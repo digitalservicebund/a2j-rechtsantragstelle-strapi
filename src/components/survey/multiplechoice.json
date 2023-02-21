@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_survey_multiplechoices",
+  "info": {
+    "displayName": "multiplechoice",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "choices": {
+      "displayName": "checkbox",
+      "type": "component",
+      "repeatable": true,
+      "component": "basic.checkbox"
+    },
+    "name": {
+      "type": "string"
+    },
+    "multiselect": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

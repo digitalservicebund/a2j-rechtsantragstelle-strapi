@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_survey_yesnos",
+  "info": {
+    "displayName": "yesno",
+    "icon": "question-circle",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

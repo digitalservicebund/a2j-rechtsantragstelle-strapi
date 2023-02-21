@@ -1,0 +1,37 @@
+{
+  "name": "a-2-j-strapi",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@strapi/plugin-i18n": "4.6.0",
+    "@strapi/plugin-users-permissions": "4.6.0",
+    "@strapi/strapi": "4.6.0",
+    "file-saver": "^2.0.5",
+    "pg": "^8.8.0",
+    "pluralize": "^8.0.0",
+    "strapi-plugin-menus": "^1.2.0",
+    "strapi-plugin-populate-deep": "^1.1.2"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "75be5f21-db3a-4a6f-9069-20b0c6b8e10c"
+  },
+  "engines": {
+    "node": ">=14.19.1 <=18.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT",
+  "//": "We need to use qs > 6.10.3 - https://github.com/advisories/GHSA-hrpp-h998-j3pp",
+  "overrides": {
+    "qs": "^6.10.3"
+  }
+}

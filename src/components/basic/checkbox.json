@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_basic_checkboxes",
+  "info": {
+    "displayName": "checkbox",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_basic_navigation_groups",
+  "info": {
+    "displayName": "NavigationGroup",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}
