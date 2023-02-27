@@ -97,8 +97,6 @@ Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/
 
 ---
 
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
-
 ## Known Issues
 
 Error: The "path" argument must be of type string. Received undefined
