@@ -11,6 +11,7 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
+  CONTAINER_IMAGE_NAME: ${{ github.repository }}
 
 jobs:
   build-strapi:
@@ -74,33 +75,23 @@ jobs:
           docker tag ${{ env.IMAGE_NAME }}:${{ github.sha }} ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
           docker push --all-tags ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
   deploy-staging:
-    needs: [build-push-image]
-    if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
+    if: ${{ github.ref == 'refs/heads/master' }}
+    concurrency: deploy-staging
     environment: staging
+    needs: build-push-image
+    permissions:
+      id-token: write # Enable OIDC for gitsign
     steps:
-      - name: Check out infra repo
-        uses: actions/checkout@v3
+      - uses: chainguard-dev/actions/setup-gitsign@ac42db4c9c2e2bd9f66aadf3290c5995891d91a3
+      - name: Deploy new backend image
+        uses: digitalservicebund/github-actions/argocd-deploy@ccfe8dfdcadb4bd87d074b4e3c946453dfc98360
         with:
-          repository: digitalservicebund/a2j-rechtsantragstelle-strapi-infra
-          ssh-key: ${{ secrets.DEPLOY_KEY }}
-
-      - name: Update image tag for staging
-        run: |
-          cd manifests/overlays/staging
-          kustomize edit set image ghcr.io/digitalservicebund/a2j-rechtsantragstelle-strapi:${{ github.sha }}
-      - name: Commit and push
-        uses: EndBug/add-and-commit@61a88be553afe4206585b31aa72387c64295d08b
-        with:
-          add: "manifests/overlays/staging/kustomization.yaml"
-          message: "Update staging image to ${{ github.sha }}"
-          pathspec_error_handling: exitImmediately
-          push: true
-
-      - name: Report Deployment
-        uses: digitalservicebund/github-actions/track-deployment@b51920b9fdeeb0c8721c210853aee955bd7cefc0
-        with:
-          project: a2j-rechtsantragstelle-strapi
           environment: staging
-          metrics_deployment_webhook_url: ${{ secrets.METRICS_DEPLOYMENT_WEBHOOK_URL }}
-          metrics_webhook_token: ${{ secrets.METRICS_WEBHOOK_TOKEN }}
+          version: ${{ needs.build-push-image.outputs.version }}
+          deploying_repo: a2j-rechtsantragstelle-strapi
+          infra_repo: a2j-rechtsantragstelle-strapi-infra
+          deploy_key: ${{ secrets.DEPLOY_KEY }}
+          app: a2j-rechtsantragstelle-strapi
+          argocd_pipeline_password: ${{ secrets.ARGOCD_PIPELINE_PASSWORD }}
+          argocd_server: ${{ secrets.ARGOCD_SERVER }}
