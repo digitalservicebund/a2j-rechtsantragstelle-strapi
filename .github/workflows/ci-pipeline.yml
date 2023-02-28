@@ -84,7 +84,7 @@ jobs:
       id-token: write # Enable OIDC for gitsign
     steps:
       - uses: chainguard-dev/actions/setup-gitsign@ac42db4c9c2e2bd9f66aadf3290c5995891d91a3
-      - name: Deploy new backend image
+      - name: Deploy strapi image
         uses: digitalservicebund/github-actions/argocd-deploy@ccfe8dfdcadb4bd87d074b4e3c946453dfc98360
         with:
           environment: staging
