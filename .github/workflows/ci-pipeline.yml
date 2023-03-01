@@ -78,7 +78,7 @@ jobs:
           docker push --all-tags ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
   deploy-staging:
       needs: [build-push-image]
-      if: github.ref == 'refs/heads/main'
+      if: github.ref == 'refs/heads/master'
       runs-on: ubuntu-latest
       environment: staging
       steps:
