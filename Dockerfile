@@ -14,8 +14,8 @@ USER node
 
 WORKDIR /opt/app
 COPY ./ .
-RUN yarn build
 RUN chown 1000:1000 -R /opt/app
+RUN yarn build
 RUN mkdir -p /opt/app/database/migrations
 EXPOSE 1337
 # Override entrypoint
