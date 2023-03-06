@@ -9,10 +9,11 @@ COPY ./package.json ./yarn.lock ./
 ENV PATH /opt/node_modules/.bin:$PATH
 
 RUN yarn config set network-timeout 600000 -g && mkdir -p /tmp/.yarn-cache && yarn install --cache-folder /tmp/.yarn-cache
-RUN chown 1000:1000 -R /opt/app
+
 WORKDIR /opt/app
 COPY ./ .
 RUN yarn build
+RUN chown 1000:1000 -R /opt/app
 EXPOSE 1337
 # Override entrypoint
 ENTRYPOINT []
