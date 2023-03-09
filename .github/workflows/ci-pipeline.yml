@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
-    branches: [master]
+    branches: [main]
   # Allow to run this workflow manually
   workflow_dispatch:
 
@@ -32,7 +32,7 @@ jobs:
 
   build-push-image:
     needs: [build-strapi]
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     permissions:
@@ -78,7 +78,7 @@ jobs:
           docker push --all-tags ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
   deploy-staging:
       needs: [build-push-image]
-      if: github.ref == 'refs/heads/master'
+      if: github.ref == 'refs/heads/main'
       runs-on: ubuntu-latest
       environment: staging
       steps:
