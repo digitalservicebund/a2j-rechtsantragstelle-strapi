@@ -67,7 +67,7 @@ add a plugin with:
 yarn add strapi-plugin-navigation
 ```
 
-and after installtion execute:
+and after installation execute:
 
 ```
 docker-compose build
