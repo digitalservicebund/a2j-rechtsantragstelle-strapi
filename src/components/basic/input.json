@@ -18,7 +18,9 @@
       "enum": [
         "text",
         "number"
-      ]
+      ],
+      "default": "text",
+      "required": true
     }
   }
 }
