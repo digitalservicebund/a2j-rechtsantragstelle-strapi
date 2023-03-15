@@ -21,7 +21,6 @@
       "components": [
         "basic.input",
         "basic.paragraph",
-        "select.select-option",
         "basic.select",
         "basic.header"
       ],
@@ -36,7 +35,6 @@
       "components": [
         "basic.input",
         "basic.paragraph",
-        "select.select-option",
         "basic.select",
         "basic.header"
       ],
