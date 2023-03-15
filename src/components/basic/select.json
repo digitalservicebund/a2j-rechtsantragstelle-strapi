@@ -17,7 +17,7 @@
       "displayName": "SelectOption",
       "type": "component",
       "repeatable": true,
-      "component": "basic.select-option"
+      "component": "select.select-option"
     }
   }
 }
