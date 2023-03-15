@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_basic_inputs",
+  "info": {
+    "displayName": "Input",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "label": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "text",
+        "number"
+      ]
+    }
+  }
+}

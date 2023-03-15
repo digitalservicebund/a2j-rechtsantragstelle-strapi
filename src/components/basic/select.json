@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_basic_selects",
+  "info": {
+    "displayName": "Select",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "label": {
+      "type": "string"
+    },
+    "options": {
+      "displayName": "SelectOption",
+      "type": "component",
+      "repeatable": true,
+      "component": "basic.select-option"
+    }
+  }
+}

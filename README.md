@@ -17,7 +17,7 @@ Build our plugins:
 cd src/plugins/content-export-import && yarn install
 ```
 
-Build the application with:
+Build the application with docker:
 
 ```
 docker-compose build

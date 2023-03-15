@@ -1,0 +1,50 @@
+{
+  "kind": "singleType",
+  "collectionName": "strapi_examples",
+  "info": {
+    "singularName": "strapi-example",
+    "pluralName": "strapi-examples",
+    "displayName": "strapi example",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "page": {
+      "type": "dynamiczone",
+      "components": [
+        "basic.input",
+        "basic.paragraph",
+        "basic.select-option",
+        "basic.select",
+        "basic.header"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "validatedForm": {
+      "type": "dynamiczone",
+      "components": [
+        "basic.input",
+        "basic.paragraph",
+        "basic.select-option",
+        "basic.select",
+        "basic.header"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}
