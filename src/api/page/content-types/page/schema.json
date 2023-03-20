@@ -46,7 +46,8 @@
         "basic.input",
         "basic.paragraph",
         "basic.select",
-        "select.select-option"
+        "select.select-option",
+        "page.info-box"
       ]
     }
   }

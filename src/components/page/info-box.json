@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_page_info_boxes",
+  "info": {
+    "displayName": "InfoBox",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "items": {
+      "displayName": "InfoBoxItem",
+      "type": "component",
+      "repeatable": true,
+      "component": "page.info-box-item",
+      "required": true
+    },
+    "headlineLevel": {
+      "type": "integer",
+      "required": true,
+      "default": 3,
+      "max": 6,
+      "min": 2
+    }
+  }
+}
