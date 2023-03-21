@@ -43,7 +43,6 @@
       "type": "dynamiczone",
       "components": [
         "basic.heading",
-        "basic.header",
         "basic.input",
         "basic.paragraph",
         "basic.select",

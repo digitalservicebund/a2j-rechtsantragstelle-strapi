@@ -23,7 +23,6 @@
         "basic.input",
         "basic.paragraph",
         "basic.select",
-        "basic.header"
       ],
       "pluginOptions": {
         "i18n": {
@@ -38,7 +37,6 @@
         "basic.input",
         "basic.paragraph",
         "basic.select",
-        "basic.header"
       ],
       "pluginOptions": {
         "i18n": {
