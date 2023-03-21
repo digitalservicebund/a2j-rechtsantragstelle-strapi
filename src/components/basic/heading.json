@@ -7,10 +7,15 @@
   "options": {},
   "attributes": {
     "text": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "level": {
-      "type": "integer"
+      "type": "integer",
+      "default": 1,
+      "required": true,
+      "max": 6,
+      "min": 1
     }
   }
 }
