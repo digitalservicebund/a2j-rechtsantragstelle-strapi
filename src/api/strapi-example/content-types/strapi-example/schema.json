@@ -19,6 +19,7 @@
     "page": {
       "type": "dynamiczone",
       "components": [
+        "basic.heading",
         "basic.input",
         "basic.paragraph",
         "basic.select",
@@ -33,6 +34,7 @@
     "validatedForm": {
       "type": "dynamiczone",
       "components": [
+        "basic.heading",
         "basic.input",
         "basic.paragraph",
         "basic.select",

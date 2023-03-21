@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_basic_headings",
+  "info": {
+    "displayName": "Heading",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "level": {
+      "type": "integer"
+    }
+  }
+}
