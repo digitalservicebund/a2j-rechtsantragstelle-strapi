@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_basic_headings",
+  "collectionName": "components_basic_headers",
   "info": {
-    "displayName": "Heading",
+    "displayName": "Header",
     "description": ""
   },
   "options": {},
