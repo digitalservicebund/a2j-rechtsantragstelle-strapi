@@ -2,6 +2,22 @@
 
 Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html) (CLI) which lets you scaffold and manage your project in seconds.
 
+## Setup for Local Usage
+- Copy `.env.example` to `.env`
+- Build and start the application's containers:
+```
+docker-compose build
+docker-compose up
+```
+- Go to http://localhost:1337/admin/
+- Under Settings > Internationalization
+  - Add German (de)
+  - Set it as default
+- Under Settings > API Tokens: Add new token and copy it to the `.env` of the A2J webapp
+
+### Troubleshooting
+If you get an error like `ECONNREFUSED 172.**.*.*:5431` on Mac, this is a [known issue](https://github.com/docker/compose/issues/4783#issuecomment-301778969). Just remove the port binding to 5431 for it to work.
+
 ## Docker
 
 If you change the admin panel or it's your first start (plugins, configs, ...) execute:
