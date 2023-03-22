@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_basic_errors",
+  "info": {
+    "displayName": "Errors"
+  },
+  "options": {},
+  "attributes": {
+    "code": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    }
+  }
+}

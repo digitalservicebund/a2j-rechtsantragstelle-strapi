@@ -21,6 +21,12 @@
       ],
       "default": "text",
       "required": true
+    },
+    "errors": {
+      "displayName": "Errors",
+      "type": "component",
+      "repeatable": true,
+      "component": "basic.errors"
     }
   }
 }
