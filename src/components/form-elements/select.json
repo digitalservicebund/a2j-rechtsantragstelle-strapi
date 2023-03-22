@@ -17,7 +17,7 @@
       "displayName": "SelectOption",
       "type": "component",
       "repeatable": true,
-      "component": "select.select-option"
+      "component": "form-helper.select-option"
     }
   }
 }

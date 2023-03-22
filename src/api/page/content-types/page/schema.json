@@ -43,10 +43,10 @@
       "type": "dynamiczone",
       "components": [
         "basic.heading",
-        "basic.input",
+        "form-elements.input",
         "basic.paragraph",
-        "basic.select",
-        "select.select-option",
+        "form-elements.select",
+        "form-helper.select-option",
         "page.info-box"
       ]
     }

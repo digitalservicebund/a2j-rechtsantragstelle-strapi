@@ -26,7 +26,7 @@
       "displayName": "Errors",
       "type": "component",
       "repeatable": true,
-      "component": "basic.errors"
+      "component": "form-helper.errors"
     }
   }
 }

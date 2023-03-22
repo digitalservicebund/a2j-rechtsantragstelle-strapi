@@ -1,7 +1,8 @@
 {
   "collectionName": "components_basic_errors",
   "info": {
-    "displayName": "Errors"
+    "displayName": "Errors",
+    "description": ""
   },
   "options": {},
   "attributes": {
