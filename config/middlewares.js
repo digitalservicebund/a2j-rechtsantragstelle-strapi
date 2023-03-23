@@ -1,12 +1,45 @@
-module.exports = [
-  'strapi::errors',
-  'strapi::security',
-  'strapi::cors',
-  'strapi::poweredBy',
-  'strapi::logger',
-  'strapi::query',
-  'strapi::body',
-  'strapi::session',
-  'strapi::favicon',
-  'strapi::public',
-];
+module.exports = ({ env }) => {
+  const uploadBucket = `${env('OBS_BUCKET_NAME')}.${env('OBS_ENDPOINT')}`;
+
+  return [
+    'strapi::errors',
+    'strapi::cors',
+    'strapi::poweredBy',
+    'strapi::logger',
+    'strapi::query',
+    'strapi::body',
+    'strapi::session',
+    'strapi::favicon',
+    'strapi::public',
+    // extend default security config as described here:
+    // https://market.strapi.io/providers/@strapi-provider-upload-aws-s3
+    {
+      name: 'strapi::security',
+      config: {
+        contentSecurityPolicy: {
+          useDefaults: true,
+          directives: {
+            'connect-src': ["'self'", 'https:'],
+            'img-src': [
+              "'self'",
+              'data:',
+              'blob:',
+              'dl.airtable.com',
+              // allow display of image thumbnail previews
+              uploadBucket,
+            ],
+            'media-src': [
+              "'self'",
+              'data:',
+              'blob:',
+              'dl.airtable.com',
+              // allow display of media thumbnail previews
+              uploadBucket,
+            ],
+            upgradeInsecureRequests: null,
+          },
+        },
+      },
+    },
+  ];
+};
