@@ -1,15 +1,12 @@
 {
   "collectionName": "components_page_meta_page_infos",
   "info": {
-    "displayName": "MetaPageInfo"
+    "displayName": "MetaPageInfo",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "title": {
-      "type": "string",
-      "required": true
-    },
-    "slug": {
       "type": "string",
       "required": true
     }
