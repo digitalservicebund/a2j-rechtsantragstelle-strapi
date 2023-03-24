@@ -11,8 +11,6 @@ module.exports = ({ env }) => {
       config: {
         provider: 'aws-s3',
         providerOptions: {
-          accessKeyId: env('OBS_ACCESS_KEY_ID'),
-          secretAccesskey: env('OBS_ACCESS_SECRET'),
           endpoint: env('OBS_ENDPOINT'),
           params: {
             Bucket: env('OBS_BUCKET_NAME'),
