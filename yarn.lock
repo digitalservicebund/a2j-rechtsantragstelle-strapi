@@ -1207,6 +1207,12 @@
   dependencies:
     tslib "^2.4.0"
 
+"@formatjs/fast-memoize@2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@formatjs/fast-memoize/-/fast-memoize-2.0.1.tgz#f15aaa73caad5562899c69bdcad8db82adcd3b0b"
+  dependencies:
+    tslib "^2.4.0"
+
 "@formatjs/icu-messageformat-parser@2.1.0":
   version "2.1.0"
   resolved "https://registry.npmjs.org/@formatjs/icu-messageformat-parser/-/icu-messageformat-parser-2.1.0.tgz"
@@ -1218,6 +1224,14 @@
 "@formatjs/icu-messageformat-parser@2.2.0":
   version "2.2.0"
   resolved "https://registry.npmjs.org/@formatjs/icu-messageformat-parser/-/icu-messageformat-parser-2.2.0.tgz"
+  dependencies:
+    "@formatjs/ecma402-abstract" "1.14.3"
+    "@formatjs/icu-skeleton-parser" "1.3.18"
+    tslib "^2.4.0"
+
+"@formatjs/icu-messageformat-parser@2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@formatjs/icu-messageformat-parser/-/icu-messageformat-parser-2.3.0.tgz#8e8fd577c3e39454ef14bba4963f2e1d5f2cc46c"
   dependencies:
     "@formatjs/ecma402-abstract" "1.14.3"
     "@formatjs/icu-skeleton-parser" "1.3.18"
@@ -1253,6 +1267,14 @@
     "@formatjs/intl-localematcher" "0.2.32"
     tslib "^2.4.0"
 
+"@formatjs/intl-displaynames@6.2.6":
+  version "6.2.6"
+  resolved "https://registry.yarnpkg.com/@formatjs/intl-displaynames/-/intl-displaynames-6.2.6.tgz#6bc02fe0bf6571391aac0e01e74ecbf38542ff32"
+  dependencies:
+    "@formatjs/ecma402-abstract" "1.14.3"
+    "@formatjs/intl-localematcher" "0.2.32"
+    tslib "^2.4.0"
+
 "@formatjs/intl-listformat@6.5.3":
   version "6.5.3"
   resolved "https://registry.npmjs.org/@formatjs/intl-listformat/-/intl-listformat-6.5.3.tgz"
@@ -1264,6 +1286,14 @@
 "@formatjs/intl-listformat@7.1.7":
   version "7.1.7"
   resolved "https://registry.npmjs.org/@formatjs/intl-listformat/-/intl-listformat-7.1.7.tgz"
+  dependencies:
+    "@formatjs/ecma402-abstract" "1.14.3"
+    "@formatjs/intl-localematcher" "0.2.32"
+    tslib "^2.4.0"
+
+"@formatjs/intl-listformat@7.1.9":
+  version "7.1.9"
+  resolved "https://registry.yarnpkg.com/@formatjs/intl-listformat/-/intl-listformat-7.1.9.tgz#0c2ce67b610054f215dd2635a6da7da308cfbe3d"
   dependencies:
     "@formatjs/ecma402-abstract" "1.14.3"
     "@formatjs/intl-localematcher" "0.2.32"
@@ -1303,6 +1333,18 @@
     "@formatjs/intl-displaynames" "6.2.4"
     "@formatjs/intl-listformat" "7.1.7"
     intl-messageformat "10.3.0"
+    tslib "^2.4.0"
+
+"@formatjs/intl@2.6.9":
+  version "2.6.9"
+  resolved "https://registry.yarnpkg.com/@formatjs/intl/-/intl-2.6.9.tgz#d4bdd8c21888f579a95341580141d0aafe761610"
+  dependencies:
+    "@formatjs/ecma402-abstract" "1.14.3"
+    "@formatjs/fast-memoize" "2.0.1"
+    "@formatjs/icu-messageformat-parser" "2.3.0"
+    "@formatjs/intl-displaynames" "6.2.6"
+    "@formatjs/intl-listformat" "7.1.9"
+    intl-messageformat "10.3.3"
     tslib "^2.4.0"
 
 "@internationalized/number@^3.1.1":
@@ -1433,10 +1475,6 @@
   dependencies:
     "@babel/runtime" "^7.13.10"
 
-"@react-dnd/asap@4.0.0":
-  version "4.0.0"
-  resolved "https://registry.npmjs.org/@react-dnd/asap/-/asap-4.0.0.tgz"
-
 "@react-dnd/asap@4.0.1":
   version "4.0.1"
   resolved "https://registry.npmjs.org/@react-dnd/asap/-/asap-4.0.1.tgz"
@@ -1444,10 +1482,6 @@
 "@react-dnd/asap@^5.0.1":
   version "5.0.2"
   resolved "https://registry.yarnpkg.com/@react-dnd/asap/-/asap-5.0.2.tgz#1f81f124c1cd6f39511c11a881cfb0f715343488"
-
-"@react-dnd/invariant@3.0.0":
-  version "3.0.0"
-  resolved "https://registry.npmjs.org/@react-dnd/invariant/-/invariant-3.0.0.tgz"
 
 "@react-dnd/invariant@3.0.1":
   version "3.0.1"
@@ -1550,9 +1584,9 @@
     escape-string-regexp "^2.0.0"
     lodash.deburr "^4.1.0"
 
-"@strapi/admin@4.8.2":
-  version "4.8.2"
-  resolved "https://registry.yarnpkg.com/@strapi/admin/-/admin-4.8.2.tgz#54954e1291aca0eab3417cefcca5a56dfb2d05d9"
+"@strapi/admin@4.9.0":
+  version "4.9.0"
+  resolved "https://registry.yarnpkg.com/@strapi/admin/-/admin-4.9.0.tgz#87f44f7af74c60d8f8a8cdc1af7392fb06c51f1c"
   dependencies:
     "@babel/core" "^7.20.12"
     "@babel/plugin-transform-runtime" "^7.19.6"
@@ -1562,15 +1596,15 @@
     "@casl/ability" "^5.4.3"
     "@fingerprintjs/fingerprintjs" "3.3.6"
     "@pmmmwh/react-refresh-webpack-plugin" "0.5.10"
-    "@strapi/babel-plugin-switch-ee-ce" "4.8.2"
-    "@strapi/data-transfer" "4.8.2"
-    "@strapi/design-system" "1.6.5"
-    "@strapi/helper-plugin" "4.8.2"
-    "@strapi/icons" "1.6.5"
-    "@strapi/permissions" "4.8.2"
-    "@strapi/provider-audit-logs-local" "4.8.2"
-    "@strapi/typescript-utils" "4.8.2"
-    "@strapi/utils" "4.8.2"
+    "@strapi/babel-plugin-switch-ee-ce" "4.9.0"
+    "@strapi/data-transfer" "4.9.0"
+    "@strapi/design-system" "1.6.6"
+    "@strapi/helper-plugin" "4.9.0"
+    "@strapi/icons" "1.6.6"
+    "@strapi/permissions" "4.9.0"
+    "@strapi/provider-audit-logs-local" "4.9.0"
+    "@strapi/typescript-utils" "4.9.0"
+    "@strapi/utils" "4.9.0"
     axios "1.3.4"
     babel-loader "^9.1.2"
     babel-plugin-styled-components "2.0.2"
@@ -1622,27 +1656,27 @@
     passport-local "1.0.0"
     pluralize "8.0.0"
     prop-types "^15.7.2"
-    qs "6.11.0"
+    qs "6.11.1"
     react "^17.0.2"
     react-copy-to-clipboard "^5.1.0"
     react-dnd "15.1.2"
-    react-dnd-html5-backend "15.1.2"
+    react-dnd-html5-backend "15.1.3"
     react-dom "^17.0.2"
     react-error-boundary "3.1.4"
     react-fast-compare "^3.2.0"
     react-helmet "^6.1.0"
-    react-intl "6.2.8"
+    react-intl "6.3.2"
     react-is "^17.0.2"
     react-query "3.24.3"
     react-redux "8.0.5"
     react-refresh "0.14.0"
     react-router-dom "5.3.4"
     react-select "5.7.0"
-    react-window "1.8.7"
+    react-window "1.8.8"
     redux "^4.2.1"
     reselect "^4.1.7"
     rimraf "3.0.2"
-    sanitize-html "2.7.3"
+    sanitize-html "2.10.0"
     semver "7.3.8"
     sift "16.0.0"
     style-loader "3.3.1"
@@ -1650,24 +1684,24 @@
     typescript "4.6.2"
     webpack "^5.76.0"
     webpack-cli "^5.0.1"
-    webpack-dev-server "^4.11.1"
+    webpack-dev-server "^4.13.1"
     webpackbar "^5.0.2"
     yup "^0.32.9"
 
-"@strapi/babel-plugin-switch-ee-ce@4.8.2":
-  version "4.8.2"
-  resolved "https://registry.yarnpkg.com/@strapi/babel-plugin-switch-ee-ce/-/babel-plugin-switch-ee-ce-4.8.2.tgz#30fb87f7643e69d8a68861f3c1646cc6a5afdd8a"
+"@strapi/babel-plugin-switch-ee-ce@4.9.0":
+  version "4.9.0"
+  resolved "https://registry.yarnpkg.com/@strapi/babel-plugin-switch-ee-ce/-/babel-plugin-switch-ee-ce-4.9.0.tgz#e09a1ea49149a6296f13ee11be7d19eb0824a268"
   dependencies:
     "@babel/template" "^7.20.7"
     reselect "4.1.7"
     resolve "1.20.0"
 
-"@strapi/data-transfer@4.8.2":
-  version "4.8.2"
-  resolved "https://registry.yarnpkg.com/@strapi/data-transfer/-/data-transfer-4.8.2.tgz#c6898efe9cfade0192d58666a617a523e6308605"
+"@strapi/data-transfer@4.9.0":
+  version "4.9.0"
+  resolved "https://registry.yarnpkg.com/@strapi/data-transfer/-/data-transfer-4.9.0.tgz#d94efafb6514f36c11515aa05037daa5043bdd2b"
   dependencies:
-    "@strapi/logger" "4.8.2"
-    "@strapi/strapi" "4.8.2"
+    "@strapi/logger" "4.9.0"
+    "@strapi/strapi" "4.9.0"
     chalk "4.1.2"
     fs-extra "10.0.0"
     lodash "4.17.21"
@@ -1679,9 +1713,9 @@
     uuid "9.0.0"
     ws "8.11.0"
 
-"@strapi/database@4.8.2":
-  version "4.8.2"
-  resolved "https://registry.yarnpkg.com/@strapi/database/-/database-4.8.2.tgz#2ef042c6ea58e3b93e92fef48019c81ea8ea69c1"
+"@strapi/database@4.9.0":
+  version "4.9.0"
+  resolved "https://registry.yarnpkg.com/@strapi/database/-/database-4.9.0.tgz#87d1289eb84727fa3a2b16c611818701c602dba4"
   dependencies:
     date-fns "2.29.3"
     debug "4.3.4"
@@ -1691,9 +1725,9 @@
     semver "7.3.8"
     umzug "3.1.1"
 
-"@strapi/design-system@1.6.5":
-  version "1.6.5"
-  resolved "https://registry.yarnpkg.com/@strapi/design-system/-/design-system-1.6.5.tgz#819feda630e83fdfe19589bb45b81d17e8b4ce8b"
+"@strapi/design-system@1.6.6":
+  version "1.6.6"
+  resolved "https://registry.yarnpkg.com/@strapi/design-system/-/design-system-1.6.6.tgz#42eef982bcd0499e4dbce4a8feadedbed2491e1f"
   dependencies:
     "@codemirror/lang-json" "^6.0.1"
     "@floating-ui/react-dom" "^1.0.0"
@@ -1703,9 +1737,9 @@
     compute-scroll-into-view "^1.0.17"
     prop-types "^15.7.2"
 
-"@strapi/generate-new@4.8.2":
-  version "4.8.2"
-  resolved "https://registry.yarnpkg.com/@strapi/generate-new/-/generate-new-4.8.2.tgz#e934316bac8d647b72347d0f1dc054c946fa0be1"
+"@strapi/generate-new@4.9.0":
+  version "4.9.0"
+  resolved "https://registry.yarnpkg.com/@strapi/generate-new/-/generate-new-4.9.0.tgz#dd766d73edfa0634e1ffd70b206e2a65deb097f5"
   dependencies:
     "@sentry/node" "6.19.7"
     chalk "^4.1.2"
@@ -1720,13 +1754,13 @@
     tar "6.1.13"
     uuid "^8.3.2"
 
-"@strapi/generators@4.8.2":
-  version "4.8.2"
-  resolved "https://registry.yarnpkg.com/@strapi/generators/-/generators-4.8.2.tgz#919f12c2c2653b5e790fc384e1e8216b205bff80"
+"@strapi/generators@4.9.0":
+  version "4.9.0"
+  resolved "https://registry.yarnpkg.com/@strapi/generators/-/generators-4.9.0.tgz#94ecd4597c2b5020079e860a1cdaff35047e5b9d"
   dependencies:
     "@sindresorhus/slugify" "1.1.0"
-    "@strapi/typescript-utils" "4.8.2"
-    "@strapi/utils" "4.8.2"
+    "@strapi/typescript-utils" "4.9.0"
+    "@strapi/utils" "4.9.0"
     chalk "4.1.2"
     fs-extra "10.0.0"
     node-plop "0.26.3"
@@ -1747,9 +1781,9 @@
     react-intl "6.2.8"
     react-select "5.6.0"
 
-"@strapi/helper-plugin@4.8.2":
-  version "4.8.2"
-  resolved "https://registry.yarnpkg.com/@strapi/helper-plugin/-/helper-plugin-4.8.2.tgz#ebd186838d42c233801f8d90ed938fe474993baf"
+"@strapi/helper-plugin@4.9.0":
+  version "4.9.0"
+  resolved "https://registry.yarnpkg.com/@strapi/helper-plugin/-/helper-plugin-4.9.0.tgz#efb28c07dc516e0160724ec734c296b8c0d4f74a"
   dependencies:
     axios "1.3.4"
     date-fns "2.29.3"
@@ -1757,75 +1791,75 @@
     immer "9.0.19"
     lodash "4.17.21"
     prop-types "^15.7.2"
-    qs "6.11.0"
+    qs "6.11.1"
     react-helmet "^6.1.0"
-    react-intl "6.2.8"
+    react-intl "6.3.2"
     react-select "5.7.0"
 
-"@strapi/icons@1.6.5":
-  version "1.6.5"
-  resolved "https://registry.yarnpkg.com/@strapi/icons/-/icons-1.6.5.tgz#59935fdeae17bcf5f74882fb10891d8d9b365351"
+"@strapi/icons@1.6.6":
+  version "1.6.6"
+  resolved "https://registry.yarnpkg.com/@strapi/icons/-/icons-1.6.6.tgz#e5259cdb6fc2425e926dfb0afc6e7c72748f1bab"
 
-"@strapi/logger@4.8.2":
-  version "4.8.2"
-  resolved "https://registry.yarnpkg.com/@strapi/logger/-/logger-4.8.2.tgz#94e32352213059065b07461d89dc20d54257321b"
+"@strapi/logger@4.9.0":
+  version "4.9.0"
+  resolved "https://registry.yarnpkg.com/@strapi/logger/-/logger-4.9.0.tgz#75658c21916e005bacfe2ad9758e05995ea23bea"
   dependencies:
     lodash "4.17.21"
     winston "3.3.3"
 
-"@strapi/permissions@4.8.2":
-  version "4.8.2"
-  resolved "https://registry.yarnpkg.com/@strapi/permissions/-/permissions-4.8.2.tgz#9395e52d8b908b7653e36308d055eb3cc3d609c9"
+"@strapi/permissions@4.9.0":
+  version "4.9.0"
+  resolved "https://registry.yarnpkg.com/@strapi/permissions/-/permissions-4.9.0.tgz#89042fcf4d719ba2d842898cbec522d0422d874e"
   dependencies:
     "@casl/ability" "5.4.4"
-    "@strapi/utils" "4.8.2"
+    "@strapi/utils" "4.9.0"
     lodash "4.17.21"
     sift "16.0.0"
 
-"@strapi/plugin-content-manager@4.8.2":
-  version "4.8.2"
-  resolved "https://registry.yarnpkg.com/@strapi/plugin-content-manager/-/plugin-content-manager-4.8.2.tgz#5dd2c2a0bff25c094616bdea7bcdca513200bd97"
+"@strapi/plugin-content-manager@4.9.0":
+  version "4.9.0"
+  resolved "https://registry.yarnpkg.com/@strapi/plugin-content-manager/-/plugin-content-manager-4.9.0.tgz#b01cd1135dff03781565522b478952d988aaf7b9"
   dependencies:
     "@sindresorhus/slugify" "1.1.0"
-    "@strapi/utils" "4.8.2"
+    "@strapi/utils" "4.9.0"
     lodash "4.17.21"
 
-"@strapi/plugin-content-type-builder@4.8.2":
-  version "4.8.2"
-  resolved "https://registry.yarnpkg.com/@strapi/plugin-content-type-builder/-/plugin-content-type-builder-4.8.2.tgz#1f21e7723b9932d86278a650761957adbdddb41a"
+"@strapi/plugin-content-type-builder@4.9.0":
+  version "4.9.0"
+  resolved "https://registry.yarnpkg.com/@strapi/plugin-content-type-builder/-/plugin-content-type-builder-4.9.0.tgz#a56ac1e73b58e611beab83a137c44a939ef2a633"
   dependencies:
     "@sindresorhus/slugify" "1.1.0"
-    "@strapi/design-system" "1.6.5"
-    "@strapi/generators" "4.8.2"
-    "@strapi/helper-plugin" "4.8.2"
-    "@strapi/icons" "1.6.5"
-    "@strapi/strapi" "4.8.2"
-    "@strapi/utils" "4.8.2"
+    "@strapi/design-system" "1.6.6"
+    "@strapi/generators" "4.9.0"
+    "@strapi/helper-plugin" "4.9.0"
+    "@strapi/icons" "1.6.6"
+    "@strapi/strapi" "4.9.0"
+    "@strapi/utils" "4.9.0"
     fs-extra "10.0.0"
     immer "9.0.19"
     lodash "4.17.21"
     match-sorter "^4.0.2"
     pluralize "^8.0.0"
     prop-types "^15.7.2"
-    qs "6.11.0"
+    qs "6.11.1"
     react-helmet "^6.1.0"
-    react-intl "6.2.8"
+    react-intl "6.3.2"
     react-redux "8.0.5"
     redux "^4.2.1"
     reselect "^4.1.7"
     yup "^0.32.9"
 
-"@strapi/plugin-email@4.8.2":
-  version "4.8.2"
-  resolved "https://registry.yarnpkg.com/@strapi/plugin-email/-/plugin-email-4.8.2.tgz#acded5b97b623a0296c671ca0121b45e65169ad5"
+"@strapi/plugin-email@4.9.0":
+  version "4.9.0"
+  resolved "https://registry.yarnpkg.com/@strapi/plugin-email/-/plugin-email-4.9.0.tgz#0ec5ec77c56bda25a65ad0c6952769b680821e29"
   dependencies:
-    "@strapi/design-system" "1.6.5"
-    "@strapi/icons" "1.6.5"
-    "@strapi/provider-email-sendmail" "4.8.2"
-    "@strapi/utils" "4.8.2"
+    "@strapi/design-system" "1.6.6"
+    "@strapi/icons" "1.6.6"
+    "@strapi/provider-email-sendmail" "4.9.0"
+    "@strapi/utils" "4.9.0"
     lodash "4.17.21"
     prop-types "^15.7.2"
-    react-intl "6.2.8"
+    react-intl "6.3.2"
     yup "^0.32.9"
 
 "@strapi/plugin-i18n@4.7.1":
@@ -1835,15 +1869,15 @@
     "@strapi/utils" "4.7.1"
     lodash "4.17.21"
 
-"@strapi/plugin-upload@4.8.2":
-  version "4.8.2"
-  resolved "https://registry.yarnpkg.com/@strapi/plugin-upload/-/plugin-upload-4.8.2.tgz#fe13f2813ad6f5fa7e1d4a04b02888d30839eb52"
+"@strapi/plugin-upload@4.9.0":
+  version "4.9.0"
+  resolved "https://registry.yarnpkg.com/@strapi/plugin-upload/-/plugin-upload-4.9.0.tgz#80ed4c8f5e12a1cd0fa174627d9a1df8f64c7047"
   dependencies:
-    "@strapi/design-system" "1.6.5"
-    "@strapi/helper-plugin" "4.8.2"
-    "@strapi/icons" "1.6.5"
-    "@strapi/provider-upload-local" "4.8.2"
-    "@strapi/utils" "4.8.2"
+    "@strapi/design-system" "1.6.6"
+    "@strapi/helper-plugin" "4.9.0"
+    "@strapi/icons" "1.6.6"
+    "@strapi/provider-upload-local" "4.9.0"
+    "@strapi/utils" "4.9.0"
     axios "1.3.4"
     byte-size "7.0.1"
     cropperjs "1.5.12"
@@ -1856,11 +1890,11 @@
     lodash "4.17.21"
     mime-types "2.1.35"
     prop-types "^15.7.2"
-    qs "6.11.0"
+    qs "6.11.1"
     react-copy-to-clipboard "^5.1.0"
     react-dnd "15.1.2"
     react-helmet "^6.1.0"
-    react-intl "6.2.8"
+    react-intl "6.3.2"
     react-query "3.24.3"
     react-redux "8.0.5"
     react-select "5.7.0"
@@ -1889,15 +1923,15 @@
     react-router-dom "5.3.4"
     url-join "4.0.1"
 
-"@strapi/provider-audit-logs-local@4.8.2":
-  version "4.8.2"
-  resolved "https://registry.yarnpkg.com/@strapi/provider-audit-logs-local/-/provider-audit-logs-local-4.8.2.tgz#41835c35fe8642778746be4f2744089724dd999a"
+"@strapi/provider-audit-logs-local@4.9.0":
+  version "4.9.0"
+  resolved "https://registry.yarnpkg.com/@strapi/provider-audit-logs-local/-/provider-audit-logs-local-4.9.0.tgz#4b7da849e84f1120a7893db4bc9bae5162945ac6"
 
-"@strapi/provider-email-sendmail@4.8.2":
-  version "4.8.2"
-  resolved "https://registry.yarnpkg.com/@strapi/provider-email-sendmail/-/provider-email-sendmail-4.8.2.tgz#5e4de0f5b5deae9bdeac42784498768eacd86e81"
+"@strapi/provider-email-sendmail@4.9.0":
+  version "4.9.0"
+  resolved "https://registry.yarnpkg.com/@strapi/provider-email-sendmail/-/provider-email-sendmail-4.9.0.tgz#66deeb1afc6f960395f6246040f25ef1d87a1429"
   dependencies:
-    "@strapi/utils" "4.8.2"
+    "@strapi/utils" "4.9.0"
     sendmail "^1.6.1"
 
 "@strapi/provider-upload-aws-s3@^4.8.2":
@@ -1907,32 +1941,32 @@
     aws-sdk "2.1287.0"
     lodash "4.17.21"
 
-"@strapi/provider-upload-local@4.8.2":
-  version "4.8.2"
-  resolved "https://registry.yarnpkg.com/@strapi/provider-upload-local/-/provider-upload-local-4.8.2.tgz#cca3b151ea9042a9b1957a1d27964d89035294c1"
+"@strapi/provider-upload-local@4.9.0":
+  version "4.9.0"
+  resolved "https://registry.yarnpkg.com/@strapi/provider-upload-local/-/provider-upload-local-4.9.0.tgz#eaa7bb090fd4c50a69123b82f478f3381714792c"
   dependencies:
-    "@strapi/utils" "4.8.2"
+    "@strapi/utils" "4.9.0"
     fs-extra "10.0.0"
 
-"@strapi/strapi@4.8.2":
-  version "4.8.2"
-  resolved "https://registry.yarnpkg.com/@strapi/strapi/-/strapi-4.8.2.tgz#994cc53f3c79ecffcd6badb298fcc81ca1c1b99d"
+"@strapi/strapi@4.9.0":
+  version "4.9.0"
+  resolved "https://registry.yarnpkg.com/@strapi/strapi/-/strapi-4.9.0.tgz#e7460e24b7af626129106539dbd85d9c48a71fe1"
   dependencies:
     "@koa/cors" "3.4.3"
     "@koa/router" "10.1.1"
-    "@strapi/admin" "4.8.2"
-    "@strapi/data-transfer" "4.8.2"
-    "@strapi/database" "4.8.2"
-    "@strapi/generate-new" "4.8.2"
-    "@strapi/generators" "4.8.2"
-    "@strapi/logger" "4.8.2"
-    "@strapi/permissions" "4.8.2"
-    "@strapi/plugin-content-manager" "4.8.2"
-    "@strapi/plugin-content-type-builder" "4.8.2"
-    "@strapi/plugin-email" "4.8.2"
-    "@strapi/plugin-upload" "4.8.2"
-    "@strapi/typescript-utils" "4.8.2"
-    "@strapi/utils" "4.8.2"
+    "@strapi/admin" "4.9.0"
+    "@strapi/data-transfer" "4.9.0"
+    "@strapi/database" "4.9.0"
+    "@strapi/generate-new" "4.9.0"
+    "@strapi/generators" "4.9.0"
+    "@strapi/logger" "4.9.0"
+    "@strapi/permissions" "4.9.0"
+    "@strapi/plugin-content-manager" "4.9.0"
+    "@strapi/plugin-content-type-builder" "4.9.0"
+    "@strapi/plugin-email" "4.9.0"
+    "@strapi/plugin-upload" "4.9.0"
+    "@strapi/typescript-utils" "4.9.0"
+    "@strapi/utils" "4.9.0"
     bcryptjs "2.4.3"
     boxen "5.1.2"
     chalk "4.1.2"
@@ -1967,15 +2001,15 @@
     open "8.4.0"
     ora "5.4.1"
     package-json "7.0.0"
-    qs "6.11.0"
+    qs "6.11.1"
     resolve-cwd "3.0.0"
     semver "7.3.8"
     statuses "2.0.1"
     uuid "^8.3.2"
 
-"@strapi/typescript-utils@4.8.2":
-  version "4.8.2"
-  resolved "https://registry.yarnpkg.com/@strapi/typescript-utils/-/typescript-utils-4.8.2.tgz#050224cd65bc454caa5bb0705377a3d5664fe025"
+"@strapi/typescript-utils@4.9.0":
+  version "4.9.0"
+  resolved "https://registry.yarnpkg.com/@strapi/typescript-utils/-/typescript-utils-4.9.0.tgz#4381438b1fe2ad3dd2a98f59932edba4b280f7b9"
   dependencies:
     chalk "4.1.2"
     cli-table3 "0.6.2"
@@ -1995,9 +2029,9 @@
     p-map "4.0.0"
     yup "0.32.9"
 
-"@strapi/utils@4.8.2":
-  version "4.8.2"
-  resolved "https://registry.yarnpkg.com/@strapi/utils/-/utils-4.8.2.tgz#46d008f1695e5b9ad9954208e58273833652b138"
+"@strapi/utils@4.9.0":
+  version "4.9.0"
+  resolved "https://registry.yarnpkg.com/@strapi/utils/-/utils-4.9.0.tgz#35731524d4c237f046b4fb4df1c32730dc85ad7d"
   dependencies:
     "@sindresorhus/slugify" "1.1.0"
     date-fns "2.29.3"
@@ -3661,14 +3695,6 @@ dkim-signer@0.2.2:
   dependencies:
     libmime "^2.0.3"
 
-dnd-core@15.1.1:
-  version "15.1.1"
-  resolved "https://registry.npmjs.org/dnd-core/-/dnd-core-15.1.1.tgz"
-  dependencies:
-    "@react-dnd/asap" "4.0.0"
-    "@react-dnd/invariant" "3.0.0"
-    redux "^4.1.1"
-
 dnd-core@15.1.2:
   version "15.1.2"
   resolved "https://registry.npmjs.org/dnd-core/-/dnd-core-15.1.2.tgz"
@@ -3716,7 +3742,15 @@ dom-serializer@^1.0.1:
     domhandler "^4.2.0"
     entities "^2.0.0"
 
-domelementtype@^2.0.1, domelementtype@^2.2.0:
+dom-serializer@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/dom-serializer/-/dom-serializer-2.0.0.tgz#e41b802e1eedf9f6cae183ce5e622d789d7d8e53"
+  dependencies:
+    domelementtype "^2.3.0"
+    domhandler "^5.0.2"
+    entities "^4.2.0"
+
+domelementtype@^2.0.1, domelementtype@^2.2.0, domelementtype@^2.3.0:
   version "2.3.0"
   resolved "https://registry.npmjs.org/domelementtype/-/domelementtype-2.3.0.tgz"
 
@@ -3726,6 +3760,12 @@ domhandler@^4.0.0, domhandler@^4.2.0, domhandler@^4.3.1:
   dependencies:
     domelementtype "^2.2.0"
 
+domhandler@^5.0.1, domhandler@^5.0.2, domhandler@^5.0.3:
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/domhandler/-/domhandler-5.0.3.tgz#cc385f7f751f1d1fc650c21374804254538c7d31"
+  dependencies:
+    domelementtype "^2.3.0"
+
 domutils@^2.5.2, domutils@^2.8.0:
   version "2.8.0"
   resolved "https://registry.npmjs.org/domutils/-/domutils-2.8.0.tgz"
@@ -3733,6 +3773,14 @@ domutils@^2.5.2, domutils@^2.8.0:
     dom-serializer "^1.0.1"
     domelementtype "^2.2.0"
     domhandler "^4.2.0"
+
+domutils@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/domutils/-/domutils-3.0.1.tgz#696b3875238338cb186b6c0612bd4901c89a4f1c"
+  dependencies:
+    dom-serializer "^2.0.0"
+    domelementtype "^2.3.0"
+    domhandler "^5.0.1"
 
 dot-case@^2.1.0:
   version "2.1.1"
@@ -3824,7 +3872,7 @@ entities@^2.0.0:
   version "2.2.0"
   resolved "https://registry.npmjs.org/entities/-/entities-2.2.0.tgz"
 
-entities@^4.4.0:
+entities@^4.2.0, entities@^4.4.0:
   version "4.4.0"
   resolved "https://registry.npmjs.org/entities/-/entities-4.4.0.tgz"
 
@@ -4666,7 +4714,7 @@ html-webpack-plugin@5.5.0:
     pretty-error "^4.0.0"
     tapable "^2.0.0"
 
-htmlparser2@^6.0.0, htmlparser2@^6.1.0:
+htmlparser2@^6.1.0:
   version "6.1.0"
   resolved "https://registry.npmjs.org/htmlparser2/-/htmlparser2-6.1.0.tgz"
   dependencies:
@@ -4674,6 +4722,15 @@ htmlparser2@^6.0.0, htmlparser2@^6.1.0:
     domhandler "^4.0.0"
     domutils "^2.5.2"
     entities "^2.0.0"
+
+htmlparser2@^8.0.0:
+  version "8.0.2"
+  resolved "https://registry.yarnpkg.com/htmlparser2/-/htmlparser2-8.0.2.tgz#f002151705b383e62433b5cf466f5b716edaec21"
+  dependencies:
+    domelementtype "^2.3.0"
+    domhandler "^5.0.3"
+    domutils "^3.0.1"
+    entities "^4.4.0"
 
 http-assert@^1.3.0:
   version "1.5.0"
@@ -4895,6 +4952,15 @@ intl-messageformat@10.3.0:
     "@formatjs/ecma402-abstract" "1.14.3"
     "@formatjs/fast-memoize" "1.2.8"
     "@formatjs/icu-messageformat-parser" "2.2.0"
+    tslib "^2.4.0"
+
+intl-messageformat@10.3.3:
+  version "10.3.3"
+  resolved "https://registry.yarnpkg.com/intl-messageformat/-/intl-messageformat-10.3.3.tgz#576798d31c9f8d90f9beadaa5a3878b8d30177a2"
+  dependencies:
+    "@formatjs/ecma402-abstract" "1.14.3"
+    "@formatjs/fast-memoize" "2.0.1"
+    "@formatjs/icu-messageformat-parser" "2.3.0"
     tslib "^2.4.0"
 
 intl-messageformat@9.13.0:
@@ -5481,6 +5547,13 @@ koa@2.13.4, koa@^2.13.4:
 kuler@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/kuler/-/kuler-2.0.0.tgz"
+
+launch-editor@^2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/launch-editor/-/launch-editor-2.6.0.tgz#4c0c1a6ac126c572bd9ff9a30da1d2cae66defd7"
+  dependencies:
+    picocolors "^1.0.0"
+    shell-quote "^1.7.3"
 
 libbase64@0.1.0:
   version "0.1.0"
@@ -6669,7 +6742,7 @@ qs@6.11.0:
   dependencies:
     side-channel "^1.0.4"
 
-qs@^6.10.2, qs@^6.10.3, qs@^6.4.0, qs@^6.9.6:
+qs@6.11.1, qs@^6.10.2, qs@^6.10.3, qs@^6.4.0, qs@^6.9.6:
   version "6.11.1"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.11.1.tgz#6c29dff97f0c0060765911ba65cbc9764186109f"
   dependencies:
@@ -6722,11 +6795,11 @@ react-copy-to-clipboard@^5.1.0:
     copy-to-clipboard "^3.3.1"
     prop-types "^15.8.1"
 
-react-dnd-html5-backend@15.1.2:
-  version "15.1.2"
-  resolved "https://registry.npmjs.org/react-dnd-html5-backend/-/react-dnd-html5-backend-15.1.2.tgz"
+react-dnd-html5-backend@15.1.3:
+  version "15.1.3"
+  resolved "https://registry.yarnpkg.com/react-dnd-html5-backend/-/react-dnd-html5-backend-15.1.3.tgz#57b4f47e0f23923e7c243d2d0eefe490069115a9"
   dependencies:
-    dnd-core "15.1.1"
+    dnd-core "15.1.2"
 
 react-dnd-html5-backend@^16.0.1:
   version "16.0.1"
@@ -6802,6 +6875,21 @@ react-intl@6.2.8:
     "@types/react" "16 || 17 || 18"
     hoist-non-react-statics "^3.3.2"
     intl-messageformat "10.3.0"
+    tslib "^2.4.0"
+
+react-intl@6.3.2:
+  version "6.3.2"
+  resolved "https://registry.yarnpkg.com/react-intl/-/react-intl-6.3.2.tgz#0816f0943690dbc6186ab1a2968eb378ba9c99f7"
+  dependencies:
+    "@formatjs/ecma402-abstract" "1.14.3"
+    "@formatjs/icu-messageformat-parser" "2.3.0"
+    "@formatjs/intl" "2.6.9"
+    "@formatjs/intl-displaynames" "6.2.6"
+    "@formatjs/intl-listformat" "7.1.9"
+    "@types/hoist-non-react-statics" "^3.3.1"
+    "@types/react" "16 || 17 || 18"
+    hoist-non-react-statics "^3.3.2"
+    intl-messageformat "10.3.3"
     tslib "^2.4.0"
 
 react-intl@^5.24.6:
@@ -6953,9 +7041,9 @@ react-transition-group@^4.3.0:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
-react-window@1.8.7:
-  version "1.8.7"
-  resolved "https://registry.npmjs.org/react-window/-/react-window-1.8.7.tgz"
+react-window@1.8.8:
+  version "1.8.8"
+  resolved "https://registry.yarnpkg.com/react-window/-/react-window-1.8.8.tgz#1b52919f009ddf91970cbdb2050a6c7be44df243"
   dependencies:
     "@babel/runtime" "^7.0.0"
     memoize-one ">=3.1.1 <6"
@@ -7005,7 +7093,7 @@ rechoir@^0.8.0:
   dependencies:
     resolve "^1.20.0"
 
-redux@^4.0.0, redux@^4.1.1, redux@^4.1.2, redux@^4.2.0, redux@^4.2.1:
+redux@^4.0.0, redux@^4.1.2, redux@^4.2.0, redux@^4.2.1:
   version "4.2.1"
   resolved "https://registry.npmjs.org/redux/-/redux-4.2.1.tgz"
   dependencies:
@@ -7268,13 +7356,13 @@ safe-stable-stringify@^2.3.1:
   version "2.1.2"
   resolved "https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.1.2.tgz"
 
-sanitize-html@2.7.3:
-  version "2.7.3"
-  resolved "https://registry.npmjs.org/sanitize-html/-/sanitize-html-2.7.3.tgz"
+sanitize-html@2.10.0:
+  version "2.10.0"
+  resolved "https://registry.yarnpkg.com/sanitize-html/-/sanitize-html-2.10.0.tgz#74d28848dfcf72c39693139131895c78900ab452"
   dependencies:
     deepmerge "^4.2.2"
     escape-string-regexp "^4.0.0"
-    htmlparser2 "^6.0.0"
+    htmlparser2 "^8.0.0"
     is-plain-object "^5.0.0"
     parse-srcset "^1.0.2"
     postcss "^8.3.11"
@@ -7449,6 +7537,10 @@ shebang-regex@^1.0.0:
 shebang-regex@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/shebang-regex/-/shebang-regex-3.0.0.tgz"
+
+shell-quote@^1.7.3:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/shell-quote/-/shell-quote-1.8.0.tgz#20d078d0eaf71d54f43bd2ba14a1b5b9bfa5c8ba"
 
 side-channel@^1.0.4:
   version "1.0.4"
@@ -8224,9 +8316,9 @@ webpack-dev-middleware@^5.3.1:
     range-parser "^1.2.1"
     schema-utils "^4.0.0"
 
-webpack-dev-server@^4.11.1:
-  version "4.11.1"
-  resolved "https://registry.npmjs.org/webpack-dev-server/-/webpack-dev-server-4.11.1.tgz"
+webpack-dev-server@^4.13.1:
+  version "4.13.1"
+  resolved "https://registry.yarnpkg.com/webpack-dev-server/-/webpack-dev-server-4.13.1.tgz#6417a9b5d2f528e7644b68d6ed335e392dccffe8"
   dependencies:
     "@types/bonjour" "^3.5.9"
     "@types/connect-history-api-fallback" "^1.3.5"
@@ -8247,6 +8339,7 @@ webpack-dev-server@^4.11.1:
     html-entities "^2.3.2"
     http-proxy-middleware "^2.0.3"
     ipaddr.js "^2.0.1"
+    launch-editor "^2.6.0"
     open "^8.0.9"
     p-retry "^4.5.0"
     rimraf "^3.0.2"
@@ -8256,7 +8349,7 @@ webpack-dev-server@^4.11.1:
     sockjs "^0.3.24"
     spdy "^4.0.2"
     webpack-dev-middleware "^5.3.1"
-    ws "^8.4.2"
+    ws "^8.13.0"
 
 webpack-merge@^5.7.3:
   version "5.8.0"
@@ -8413,9 +8506,13 @@ write-file-atomic@^3.0.0:
     signal-exit "^3.0.2"
     typedarray-to-buffer "^3.1.5"
 
-ws@8.11.0, ws@^8.4.2:
+ws@8.11.0:
   version "8.11.0"
   resolved "https://registry.npmjs.org/ws/-/ws-8.11.0.tgz"
+
+ws@^8.13.0:
+  version "8.13.0"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-8.13.0.tgz#9a9fb92f93cf41512a0735c8f4dd09b8a1211cd0"
 
 xdg-basedir@^4.0.0:
   version "4.0.0"
