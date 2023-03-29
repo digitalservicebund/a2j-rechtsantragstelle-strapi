@@ -1900,9 +1900,9 @@
     "@strapi/utils" "4.8.2"
     sendmail "^1.6.1"
 
-"@strapi/provider-upload-aws-s3@^4.8.2":
-  version "4.8.2"
-  resolved "https://registry.npmjs.org/@strapi/provider-upload-aws-s3/-/provider-upload-aws-s3-4.8.2.tgz"
+"@strapi/provider-upload-aws-s3@^4.9.0":
+  version "4.9.0"
+  resolved "https://registry.yarnpkg.com/@strapi/provider-upload-aws-s3/-/provider-upload-aws-s3-4.9.0.tgz#08c4b8ff2cdaa32536c97bed1754b9c22e8e8df3"
   dependencies:
     aws-sdk "2.1287.0"
     lodash "4.17.21"
