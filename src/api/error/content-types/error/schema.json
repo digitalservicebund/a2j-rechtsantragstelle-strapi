@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "errors",
+  "info": {
+    "singularName": "error",
+    "pluralName": "errors",
+    "displayName": "Error",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "errorCodes": {
+      "type": "component",
+      "repeatable": true,
+      "component": "form-helper.errors"
+    }
+  }
+}

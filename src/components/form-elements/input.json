@@ -23,10 +23,9 @@
       "required": true
     },
     "errors": {
-      "displayName": "Errors",
-      "type": "component",
-      "repeatable": true,
-      "component": "form-helper.errors"
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::error.error"
     }
   }
 }

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "vorab-check-page",
     "pluralName": "vorab-check-pages",
-    "displayName": "VorabCheckPage"
+    "displayName": "VorabCheckPage",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
