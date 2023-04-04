@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_page_headers",
+  "info": {
+    "displayName": "Header",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "description": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.paragraph"
+    },
+    "header": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.heading"
+    },
+    "hasBackground": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

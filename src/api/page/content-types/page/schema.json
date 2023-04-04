@@ -49,7 +49,10 @@
         "basic.paragraph",
         "form-elements.select",
         "form-helper.select-option",
-        "page.info-box"
+        "page.info-box",
+        "page.header",
+        "page.info-box-item",
+        "page.meta-page-info"
       ]
     }
   }
