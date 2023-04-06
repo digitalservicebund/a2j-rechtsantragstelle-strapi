@@ -1,0 +1,37 @@
+{
+  "kind": "singleType",
+  "collectionName": "footers",
+  "info": {
+    "singularName": "footer",
+    "pluralName": "footers",
+    "displayName": "footer",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "paragraphs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "basic.paragraph"
+    },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "basic.link"
+    }
+  }
+}
