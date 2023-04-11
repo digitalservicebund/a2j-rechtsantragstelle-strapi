@@ -16,6 +16,18 @@
       "required": true,
       "max": 6,
       "min": 1
+    },
+    "style": {
+      "type": "enumeration",
+      "enum": [
+        "heading-01-reg",
+        "heading-02-reg",
+        "heading-03-reg",
+        "heading-03-bold",
+        "subhead"
+      ],
+      "default": "heading-01-reg",
+      "required": true
     }
   }
 }
