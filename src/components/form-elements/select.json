@@ -18,6 +18,9 @@
       "type": "component",
       "repeatable": true,
       "component": "form-helper.select-option"
+    },
+    "altLabel": {
+      "type": "string"
     }
   }
 }
