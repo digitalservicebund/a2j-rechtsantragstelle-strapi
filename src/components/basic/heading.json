@@ -20,13 +20,13 @@
     "style": {
       "type": "enumeration",
       "enum": [
-        "heading-01-reg",
-        "heading-02-reg",
-        "heading-03-reg",
-        "heading-03-bold",
+        "ds-heading-01-reg",
+        "ds-heading-02-reg",
+        "ds-heading-03-reg",
+        "ds-heading-03-bold",
         "subhead"
       ],
-      "default": "heading-01-reg",
+      "default": "ds-heading-01-reg",
       "required": true
     }
   }

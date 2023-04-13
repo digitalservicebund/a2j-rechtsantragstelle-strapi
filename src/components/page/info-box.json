@@ -6,19 +6,15 @@
   },
   "options": {},
   "attributes": {
+    "headline": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.heading"
+    },
     "items": {
-      "displayName": "InfoBoxItem",
       "type": "component",
       "repeatable": true,
-      "component": "page.info-box-item",
-      "required": true
-    },
-    "headlineLevel": {
-      "type": "integer",
-      "required": true,
-      "default": 3,
-      "max": 6,
-      "min": 2
+      "component": "page.info-box-item"
     }
   }
 }

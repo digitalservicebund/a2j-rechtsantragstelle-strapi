@@ -9,11 +9,7 @@
     "label": {
       "type": "string"
     },
-    "headline": {
-      "type": "string",
-      "required": true
-    },
-    "illustration": {
+    "image": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -23,6 +19,9 @@
     },
     "content": {
       "type": "richtext"
+    },
+    "headline": {
+      "type": "string"
     }
   }
 }
