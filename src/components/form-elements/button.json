@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_form_elements_buttons",
+  "info": {
+    "displayName": "Button",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "look": {
+      "type": "enumeration",
+      "enum": [
+        "primary",
+        "secondary",
+        "tertiary",
+        "ghost"
+      ],
+      "default": "primary",
+      "required": false
+    },
+    "size": {
+      "type": "enumeration",
+      "enum": [
+        "large",
+        "medium",
+        "small"
+      ]
+    },
+    "fullWidth": {
+      "type": "boolean",
+      "default": false
+    },
+    "href": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    }
+  }
+}

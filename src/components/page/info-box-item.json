@@ -22,6 +22,11 @@
     },
     "headline": {
       "type": "string"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "form-elements.button"
     }
   }
 }
