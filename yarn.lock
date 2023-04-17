@@ -2156,15 +2156,15 @@
     react-intl "6.3.2"
     yup "^0.32.9"
 
-"@strapi/plugin-i18n@4.9.0":
-  version "4.9.0"
-  resolved "https://registry.npmjs.org/@strapi/plugin-i18n/-/plugin-i18n-4.9.0.tgz"
-  integrity sha512-W/xbnOezK3DvtKqhznKmH6j1OwsNevtvHPh7cNPt0Vp+Tp8l8gSEUzWsWJ/JifzLXRW0OdiQmYnmHlDQaXKL7A==
+"@strapi/plugin-i18n@4.9.1":
+  version "4.9.1"
+  resolved "https://registry.yarnpkg.com/@strapi/plugin-i18n/-/plugin-i18n-4.9.1.tgz#0453446181f4997a59198a1c2dfcab3342aa59ea"
+  integrity sha512-UvvnONCkul8AzD69BbB0kOW933nvKPV1O8LS34uy9AwUXzxkYZWDD0WA+CloiPAiAfN7TNOQLJhchw5qwj1+NQ==
   dependencies:
     "@strapi/design-system" "1.6.6"
-    "@strapi/helper-plugin" "4.9.0"
+    "@strapi/helper-plugin" "4.9.1"
     "@strapi/icons" "1.6.6"
-    "@strapi/utils" "4.9.0"
+    "@strapi/utils" "4.9.1"
     formik "2.2.9"
     immer "9.0.19"
     lodash "4.17.21"
