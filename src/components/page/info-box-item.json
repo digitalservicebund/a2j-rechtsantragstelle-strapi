@@ -7,7 +7,9 @@
   "options": {},
   "attributes": {
     "label": {
-      "type": "string"
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.heading"
     },
     "image": {
       "type": "media",
@@ -21,7 +23,9 @@
       "type": "richtext"
     },
     "headline": {
-      "type": "string"
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.heading"
     },
     "button": {
       "type": "component",
