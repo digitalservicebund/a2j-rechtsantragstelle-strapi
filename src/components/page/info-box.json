@@ -15,6 +15,16 @@
       "type": "component",
       "repeatable": true,
       "component": "page.info-box-item"
+    },
+    "style": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "blue",
+        "yellow"
+      ],
+      "default": "white",
+      "required": true
     }
   }
 }
