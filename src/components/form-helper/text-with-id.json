@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_form_helper_text_with_ids",
+  "info": {
+    "displayName": "TextWithId"
+  },
+  "options": {},
+  "attributes": {
+    "textId": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "component",
+      "repeatable": true,
+      "component": "basic.paragraph"
+    }
+  }
+}
