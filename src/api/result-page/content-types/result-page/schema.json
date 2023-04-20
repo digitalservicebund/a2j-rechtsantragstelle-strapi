@@ -91,6 +91,21 @@
         "page.info-box",
         "page.info-box-item"
       ]
+    },
+    "pageType": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "error",
+        "success",
+        "warning"
+      ],
+      "required": true,
+      "default": "error"
     }
   }
 }
