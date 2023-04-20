@@ -1,0 +1,55 @@
+{
+  "collectionName": "components_meta_containers",
+  "info": {
+    "displayName": "Container",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "backgroundColor": {
+      "type": "enumeration",
+      "enum": [
+        "default",
+        "white",
+        "blue",
+        "yellow"
+      ],
+      "required": true,
+      "default": "default"
+    },
+    "paddingTop": {
+      "type": "enumeration",
+      "enum": [
+        "default",
+        "px0",
+        "px8",
+        "px16",
+        "px24",
+        "px32",
+        "px40",
+        "px48",
+        "px56",
+        "px64"
+      ],
+      "default": "default",
+      "required": true
+    },
+    "paddingBottom": {
+      "type": "enumeration",
+      "enum": [
+        "default",
+        "px0",
+        "px8",
+        "px16",
+        "px24",
+        "px32",
+        "px40",
+        "px48",
+        "px56",
+        "px64"
+      ],
+      "default": "default",
+      "required": true
+    }
+  }
+}

@@ -1,35 +1,28 @@
 {
-  "collectionName": "components_page_info_boxes",
+  "collectionName": "components_page_boxes",
   "info": {
-    "displayName": "InfoBox",
+    "displayName": "Box",
     "description": ""
   },
   "options": {},
   "attributes": {
-    "headline": {
-      "type": "component",
-      "repeatable": false,
-      "component": "basic.heading"
-    },
-    "items": {
-      "type": "component",
-      "repeatable": true,
-      "component": "page.info-box-item"
-    },
-    "style": {
-      "type": "enumeration",
-      "enum": [
-        "white",
-        "blue",
-        "yellow"
-      ],
-      "default": "white",
-      "required": true
+    "label": {
+      "type": "string"
     },
     "heading": {
       "type": "component",
       "repeatable": false,
       "component": "basic.heading"
+    },
+    "content": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.paragraph"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "form-elements.button"
     },
     "background": {
       "type": "component",

@@ -1,0 +1,55 @@
+{
+  "collectionName": "components_meta_backgrounds",
+  "info": {
+    "displayName": "Background",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "default",
+        "white",
+        "blue",
+        "yellow"
+      ],
+      "default": "default",
+      "required": true
+    },
+    "paddingTop": {
+      "type": "enumeration",
+      "enum": [
+        "default",
+        "px0",
+        "px8",
+        "px16",
+        "px24",
+        "px32",
+        "px40",
+        "px48",
+        "px56",
+        "px64"
+      ],
+      "default": "default",
+      "required": true
+    },
+    "paddingBottom": {
+      "type": "enumeration",
+      "enum": [
+        "default",
+        "px0",
+        "px8",
+        "px16",
+        "px24",
+        "px32",
+        "px40",
+        "px48",
+        "px56",
+        "px64"
+      ],
+      "default": "default",
+      "required": true
+    }
+  }
+}
