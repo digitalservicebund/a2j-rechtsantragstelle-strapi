@@ -66,17 +66,6 @@
       },
       "type": "string"
     },
-    "reasoning": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "dynamiczone",
-      "components": [
-        "form-helper.text-with-id"
-      ]
-    },
     "freeZone": {
       "pluginOptions": {
         "i18n": {
@@ -116,6 +105,11 @@
         }
       },
       "component": "basic.link"
+    },
+    "reasonings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::element-with-id.element-with-id"
     }
   }
 }
