@@ -106,6 +106,16 @@
       ],
       "required": true,
       "default": "error"
+    },
+    "nextLink": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "basic.link"
     }
   }
 }
