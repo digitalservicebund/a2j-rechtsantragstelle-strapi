@@ -50,7 +50,8 @@
         "form-elements.select",
         "page.info-box",
         "page.header",
-        "page.meta-page-info"
+        "page.meta-page-info",
+        "page.box"
       ]
     }
   }

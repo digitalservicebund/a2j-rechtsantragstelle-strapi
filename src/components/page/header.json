@@ -19,6 +19,28 @@
     "hasBackground": {
       "type": "boolean",
       "default": true
+    },
+    "heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.heading",
+      "required": true
+    },
+    "content": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.paragraph"
+    },
+    "background": {
+      "type": "component",
+      "repeatable": false,
+      "component": "meta.background"
+    },
+    "container": {
+      "type": "component",
+      "repeatable": false,
+      "component": "meta.container",
+      "required": true
     }
   }
 }
