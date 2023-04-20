@@ -6,7 +6,7 @@
   },
   "options": {},
   "attributes": {
-    "color": {
+    "backgroundColor": {
       "type": "enumeration",
       "enum": [
         "default",
