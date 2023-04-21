@@ -88,11 +88,7 @@
         }
       },
       "type": "enumeration",
-      "enum": [
-        "error",
-        "success",
-        "warning"
-      ],
+      "enum": ["error", "success", "warning"],
       "required": true,
       "default": "error"
     },
@@ -109,6 +105,11 @@
     "reasonings": {
       "type": "relation",
       "relation": "oneToMany",
+      "target": "api::element-with-id.element-with-id"
+    },
+    "documents": {
+      "type": "relation",
+      "relation": "oneToOne",
       "target": "api::element-with-id.element-with-id"
     }
   }
