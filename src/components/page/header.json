@@ -6,20 +6,6 @@
   },
   "options": {},
   "attributes": {
-    "description": {
-      "type": "component",
-      "repeatable": false,
-      "component": "basic.paragraph"
-    },
-    "header": {
-      "type": "component",
-      "repeatable": false,
-      "component": "basic.heading"
-    },
-    "hasBackground": {
-      "type": "boolean",
-      "default": true
-    },
     "heading": {
       "type": "component",
       "repeatable": false,
