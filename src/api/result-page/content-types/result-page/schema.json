@@ -111,6 +111,11 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::element-with-id.element-with-id"
+    },
+    "nextSteps": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::element-with-id.element-with-id"
     }
   }
 }
