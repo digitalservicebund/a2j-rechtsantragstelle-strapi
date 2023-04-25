@@ -4,7 +4,8 @@
   "info": {
     "singularName": "vorab-check-common",
     "pluralName": "vorab-check-commons",
-    "displayName": "VorabCheckCommon"
+    "displayName": "VorabCheckCommon",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,6 +17,38 @@
   },
   "attributes": {
     "progressBarLabel": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "resultHintLabel": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "backButtonDefaultLabel": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "nextButtonDefaultLabel": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "lastNextButtonLabel": {
       "pluginOptions": {
         "i18n": {
           "localized": true
