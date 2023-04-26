@@ -26,6 +26,9 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::error.error"
+    },
+    "placeholder": {
+      "type": "string"
     }
   }
 }
