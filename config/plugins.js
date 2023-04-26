@@ -11,9 +11,11 @@ module.exports = ({ env }) => {
       config: {
         provider: 'aws-s3',
         providerOptions: {
-          endpoint: env('OBS_ENDPOINT'),
-          params: {
-            Bucket: env('OBS_BUCKET_NAME'),
+          s3Options: {
+            endpoint: env('OBS_ENDPOINT'),
+            params: {
+              Bucket: env('OBS_BUCKET_NAME'),
+            },
           },
         },
       },
