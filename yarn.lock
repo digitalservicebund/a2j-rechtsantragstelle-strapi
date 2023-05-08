@@ -1132,13 +1132,6 @@
   dependencies:
     "@emotion/memoize" "0.7.4"
 
-"@emotion/is-prop-valid@^1.1.0":
-  version "1.2.0"
-  resolved "https://registry.npmjs.org/@emotion/is-prop-valid/-/is-prop-valid-1.2.0.tgz"
-  integrity sha512-3aDpDprjM0AwaxGE09bOPkNxHpBd+kA6jty3RnaEXdweX1DF1U3VQpPYb0g1IStAuK7SVQ1cy+bNBBKp4W3Fjg==
-  dependencies:
-    "@emotion/memoize" "^0.8.0"
-
 "@emotion/memoize@0.7.4":
   version "0.7.4"
   resolved "https://registry.npmjs.org/@emotion/memoize/-/memoize-0.7.4.tgz"
@@ -9028,10 +9021,10 @@ std-env@^3.0.1:
   resolved "https://registry.npmjs.org/std-env/-/std-env-3.3.3.tgz"
   integrity sha512-Rz6yejtVyWnVjC1RFvNmYL10kgjC49EOghxWn0RFqlCHGFpQx+Xe7yW3I4ceK1SGrWIGMjD5Kbue8W/udkbMJg==
 
-strapi-plugin-menus@^1.3.2:
-  version "1.3.2"
-  resolved "https://registry.npmjs.org/strapi-plugin-menus/-/strapi-plugin-menus-1.3.2.tgz"
-  integrity sha512-gzezwSl5q2qs+1cbAzLgiKk1GJeoyTOfUwdf1MlJIb1K73bbEiHBAgq6C+u3Y0cSTJflyBi270j1tzHytZBvPg==
+strapi-plugin-menus@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/strapi-plugin-menus/-/strapi-plugin-menus-1.4.1.tgz#c3fb500a300ce369a9c45f02fd2c1b4107679990"
+  integrity sha512-CcguAuS6a88lFav9Vll0G80jgno2FlXUSZIxicU5m6ODo4mSUpZeM19N9VTBvJn7cpyWPcKFcMsIOyTF2jKp8g==
   dependencies:
     axios "^0.27.2"
     lodash "4.17.21"
@@ -9046,7 +9039,7 @@ strapi-plugin-menus@^1.3.2:
     react-redux "^7.2.6"
     react-router-dom "^6.2.1"
     react-select "^5.2.2"
-    styled-components "^5.3.3"
+    styled-components "5.3.3"
 
 strapi-plugin-populate-deep@^2.0.0:
   version "2.0.0"
@@ -9157,22 +9150,6 @@ styled-components@5.3.3:
     "@babel/helper-module-imports" "^7.0.0"
     "@babel/traverse" "^7.4.5"
     "@emotion/is-prop-valid" "^0.8.8"
-    "@emotion/stylis" "^0.8.4"
-    "@emotion/unitless" "^0.7.4"
-    babel-plugin-styled-components ">= 1.12.0"
-    css-to-react-native "^3.0.0"
-    hoist-non-react-statics "^3.0.0"
-    shallowequal "^1.1.0"
-    supports-color "^5.5.0"
-
-styled-components@^5.3.3:
-  version "5.3.9"
-  resolved "https://registry.npmjs.org/styled-components/-/styled-components-5.3.9.tgz"
-  integrity sha512-Aj3kb13B75DQBo2oRwRa/APdB5rSmwUfN5exyarpX+x/tlM/rwZA2vVk2vQgVSP6WKaZJHWwiFrzgHt+CLtB4A==
-  dependencies:
-    "@babel/helper-module-imports" "^7.0.0"
-    "@babel/traverse" "^7.4.5"
-    "@emotion/is-prop-valid" "^1.1.0"
     "@emotion/stylis" "^0.8.4"
     "@emotion/unitless" "^0.7.4"
     babel-plugin-styled-components ">= 1.12.0"
