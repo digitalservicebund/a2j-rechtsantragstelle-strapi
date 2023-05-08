@@ -10,31 +10,6 @@
       "type": "string",
       "required": true
     },
-    "level": {
-      "type": "integer",
-      "default": 1,
-      "required": true,
-      "max": 6,
-      "min": 1
-    },
-    "style": {
-      "type": "enumeration",
-      "enum": [
-        "ds-heading-01-reg",
-        "ds-heading-02-reg",
-        "ds-heading-03-reg",
-        "ds-heading-03-bold",
-        "subhead",
-        "ds-label-01-reg",
-        "ds-label-01-bold",
-        "ds-label-02-reg",
-        "ds-label-02-bold",
-        "ds-label-03-reg",
-        "ds-label-03-bold"
-      ],
-      "default": "ds-heading-01-reg",
-      "required": true
-    },
     "tagName": {
       "type": "enumeration",
       "enum": [
