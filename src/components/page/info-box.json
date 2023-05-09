@@ -26,6 +26,11 @@
       "repeatable": false,
       "component": "meta.container",
       "required": true
+    },
+    "outerBackground": {
+      "type": "component",
+      "repeatable": false,
+      "component": "meta.background"
     }
   }
 }
