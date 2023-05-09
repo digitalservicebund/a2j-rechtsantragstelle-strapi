@@ -17,11 +17,6 @@
       "repeatable": false,
       "component": "basic.paragraph"
     },
-    "background": {
-      "type": "component",
-      "repeatable": false,
-      "component": "meta.background"
-    },
     "container": {
       "type": "component",
       "repeatable": false,

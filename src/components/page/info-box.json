@@ -16,11 +16,6 @@
       "repeatable": true,
       "component": "page.info-box-item"
     },
-    "background": {
-      "type": "component",
-      "repeatable": false,
-      "component": "meta.background"
-    },
     "container": {
       "type": "component",
       "repeatable": false,

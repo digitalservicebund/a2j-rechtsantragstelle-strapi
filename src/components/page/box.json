@@ -26,11 +26,6 @@
       "repeatable": false,
       "component": "form-elements.button"
     },
-    "background": {
-      "type": "component",
-      "repeatable": false,
-      "component": "meta.background"
-    },
     "container": {
       "type": "component",
       "repeatable": false,
