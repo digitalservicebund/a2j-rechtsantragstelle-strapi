@@ -4,7 +4,8 @@
   "info": {
     "singularName": "element-with-id",
     "pluralName": "element-with-ids",
-    "displayName": "ElementWithId"
+    "displayName": "ElementWithId",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -42,7 +43,8 @@
         "form-elements.select",
         "form-helper.errors",
         "page.info-box-item",
-        "page.info-box"
+        "page.info-box",
+        "page.box"
       ],
       "required": true
     }
