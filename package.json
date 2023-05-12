@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@strapi/plugin-i18n": "4.10.4",
-    "@strapi/plugin-users-permissions": "4.10.4",
+    "@strapi/plugin-users-permissions": "4.10.5",
     "@strapi/provider-upload-aws-s3": "^4.10.4",
     "@strapi/strapi": "4.10.4",
     "file-saver": "^2.0.5",
