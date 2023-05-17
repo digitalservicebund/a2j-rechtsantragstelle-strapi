@@ -1,6 +1,6 @@
 FROM node:18-alpine
 
-ARG NODE_ENV=development
+ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}
 RUN echo "Building for NODE_ENV: ${NODE_ENV}"
 

@@ -1,18 +1,15 @@
 # 🚀 Getting started with Strapi
 
-## Quickstart
+## Quickstart (local)
 
-1. Copy `.env.example` to `.env`
-2. Build and start the application's containers
+1. Create .env file from template: `$ cp .env.example .env`
+2. Build and start the application's containers: `docker compose up`
 
-```bash
-cp .env.example .env
-docker compose up
-```
+3. Visit http://localhost:1337/admin/
+4. Under Settings > Internationalization: Add `German (de)` & set it as default
+5. Under Settings > API Tokens: Add new token and copy it to the `.env` of the A2J webapp
 
-1. Visit http://localhost:1337/admin/
-2. Under Settings > Internationalization: Add `German (de)` & set it as default
-3. Under Settings > API Tokens: Add new token and copy it to the `.env` of the A2J webapp
+To start a production environment change `NODE_ENV=production` inside `.env`.
 
 ### Troubleshooting
 
