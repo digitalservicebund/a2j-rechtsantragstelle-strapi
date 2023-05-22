@@ -10,7 +10,11 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "image": {
       "type": "media",
@@ -21,17 +25,32 @@
         "files",
         "videos",
         "audios"
-      ]
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "paragraphs": {
       "type": "component",
       "repeatable": true,
-      "component": "basic.paragraph"
+      "component": "basic.paragraph",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "links": {
       "type": "component",
       "repeatable": true,
-      "component": "basic.link"
+      "component": "basic.link",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
