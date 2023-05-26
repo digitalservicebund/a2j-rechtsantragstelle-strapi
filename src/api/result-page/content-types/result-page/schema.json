@@ -34,7 +34,8 @@
           "localized": true
         }
       },
-      "component": "page.meta-page-info"
+      "component": "page.meta-page-info",
+      "required": true
     },
     "heading": {
       "type": "component",
@@ -88,7 +89,11 @@
         }
       },
       "type": "enumeration",
-      "enum": ["error", "success", "warning"],
+      "enum": [
+        "error",
+        "success",
+        "warning"
+      ],
       "required": true,
       "default": "error"
     },

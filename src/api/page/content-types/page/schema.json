@@ -34,7 +34,8 @@
           "localized": true
         }
       },
-      "component": "page.meta-page-info"
+      "component": "page.meta-page-info",
+      "required": true
     },
     "content": {
       "pluginOptions": {
