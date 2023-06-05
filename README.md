@@ -1,129 +1,40 @@
 # 🚀 Getting started with Strapi
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html) (CLI) which lets you scaffold and manage your project in seconds.
+## Quickstart (local)
 
-## Setup for Local Usage
-- Copy `.env.example` to `.env`
-- Build and start the application's containers:
-```
-docker-compose build
-docker-compose up
-```
-- Go to http://localhost:1337/admin/
-- Under Settings > Internationalization
-  - Add German (de)
-  - Set it as default
-- Under Settings > API Tokens: Add new token and copy it to the `.env` of the A2J webapp
+1. Create .env file from template: `$ cp .env.example .env`
+2. Build and start the application's containers: `docker compose up`
+
+3. Visit http://localhost:1337/admin/
+4. Under Settings > Internationalization: Add `German (de)` & set it as default
+5. Under Settings > API Tokens: Add new token and copy it to the `.env` of the A2J webapp
+
+To start a production environment change `NODE_ENV=production` inside `.env`.
 
 ### Troubleshooting
+
 If you get an error like `ECONNREFUSED 172.**.*.*:5431` on Mac, this is a [known issue](https://github.com/docker/compose/issues/4783#issuecomment-301778969). Just remove the port binding to 5431 for it to work.
 
-## Docker
+## Strapi CLI
 
-If you change the admin panel or it's your first start (plugins, configs, ...) execute:
-```
-npm run build
-# or
-yarn build
-```
+Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI)
 
-Build our plugins:
-
-```
-cd src/plugins/content-export-import && yarn install
-```
-
-Build the application with docker:
-
-```
-docker-compose build
-```
-
-Start the docker container:
-
-```
-docker-compose up
-```
-
-### `develop`
-
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-develop)
-
-```
-npm run develop
-# or
-yarn develop
-```
-
-### `start`
-
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-start)
-
-```
+```bash
+# Start strapi instance
 npm run start
-# or
-yarn start
-```
 
-### `build`
+# Start strapi instance  with autoreload enabled
+npm run develop
 
-Build your admin panel. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-build)
-
-```
+# Build admin panel
 npm run build
-# or
-yarn build
 ```
 
 ## Plugins
 
-add a plugin with:
+To add a plugin, install it & rebuild the container:
 
-```
-yarn add strapi-plugin-navigation
-```
-
-and after installation execute:
-
-```
-docker-compose build
-```
-
-Compile our plugins:
-
-```
-cd plugins/content-export-import
-npm install
-```
-
-## ⚙️ Deployment
-
-Strapi gives you many possible deployment options for your project. Find the one that suits you on the [deployment section of the documentation](https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/deployment.html).
-
-## 📚 Learn more
-
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://docs.strapi.io) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
-
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
-
-## ✨ Community
-
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
-
----
-
-## Known Issues
-
-Error: The "path" argument must be of type string. Received undefined
-
-```
-npm run build
-docker-compose build
-docker-compose up
+```bash
+npm install --save strapi-plugin-navigation
+docker compose build
 ```
