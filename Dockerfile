@@ -1,21 +1,24 @@
 FROM node:18-alpine
-
-ARG NODE_ENV=production
+# Installing libvips-dev for sharp Compatability
+RUN apk update && apk add  build-base gcc autoconf automake zlib-dev libpng-dev nasm bash vips-dev postgresql
+ARG NODE_ENV=development
 ENV NODE_ENV=${NODE_ENV}
-RUN echo "Building for NODE_ENV: ${NODE_ENV}"
-
-# Installing libvips-dev for sharp compatibility
-RUN apk add --update --no-cache vips-dev
 
 WORKDIR /opt/
-COPY ./package.json ./package-lock.json ./
+COPY ./package.json ./yarn.lock ./
 ENV PATH /opt/node_modules/.bin:$PATH
-RUN npm install
+
+RUN yarn config set network-timeout 600000 -g && mkdir -p /tmp/.yarn-cache && yarn install --cache-folder /tmp/.yarn-cache
 
 WORKDIR /opt/app
 COPY ./ .
-RUN npm run build
-
+RUN yarn build
+RUN mkdir -p /opt/app/database/migrations
+RUN chown 1000:1000 -R /opt/app
 EXPOSE 1337
-CMD exec npm run $([[ "$NODE_ENV" == "development" ]] && echo "develop" || echo "start")
+# Override entrypoint
+ENTRYPOINT []
+CMD ["yarn", "develop"]
+
+
 
