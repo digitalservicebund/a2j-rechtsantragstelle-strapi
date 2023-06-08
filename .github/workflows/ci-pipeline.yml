@@ -29,6 +29,8 @@ jobs:
         working-directory: ./src/plugins/content-export-import
       - name: Run build
         run: npm run build
+      - name: Run test
+        run: npm run test
 
   build-push-image:
     needs: [build-strapi]
@@ -77,25 +79,25 @@ jobs:
           docker tag ${{ env.IMAGE_NAME }}:${{ github.sha }} ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
           docker push --all-tags ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
   deploy-staging:
-      needs: [build-push-image]
-      if: github.ref == 'refs/heads/main'
-      runs-on: ubuntu-latest
-      environment: staging
-      steps:
-        - name: Check out strapi infra repo
-          uses: actions/checkout@v3
-          with:
-            repository: digitalservicebund/a2j-rechtsantragstelle-strapi-infra
-            ssh-key: ${{ secrets.DEPLOY_KEY }}
+    needs: [build-push-image]
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment: staging
+    steps:
+      - name: Check out strapi infra repo
+        uses: actions/checkout@v3
+        with:
+          repository: digitalservicebund/a2j-rechtsantragstelle-strapi-infra
+          ssh-key: ${{ secrets.DEPLOY_KEY }}
 
-        - name: Update image tag for staging
-          run: |
-            cd manifests/overlays/staging
-            kustomize edit set image ghcr.io/digitalservicebund/a2j-rechtsantragstelle-strapi:${{ github.sha }}
-        - name: Commit and push
-          uses: EndBug/add-and-commit@61a88be553afe4206585b31aa72387c64295d08b
-          with:
-            add: "manifests/overlays/staging/kustomization.yaml"
-            message: "Update staging image to ${{ github.sha }}"
-            pathspec_error_handling: exitImmediately
-            push: true
+      - name: Update image tag for staging
+        run: |
+          cd manifests/overlays/staging
+          kustomize edit set image ghcr.io/digitalservicebund/a2j-rechtsantragstelle-strapi:${{ github.sha }}
+      - name: Commit and push
+        uses: EndBug/add-and-commit@61a88be553afe4206585b31aa72387c64295d08b
+        with:
+          add: "manifests/overlays/staging/kustomization.yaml"
+          message: "Update staging image to ${{ github.sha }}"
+          pathspec_error_handling: exitImmediately
+          push: true
