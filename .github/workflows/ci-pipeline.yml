@@ -31,6 +31,8 @@ jobs:
         run: npm run build
       - name: Run test
         run: npm run test
+        env:
+          APP_KEYS: "toBeModified1,toBeModified2"
 
   build-push-image:
     needs: [build-strapi]
