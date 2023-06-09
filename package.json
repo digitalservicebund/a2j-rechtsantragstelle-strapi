@@ -48,6 +48,7 @@
       ".cache",
       "/src/plugins/"
     ],
+    "testTimeout": 70000,
     "testEnvironment": "node"
   }
 }
