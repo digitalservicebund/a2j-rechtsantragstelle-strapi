@@ -2,6 +2,7 @@ const fs = require("fs");
 const { setupStrapi, cleanupStrapi } = require("./helpers/strapi");
 
 beforeAll(async () => {
+  console.log(`Running tests in NODE_ENV: ${process.env.NODE_ENV}`);
   await setupStrapi();
 });
 

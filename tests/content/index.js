@@ -1,6 +1,6 @@
 const request = require("supertest");
 
-it("should return users data for authenticated user", async () => {
+it("returns single type with populate=deep and locale=all for authenticated users", async () => {
   const defaultRole = await strapi
     .query("plugin::users-permissions.role")
     .findOne({}, []);
