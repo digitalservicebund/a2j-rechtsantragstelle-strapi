@@ -20,12 +20,17 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
-      - name: Checkout strapi
+      - name: Checkout repo
         uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18.x"
+          cache: "npm"
       - name: Install dependencies
-        run: npm install
+        run: npm ci --include=dev
       - name: Install dependencies for plugins
-        run: npm install
+        run: npm ci
         working-directory: ./src/plugins/content-export-import
       - name: Run build
         run: npm run build
