@@ -8,7 +8,7 @@ WORKDIR /opt/
 COPY ./package.json ./yarn.lock ./
 ENV PATH /opt/node_modules/.bin:$PATH
 
-RUN yarn config set network-timeout 600000 -g && mkdir -p /tmp/.yarn-cache && yarn install --cache-folder /tmp/.yarn-cache
+RUN yarn config set network-timeout 600000 -g && yarn install
 
 WORKDIR /opt/app
 COPY ./ .

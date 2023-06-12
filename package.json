@@ -20,6 +20,7 @@
     "patch-package": "^7.0.0",
     "pg": "^8.11.0",
     "pluralize": "^8.0.0",
+    "postinstall-postinstall": "^2.1.0",
     "strapi-plugin-menus": "^1.4.1",
     "strapi-plugin-populate-deep": "^2.0.0"
   },
