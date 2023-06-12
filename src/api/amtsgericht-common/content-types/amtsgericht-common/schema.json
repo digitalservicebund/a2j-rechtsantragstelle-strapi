@@ -16,7 +16,7 @@
     }
   },
   "attributes": {
-    "ergebnisHeading": {
+    "featureName": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -25,7 +25,7 @@
       "type": "string",
       "required": true
     },
-    "ergebnisLabel": {
+    "resultHeading": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -34,7 +34,7 @@
       "type": "string",
       "required": true
     },
-    "ergebnisAddress": {
+    "resultAddress": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -43,7 +43,7 @@
       "type": "string",
       "required": true
     },
-    "ergebnisTelephone": {
+    "resultPhone": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -52,7 +52,16 @@
       "type": "string",
       "required": true
     },
-    "ergebnisWebsite": {
+    "resultWebsite": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true
+    },
+    "searchHeading": {
       "pluginOptions": {
         "i18n": {
           "localized": true
