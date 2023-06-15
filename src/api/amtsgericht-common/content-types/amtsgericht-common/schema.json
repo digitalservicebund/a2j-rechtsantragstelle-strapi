@@ -97,6 +97,15 @@
       "type": "string",
       "required": true
     },
+    "resultListSubHeading": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true
+    },
     "resultListHeading": {
       "pluginOptions": {
         "i18n": {
