@@ -1,24 +1,31 @@
-FROM node:18-alpine
-# Installing libvips-dev for sharp Compatability
-RUN apk update && apk add  build-base gcc autoconf automake zlib-dev libpng-dev nasm bash vips-dev postgresql
-ARG NODE_ENV=development
+# Adapted from https://docs.strapi.io/dev-docs/installation/docker#production-dockerfile
+# Creating multi-stage build for production
+FROM node:18-alpine AS build
+RUN apk update && apk add --no-cache build-base zlib-dev libpng-dev vips-dev > /dev/null 2>&1
+ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}
 
 WORKDIR /opt/
-COPY ./package.json ./yarn.lock ./
+COPY package.json package-lock.json ./
 COPY ./patches/strapi-plugin-populate-deep+2.0.0.patch ./patches/
+RUN npm ci --omit=dev
 ENV PATH /opt/node_modules/.bin:$PATH
-RUN yarn config set network-timeout 600000 -g && mkdir -p /tmp/.yarn-cache && yarn install --cache-folder /tmp/.yarn-cache
-
 WORKDIR /opt/app
-COPY ./ .
-RUN yarn build
-RUN mkdir -p /opt/app/database/migrations
-RUN chown 1000:1000 -R /opt/app
+COPY . .
+RUN npm run build
+
+# Creating final production image
+FROM node:18-alpine
+RUN apk add --no-cache vips-dev
+ARG NODE_ENV=production
+ENV NODE_ENV=${NODE_ENV}
+WORKDIR /opt/
+COPY --from=build /opt/node_modules ./node_modules
+WORKDIR /opt/app
+COPY --from=build /opt/app ./
+ENV PATH /opt/node_modules/.bin:$PATH
+
+RUN chown -R node:node /opt/app
+USER node
 EXPOSE 1337
-# Override entrypoint
-ENTRYPOINT []
-CMD ["yarn", "develop"]
-
-
-
+CMD ["npm", "run", "start"]
