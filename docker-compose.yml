@@ -9,6 +9,7 @@ services:
     image: strapi:latest
     restart: unless-stopped
     env_file: .env
+    read_only: true
     environment:
       DATABASE_CLIENT: ${DATABASE_CLIENT}
       DATABASE_HOST: strapiDB

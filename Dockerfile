@@ -28,4 +28,5 @@ ENV PATH /opt/node_modules/.bin:$PATH
 RUN chown -R node:node /opt/app
 USER node
 EXPOSE 1337
-CMD ["npm", "run", "start"]
+# Avoiding NPM as it wants to read to /.npm/ which doesn't work in read-only
+CMD ["strapi", "start"]
