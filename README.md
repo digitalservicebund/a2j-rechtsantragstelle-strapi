@@ -27,12 +27,6 @@ npm run build
 yarn build
 ```
 
-Build our plugins:
-
-```
-cd src/plugins/content-export-import && yarn install
-```
-
 Build the application with docker:
 
 ```
@@ -87,13 +81,6 @@ and after installation execute:
 
 ```
 docker-compose build
-```
-
-Compile our plugins:
-
-```
-cd plugins/content-export-import
-npm install
 ```
 
 ## ⚙️ Deployment

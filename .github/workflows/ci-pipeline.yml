@@ -29,9 +29,6 @@ jobs:
           cache: "npm"
       - name: Install dependencies
         run: npm ci --include=dev
-      - name: Install dependencies for plugins
-        run: npm ci
-        working-directory: ./src/plugins/content-export-import
       - name: Run build
         run: npm run build
       - name: Run test
