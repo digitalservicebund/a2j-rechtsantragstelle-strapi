@@ -20,7 +20,7 @@ If you get an error like `ECONNREFUSED 172.**.*.*:5431` on Mac, this is a [known
 
 ## Strapi CLI
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI)
+Strapi comes with a fully featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI)
 
 ```bash
 # Start strapi instance
@@ -29,15 +29,6 @@ npm run start
 # Build admin panel
 npm run build
 
-# Start strapi instance with autoreload enabled
+# Start strapi instance with autoreload & content builder enabled
 npm run develop
-```
-
-## Plugins
-
-To add a plugin, install it & rebuild the container:
-
-```bash
-npm install --save strapi-plugin-navigation
-docker compose build
 ```
