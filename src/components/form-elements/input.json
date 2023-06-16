@@ -15,10 +15,7 @@
     },
     "type": {
       "type": "enumeration",
-      "enum": [
-        "text",
-        "number"
-      ],
+      "enum": ["text", "number"],
       "default": "text",
       "required": true
     },
@@ -28,6 +25,9 @@
       "target": "api::error.error"
     },
     "placeholder": {
+      "type": "string"
+    },
+    "suffix": {
       "type": "string"
     }
   }
