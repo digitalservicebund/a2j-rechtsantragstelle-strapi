@@ -15,7 +15,7 @@
         "ghost"
       ],
       "default": "primary",
-      "required": false
+      "required": true
     },
     "size": {
       "type": "enumeration",
@@ -23,11 +23,13 @@
         "large",
         "medium",
         "small"
-      ]
+      ],
+      "required": true
     },
     "fullWidth": {
       "type": "boolean",
-      "default": false
+      "default": false,
+      "required": true
     },
     "href": {
       "type": "string"
