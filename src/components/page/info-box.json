@@ -6,6 +6,10 @@
   },
   "options": {},
   "attributes": {
+    "identifier": {
+      "type": "string",
+      "unique": true
+    },
     "heading": {
       "type": "component",
       "repeatable": false,
