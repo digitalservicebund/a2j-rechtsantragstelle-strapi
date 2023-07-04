@@ -52,7 +52,8 @@
         "page.info-box",
         "page.header",
         "page.meta-page-info",
-        "page.box"
+        "page.box",
+        "page.link-list-box"
       ],
       "required": true
     }

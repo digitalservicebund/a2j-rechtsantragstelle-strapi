@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_page_link_list_boxes",
+  "info": {
+    "displayName": "LinkListBox",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "identifier": {
+      "type": "string"
+    },
+    "label": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.heading"
+    },
+    "heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.heading"
+    },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "basic.link"
+    },
+    "container": {
+      "type": "component",
+      "repeatable": false,
+      "component": "meta.container"
+    },
+    "outerBackground": {
+      "type": "component",
+      "repeatable": false,
+      "component": "meta.container"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "form-elements.button"
+    }
+  }
+}
