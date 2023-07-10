@@ -43,7 +43,8 @@
         "basic.paragraph",
         "page.info-box-item",
         "page.info-box",
-        "page.meta-page-info"
+        "page.meta-page-info",
+        "page.box-with-image"
       ],
       "pluginOptions": {
         "i18n": {

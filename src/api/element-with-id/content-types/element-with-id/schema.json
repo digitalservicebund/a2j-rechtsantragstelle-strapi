@@ -43,7 +43,8 @@
         "form-helper.errors",
         "page.info-box-item",
         "page.info-box",
-        "page.box"
+        "page.box",
+        "page.box-with-image"
       ],
       "required": true
     }

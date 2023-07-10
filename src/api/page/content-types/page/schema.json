@@ -53,7 +53,8 @@
         "page.header",
         "page.meta-page-info",
         "page.box",
-        "page.link-list-box"
+        "page.link-list-box",
+        "page.box-with-image"
       ],
       "required": true
     }
