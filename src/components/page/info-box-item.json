@@ -34,6 +34,11 @@
       "type": "component",
       "repeatable": false,
       "component": "form-elements.button"
+    },
+    "buttons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "form-elements.button"
     }
   }
 }
