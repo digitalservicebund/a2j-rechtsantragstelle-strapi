@@ -13,6 +13,9 @@
   "pluginOptions": {
     "i18n": {
       "localized": true
+    },
+    "versions": {
+      "versioned": true
     }
   },
   "attributes": {
