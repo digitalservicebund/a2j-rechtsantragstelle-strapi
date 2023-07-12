@@ -8,12 +8,7 @@
   "attributes": {
     "backgroundColor": {
       "type": "enumeration",
-      "enum": [
-        "default",
-        "white",
-        "blue",
-        "yellow"
-      ],
+      "enum": ["default", "white", "blue", "darkBlue", "yellow"],
       "default": "default",
       "required": true
     },
