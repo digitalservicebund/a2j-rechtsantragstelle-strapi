@@ -32,7 +32,7 @@
     "outerBackground": {
       "type": "component",
       "repeatable": false,
-      "component": "meta.container"
+      "component": "meta.background"
     },
     "button": {
       "type": "component",
