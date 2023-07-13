@@ -8,13 +8,12 @@
   "attributes": {
     "backgroundColor": {
       "type": "enumeration",
-      "enum": ["default", "white", "blue", "yellow"],
-      "required": true,
-      "default": "default"
-    },
-    "textColor": {
-      "type": "enumeration",
-      "enum": ["default", "black", "white"],
+      "enum": [
+        "default",
+        "white",
+        "blue",
+        "yellow"
+      ],
       "required": true,
       "default": "default"
     },
