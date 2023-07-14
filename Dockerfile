@@ -7,7 +7,7 @@ ENV NODE_ENV=${NODE_ENV}
 
 WORKDIR /opt/
 COPY package.json package-lock.json ./
-COPY ./patches/strapi-plugin-populate-deep+2.0.0.patch ./patches/
+COPY ./patches/* ./patches/
 RUN npm ci --omit=dev
 ENV PATH /opt/node_modules/.bin:$PATH
 WORKDIR /opt/app
