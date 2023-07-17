@@ -48,10 +48,6 @@
       },
       "type": "dynamiczone",
       "components": [
-        "basic.heading",
-        "form-elements.input",
-        "basic.paragraph",
-        "form-elements.select",
         "page.info-box",
         "page.header",
         "page.meta-page-info",
