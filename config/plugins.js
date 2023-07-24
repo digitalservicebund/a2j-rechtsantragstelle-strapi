@@ -1,9 +1,5 @@
 module.exports = ({ env }) => {
-  const config = {
-    "content-versioning": {
-      enabled: true,
-    },
-  };
+  const config = {};
   if (env("OBS_ENDPOINT") && env("OBS_BUCKET_NAME")) {
     Object.assign(config, {
       upload: {
