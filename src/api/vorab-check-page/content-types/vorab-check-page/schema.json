@@ -7,62 +7,30 @@
     "displayName": "VorabCheckPage",
     "description": ""
   },
-  "options": {
-    "draftAndPublish": true
-  },
-  "pluginOptions": {
-    "i18n": {
-      "localized": true
-    }
-  },
+  "options": { "draftAndPublish": true },
+  "pluginOptions": { "i18n": { "localized": true } },
   "attributes": {
     "slug": {
       "type": "string",
       "required": true,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+      "pluginOptions": { "i18n": { "localized": true } }
     },
     "meta": {
       "type": "component",
       "repeatable": false,
       "component": "page.meta-page-info",
       "required": true,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+      "pluginOptions": { "i18n": { "localized": true } }
     },
     "pre_form": {
       "type": "dynamiczone",
-      "components": [
-        "basic.heading",
-        "basic.paragraph",
-        "page.info-box-item",
-        "page.info-box",
-        "page.meta-page-info",
-        "page.box-with-image"
-      ],
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+      "components": ["basic.heading", "basic.paragraph"],
+      "pluginOptions": { "i18n": { "localized": true } }
     },
     "form": {
       "type": "dynamiczone",
-      "components": [
-        "form-elements.input",
-        "form-elements.select"
-      ],
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+      "components": ["form-elements.input", "form-elements.select"],
+      "pluginOptions": { "i18n": { "localized": true } }
     }
   }
 }

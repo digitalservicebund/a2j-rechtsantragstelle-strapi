@@ -47,7 +47,6 @@
       "components": [
         "page.info-box",
         "page.header",
-        "page.meta-page-info",
         "page.box",
         "page.link-list-box",
         "page.box-with-image"
