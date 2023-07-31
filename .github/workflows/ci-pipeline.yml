@@ -14,7 +14,7 @@ env:
   CONTAINER_IMAGE_NAME: ${{ github.repository }}
 
 jobs:
-  build-strapi:
+  test-build-strapi:
     permissions:
       packages: read
     runs-on: ubuntu-latest
