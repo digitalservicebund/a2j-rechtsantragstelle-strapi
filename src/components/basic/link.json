@@ -9,6 +9,7 @@
       "type": "string"
     },
     "url": {
+      "required": true,
       "type": "string"
     }
   }
