@@ -24,7 +24,7 @@ module.exports = ({ env }) => {
               "'self'",
               'data:',
               'blob:',
-              'dl.airtable.com',
+              'market-assets.strapi.io',
               // allow display of image thumbnail previews
               uploadBucket,
             ],
@@ -32,7 +32,7 @@ module.exports = ({ env }) => {
               "'self'",
               'data:',
               'blob:',
-              'dl.airtable.com',
+              'market-assets.strapi.io',
               // allow display of media thumbnail previews
               uploadBucket,
             ],
