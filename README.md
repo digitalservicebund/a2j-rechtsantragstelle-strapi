@@ -32,3 +32,30 @@ npm run build
 # Start strapi instance with autoreload & content builder enabled
 npm run develop
 ```
+
+## Transfer staging data to local database
+
+**Deletes all you local data!**
+
+[docs](https://docs.strapi.io/dev-docs/data-management/transfer)
+
+* Strapi versions must match exactly
+
+```sh
+npm run strapi transfer -- --from "https://a2j-rast-strapi.dev.ds4g.net/admin/" --to-token=<PUSH_TRANSFER_TOKEN_FROM_LOCAL_STRAPI> --from-token=<PULL_TRANSFER_TOKEN_FROM_STAGING_STRAPI>
+```
+
+Create your own transfer tokens in Strapi Admin Settings "Transfer Tokens".
+
+## Data migrations
+
+**Be careful. Test with local dump first before committing.**
+
+[docs](https://docs.strapi.io/dev-docs/database-migrations)
+
+* read the (short) docs!
+* run **once** on Strapi server start-up (or reload when using `npm run develop`)
+* migration files are run in alphabetical order (use time stamps in front)
+* **no revert** possible
+* only(?) use for data migration, not for changing database structure (do this in the schemas instead)
+* you might not want to run a migration in unit tests -> check for `process.env.NODE_ENV === "test"` and return early
