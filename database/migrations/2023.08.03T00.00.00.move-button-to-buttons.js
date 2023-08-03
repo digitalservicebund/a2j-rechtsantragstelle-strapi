@@ -10,7 +10,10 @@
  */
 
 async function up(knex) {
-  console.log("move button to buttons");
+  if (process.env.NODE_ENV === "test") {
+    return;
+  }
+  console.log("migration: move button to buttons");
 
   const components_with_button_and_buttons = [
     "boxes",
