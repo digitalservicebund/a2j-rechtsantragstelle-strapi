@@ -24,11 +24,6 @@
       "repeatable": false,
       "component": "basic.paragraph"
     },
-    "button": {
-      "type": "component",
-      "repeatable": false,
-      "component": "form-elements.button"
-    },
     "container": {
       "type": "component",
       "repeatable": false,

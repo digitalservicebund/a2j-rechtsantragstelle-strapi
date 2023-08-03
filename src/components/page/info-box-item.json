@@ -30,11 +30,6 @@
       "repeatable": false,
       "component": "basic.heading"
     },
-    "button": {
-      "type": "component",
-      "repeatable": false,
-      "component": "form-elements.button"
-    },
     "buttons": {
       "type": "component",
       "repeatable": true,
