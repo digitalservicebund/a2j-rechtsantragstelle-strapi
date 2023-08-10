@@ -10,11 +10,6 @@
  */
 
 async function up(knex) {
-  if (process.env.NODE_ENV === "test") {
-    return;
-  }
-  console.log("migration: move button to buttons");
-
   const components_with_button_and_buttons = [
     "boxes",
     "link_list_boxes",
@@ -24,35 +19,38 @@ async function up(knex) {
   let changed = 0;
 
   for (const component of components_with_button_and_buttons) {
-    const componentIds = await knex(`components_page_${component}`).select(
-      "id"
-    );
-    for (const { id: componentId } of componentIds) {
-      const nestedComponents = await knex(
-        `components_page_${component}_components`
-      )
-        .select("*")
-        .where({ entity_id: componentId });
-      const buttonExists = nestedComponents.some(
-        (row) => row.field === "button"
-      );
-      const buttonsExist = nestedComponents.some(
-        (row) => row.field === "buttons"
-      );
-
-      if (buttonExists && !buttonsExist) {
-        // change field "button" to "buttons"
-        const changedDatasetCount = await knex(
+    const nestedComponentTable = `components_page_${component}`;
+    try {
+      const componentIds = await knex(nestedComponentTable).select("id");
+      for (const { id: componentId } of componentIds) {
+        const nestedComponents = await knex(
           `components_page_${component}_components`
         )
-          .where({ entity_id: componentId, field: "button" })
-          .update({ field: "buttons" });
-        changed += changedDatasetCount;
-        console.log({ changedDatasetCount, componentId, component });
+          .select("*")
+          .where({ entity_id: componentId });
+        const buttonExists = nestedComponents.some(
+          (row) => row.field === "button"
+        );
+        const buttonsExist = nestedComponents.some(
+          (row) => row.field === "buttons"
+        );
+
+        if (buttonExists && !buttonsExist) {
+          // change field "button" to "buttons"
+          const changedDatasetCount = await knex(
+            `components_page_${component}_components`
+          )
+            .where({ entity_id: componentId, field: "button" })
+            .update({ field: "buttons" });
+          changed += changedDatasetCount;
+          console.log({ changedDatasetCount, componentId, component });
+        }
       }
+    } catch {
+      console.log(`table ${nestedComponentTable} does not exist, skipping...`);
     }
   }
-  console.log({ changed });
+  console.log("migration: move button to buttons:", { changed });
 }
 
 module.exports = { up };
