@@ -1,7 +1,8 @@
 {
   "collectionName": "components_basic_links",
   "info": {
-    "displayName": "Link"
+    "displayName": "Link",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -11,6 +12,11 @@
     "url": {
       "required": true,
       "type": "string"
+    },
+    "openInNewTab": {
+      "type": "boolean",
+      "default": false,
+      "required": false
     }
   }
 }
