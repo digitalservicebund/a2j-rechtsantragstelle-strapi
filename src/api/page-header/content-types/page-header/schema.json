@@ -1,0 +1,37 @@
+{
+  "kind": "singleType",
+  "collectionName": "page_headers",
+  "info": {
+    "singularName": "page-header",
+    "pluralName": "page-headers",
+    "displayName": "PageHeader"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true
+    },
+    "linkLabel": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true
+    }
+  }
+}
