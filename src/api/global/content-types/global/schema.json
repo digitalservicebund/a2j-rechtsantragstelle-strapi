@@ -16,7 +16,7 @@
     },
     "feedbackContent": {
       "pluginOptions": { "i18n": { "localized": true } },
-      "type": "string",
+      "type": "text",
       "required": false
     }
   }
