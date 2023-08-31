@@ -12,7 +12,7 @@
     "postinstall": "patch-package"
   },
   "dependencies": {
-    "@strapi/plugin-i18n": "4.12.7",
+    "@strapi/plugin-i18n": "4.13.1",
     "@strapi/plugin-users-permissions": "4.12.7",
     "@strapi/provider-upload-aws-s3": "4.12.7",
     "@strapi/strapi": "4.12.7",
