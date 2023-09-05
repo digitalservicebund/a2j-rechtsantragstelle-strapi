@@ -21,7 +21,7 @@ jobs:
     timeout-minutes: 25
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
@@ -49,7 +49,7 @@ jobs:
       version: ${{ github.sha }}
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Build an image from Dockerfile
         run: |
@@ -89,7 +89,7 @@ jobs:
     environment: staging
     steps:
       - name: Check out strapi infra repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: digitalservicebund/a2j-rechtsantragstelle-strapi-infra
           ssh-key: ${{ secrets.DEPLOY_KEY }}
