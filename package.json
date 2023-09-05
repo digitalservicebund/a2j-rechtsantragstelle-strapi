@@ -12,10 +12,10 @@
     "postinstall": "patch-package"
   },
   "dependencies": {
-    "@strapi/plugin-i18n": "4.13.1",
-    "@strapi/plugin-users-permissions": "4.13.1",
-    "@strapi/provider-upload-aws-s3": "4.13.1",
-    "@strapi/strapi": "4.13.1",
+    "@strapi/plugin-i18n": "4.13.2",
+    "@strapi/plugin-users-permissions": "4.13.2",
+    "@strapi/provider-upload-aws-s3": "4.13.2",
+    "@strapi/strapi": "4.13.2",
     "patch-package": "^8.0.0",
     "pg": "^8.11.3",
     "pluralize": "^8.0.0",
