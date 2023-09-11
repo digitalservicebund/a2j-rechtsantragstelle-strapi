@@ -20,6 +20,9 @@
     "altLabel": {
       "type": "text"
     },
+    "placeholder": {
+      "type": "text"
+    },
     "errors": {
       "type": "relation",
       "relation": "oneToMany",
