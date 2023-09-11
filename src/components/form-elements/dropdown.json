@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_form_elements_dropdowns",
+  "info": {
+    "displayName": "Dropdown"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "label": {
+      "type": "text"
+    },
+    "options": {
+      "type": "component",
+      "repeatable": true,
+      "component": "form-helper.select-option"
+    },
+    "altLabel": {
+      "type": "text"
+    },
+    "errors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::error.error"
+    }
+  }
+}

@@ -44,7 +44,8 @@
         "page.info-box-item",
         "page.info-box",
         "page.box",
-        "page.box-with-image"
+        "page.box-with-image",
+        "form-elements.dropdown"
       ],
       "required": true
     }

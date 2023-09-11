@@ -15,7 +15,10 @@
     },
     "type": {
       "type": "enumeration",
-      "enum": ["text", "number"],
+      "enum": [
+        "text",
+        "number"
+      ],
       "default": "text",
       "required": true
     },
