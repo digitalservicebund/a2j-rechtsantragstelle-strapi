@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@strapi/plugin-i18n": "4.13.4",
-    "@strapi/plugin-users-permissions": "4.13.4",
+    "@strapi/plugin-users-permissions": "4.13.5",
     "@strapi/provider-upload-aws-s3": "4.13.4",
     "@strapi/strapi": "4.13.4",
     "patch-package": "^8.0.0",
