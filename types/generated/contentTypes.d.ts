@@ -1039,13 +1039,12 @@ export interface ApiFooterFooter extends Schema.SingleType {
   };
 }
 
-export interface ApiFormularFlowPageFormularFlowPage
-  extends Schema.CollectionType {
-  collectionName: 'formular_flow_pages';
+export interface ApiFormFlowPageFormFlowPage extends Schema.CollectionType {
+  collectionName: 'form_flow_pages';
   info: {
-    singularName: 'formular-flow-page';
-    pluralName: 'formular-flow-pages';
-    displayName: 'FormularFlowPage';
+    singularName: 'form-flow-page';
+    pluralName: 'form-flow-pages';
+    displayName: 'FormFlowPage';
   };
   options: {
     draftAndPublish: true;
@@ -1090,25 +1089,31 @@ export interface ApiFormularFlowPageFormularFlowPage
           localized: true;
         };
       }>;
+    post_form: Attribute.DynamicZone<['basic.heading', 'basic.paragraph']> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'api::formular-flow-page.formular-flow-page',
+      'api::form-flow-page.form-flow-page',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'api::formular-flow-page.formular-flow-page',
+      'api::form-flow-page.form-flow-page',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     localizations: Attribute.Relation<
-      'api::formular-flow-page.formular-flow-page',
+      'api::form-flow-page.form-flow-page',
       'oneToMany',
-      'api::formular-flow-page.formular-flow-page'
+      'api::form-flow-page.form-flow-page'
     >;
     locale: Attribute.String;
   };
@@ -1619,7 +1624,7 @@ declare module '@strapi/types' {
       'api::element-with-id.element-with-id': ApiElementWithIdElementWithId;
       'api::error.error': ApiErrorError;
       'api::footer.footer': ApiFooterFooter;
-      'api::formular-flow-page.formular-flow-page': ApiFormularFlowPageFormularFlowPage;
+      'api::form-flow-page.form-flow-page': ApiFormFlowPageFormFlowPage;
       'api::global.global': ApiGlobalGlobal;
       'api::navigation.navigation': ApiNavigationNavigation;
       'api::page.page': ApiPagePage;

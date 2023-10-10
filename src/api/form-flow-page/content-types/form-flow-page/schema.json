@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "formular_flow_pages",
+  "collectionName": "form_flow_pages",
   "info": {
-    "singularName": "formular-flow-page",
-    "pluralName": "formular-flow-pages",
-    "displayName": "FormularFlowPage"
+    "singularName": "form-flow-page",
+    "pluralName": "form-flow-pages",
+    "displayName": "FormFlowPage"
   },
   "options": {
     "draftAndPublish": true
@@ -14,6 +14,7 @@
       "localized": true
     }
   },
+
   "attributes": {
     "slug": {
       "type": "string",
@@ -67,17 +68,17 @@
           "localized": true
         }
       }
-    }
-  },
-  "post_form": {
-    "type": "dynamiczone",
-    "components": [
-      "basic.heading",
-      "basic.paragraph"
-    ],
-    "pluginOptions": {
-      "i18n": {
-        "localized": true
+    },
+    "post_form": {
+      "type": "dynamiczone",
+      "components": [
+        "basic.heading",
+        "basic.paragraph"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
       }
     }
   }
