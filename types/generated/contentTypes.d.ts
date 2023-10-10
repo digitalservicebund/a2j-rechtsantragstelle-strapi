@@ -1070,6 +1070,7 @@ export interface ApiFormFlowPageFormFlowPage extends Schema.CollectionType {
         };
       }>;
     heading: Attribute.String &
+      Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

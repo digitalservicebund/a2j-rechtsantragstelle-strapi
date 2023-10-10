@@ -42,6 +42,7 @@
           "localized": true
         }
       },
+      "required": true,
       "type": "string"
     },
     "pre_form": {
