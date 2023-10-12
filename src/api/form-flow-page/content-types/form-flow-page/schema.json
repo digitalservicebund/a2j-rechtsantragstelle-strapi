@@ -61,6 +61,7 @@
       "type": "dynamiczone",
       "components": [
         "form-elements.input",
+        "form-elements.textarea",
         "form-elements.select",
         "form-elements.dropdown"
       ],
