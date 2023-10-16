@@ -36,6 +36,15 @@
         }
       }
     },
+    "preHeading": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": false,
+      "type": "string"
+    },
     "heading": {
       "pluginOptions": {
         "i18n": {
