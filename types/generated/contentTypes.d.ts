@@ -1045,6 +1045,7 @@ export interface ApiFormFlowPageFormFlowPage extends Schema.CollectionType {
     singularName: 'form-flow-page';
     pluralName: 'form-flow-pages';
     displayName: 'FormFlowPage';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1076,7 +1077,16 @@ export interface ApiFormFlowPageFormFlowPage extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    pre_form: Attribute.DynamicZone<['basic.heading', 'basic.paragraph']> &
+    pre_form: Attribute.DynamicZone<
+      [
+        'basic.heading',
+        'basic.paragraph',
+        'page.box-with-image',
+        'page.box',
+        'page.info-box',
+        'page.link-list-box'
+      ]
+    > &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
