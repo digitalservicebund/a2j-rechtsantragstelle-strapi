@@ -88,7 +88,11 @@
       "type": "dynamiczone",
       "components": [
         "basic.heading",
-        "basic.paragraph"
+        "basic.paragraph",
+        "page.box-with-image",
+        "page.box",
+        "page.info-box",
+        "page.link-list-box"
       ],
       "pluginOptions": {
         "i18n": {
