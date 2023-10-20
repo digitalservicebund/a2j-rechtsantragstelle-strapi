@@ -22,7 +22,7 @@
     "strapi-plugin-populate-deep": "^3.0.0",
     "strapi-plugin-site-publisher": "^0.1.2"
   },
-  "author": {
+"author": {
     "name": "A Strapi developer"
   },
   "strapi": {
@@ -38,8 +38,8 @@
     "qs": "^6.10.3"
   },
   "devDependencies": {
+    "better-sqlite3": "^9.0.0",
     "jest": "^29.7.0",
-    "sqlite3": "^5.1.6",
     "supertest": "^6.3.3"
   },
   "jest": {
