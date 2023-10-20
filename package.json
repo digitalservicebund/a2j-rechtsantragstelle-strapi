@@ -22,9 +22,6 @@
     "strapi-plugin-populate-deep": "^3.0.0",
     "strapi-plugin-site-publisher": "^0.1.2"
   },
-"author": {
-    "name": "A Strapi developer"
-  },
   "strapi": {
     "uuid": "75be5f21-db3a-4a6f-9069-20b0c6b8e10c"
   },
@@ -33,10 +30,6 @@
     "npm": ">=6.0.0"
   },
   "license": "MIT",
-  "//": "We need to use qs > 6.10.3 - https://github.com/advisories/GHSA-hrpp-h998-j3pp",
-  "overrides": {
-    "qs": "^6.10.3"
-  },
   "devDependencies": {
     "better-sqlite3": "^9.0.0",
     "jest": "^29.7.0",
