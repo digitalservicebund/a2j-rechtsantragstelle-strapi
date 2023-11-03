@@ -10,11 +10,13 @@ Icon
 .Trashes
 ._*
 
+
 ############################
 # Linux
 ############################
 
 *~
+
 
 ############################
 # Windows
@@ -28,6 +30,7 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
+
 
 ############################
 # Packages
@@ -57,6 +60,7 @@ $RECYCLE.BIN/
 *.out
 *.pid
 
+
 ############################
 # Logs and databases
 ############################
@@ -66,6 +70,7 @@ $RECYCLE.BIN/
 *.sql
 *.sqlite
 *.sqlite3
+
 
 ############################
 # Misc.
@@ -109,4 +114,3 @@ build
 .strapi-updater.json
 data/*
 !data/.gitkeep
-.strapi/*

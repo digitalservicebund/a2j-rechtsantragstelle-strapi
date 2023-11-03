@@ -1,7 +1,4 @@
-const { env } = require("@strapi/utils");
-// Workaround , see https://github.com/strapi/strapi/issues/18649
-
-module.exports = (/*{ env }*/) => {
+module.exports = ({ env }) => {
   const config = {
     "site-publisher": {
       config: {
