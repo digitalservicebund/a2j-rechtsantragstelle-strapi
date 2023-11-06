@@ -19,7 +19,7 @@
     "patch-package": "^8.0.0",
     "pg": "^8.11.3",
     "pluralize": "^8.0.0",
-    "strapi-plugin-populate-deep": "^3.0.0",
+    "strapi-plugin-populate-deep": "^3.0.1",
     "strapi-plugin-site-publisher": "^0.1.2"
   },
   "strapi": {
