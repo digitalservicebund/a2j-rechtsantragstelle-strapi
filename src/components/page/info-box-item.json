@@ -28,6 +28,10 @@
     "content": {
       "type": "richtext"
     },
+    "hasSeparator": {
+      "type": "boolean",
+      "default": true
+    },
     "headline": {
       "type": "component",
       "repeatable": false,
