@@ -49,7 +49,8 @@
         "page.header",
         "page.box",
         "page.link-list-box",
-        "page.box-with-image"
+        "page.box-with-image",
+        "page.numeric-list"
       ],
       "required": true
     }

@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_page_numeric_list_items",
+  "info": {
+    "displayName": "NumericListItem",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "identifier": {
+      "type": "string"
+    },
+    "label": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.heading"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "headline": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.heading"
+    },
+    "buttons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "form-elements.button"
+    }
+  }
+}
