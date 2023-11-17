@@ -1070,6 +1070,12 @@ export interface ApiFormFlowPageFormFlowPage extends Schema.CollectionType {
           localized: true;
         };
       }>;
+    preHeading: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     heading: Attribute.String &
       Attribute.Required &
       Attribute.SetPluginOptions<{
@@ -1093,14 +1099,29 @@ export interface ApiFormFlowPageFormFlowPage extends Schema.CollectionType {
         };
       }>;
     form: Attribute.DynamicZone<
-      ['form-elements.input', 'form-elements.select', 'form-elements.dropdown']
+      [
+        'form-elements.input',
+        'form-elements.textarea',
+        'form-elements.select',
+        'form-elements.checkbox',
+        'form-elements.dropdown'
+      ]
     > &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    post_form: Attribute.DynamicZone<['basic.heading', 'basic.paragraph']> &
+    post_form: Attribute.DynamicZone<
+      [
+        'basic.heading',
+        'basic.paragraph',
+        'page.box-with-image',
+        'page.box',
+        'page.info-box',
+        'page.link-list-box'
+      ]
+    > &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1182,53 +1203,6 @@ export interface ApiGlobalGlobal extends Schema.SingleType {
   };
 }
 
-export interface ApiNavigationNavigation extends Schema.SingleType {
-  collectionName: 'navigations';
-  info: {
-    singularName: 'navigation';
-    pluralName: 'navigations';
-    displayName: 'Navigation';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  pluginOptions: {
-    i18n: {
-      localized: true;
-    };
-  };
-  attributes: {
-    tree: Attribute.Component<'page.navigation-item', true> &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::navigation.navigation',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::navigation.navigation',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    localizations: Attribute.Relation<
-      'api::navigation.navigation',
-      'oneToMany',
-      'api::navigation.navigation'
-    >;
-    locale: Attribute.String;
-  };
-}
-
 export interface ApiPagePage extends Schema.CollectionType {
   collectionName: 'pages';
   info: {
@@ -1266,7 +1240,8 @@ export interface ApiPagePage extends Schema.CollectionType {
         'page.header',
         'page.box',
         'page.link-list-box',
-        'page.box-with-image'
+        'page.box-with-image',
+        'page.list'
       ]
     > &
       Attribute.Required &
@@ -1583,7 +1558,13 @@ export interface ApiVorabCheckPageVorabCheckPage extends Schema.CollectionType {
         };
       }>;
     form: Attribute.DynamicZone<
-      ['form-elements.input', 'form-elements.select', 'form-elements.dropdown']
+      [
+        'form-elements.input',
+        'form-elements.textarea',
+        'form-elements.select',
+        'form-elements.checkbox',
+        'form-elements.dropdown'
+      ]
     > &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -1637,7 +1618,6 @@ declare module '@strapi/types' {
       'api::footer.footer': ApiFooterFooter;
       'api::form-flow-page.form-flow-page': ApiFormFlowPageFormFlowPage;
       'api::global.global': ApiGlobalGlobal;
-      'api::navigation.navigation': ApiNavigationNavigation;
       'api::page.page': ApiPagePage;
       'api::page-header.page-header': ApiPageHeaderPageHeader;
       'api::result-page.result-page': ApiResultPageResultPage;
