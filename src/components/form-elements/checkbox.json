@@ -2,20 +2,23 @@
   "collectionName": "components_form_elements_checkboxes",
   "info": {
     "displayName": "Checkbox",
-    "icon": "check"
+    "icon": "check",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "label": {
       "type": "string",
-      "required": false
+      "required": true
     },
     "name": {
       "type": "string",
       "required": true
     },
-    "value": {
-      "type": "string"
+    "isRequiredError": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::error.error"
     }
   }
 }
