@@ -38,10 +38,7 @@
     },
     "pre_form": {
       "type": "dynamiczone",
-      "components": [
-        "basic.heading",
-        "basic.paragraph"
-      ],
+      "components": ["basic.heading", "basic.paragraph"],
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -54,6 +51,7 @@
         "form-elements.input",
         "form-elements.textarea",
         "form-elements.select",
+        "form-elements.checkbox",
         "form-elements.dropdown"
       ],
       "pluginOptions": {
