@@ -81,6 +81,24 @@ export interface FormElementsButton extends Schema.Component {
   };
 }
 
+export interface FormElementsCheckbox extends Schema.Component {
+  collectionName: 'components_form_elements_checkboxes';
+  info: {
+    displayName: 'Checkbox';
+    icon: 'check';
+    description: '';
+  };
+  attributes: {
+    label: Attribute.String & Attribute.Required;
+    name: Attribute.String & Attribute.Required;
+    isRequiredError: Attribute.Relation<
+      'form-elements.checkbox',
+      'oneToOne',
+      'api::error.error'
+    >;
+  };
+}
+
 export interface FormElementsDropdown extends Schema.Component {
   collectionName: 'components_form_elements_dropdowns';
   info: {
@@ -151,6 +169,24 @@ export interface FormElementsSelect extends Schema.Component {
       'api::error.error'
     > &
       Attribute.Required;
+  };
+}
+
+export interface FormElementsTextarea extends Schema.Component {
+  collectionName: 'components_basic_textareas';
+  info: {
+    displayName: 'textarea';
+    description: '';
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Required;
+    label: Attribute.String;
+    errors: Attribute.Relation<
+      'form-elements.textarea',
+      'oneToMany',
+      'api::error.error'
+    >;
+    placeholder: Attribute.String;
   };
 }
 
@@ -368,6 +404,38 @@ export interface PageLinkListBox extends Schema.Component {
   };
 }
 
+export interface PageListItem extends Schema.Component {
+  collectionName: 'components_page_list_items';
+  info: {
+    displayName: 'ListItem';
+    description: '';
+  };
+  attributes: {
+    identifier: Attribute.String;
+    label: Attribute.Component<'basic.heading'>;
+    image: Attribute.Media;
+    content: Attribute.RichText;
+    headline: Attribute.Component<'basic.heading'>;
+    buttons: Attribute.Component<'form-elements.button', true>;
+  };
+}
+
+export interface PageList extends Schema.Component {
+  collectionName: 'components_page_lists';
+  info: {
+    displayName: 'List';
+    description: '';
+  };
+  attributes: {
+    identifier: Attribute.String;
+    heading: Attribute.Component<'basic.heading'>;
+    isNumeric: Attribute.Boolean & Attribute.DefaultTo<true>;
+    items: Attribute.Component<'page.list-item', true>;
+    container: Attribute.Component<'meta.container'> & Attribute.Required;
+    outerBackground: Attribute.Component<'meta.background'>;
+  };
+}
+
 export interface PageMetaPageInfo extends Schema.Component {
   collectionName: 'components_page_meta_page_infos';
   info: {
@@ -394,6 +462,38 @@ export interface PageNavigationItem extends Schema.Component {
   };
 }
 
+export interface PageNumericListItem extends Schema.Component {
+  collectionName: 'components_page_numeric_list_items';
+  info: {
+    displayName: 'NumericListItem';
+    description: '';
+  };
+  attributes: {
+    identifier: Attribute.String;
+    label: Attribute.Component<'basic.heading'>;
+    image: Attribute.Media;
+    content: Attribute.RichText;
+    headline: Attribute.Component<'basic.heading'>;
+    buttons: Attribute.Component<'form-elements.button', true>;
+  };
+}
+
+export interface PageNumericList extends Schema.Component {
+  collectionName: 'components_page_numeric_lists';
+  info: {
+    displayName: 'NumericList';
+    description: '';
+  };
+  attributes: {
+    identifier: Attribute.String;
+    heading: Attribute.Component<'basic.heading'>;
+    isNumeric: Attribute.Boolean & Attribute.DefaultTo<true>;
+    items: Attribute.Component<'page.numeric-list-item', true>;
+    container: Attribute.Component<'meta.container'> & Attribute.Required;
+    outerBackground: Attribute.Component<'meta.background'>;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
@@ -401,9 +501,11 @@ declare module '@strapi/types' {
       'basic.link': BasicLink;
       'basic.paragraph': BasicParagraph;
       'form-elements.button': FormElementsButton;
+      'form-elements.checkbox': FormElementsCheckbox;
       'form-elements.dropdown': FormElementsDropdown;
       'form-elements.input': FormElementsInput;
       'form-elements.select': FormElementsSelect;
+      'form-elements.textarea': FormElementsTextarea;
       'form-helper.errors': FormHelperErrors;
       'form-helper.select-option': FormHelperSelectOption;
       'meta.background': MetaBackground;
@@ -414,8 +516,12 @@ declare module '@strapi/types' {
       'page.info-box-item': PageInfoBoxItem;
       'page.info-box': PageInfoBox;
       'page.link-list-box': PageLinkListBox;
+      'page.list-item': PageListItem;
+      'page.list': PageList;
       'page.meta-page-info': PageMetaPageInfo;
       'page.navigation-item': PageNavigationItem;
+      'page.numeric-list-item': PageNumericListItem;
+      'page.numeric-list': PageNumericList;
     }
   }
 }

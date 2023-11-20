@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_page_lists",
+  "info": {
+    "displayName": "List",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "identifier": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.heading"
+    },
+    "isNumeric": {
+      "type": "boolean",
+      "default": true
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "page.list-item"
+    },
+    "container": {
+      "type": "component",
+      "repeatable": false,
+      "component": "meta.container",
+      "required": true
+    },
+    "outerBackground": {
+      "type": "component",
+      "repeatable": false,
+      "component": "meta.background"
+    }
+  }
+}

@@ -50,7 +50,8 @@
         "page.box",
         "page.link-list-box",
         "page.box-with-image",
-        "page.numeric-list"
+        "page.numeric-list",
+        "page.list"
       ],
       "required": true
     }
