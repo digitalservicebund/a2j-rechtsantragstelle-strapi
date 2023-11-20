@@ -37,9 +37,8 @@ services:
       - strapiDB
 
   strapiDB:
-    image: postgres:13.6
+    image: postgres:14-alpine
     container_name: strapiDB
-    platform: linux/amd64 #for platform error on Apple M1 chips
     restart: unless-stopped
     env_file: .env
     environment:
