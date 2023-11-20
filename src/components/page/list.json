@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_page_numeric_lists",
+  "collectionName": "components_page_lists",
   "info": {
-    "displayName": "NumericList",
+    "displayName": "List",
     "description": ""
   },
   "options": {},
@@ -21,7 +21,7 @@
     "items": {
       "type": "component",
       "repeatable": true,
-      "component": "page.numeric-list-item"
+      "component": "page.list-item"
     },
     "container": {
       "type": "component",
