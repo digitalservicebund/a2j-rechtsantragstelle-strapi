@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_page_list_items",
+  "collectionName": "components_page_numeric_list_items",
   "info": {
-    "displayName": "ListItem",
+    "displayName": "NumericListItem",
     "description": ""
   },
   "options": {},
