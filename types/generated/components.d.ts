@@ -89,7 +89,7 @@ export interface FormElementsCheckbox extends Schema.Component {
     description: '';
   };
   attributes: {
-    label: Attribute.String & Attribute.Required;
+    label: Attribute.Text & Attribute.Required;
     name: Attribute.String & Attribute.Required;
     isRequiredError: Attribute.Relation<
       'form-elements.checkbox',
@@ -462,38 +462,6 @@ export interface PageNavigationItem extends Schema.Component {
   };
 }
 
-export interface PageNumericListItem extends Schema.Component {
-  collectionName: 'components_page_numeric_list_items';
-  info: {
-    displayName: 'NumericListItem';
-    description: '';
-  };
-  attributes: {
-    identifier: Attribute.String;
-    label: Attribute.Component<'basic.heading'>;
-    image: Attribute.Media;
-    content: Attribute.RichText;
-    headline: Attribute.Component<'basic.heading'>;
-    buttons: Attribute.Component<'form-elements.button', true>;
-  };
-}
-
-export interface PageNumericList extends Schema.Component {
-  collectionName: 'components_page_numeric_lists';
-  info: {
-    displayName: 'NumericList';
-    description: '';
-  };
-  attributes: {
-    identifier: Attribute.String;
-    heading: Attribute.Component<'basic.heading'>;
-    isNumeric: Attribute.Boolean & Attribute.DefaultTo<true>;
-    items: Attribute.Component<'page.numeric-list-item', true>;
-    container: Attribute.Component<'meta.container'> & Attribute.Required;
-    outerBackground: Attribute.Component<'meta.background'>;
-  };
-}
-
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
@@ -520,8 +488,6 @@ declare module '@strapi/types' {
       'page.list': PageList;
       'page.meta-page-info': PageMetaPageInfo;
       'page.navigation-item': PageNavigationItem;
-      'page.numeric-list-item': PageNumericListItem;
-      'page.numeric-list': PageNumericList;
     }
   }
 }

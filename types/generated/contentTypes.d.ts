@@ -1241,7 +1241,6 @@ export interface ApiPagePage extends Schema.CollectionType {
         'page.box',
         'page.link-list-box',
         'page.box-with-image',
-        'page.numeric-list',
         'page.list'
       ]
     > &

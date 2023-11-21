@@ -8,7 +8,7 @@
   "options": {},
   "attributes": {
     "label": {
-      "type": "string",
+      "type": "text",
       "required": true
     },
     "name": {
