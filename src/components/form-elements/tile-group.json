@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_basic_tile_group",
+  "info": {
+    "displayName": "Tiles",
+    "description": ""
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "label": {
+      "type": "string"
+    },
+    "options": {
+      "displayName": "Tiles",
+      "type": "component",
+      "repeatable": true,
+      "component": "form-helper.tile"
+    },
+    "altLabel": {
+      "type": "string"
+    },
+    "errors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::error.error",
+      "required": true
+    }
+  }
+}

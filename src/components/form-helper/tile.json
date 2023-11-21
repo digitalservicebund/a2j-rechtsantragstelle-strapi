@@ -1,0 +1,30 @@
+{
+    "collectionName": "components_basic_tile",
+    "info": {
+      "displayName": "Tile",
+      "description": ""
+    },
+    "options": {},
+    "attributes": {
+      "text": {
+        "type": "string",
+        "required": true
+      },
+      "description": {
+        "type": "string"
+      },
+      "value": {
+        "type": "string",
+        "required": true
+      },
+      "image": {
+        "type": "media",
+        "multiple": false,
+        "required": false,
+        "allowedTypes": [
+          "images"
+        ]
+      }
+    }
+  }
+  

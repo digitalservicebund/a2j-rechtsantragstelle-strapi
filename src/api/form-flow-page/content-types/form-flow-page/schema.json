@@ -77,7 +77,8 @@
         "form-elements.textarea",
         "form-elements.select",
         "form-elements.checkbox",
-        "form-elements.dropdown"
+        "form-elements.dropdown",
+        "form-elements.tile-group"
       ],
       "pluginOptions": {
         "i18n": {
