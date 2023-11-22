@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_form_elements_date_inputs",
+  "info": {
+    "displayName": "DateInput",
+    "icon": "calendar"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "label": {
+      "type": "string"
+    },
+    "errors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::error.error"
+    },
+    "placeholder": {
+      "type": "string"
+    }
+  }
+}

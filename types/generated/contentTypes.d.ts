@@ -1241,7 +1241,8 @@ export interface ApiPagePage extends Schema.CollectionType {
         'page.box',
         'page.link-list-box',
         'page.box-with-image',
-        'page.list'
+        'page.list',
+        'form-elements.date-input'
       ]
     > &
       Attribute.Required &

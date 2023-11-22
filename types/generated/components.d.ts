@@ -99,6 +99,24 @@ export interface FormElementsCheckbox extends Schema.Component {
   };
 }
 
+export interface FormElementsDateInput extends Schema.Component {
+  collectionName: 'components_form_elements_date_inputs';
+  info: {
+    displayName: 'DateInput';
+    icon: 'calendar';
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Required;
+    label: Attribute.String;
+    errors: Attribute.Relation<
+      'form-elements.date-input',
+      'oneToMany',
+      'api::error.error'
+    >;
+    placeholder: Attribute.String;
+  };
+}
+
 export interface FormElementsDropdown extends Schema.Component {
   collectionName: 'components_form_elements_dropdowns';
   info: {
