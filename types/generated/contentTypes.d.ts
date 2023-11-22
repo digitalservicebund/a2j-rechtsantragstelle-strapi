@@ -1104,7 +1104,8 @@ export interface ApiFormFlowPageFormFlowPage extends Schema.CollectionType {
         'form-elements.textarea',
         'form-elements.select',
         'form-elements.checkbox',
-        'form-elements.dropdown'
+        'form-elements.dropdown',
+        'form-elements.date-input'
       ]
     > &
       Attribute.SetPluginOptions<{
@@ -1241,8 +1242,7 @@ export interface ApiPagePage extends Schema.CollectionType {
         'page.box',
         'page.link-list-box',
         'page.box-with-image',
-        'page.list',
-        'form-elements.date-input'
+        'page.list'
       ]
     > &
       Attribute.Required &
@@ -1564,7 +1564,8 @@ export interface ApiVorabCheckPageVorabCheckPage extends Schema.CollectionType {
         'form-elements.textarea',
         'form-elements.select',
         'form-elements.checkbox',
-        'form-elements.dropdown'
+        'form-elements.dropdown',
+        'form-elements.date-input'
       ]
     > &
       Attribute.SetPluginOptions<{

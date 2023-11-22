@@ -488,6 +488,7 @@ declare module '@strapi/types' {
       'basic.paragraph': BasicParagraph;
       'form-elements.button': FormElementsButton;
       'form-elements.checkbox': FormElementsCheckbox;
+      'form-elements.date-input': FormElementsDateInput;
       'form-elements.dropdown': FormElementsDropdown;
       'form-elements.input': FormElementsInput;
       'form-elements.select': FormElementsSelect;
