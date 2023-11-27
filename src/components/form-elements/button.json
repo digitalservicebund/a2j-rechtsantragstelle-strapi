@@ -37,9 +37,8 @@
     "text": {
       "type": "string"
     },
-    "isDownload": {
-      "type": "boolean",
-      "default": false
+    "downloadFile": {
+      "type": "string"
     }
   }
 }
