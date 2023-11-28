@@ -54,6 +54,14 @@
       "required": true,
       "type": "string"
     },
+    "nextButtonLabel": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
     "pre_form": {
       "type": "dynamiczone",
       "components": [
