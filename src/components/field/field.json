@@ -7,12 +7,12 @@
   },
   "options": {},
   "attributes": {
-    "Name": {
+    "name": {
       "type": "string",
       "required": true,
       "unique": false
     },
-    "Value": {
+    "value": {
       "type": "text",
       "required": false
     }

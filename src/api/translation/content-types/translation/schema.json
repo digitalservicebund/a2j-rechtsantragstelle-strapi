@@ -8,7 +8,7 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {
     "i18n": {
@@ -16,7 +16,7 @@
     }
   },
   "attributes": {
-    "Field": {
+    "field": {
       "displayName": "Field",
       "type": "component",
       "repeatable": true,
@@ -27,7 +27,7 @@
       },
       "component": "field.field"
     },
-    "Groupname": {
+    "scope": {
       "pluginOptions": {
         "i18n": {
           "localized": false
