@@ -13,7 +13,7 @@
       "unique": false
     },
     "Value": {
-      "type": "string",
+      "type": "text",
       "required": false
     }
   }
