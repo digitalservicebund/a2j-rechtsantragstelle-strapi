@@ -14,7 +14,7 @@
     },
     "value": {
       "type": "text",
-      "required": false
+      "required": true
     }
   }
 }
