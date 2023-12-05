@@ -1083,6 +1083,12 @@ export interface ApiFormFlowPageFormFlowPage extends Schema.CollectionType {
           localized: true;
         };
       }>;
+    nextButtonLabel: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     pre_form: Attribute.DynamicZone<
       [
         'basic.heading',
@@ -1547,6 +1553,12 @@ export interface ApiVorabCheckPageVorabCheckPage extends Schema.CollectionType {
       }>;
     meta: Attribute.Component<'page.meta-page-info'> &
       Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    nextButtonLabel: Attribute.String &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
