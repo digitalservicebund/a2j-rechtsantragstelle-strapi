@@ -88,7 +88,8 @@
         "basic.paragraph",
         "page.info-box",
         "page.info-box-item",
-        "page.box-with-image"
+        "page.box-with-image",
+        "page.list"
       ]
     },
     "pageType": {
