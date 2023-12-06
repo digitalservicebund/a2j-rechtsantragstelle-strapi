@@ -6,7 +6,7 @@
     },
     "options": {},
     "attributes": {
-      "text": {
+      "title": {
         "type": "string",
         "required": true
       },
