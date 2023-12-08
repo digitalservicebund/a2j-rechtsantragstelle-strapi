@@ -27,7 +27,7 @@
       "target": "api::error.error",
       "required": true
     },
-    "useTwoColumn": {
+    "useTwoColumns": {
       "type": "boolean",
       "required": true,
       "default": true
