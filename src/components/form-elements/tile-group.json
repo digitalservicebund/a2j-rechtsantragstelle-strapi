@@ -26,6 +26,11 @@
       "relation": "oneToMany",
       "target": "api::error.error",
       "required": true
+    },
+    "useTwoColumn": {
+      "type": "boolean",
+      "required": true,
+      "default": true
     }
   }
 }
