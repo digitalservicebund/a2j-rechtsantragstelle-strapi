@@ -1,5 +1,21 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface BasicAlert extends Schema.Component {
+  collectionName: 'components_basic_alert';
+  info: {
+    displayName: 'Alert';
+    description: '';
+  };
+  attributes: {
+    identifier: Attribute.String;
+    heading: Attribute.Component<'basic.heading'>;
+    look: Attribute.Enumeration<['hint']> &
+      Attribute.Required &
+      Attribute.DefaultTo<'hint'>;
+    content: Attribute.RichText;
+  };
+}
+
 export interface BasicHeading extends Schema.Component {
   collectionName: 'components_basic_headings';
   info: {
@@ -61,6 +77,19 @@ export interface BasicParagraph extends Schema.Component {
   };
 }
 
+export interface FieldField extends Schema.Component {
+  collectionName: 'components_field_fields';
+  info: {
+    displayName: 'Field';
+    icon: '';
+    description: '';
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Required;
+    value: Attribute.Text & Attribute.Required;
+  };
+}
+
 export interface FormElementsButton extends Schema.Component {
   collectionName: 'components_form_elements_buttons';
   info: {
@@ -78,6 +107,7 @@ export interface FormElementsButton extends Schema.Component {
       Attribute.DefaultTo<false>;
     href: Attribute.String;
     text: Attribute.String;
+    downloadFile: Attribute.String;
   };
 }
 
@@ -208,6 +238,29 @@ export interface FormElementsTextarea extends Schema.Component {
   };
 }
 
+export interface FormElementsTileGroup extends Schema.Component {
+  collectionName: 'components_basic_tile_group';
+  info: {
+    displayName: 'Tiles';
+    description: '';
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Required;
+    label: Attribute.String;
+    options: Attribute.Component<'form-helper.tile', true>;
+    altLabel: Attribute.String;
+    errors: Attribute.Relation<
+      'form-elements.tile-group',
+      'oneToMany',
+      'api::error.error'
+    > &
+      Attribute.Required;
+    useTwoColumns: Attribute.Boolean &
+      Attribute.Required &
+      Attribute.DefaultTo<true>;
+  };
+}
+
 export interface FormHelperErrors extends Schema.Component {
   collectionName: 'components_basic_errors';
   info: {
@@ -229,6 +282,20 @@ export interface FormHelperSelectOption extends Schema.Component {
   attributes: {
     text: Attribute.String & Attribute.Required;
     value: Attribute.String & Attribute.Required;
+  };
+}
+
+export interface FormHelperTile extends Schema.Component {
+  collectionName: 'components_basic_tile';
+  info: {
+    displayName: 'Tile';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    description: Attribute.RichText;
+    value: Attribute.String & Attribute.Required;
+    image: Attribute.Media;
   };
 }
 
@@ -483,9 +550,11 @@ export interface PageNavigationItem extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'basic.alert': BasicAlert;
       'basic.heading': BasicHeading;
       'basic.link': BasicLink;
       'basic.paragraph': BasicParagraph;
+      'field.field': FieldField;
       'form-elements.button': FormElementsButton;
       'form-elements.checkbox': FormElementsCheckbox;
       'form-elements.date-input': FormElementsDateInput;
@@ -493,8 +562,10 @@ declare module '@strapi/types' {
       'form-elements.input': FormElementsInput;
       'form-elements.select': FormElementsSelect;
       'form-elements.textarea': FormElementsTextarea;
+      'form-elements.tile-group': FormElementsTileGroup;
       'form-helper.errors': FormHelperErrors;
       'form-helper.select-option': FormHelperSelectOption;
+      'form-helper.tile': FormHelperTile;
       'meta.background': MetaBackground;
       'meta.container': MetaContainer;
       'page.box-with-image': PageBoxWithImage;

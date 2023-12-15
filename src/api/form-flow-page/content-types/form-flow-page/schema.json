@@ -65,6 +65,7 @@
     "pre_form": {
       "type": "dynamiczone",
       "components": [
+        "basic.alert",
         "basic.heading",
         "basic.paragraph",
         "page.box-with-image",

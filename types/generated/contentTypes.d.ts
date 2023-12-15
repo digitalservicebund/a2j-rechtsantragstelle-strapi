@@ -1091,6 +1091,7 @@ export interface ApiFormFlowPageFormFlowPage extends Schema.CollectionType {
       }>;
     pre_form: Attribute.DynamicZone<
       [
+        'basic.alert',
         'basic.heading',
         'basic.paragraph',
         'page.box-with-image',
@@ -1111,6 +1112,7 @@ export interface ApiFormFlowPageFormFlowPage extends Schema.CollectionType {
         'form-elements.select',
         'form-elements.checkbox',
         'form-elements.dropdown',
+        'form-elements.tile-group',
         'form-elements.date-input'
       ]
     > &
@@ -1390,7 +1392,8 @@ export interface ApiResultPageResultPage extends Schema.CollectionType {
         'basic.paragraph',
         'page.info-box',
         'page.info-box-item',
-        'page.box-with-image'
+        'page.box-with-image',
+        'page.list'
       ]
     > &
       Attribute.SetPluginOptions<{
@@ -1446,6 +1449,59 @@ export interface ApiResultPageResultPage extends Schema.CollectionType {
       'api::result-page.result-page',
       'oneToMany',
       'api::result-page.result-page'
+    >;
+    locale: Attribute.String;
+  };
+}
+
+export interface ApiTranslationTranslation extends Schema.CollectionType {
+  collectionName: 'translations';
+  info: {
+    singularName: 'translation';
+    pluralName: 'translations';
+    displayName: 'Translations';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    field: Attribute.Component<'field.field', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    scope: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::translation.translation',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::translation.translation',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::translation.translation',
+      'oneToMany',
+      'api::translation.translation'
     >;
     locale: Attribute.String;
   };
@@ -1577,6 +1633,7 @@ export interface ApiVorabCheckPageVorabCheckPage extends Schema.CollectionType {
         'form-elements.select',
         'form-elements.checkbox',
         'form-elements.dropdown',
+        'form-elements.tile-group',
         'form-elements.date-input'
       ]
     > &
@@ -1635,6 +1692,7 @@ declare module '@strapi/types' {
       'api::page.page': ApiPagePage;
       'api::page-header.page-header': ApiPageHeaderPageHeader;
       'api::result-page.result-page': ApiResultPageResultPage;
+      'api::translation.translation': ApiTranslationTranslation;
       'api::vorab-check-common.vorab-check-common': ApiVorabCheckCommonVorabCheckCommon;
       'api::vorab-check-page.vorab-check-page': ApiVorabCheckPageVorabCheckPage;
     }
