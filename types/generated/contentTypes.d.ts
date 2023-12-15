@@ -1620,7 +1620,9 @@ export interface ApiVorabCheckPageVorabCheckPage extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    pre_form: Attribute.DynamicZone<['basic.heading', 'basic.paragraph']> &
+    pre_form: Attribute.DynamicZone<
+      ['basic.alert', 'basic.heading', 'basic.paragraph']
+    > &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

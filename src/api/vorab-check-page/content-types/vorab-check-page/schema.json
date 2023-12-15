@@ -46,10 +46,7 @@
     },
     "pre_form": {
       "type": "dynamiczone",
-      "components": [
-        "basic.heading",
-        "basic.paragraph"
-      ],
+      "components": ["basic.alert", "basic.heading", "basic.paragraph"],
       "pluginOptions": {
         "i18n": {
           "localized": true
