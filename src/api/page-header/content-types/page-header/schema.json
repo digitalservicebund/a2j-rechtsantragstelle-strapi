@@ -32,6 +32,15 @@
       },
       "type": "string",
       "required": true
+    },
+    "environmentBannerLabel": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": false
     }
   }
 }
