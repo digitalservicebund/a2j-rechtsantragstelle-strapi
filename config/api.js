@@ -1,10 +1,10 @@
 module.exports = {
   responses: {
-    privateAttributes: ['localizations'],
+    privateAttributes: ["localizations"],
   },
   rest: {
-    defaultLimit: 25,
-    maxLimit: 100,
+    defaultLimit: 99999,
+    maxLimit: 99999,
     withCount: true,
   },
 };
