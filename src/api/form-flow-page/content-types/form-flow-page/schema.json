@@ -88,7 +88,8 @@
         "form-elements.checkbox",
         "form-elements.dropdown",
         "form-elements.tile-group",
-        "form-elements.date-input"
+        "form-elements.date-input",
+        "form-elements.file-input"
       ],
       "pluginOptions": {
         "i18n": {
