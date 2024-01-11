@@ -34,7 +34,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "5.3.4",
     "strapi-plugin-populate-deep": "^3.0.1",
-    "strapi-plugin-site-publisher": "^0.1.2",
+    "strapi-plugin-site-publisher": "^0.2.0",
     "styled-components": "5.3.3"
   },
   "devDependencies": {
