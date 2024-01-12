@@ -4,7 +4,7 @@ module.exports = ({ env }) => {
       config: {
         owner: "digitalservicebund",
         repo: "a2j-rechtsantragstelle",
-        workflow_id: "ci-pipeline.yml",
+        workflow_id: "build-content.yml",
         token: env("GITHUB_TOKEN", "dummy"),
         branch: "main",
         inputs: {},
