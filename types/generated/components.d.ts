@@ -166,6 +166,18 @@ export interface FormElementsDropdown extends Schema.Component {
   };
 }
 
+export interface FormElementsFileInput extends Schema.Component {
+  collectionName: 'components_form_elements_file_inputs';
+  info: {
+    displayName: 'FileInput';
+    icon: '';
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Required;
+    label: Attribute.String;
+  };
+}
+
 export interface FormElementsInput extends Schema.Component {
   collectionName: 'components_basic_inputs';
   info: {
@@ -258,6 +270,24 @@ export interface FormElementsTileGroup extends Schema.Component {
     useTwoColumns: Attribute.Boolean &
       Attribute.Required &
       Attribute.DefaultTo<true>;
+  };
+}
+
+export interface FormElementsTimeInput extends Schema.Component {
+  collectionName: 'components_form_elements_time_inputs';
+  info: {
+    displayName: 'TimeInput';
+    description: '';
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Required;
+    label: Attribute.String;
+    errors: Attribute.Relation<
+      'form-elements.time-input',
+      'oneToMany',
+      'api::error.error'
+    >;
+    placeholder: Attribute.String;
   };
 }
 
@@ -559,10 +589,12 @@ declare module '@strapi/types' {
       'form-elements.checkbox': FormElementsCheckbox;
       'form-elements.date-input': FormElementsDateInput;
       'form-elements.dropdown': FormElementsDropdown;
+      'form-elements.file-input': FormElementsFileInput;
       'form-elements.input': FormElementsInput;
       'form-elements.select': FormElementsSelect;
       'form-elements.textarea': FormElementsTextarea;
       'form-elements.tile-group': FormElementsTileGroup;
+      'form-elements.time-input': FormElementsTimeInput;
       'form-helper.errors': FormHelperErrors;
       'form-helper.select-option': FormHelperSelectOption;
       'form-helper.tile': FormHelperTile;

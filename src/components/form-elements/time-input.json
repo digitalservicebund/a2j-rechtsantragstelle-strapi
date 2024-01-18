@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_form_elements_time_inputs",
+  "info": {
+    "displayName": "TimeInput",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "label": {
+      "type": "string"
+    },
+    "errors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::error.error"
+    },
+    "placeholder": {
+      "type": "string"
+    }
+  }
+}

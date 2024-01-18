@@ -89,6 +89,7 @@
         "form-elements.dropdown",
         "form-elements.tile-group",
         "form-elements.date-input",
+        "form-elements.time-input",
         "form-elements.file-input"
       ],
       "pluginOptions": {
