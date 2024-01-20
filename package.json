@@ -47,11 +47,8 @@
     "npm": ">=6.0.0"
   },
   "overrides": {
-    "strapi-plugin-site-publisher": {
-      "axios": "^1.6.0"
-    },
     "@strapi/pack-up": {
-      "vite": "~4.4.9"
+      "vite": "~4.5.2"
     }
   },
   "strapi": {
