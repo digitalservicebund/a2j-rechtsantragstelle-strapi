@@ -1398,12 +1398,6 @@ export interface ApiPageHeaderPageHeader extends Schema.SingleType {
           localized: true;
         };
       }>;
-    environmentBannerLabel: Attribute.String &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
