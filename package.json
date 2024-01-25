@@ -23,10 +23,10 @@
     "testTimeout": 70000
   },
   "dependencies": {
-    "@strapi/plugin-i18n": "4.17.1",
-    "@strapi/plugin-users-permissions": "4.17.1",
-    "@strapi/provider-upload-aws-s3": "4.17.1",
-    "@strapi/strapi": "4.17.1",
+    "@strapi/plugin-i18n": "4.19.0",
+    "@strapi/plugin-users-permissions": "4.19.0",
+    "@strapi/provider-upload-aws-s3": "4.19.0",
+    "@strapi/strapi": "4.19.0",
     "patch-package": "^8.0.0",
     "pg": "^8.11.3",
     "pluralize": "^8.0.0",
@@ -48,7 +48,10 @@
   },
   "overrides": {
     "@strapi/pack-up": {
-      "vite": "~4.5.2"
+      "vite": "~5.0.12"
+    },
+    "@strapi/admin": {
+      "vite": "~5.0.12"
     }
   },
   "strapi": {
