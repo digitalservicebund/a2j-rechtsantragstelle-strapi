@@ -110,10 +110,10 @@ jobs:
     runs-on: ubuntu-latest
     environment: staging
     steps:
-      - name: Deploy new preview image
+      - name: Deploy new staging image
         uses: digitalservicebund/github-actions/argocd-deploy@a223a68bc5982e5175beb73c708d99d8f9ba7858
         with:
-          environment: preview
+          environment: staging
           version: ${{ github.sha }}
           deploying_repo: a2j-rechtsantragstelle-strapi
           infra_repo: a2j-rechtsantragstelle-strapi-infra
