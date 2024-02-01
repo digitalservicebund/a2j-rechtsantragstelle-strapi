@@ -56,7 +56,7 @@ jobs:
           docker build -t ${{ env.IMAGE_NAME }}:${{ github.sha }} . --build-arg COMMIT_SHA=${{ github.sha }}
 
       - name: Install cosign
-        uses: sigstore/cosign-installer@9614fae9e5c5eddabb09f90a270fcb487c9f7149
+        uses: sigstore/cosign-installer@e1523de7571e31dbe865fd2e80c5c7c23ae71eb4
 
       - name: Login to container registry
         uses: docker/login-action@343f7c4344506bcbf9b4de18042ae17996df046d
