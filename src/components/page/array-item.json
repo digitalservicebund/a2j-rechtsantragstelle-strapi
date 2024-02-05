@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_page_array_items",
+  "info": {
+    "displayName": "ArrayItem",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "key": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

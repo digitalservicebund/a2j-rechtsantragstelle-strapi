@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_page_array_summaries",
+  "info": {
+    "displayName": "ArraySummary",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.heading",
+      "required": true
+    },
+    "editButtonText": {
+      "type": "string",
+      "required": true,
+      "default": "Ändern"
+    },
+    "deleteButtonText": {
+      "type": "string",
+      "default": "Entfernen",
+      "required": true
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "page.array-item"
+    }
+  }
+}

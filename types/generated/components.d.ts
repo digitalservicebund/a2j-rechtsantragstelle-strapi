@@ -423,6 +423,37 @@ export interface MetaContainer extends Schema.Component {
   };
 }
 
+export interface PageArrayItem extends Schema.Component {
+  collectionName: 'components_page_array_items';
+  info: {
+    displayName: 'ArrayItem';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    key: Attribute.String & Attribute.Required;
+  };
+}
+
+export interface PageArraySummary extends Schema.Component {
+  collectionName: 'components_page_array_summaries';
+  info: {
+    displayName: 'ArraySummary';
+    icon: 'bulletList';
+    description: '';
+  };
+  attributes: {
+    heading: Attribute.Component<'basic.heading'> & Attribute.Required;
+    editButtonText: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'\u00C4ndern'>;
+    deleteButtonText: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Entfernen'>;
+    items: Attribute.Component<'page.array-item', true>;
+  };
+}
+
 export interface PageBoxWithImage extends Schema.Component {
   collectionName: 'components_page_box_with_images';
   info: {
@@ -600,6 +631,8 @@ declare module '@strapi/types' {
       'form-helper.tile': FormHelperTile;
       'meta.background': MetaBackground;
       'meta.container': MetaContainer;
+      'page.array-item': PageArrayItem;
+      'page.array-summary': PageArraySummary;
       'page.box-with-image': PageBoxWithImage;
       'page.box': PageBox;
       'page.header': PageHeader;
