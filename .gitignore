@@ -114,3 +114,4 @@ build
 .strapi-updater.json
 data/*
 !data/.gitkeep
+.strapi/client/*

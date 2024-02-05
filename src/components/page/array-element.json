@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_page_array_items",
+  "collectionName": "components_page_array_elements",
   "info": {
-    "displayName": "ArrayItem",
+    "displayName": "ArrayElement",
     "description": ""
   },
   "options": {},
