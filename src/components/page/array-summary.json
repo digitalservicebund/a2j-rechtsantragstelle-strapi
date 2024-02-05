@@ -13,6 +13,10 @@
       "component": "basic.heading",
       "required": true
     },
+    "arrayKey": {
+      "type": "string",
+      "required": true
+    },
     "editButtonText": {
       "type": "string",
       "required": true,

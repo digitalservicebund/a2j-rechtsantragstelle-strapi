@@ -444,6 +444,9 @@ export interface PageArraySummary extends Schema.Component {
   };
   attributes: {
     heading: Attribute.Component<'basic.heading'> & Attribute.Required;
+    arrayKey: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'\u00C4ndern'>;
     editButtonText: Attribute.String &
       Attribute.Required &
       Attribute.DefaultTo<'\u00C4ndern'>;
