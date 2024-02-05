@@ -16,6 +16,11 @@
       "component": "basic.heading",
       "required": true
     },
+    "content": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.paragraph"
+    },
     "arrayKey": {
       "type": "string",
       "required": true
