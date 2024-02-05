@@ -10,7 +10,7 @@
       "type": "string",
       "required": true
     },
-    "key": {
+    "elementKey": {
       "type": "string",
       "required": true
     }
