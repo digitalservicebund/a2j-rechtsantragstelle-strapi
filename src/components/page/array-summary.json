@@ -10,6 +10,7 @@
     "identifier": {
       "type": "string"
     },
+    "heading": {
       "type": "component",
       "repeatable": false,
       "component": "basic.heading",
