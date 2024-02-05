@@ -7,7 +7,9 @@
   },
   "options": {},
   "attributes": {
-    "heading": {
+    "identifier": {
+      "type": "string"
+    },
       "type": "component",
       "repeatable": false,
       "component": "basic.heading",
