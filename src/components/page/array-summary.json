@@ -27,6 +27,11 @@
       "default": "Entfernen",
       "required": true
     },
+    "addButtonText": {
+      "type": "string",
+      "required": true,
+      "default": "Hinzufügen"
+    },
     "items": {
       "type": "component",
       "repeatable": true,
