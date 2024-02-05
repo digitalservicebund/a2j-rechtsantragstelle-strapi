@@ -38,7 +38,7 @@
     "items": {
       "type": "component",
       "repeatable": true,
-      "component": "page.array-item"
+      "component": "page.array-element"
     }
   }
 }
