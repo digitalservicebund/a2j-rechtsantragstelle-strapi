@@ -444,15 +444,16 @@ export interface PageArraySummary extends Schema.Component {
   };
   attributes: {
     heading: Attribute.Component<'basic.heading'> & Attribute.Required;
-    arrayKey: Attribute.String &
-      Attribute.Required &
-      Attribute.DefaultTo<'\u00C4ndern'>;
+    arrayKey: Attribute.String & Attribute.Required;
     editButtonText: Attribute.String &
       Attribute.Required &
       Attribute.DefaultTo<'\u00C4ndern'>;
     deleteButtonText: Attribute.String &
       Attribute.Required &
       Attribute.DefaultTo<'Entfernen'>;
+    addButtonText: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Hinzuf\u00FCgen'>;
     items: Attribute.Component<'page.array-item', true>;
   };
 }

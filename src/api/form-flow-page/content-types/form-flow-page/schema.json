@@ -71,7 +71,8 @@
         "page.box-with-image",
         "page.box",
         "page.info-box",
-        "page.link-list-box"
+        "page.link-list-box",
+        "page.array-summary"
       ],
       "pluginOptions": {
         "i18n": {
@@ -90,8 +91,7 @@
         "form-elements.tile-group",
         "form-elements.date-input",
         "form-elements.time-input",
-        "form-elements.file-input",
-        "page.array-summary"
+        "form-elements.file-input"
       ],
       "pluginOptions": {
         "i18n": {

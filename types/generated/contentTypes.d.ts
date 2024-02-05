@@ -1201,7 +1201,8 @@ export interface ApiFormFlowPageFormFlowPage extends Schema.CollectionType {
         'page.box-with-image',
         'page.box',
         'page.info-box',
-        'page.link-list-box'
+        'page.link-list-box',
+        'page.array-summary'
       ]
     > &
       Attribute.SetPluginOptions<{
@@ -1219,8 +1220,7 @@ export interface ApiFormFlowPageFormFlowPage extends Schema.CollectionType {
         'form-elements.tile-group',
         'form-elements.date-input',
         'form-elements.time-input',
-        'form-elements.file-input',
-        'page.array-summary'
+        'form-elements.file-input'
       ]
     > &
       Attribute.SetPluginOptions<{
