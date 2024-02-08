@@ -423,15 +423,15 @@ export interface MetaContainer extends Schema.Component {
   };
 }
 
-export interface PageArrayItem extends Schema.Component {
-  collectionName: 'components_page_array_items';
+export interface PageArrayElement extends Schema.Component {
+  collectionName: 'components_page_array_elements';
   info: {
-    displayName: 'ArrayItem';
+    displayName: 'ArrayElement';
     description: '';
   };
   attributes: {
     title: Attribute.String & Attribute.Required;
-    key: Attribute.String & Attribute.Required;
+    elementKey: Attribute.String & Attribute.Required;
   };
 }
 
@@ -443,18 +443,10 @@ export interface PageArraySummary extends Schema.Component {
     description: '';
   };
   attributes: {
-    heading: Attribute.Component<'basic.heading'> & Attribute.Required;
+    identifier: Attribute.String;
+    content: Attribute.Component<'basic.paragraph'>;
     arrayKey: Attribute.String & Attribute.Required;
-    editButtonText: Attribute.String &
-      Attribute.Required &
-      Attribute.DefaultTo<'\u00C4ndern'>;
-    deleteButtonText: Attribute.String &
-      Attribute.Required &
-      Attribute.DefaultTo<'Entfernen'>;
-    addButtonText: Attribute.String &
-      Attribute.Required &
-      Attribute.DefaultTo<'Hinzuf\u00FCgen'>;
-    items: Attribute.Component<'page.array-item', true>;
+    title: Attribute.String & Attribute.Required;
   };
 }
 
@@ -635,7 +627,7 @@ declare module '@strapi/types' {
       'form-helper.tile': FormHelperTile;
       'meta.background': MetaBackground;
       'meta.container': MetaContainer;
-      'page.array-item': PageArrayItem;
+      'page.array-element': PageArrayElement;
       'page.array-summary': PageArraySummary;
       'page.box-with-image': PageBoxWithImage;
       'page.box': PageBox;

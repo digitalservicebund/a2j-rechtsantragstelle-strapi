@@ -10,12 +10,6 @@
     "identifier": {
       "type": "string"
     },
-    "heading": {
-      "type": "component",
-      "repeatable": false,
-      "component": "basic.heading",
-      "required": true
-    },
     "content": {
       "type": "component",
       "repeatable": false,
@@ -25,25 +19,9 @@
       "type": "string",
       "required": true
     },
-    "editButtonText": {
+    "title": {
       "type": "string",
-      "required": true,
-      "default": "Ändern"
-    },
-    "deleteButtonText": {
-      "type": "string",
-      "default": "Entfernen",
       "required": true
-    },
-    "addButtonText": {
-      "type": "string",
-      "required": true,
-      "default": "Hinzufügen"
-    },
-    "items": {
-      "type": "component",
-      "repeatable": true,
-      "component": "page.array-element"
     }
   }
 }
