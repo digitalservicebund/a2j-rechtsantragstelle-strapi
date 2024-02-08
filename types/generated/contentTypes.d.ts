@@ -1202,7 +1202,8 @@ export interface ApiFormFlowPageFormFlowPage extends Schema.CollectionType {
         'page.box',
         'page.info-box',
         'page.link-list-box',
-        'page.array-summary'
+        'page.array-summary',
+        'page.list'
       ]
     > &
       Attribute.SetPluginOptions<{
@@ -1235,7 +1236,8 @@ export interface ApiFormFlowPageFormFlowPage extends Schema.CollectionType {
         'page.box-with-image',
         'page.box',
         'page.info-box',
-        'page.link-list-box'
+        'page.link-list-box',
+        'page.list'
       ]
     > &
       Attribute.SetPluginOptions<{
