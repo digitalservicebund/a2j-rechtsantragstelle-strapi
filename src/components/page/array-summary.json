@@ -7,14 +7,6 @@
   },
   "options": {},
   "attributes": {
-    "identifier": {
-      "type": "string"
-    },
-    "content": {
-      "type": "component",
-      "repeatable": false,
-      "component": "basic.paragraph"
-    },
     "arrayKey": {
       "type": "string",
       "required": true
@@ -22,6 +14,9 @@
     "title": {
       "type": "string",
       "required": true
+    },
+    "description": {
+      "type": "richtext"
     }
   }
 }
