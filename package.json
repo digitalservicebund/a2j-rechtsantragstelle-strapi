@@ -23,7 +23,7 @@
     "testTimeout": 70000
   },
   "dependencies": {
-    "@strapi/plugin-i18n": "4.19.1",
+    "@strapi/plugin-i18n": "4.20.0",
     "@strapi/plugin-users-permissions": "4.19.1",
     "@strapi/provider-upload-aws-s3": "4.19.1",
     "@strapi/strapi": "4.19.1",
