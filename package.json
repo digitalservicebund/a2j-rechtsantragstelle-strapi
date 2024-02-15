@@ -26,7 +26,7 @@
     "@strapi/plugin-i18n": "4.20.0",
     "@strapi/plugin-users-permissions": "4.20.0",
     "@strapi/provider-upload-aws-s3": "4.20.0",
-    "@strapi/strapi": "4.20.0",
+    "@strapi/strapi": "4.20.1",
     "patch-package": "^8.0.0",
     "pg": "^8.11.3",
     "pluralize": "^8.0.0",
