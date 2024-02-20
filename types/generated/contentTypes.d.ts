@@ -1237,7 +1237,8 @@ export interface ApiFormFlowPageFormFlowPage extends Schema.CollectionType {
         'page.box',
         'page.info-box',
         'page.link-list-box',
-        'page.list'
+        'page.list',
+        'basic.alert'
       ]
     > &
       Attribute.SetPluginOptions<{
