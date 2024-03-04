@@ -51,7 +51,8 @@
       "vite": "~5.0.12"
     },
     "@strapi/admin": {
-      "vite": "~5.0.12"
+      "vite": "~5.0.12",
+      "sanitize-html": "~2.12.1"
     }
   },
   "strapi": {
