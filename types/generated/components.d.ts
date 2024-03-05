@@ -434,6 +434,8 @@ export interface PageArraySummary extends Schema.Component {
     arrayKey: Attribute.String & Attribute.Required;
     title: Attribute.String & Attribute.Required;
     description: Attribute.RichText;
+    categoryUrl: Attribute.String & Attribute.Required;
+    category: Attribute.String & Attribute.Required;
   };
 }
 
