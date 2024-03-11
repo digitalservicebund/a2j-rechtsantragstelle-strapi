@@ -577,6 +577,7 @@ export interface PageMetaPageInfo extends Schema.Component {
     title: Attribute.String & Attribute.Required;
     description: Attribute.Text;
     ogTitle: Attribute.Text;
+    breadcrumb: Attribute.Text & Attribute.Required;
   };
 }
 

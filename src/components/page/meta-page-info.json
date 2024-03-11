@@ -15,6 +15,10 @@
     },
     "ogTitle": {
       "type": "text"
+    },
+    "breadcrumb": {
+      "type": "text",
+      "required": true
     }
   }
 }
