@@ -7,17 +7,6 @@
   },
   "options": {},
   "attributes": {
-    "arrayKey": {
-      "type": "string",
-      "required": true
-    },
-    "title": {
-      "type": "string",
-      "required": true
-    },
-    "description": {
-      "type": "richtext"
-    },
     "categoryUrl": {
       "type": "string",
       "required": true
