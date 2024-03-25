@@ -247,6 +247,7 @@ export interface FormElementsTextarea extends Schema.Component {
       'api::error.error'
     >;
     placeholder: Attribute.String;
+    description: Attribute.RichText;
   };
 }
 
