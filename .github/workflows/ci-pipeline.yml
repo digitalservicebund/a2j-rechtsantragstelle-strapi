@@ -95,13 +95,9 @@ jobs:
           docker push --all-tags ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
 
       - name: Sign the published Docker image
-        env:
-          COSIGN_EXPERIMENTAL: "true"
         run: cosign sign --yes ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
 
       - name: Attest the vulnerability scan
-        env:
-          COSIGN_EXPERIMENTAL: "true"
         run: cosign attest --yes --replace --predicate vulnerabilities.json --type vuln ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
 
   deploy-staging:
