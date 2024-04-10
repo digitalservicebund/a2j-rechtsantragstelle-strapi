@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_basic_inline_notice",
+  "info": {
+    "displayName": "Inline Notice",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "identifier": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.heading",
+      "required": true
+    },
+    "look": {
+      "type": "enumeration",
+      "enum": ["warning", "tips"],
+      "default": "warning",
+      "required": true
+    },
+    "content": {
+      "type": "richtext"
+    }
+  }
+}
