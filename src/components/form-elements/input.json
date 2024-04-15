@@ -45,6 +45,12 @@
         "characters36",
         "characters54"
       ]
+    },
+    "dataList": {
+      "type": "enumeration",
+      "enum": [
+        "airports"
+      ]
     }
   }
 }
