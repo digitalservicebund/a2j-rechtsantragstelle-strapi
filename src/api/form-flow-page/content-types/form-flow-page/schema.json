@@ -65,7 +65,6 @@
     "pre_form": {
       "type": "dynamiczone",
       "components": [
-        "basic.alert",
         "basic.heading",
         "basic.paragraph",
         "page.box-with-image",
@@ -110,8 +109,7 @@
         "page.box",
         "page.info-box",
         "page.link-list-box",
-        "page.list",
-        "basic.alert"
+        "page.list"
       ],
       "pluginOptions": {
         "i18n": {

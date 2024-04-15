@@ -1,21 +1,5 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
-export interface BasicAlert extends Schema.Component {
-  collectionName: 'components_basic_alert';
-  info: {
-    displayName: 'Alert';
-    description: '';
-  };
-  attributes: {
-    identifier: Attribute.String;
-    heading: Attribute.Component<'basic.heading'>;
-    look: Attribute.Enumeration<['hint']> &
-      Attribute.Required &
-      Attribute.DefaultTo<'hint'>;
-    content: Attribute.RichText;
-  };
-}
-
 export interface BasicHeading extends Schema.Component {
   collectionName: 'components_basic_headings';
   info: {
@@ -625,7 +609,6 @@ export interface PageNavigationItem extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
-      'basic.alert': BasicAlert;
       'basic.heading': BasicHeading;
       'basic.inline-notice': BasicInlineNotice;
       'basic.link': BasicLink;
