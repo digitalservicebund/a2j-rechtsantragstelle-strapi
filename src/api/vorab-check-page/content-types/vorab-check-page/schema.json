@@ -47,7 +47,6 @@
     "pre_form": {
       "type": "dynamiczone",
       "components": [
-        "basic.alert",
         "basic.heading",
         "basic.paragraph",
         "basic.inline-notice"

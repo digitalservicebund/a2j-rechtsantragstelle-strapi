@@ -1202,7 +1202,6 @@ export interface ApiFormFlowPageFormFlowPage extends Schema.CollectionType {
       }>;
     pre_form: Attribute.DynamicZone<
       [
-        'basic.alert',
         'basic.heading',
         'basic.paragraph',
         'page.box-with-image',
@@ -1245,8 +1244,7 @@ export interface ApiFormFlowPageFormFlowPage extends Schema.CollectionType {
         'page.box',
         'page.info-box',
         'page.link-list-box',
-        'page.list',
-        'basic.alert'
+        'page.list'
       ]
     > &
       Attribute.SetPluginOptions<{
@@ -1368,7 +1366,8 @@ export interface ApiPagePage extends Schema.CollectionType {
         'page.box',
         'page.link-list-box',
         'page.box-with-image',
-        'page.list'
+        'page.list',
+        'basic.inline-notice'
       ]
     > &
       Attribute.Required &
@@ -1739,7 +1738,7 @@ export interface ApiVorabCheckPageVorabCheckPage extends Schema.CollectionType {
         };
       }>;
     pre_form: Attribute.DynamicZone<
-      ['basic.alert', 'basic.heading', 'basic.paragraph', 'basic.inline-notice']
+      ['basic.heading', 'basic.paragraph', 'basic.inline-notice']
     > &
       Attribute.SetPluginOptions<{
         i18n: {
