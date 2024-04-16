@@ -964,6 +964,12 @@ export interface ApiCookieBannerCookieBanner extends Schema.SingleType {
           localized: true;
         };
       }>;
+    cookieSettingLinkUrl: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
