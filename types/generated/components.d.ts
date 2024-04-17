@@ -530,6 +530,33 @@ export interface PageInfoBox extends Schema.Component {
   };
 }
 
+export interface PageInlineNotice extends Schema.Component {
+  collectionName: 'components_page_inline_notice';
+  info: {
+    displayName: 'InlineNotice';
+    description: 'A notice component with a fixed title label-01-bold. The component works in FormFlow Page, Vorabcheck Page, and Content Page';
+  };
+  attributes: {
+    identifier: Attribute.String;
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 70;
+      }>;
+    tagName: Attribute.Enumeration<
+      ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'div']
+    > &
+      Attribute.Required &
+      Attribute.DefaultTo<'h1'>;
+    look: Attribute.Enumeration<['warning', 'tips']> &
+      Attribute.Required &
+      Attribute.DefaultTo<'warning'>;
+    content: Attribute.RichText;
+    container: Attribute.Component<'meta.container'>;
+    outerBackground: Attribute.Component<'meta.background'>;
+  };
+}
+
 export interface PageLinkListBox extends Schema.Component {
   collectionName: 'components_page_link_list_boxes';
   info: {
@@ -635,6 +662,7 @@ declare module '@strapi/types' {
       'page.header': PageHeader;
       'page.info-box-item': PageInfoBoxItem;
       'page.info-box': PageInfoBox;
+      'page.inline-notice': PageInlineNotice;
       'page.link-list-box': PageLinkListBox;
       'page.list-item': PageListItem;
       'page.list': PageList;

@@ -51,7 +51,8 @@
         "page.link-list-box",
         "page.box-with-image",
         "page.list",
-        "basic.inline-notice"
+        "basic.inline-notice",
+        "page.inline-notice"
       ],
       "required": true
     }
