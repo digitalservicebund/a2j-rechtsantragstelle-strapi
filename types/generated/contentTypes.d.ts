@@ -1518,7 +1518,8 @@ export interface ApiResultPageResultPage extends Schema.CollectionType {
         'page.info-box',
         'page.info-box-item',
         'page.box-with-image',
-        'page.list'
+        'page.list',
+        'page.inline-notice'
       ]
     > &
       Attribute.SetPluginOptions<{
