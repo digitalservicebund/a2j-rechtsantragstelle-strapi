@@ -552,7 +552,7 @@ export interface PageInlineNotice extends Schema.Component {
       Attribute.Required &
       Attribute.DefaultTo<'warning'>;
     content: Attribute.RichText;
-    container: Attribute.Component<'meta.container'>;
+    container: Attribute.Component<'meta.container'> & Attribute.Required;
     outerBackground: Attribute.Component<'meta.background'>;
   };
 }
