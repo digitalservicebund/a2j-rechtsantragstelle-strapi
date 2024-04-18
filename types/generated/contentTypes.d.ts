@@ -964,6 +964,12 @@ export interface ApiCookieBannerCookieBanner extends Schema.SingleType {
           localized: true;
         };
       }>;
+    cookieSettingLinkUrl: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1210,7 +1216,7 @@ export interface ApiFormFlowPageFormFlowPage extends Schema.CollectionType {
         'page.link-list-box',
         'page.array-summary',
         'page.list',
-        'basic.inline-notice'
+        'page.inline-notice'
       ]
     > &
       Attribute.SetPluginOptions<{
@@ -1367,7 +1373,7 @@ export interface ApiPagePage extends Schema.CollectionType {
         'page.link-list-box',
         'page.box-with-image',
         'page.list',
-        'basic.inline-notice'
+        'page.inline-notice'
       ]
     > &
       Attribute.Required &
@@ -1510,7 +1516,8 @@ export interface ApiResultPageResultPage extends Schema.CollectionType {
         'page.info-box',
         'page.info-box-item',
         'page.box-with-image',
-        'page.list'
+        'page.list',
+        'page.inline-notice'
       ]
     > &
       Attribute.SetPluginOptions<{
@@ -1738,7 +1745,7 @@ export interface ApiVorabCheckPageVorabCheckPage extends Schema.CollectionType {
         };
       }>;
     pre_form: Attribute.DynamicZone<
-      ['basic.heading', 'basic.paragraph', 'basic.inline-notice']
+      ['basic.heading', 'basic.paragraph', 'page.inline-notice']
     > &
       Attribute.SetPluginOptions<{
         i18n: {

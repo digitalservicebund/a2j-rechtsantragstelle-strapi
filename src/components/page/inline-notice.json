@@ -1,8 +1,8 @@
 {
-  "collectionName": "components_basic_inline_notice",
+  "collectionName": "components_page_inline_notice",
   "info": {
-    "displayName": "Inline Notice",
-    "description": "A notice component with a fixed title label-01-bold"
+    "displayName": "InlineNotice",
+    "description": "A notice component with a fixed title label-01-bold. The component works in FormFlow Page, Vorabcheck Page, and Content Page"
   },
   "options": {},
   "attributes": {
@@ -16,30 +16,24 @@
     },
     "tagName": {
       "type": "enumeration",
-      "enum": [
-        "h1",
-        "h2",
-        "h3",
-        "h4",
-        "h5",
-        "h6",
-        "p",
-        "div"
-      ],
+      "enum": ["h1", "h2", "h3", "h4", "h5", "h6", "p", "div"],
       "default": "h1",
       "required": true
     },
     "look": {
       "type": "enumeration",
-      "enum": [
-        "warning",
-        "tips"
-      ],
+      "enum": ["warning", "tips"],
       "default": "warning",
       "required": true
     },
     "content": {
       "type": "richtext"
+    },
+    "container": {
+      "type": "component",
+      "repeatable": false,
+      "component": "meta.container",
+      "required": true
     },
     "outerBackground": {
       "type": "component",

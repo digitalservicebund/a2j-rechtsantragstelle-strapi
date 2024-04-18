@@ -49,7 +49,7 @@
       "components": [
         "basic.heading",
         "basic.paragraph",
-        "basic.inline-notice"
+        "page.inline-notice"
       ],
       "pluginOptions": {
         "i18n": {

@@ -73,7 +73,7 @@
         "page.link-list-box",
         "page.array-summary",
         "page.list",
-        "basic.inline-notice"
+        "page.inline-notice"
       ],
       "pluginOptions": {
         "i18n": {

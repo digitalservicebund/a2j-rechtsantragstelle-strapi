@@ -89,7 +89,8 @@
         "page.info-box",
         "page.info-box-item",
         "page.box-with-image",
-        "page.list"
+        "page.list",
+        "page.inline-notice"
       ]
     },
     "pageType": {
