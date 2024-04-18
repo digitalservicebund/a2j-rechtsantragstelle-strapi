@@ -37,32 +37,6 @@ export interface BasicHeading extends Schema.Component {
   };
 }
 
-export interface BasicInlineNotice extends Schema.Component {
-  collectionName: 'components_basic_inline_notice';
-  info: {
-    displayName: 'Inline Notice';
-    description: 'A notice component with a fixed title label-01-bold';
-  };
-  attributes: {
-    identifier: Attribute.String;
-    title: Attribute.String &
-      Attribute.Required &
-      Attribute.SetMinMaxLength<{
-        maxLength: 70;
-      }>;
-    tagName: Attribute.Enumeration<
-      ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'div']
-    > &
-      Attribute.Required &
-      Attribute.DefaultTo<'h1'>;
-    look: Attribute.Enumeration<['warning', 'tips']> &
-      Attribute.Required &
-      Attribute.DefaultTo<'warning'>;
-    content: Attribute.RichText;
-    outerBackground: Attribute.Component<'meta.background'>;
-  };
-}
-
 export interface BasicLink extends Schema.Component {
   collectionName: 'components_basic_links';
   info: {
@@ -637,7 +611,6 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'basic.heading': BasicHeading;
-      'basic.inline-notice': BasicInlineNotice;
       'basic.link': BasicLink;
       'basic.paragraph': BasicParagraph;
       'field.field': FieldField;

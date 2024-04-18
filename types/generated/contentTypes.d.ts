@@ -1216,7 +1216,6 @@ export interface ApiFormFlowPageFormFlowPage extends Schema.CollectionType {
         'page.link-list-box',
         'page.array-summary',
         'page.list',
-        'basic.inline-notice',
         'page.inline-notice'
       ]
     > &
@@ -1374,7 +1373,6 @@ export interface ApiPagePage extends Schema.CollectionType {
         'page.link-list-box',
         'page.box-with-image',
         'page.list',
-        'basic.inline-notice',
         'page.inline-notice'
       ]
     > &
@@ -1747,12 +1745,7 @@ export interface ApiVorabCheckPageVorabCheckPage extends Schema.CollectionType {
         };
       }>;
     pre_form: Attribute.DynamicZone<
-      [
-        'basic.heading',
-        'basic.paragraph',
-        'basic.inline-notice',
-        'page.inline-notice'
-      ]
+      ['basic.heading', 'basic.paragraph', 'page.inline-notice']
     > &
       Attribute.SetPluginOptions<{
         i18n: {
