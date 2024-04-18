@@ -11,8 +11,7 @@
     },
     "title": {
       "type": "string",
-      "required": true,
-      "maxLength": 70
+      "required": true
     },
     "tagName": {
       "type": "enumeration",

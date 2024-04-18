@@ -512,11 +512,7 @@ export interface PageInlineNotice extends Schema.Component {
   };
   attributes: {
     identifier: Attribute.String;
-    title: Attribute.String &
-      Attribute.Required &
-      Attribute.SetMinMaxLength<{
-        maxLength: 70;
-      }>;
+    title: Attribute.String & Attribute.Required;
     tagName: Attribute.Enumeration<
       ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'div']
     > &
