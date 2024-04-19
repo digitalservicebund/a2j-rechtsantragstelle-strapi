@@ -46,11 +46,7 @@
     },
     "pre_form": {
       "type": "dynamiczone",
-      "components": [
-        "basic.heading",
-        "basic.paragraph",
-        "page.inline-notice"
-      ],
+      "components": ["basic.heading", "basic.paragraph", "page.inline-notice"],
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -67,7 +63,8 @@
         "form-elements.dropdown",
         "form-elements.tile-group",
         "form-elements.date-input",
-        "form-elements.file-input"
+        "form-elements.file-input",
+        "form-elements.suggestion-input"
       ],
       "pluginOptions": {
         "i18n": {

@@ -1234,7 +1234,8 @@ export interface ApiFormFlowPageFormFlowPage extends Schema.CollectionType {
         'form-elements.tile-group',
         'form-elements.date-input',
         'form-elements.time-input',
-        'form-elements.file-input'
+        'form-elements.file-input',
+        'form-elements.suggestion-input'
       ]
     > &
       Attribute.SetPluginOptions<{
@@ -1761,7 +1762,8 @@ export interface ApiVorabCheckPageVorabCheckPage extends Schema.CollectionType {
         'form-elements.dropdown',
         'form-elements.tile-group',
         'form-elements.date-input',
-        'form-elements.file-input'
+        'form-elements.file-input',
+        'form-elements.suggestion-input'
       ]
     > &
       Attribute.SetPluginOptions<{

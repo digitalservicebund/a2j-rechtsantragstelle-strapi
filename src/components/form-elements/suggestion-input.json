@@ -1,0 +1,51 @@
+{
+  "collectionName": "components_basic_suggestion_inputs",
+  "info": {
+    "displayName": "SuggestionInput",
+    "description": "An input field with an autosuggestion feature."
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "label": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": ["text", "number"],
+      "default": "text",
+      "required": true
+    },
+    "errors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::error.error"
+    },
+    "placeholder": {
+      "type": "string"
+    },
+    "suffix": {
+      "type": "string"
+    },
+    "width": {
+      "type": "enumeration",
+      "enum": [
+        "characters3",
+        "characters5",
+        "characters7",
+        "characters10",
+        "characters16",
+        "characters24",
+        "characters36",
+        "characters54"
+      ]
+    },
+    "dataList": {
+      "type": "enumeration",
+      "enum": ["airports"]
+    }
+  }
+}
