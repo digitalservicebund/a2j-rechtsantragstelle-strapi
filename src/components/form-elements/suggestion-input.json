@@ -13,21 +13,12 @@
     "label": {
       "type": "string"
     },
-    "type": {
-      "type": "enumeration",
-      "enum": ["text", "number"],
-      "default": "text",
-      "required": true
-    },
     "errors": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::error.error"
     },
     "placeholder": {
-      "type": "string"
-    },
-    "suffix": {
       "type": "string"
     },
     "width": {
@@ -45,7 +36,9 @@
     },
     "dataList": {
       "type": "enumeration",
-      "enum": ["airports"]
+      "enum": [
+        "airports"
+      ]
     }
   }
 }

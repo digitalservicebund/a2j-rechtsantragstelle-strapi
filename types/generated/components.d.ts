@@ -229,16 +229,12 @@ export interface FormElementsSuggestionInput extends Schema.Component {
   attributes: {
     name: Attribute.String & Attribute.Required;
     label: Attribute.String;
-    type: Attribute.Enumeration<['text', 'number']> &
-      Attribute.Required &
-      Attribute.DefaultTo<'text'>;
     errors: Attribute.Relation<
       'form-elements.suggestion-input',
       'oneToMany',
       'api::error.error'
     >;
     placeholder: Attribute.String;
-    suffix: Attribute.String;
     width: Attribute.Enumeration<
       [
         'characters3',
