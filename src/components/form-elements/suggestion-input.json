@@ -39,6 +39,9 @@
       "enum": [
         "airports"
       ]
+    },
+    "noSuggestionMessage": {
+      "type": "string"
     }
   }
 }

@@ -248,6 +248,7 @@ export interface FormElementsSuggestionInput extends Schema.Component {
       ]
     >;
     dataList: Attribute.Enumeration<['airports']>;
+    noSuggestionMessage: Attribute.String;
   };
 }
 
