@@ -92,9 +92,7 @@ export interface FormElementsButton extends Schema.Component {
     href: Attribute.String;
     text: Attribute.String;
     downloadFile: Attribute.String;
-    openInNewTab: Attribute.Boolean &
-      Attribute.Required &
-      Attribute.DefaultTo<false>;
+    openInNewTab: Attribute.Boolean;
   };
 }
 
