@@ -194,7 +194,6 @@ export interface FormElementsInput extends Schema.Component {
         'characters54'
       ]
     >;
-    dataList: Attribute.Enumeration<['airports']>;
   };
 }
 
