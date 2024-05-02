@@ -31,6 +31,10 @@
       "type": "boolean",
       "required": true,
       "default": true
+    },
+    "showRadioButtonTiles": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

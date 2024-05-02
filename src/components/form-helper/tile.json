@@ -1,30 +1,32 @@
 {
-    "collectionName": "components_basic_tile",
-    "info": {
-      "displayName": "Tile",
-      "description": ""
+  "collectionName": "components_basic_tile",
+  "info": {
+    "displayName": "Tile",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
     },
-    "options": {},
-    "attributes": {
-      "title": {
-        "type": "string",
-        "required": true
-      },
-      "description": {
-        "type": "richtext"
-      },
-      "value": {
-        "type": "string",
-        "required": true
-      },
-      "image": {
-        "type": "media",
-        "multiple": false,
-        "required": false,
-        "allowedTypes": [
-          "images"
-        ]
-      }
+    "description": {
+      "type": "richtext"
+    },
+    "value": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "tagDescription": {
+      "type": "string"
     }
   }
-  
+}
