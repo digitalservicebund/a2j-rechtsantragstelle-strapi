@@ -67,14 +67,6 @@
       },
       "type": "string"
     },
-    "backLinkInHeader": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "boolean"
-    },
     "freeZone": {
       "pluginOptions": {
         "i18n": {

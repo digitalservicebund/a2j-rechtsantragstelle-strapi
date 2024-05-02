@@ -1503,12 +1503,6 @@ export interface ApiResultPageResultPage extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    backLinkInHeader: Attribute.Boolean &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     freeZone: Attribute.DynamicZone<
       [
         'basic.heading',
