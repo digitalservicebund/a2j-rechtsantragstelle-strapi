@@ -47,11 +47,11 @@
     "npm": ">=6.0.0"
   },
   "overrides": {
-    "@strapi/pack-up": {
-      "vite": "~5.0.12"
+    "@strapi/data-transfer": {
+      "tar": "~6.2.1"
     },
-    "@strapi/admin": {
-      "vite": "~5.0.12"
+    "@strapi/generate-new": {
+      "tar": "~6.2.1"
     }
   },
   "strapi": {
