@@ -1032,7 +1032,10 @@ export interface ApiElementWithIdElementWithId extends Schema.CollectionType {
         'page.info-box',
         'page.box',
         'page.box-with-image',
-        'form-elements.dropdown'
+        'form-elements.dropdown',
+        'page.inline-notice',
+        'page.link-list-box',
+        'page.list'
       ]
     > &
       Attribute.Required &
