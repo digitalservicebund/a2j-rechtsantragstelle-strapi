@@ -2,7 +2,7 @@ module.exports = ({ env }) => {
   const config = {
     "site-publisher": {
       config: {
-        owner: "digitalservicebund-machine",
+        owner: "digitalservicebund",
         repo: "a2j-rechtsantragstelle",
         workflow_id: "build-content.yml",
         token: env("GITHUB_TOKEN", "dummy"),
