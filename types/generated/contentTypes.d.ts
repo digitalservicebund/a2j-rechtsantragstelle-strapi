@@ -1515,7 +1515,8 @@ export interface ApiResultPageResultPage extends Schema.CollectionType {
         'page.info-box-item',
         'page.box-with-image',
         'page.list',
-        'page.inline-notice'
+        'page.inline-notice',
+        'page.details-summary'
       ]
     > &
       Attribute.SetPluginOptions<{
@@ -1743,7 +1744,12 @@ export interface ApiVorabCheckPageVorabCheckPage extends Schema.CollectionType {
         };
       }>;
     pre_form: Attribute.DynamicZone<
-      ['basic.heading', 'basic.paragraph', 'page.inline-notice']
+      [
+        'basic.heading',
+        'basic.paragraph',
+        'page.inline-notice',
+        'page.details-summary'
+      ]
     > &
       Attribute.SetPluginOptions<{
         i18n: {

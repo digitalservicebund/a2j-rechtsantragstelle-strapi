@@ -18,9 +18,7 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": [
-        "images"
-      ]
+      "allowedTypes": ["images"]
     },
     "content": {
       "type": "richtext"
@@ -34,6 +32,11 @@
       "type": "component",
       "repeatable": true,
       "component": "form-elements.button"
+    },
+    "detailsSummary": {
+      "type": "component",
+      "repeatable": false,
+      "component": "page.details-summary"
     }
   }
 }

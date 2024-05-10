@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_page_details_summary",
+  "info": {
+    "displayName": "DetailsSummary",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "identifier": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

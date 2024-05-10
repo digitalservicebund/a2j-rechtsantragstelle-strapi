@@ -490,6 +490,19 @@ export interface PageBox extends Schema.Component {
   };
 }
 
+export interface PageDetailsSummary extends Schema.Component {
+  collectionName: 'components_page_details_summary';
+  info: {
+    displayName: 'DetailsSummary';
+    description: '';
+  };
+  attributes: {
+    identifier: Attribute.String;
+    title: Attribute.String & Attribute.Required;
+    content: Attribute.RichText & Attribute.Required;
+  };
+}
+
 export interface PageHeader extends Schema.Component {
   collectionName: 'components_page_headers';
   info: {
@@ -517,6 +530,7 @@ export interface PageInfoBoxItem extends Schema.Component {
     content: Attribute.RichText;
     headline: Attribute.Component<'basic.heading'>;
     buttons: Attribute.Component<'form-elements.button', true>;
+    detailsSummary: Attribute.Component<'page.details-summary'>;
   };
 }
 
@@ -660,6 +674,7 @@ declare module '@strapi/types' {
       'page.array-summary': PageArraySummary;
       'page.box-with-image': PageBoxWithImage;
       'page.box': PageBox;
+      'page.details-summary': PageDetailsSummary;
       'page.header': PageHeader;
       'page.info-box-item': PageInfoBoxItem;
       'page.info-box': PageInfoBox;
