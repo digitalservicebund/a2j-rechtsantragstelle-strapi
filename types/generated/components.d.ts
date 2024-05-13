@@ -530,7 +530,7 @@ export interface PageInfoBoxItem extends Schema.Component {
     content: Attribute.RichText;
     headline: Attribute.Component<'basic.heading'>;
     buttons: Attribute.Component<'form-elements.button', true>;
-    detailsSummary: Attribute.Component<'page.details-summary'>;
+    detailsSummary: Attribute.Component<'page.details-summary', true>;
   };
 }
 
