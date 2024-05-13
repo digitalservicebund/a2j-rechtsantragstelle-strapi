@@ -35,6 +35,7 @@
     },
     "detailsSummary": {
       "type": "component",
+      "required": false,
       "repeatable": true,
       "component": "page.details-summary"
     }
