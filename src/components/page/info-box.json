@@ -9,6 +9,12 @@
     "identifier": {
       "type": "string"
     },
+    "separator": {
+      "type": "boolean",
+      "default": true,
+      "repeatable": false,
+      "required": false
+    },
     "heading": {
       "type": "component",
       "repeatable": false,

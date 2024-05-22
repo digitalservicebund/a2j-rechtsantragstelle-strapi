@@ -542,6 +542,7 @@ export interface PageInfoBox extends Schema.Component {
   };
   attributes: {
     identifier: Attribute.String;
+    separator: Attribute.Boolean & Attribute.DefaultTo<true>;
     heading: Attribute.Component<'basic.heading'>;
     items: Attribute.Component<'page.info-box-item', true>;
     container: Attribute.Component<'meta.container'> & Attribute.Required;
