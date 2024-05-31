@@ -288,7 +288,6 @@ export interface FormElementsTileGroup extends Schema.Component {
     useTwoColumns: Attribute.Boolean &
       Attribute.Required &
       Attribute.DefaultTo<true>;
-    showRadioButtonTiles: Attribute.Boolean & Attribute.DefaultTo<false>;
   };
 }
 
