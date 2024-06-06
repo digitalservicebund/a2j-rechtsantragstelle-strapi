@@ -74,6 +74,37 @@ export interface FieldField extends Schema.Component {
   };
 }
 
+export interface FormElementsAutoSuggestInput extends Schema.Component {
+  collectionName: 'components_form_elements_auto_suggest_inputs';
+  info: {
+    displayName: 'AutoSuggestInput';
+  };
+  attributes: {
+    name: Attribute.String;
+    label: Attribute.String;
+    errors: Attribute.Relation<
+      'form-elements.auto-suggest-input',
+      'oneToMany',
+      'api::error.error'
+    >;
+    placeholder: Attribute.String;
+    width: Attribute.Enumeration<
+      [
+        'characters3',
+        'characters5',
+        'characters7',
+        'characters10',
+        'characters16',
+        'characters24',
+        'characters36',
+        'characters54'
+      ]
+    >;
+    dataList: Attribute.Enumeration<['airports']>;
+    noSuggestionMessage: Attribute.String;
+  };
+}
+
 export interface FormElementsButton extends Schema.Component {
   collectionName: 'components_form_elements_buttons';
   info: {
@@ -655,6 +686,7 @@ declare module '@strapi/types' {
       'basic.link': BasicLink;
       'basic.paragraph': BasicParagraph;
       'field.field': FieldField;
+      'form-elements.auto-suggest-input': FormElementsAutoSuggestInput;
       'form-elements.button': FormElementsButton;
       'form-elements.checkbox': FormElementsCheckbox;
       'form-elements.date-input': FormElementsDateInput;
