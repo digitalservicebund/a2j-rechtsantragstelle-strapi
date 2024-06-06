@@ -1767,7 +1767,8 @@ export interface ApiVorabCheckPageVorabCheckPage extends Schema.CollectionType {
         'form-elements.tile-group',
         'form-elements.date-input',
         'form-elements.file-input',
-        'form-elements.suggestion-input'
+        'form-elements.suggestion-input',
+        'form-elements.auto-suggest-input'
       ]
     > &
       Attribute.SetPluginOptions<{
