@@ -248,38 +248,6 @@ export interface FormElementsSelect extends Schema.Component {
   };
 }
 
-export interface FormElementsSuggestionInput extends Schema.Component {
-  collectionName: 'components_basic_suggestion_inputs';
-  info: {
-    displayName: 'SuggestionInput';
-    description: 'An input field with an autosuggestion feature.';
-  };
-  attributes: {
-    name: Attribute.String & Attribute.Required;
-    label: Attribute.String;
-    errors: Attribute.Relation<
-      'form-elements.suggestion-input',
-      'oneToMany',
-      'api::error.error'
-    >;
-    placeholder: Attribute.String;
-    width: Attribute.Enumeration<
-      [
-        'characters3',
-        'characters5',
-        'characters7',
-        'characters10',
-        'characters16',
-        'characters24',
-        'characters36',
-        'characters54'
-      ]
-    >;
-    dataList: Attribute.Enumeration<['airports']>;
-    noSuggestionMessage: Attribute.String;
-  };
-}
-
 export interface FormElementsTextarea extends Schema.Component {
   collectionName: 'components_basic_textareas';
   info: {
@@ -694,7 +662,6 @@ declare module '@strapi/types' {
       'form-elements.file-input': FormElementsFileInput;
       'form-elements.input': FormElementsInput;
       'form-elements.select': FormElementsSelect;
-      'form-elements.suggestion-input': FormElementsSuggestionInput;
       'form-elements.textarea': FormElementsTextarea;
       'form-elements.tile-group': FormElementsTileGroup;
       'form-elements.time-input': FormElementsTimeInput;
