@@ -1117,7 +1117,7 @@ export interface ApiFooterFooter extends Schema.SingleType {
     };
   };
   attributes: {
-    image: Attribute.Media &
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
