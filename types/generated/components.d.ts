@@ -78,6 +78,7 @@ export interface FormElementsAutoSuggestInput extends Schema.Component {
   collectionName: 'components_form_elements_auto_suggest_inputs';
   info: {
     displayName: 'AutoSuggestInput';
+    description: '';
   };
   attributes: {
     name: Attribute.String;
@@ -100,7 +101,7 @@ export interface FormElementsAutoSuggestInput extends Schema.Component {
         'characters54'
       ]
     >;
-    dataList: Attribute.Enumeration<['airports']>;
+    dataList: Attribute.Enumeration<['airports', 'airlines']>;
     noSuggestionMessage: Attribute.String;
   };
 }
@@ -342,7 +343,7 @@ export interface FormHelperTile extends Schema.Component {
     title: Attribute.String & Attribute.Required;
     description: Attribute.RichText;
     value: Attribute.String & Attribute.Required;
-    image: Attribute.Media;
+    image: Attribute.Media<'images'>;
     tagDescription: Attribute.String;
   };
 }
@@ -464,7 +465,8 @@ export interface PageBoxWithImage extends Schema.Component {
     identifier: Attribute.String;
     heading: Attribute.Component<'basic.heading'>;
     content: Attribute.RichText;
-    image: Attribute.Media & Attribute.Required;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
     container: Attribute.Component<'meta.container'> & Attribute.Required;
     outerBackground: Attribute.Component<'meta.background'>;
     imageLabel: Attribute.String;
@@ -524,7 +526,7 @@ export interface PageInfoBoxItem extends Schema.Component {
   attributes: {
     identifier: Attribute.String;
     label: Attribute.Component<'basic.heading'>;
-    image: Attribute.Media;
+    image: Attribute.Media<'images'>;
     content: Attribute.RichText;
     headline: Attribute.Component<'basic.heading'>;
     buttons: Attribute.Component<'form-elements.button', true>;
@@ -597,7 +599,7 @@ export interface PageListItem extends Schema.Component {
   attributes: {
     identifier: Attribute.String;
     label: Attribute.Component<'basic.heading'>;
-    image: Attribute.Media;
+    image: Attribute.Media<'images'>;
     content: Attribute.RichText;
     headline: Attribute.Component<'basic.heading'>;
     buttons: Attribute.Component<'form-elements.button', true>;

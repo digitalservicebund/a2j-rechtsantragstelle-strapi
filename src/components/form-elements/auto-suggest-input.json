@@ -1,7 +1,8 @@
 {
   "collectionName": "components_form_elements_auto_suggest_inputs",
   "info": {
-    "displayName": "AutoSuggestInput"
+    "displayName": "AutoSuggestInput",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -35,7 +36,8 @@
     "dataList": {
       "type": "enumeration",
       "enum": [
-        "airports"
+        "airports",
+        "airlines"
       ]
     },
     "noSuggestionMessage": {
