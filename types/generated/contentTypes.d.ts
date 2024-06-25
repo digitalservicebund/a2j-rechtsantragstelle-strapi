@@ -1499,12 +1499,6 @@ export interface ApiResultPageResultPage extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    linkText: Attribute.String &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     freeZone: Attribute.DynamicZone<
       [
         'basic.heading',

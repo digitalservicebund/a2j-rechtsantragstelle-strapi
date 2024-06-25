@@ -59,14 +59,6 @@
       "component": "basic.paragraph",
       "required": false
     },
-    "linkText": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string"
-    },
     "freeZone": {
       "pluginOptions": {
         "i18n": {
