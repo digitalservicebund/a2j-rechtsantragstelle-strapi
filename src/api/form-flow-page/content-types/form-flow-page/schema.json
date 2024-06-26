@@ -109,7 +109,8 @@
         "page.box",
         "page.info-box",
         "page.link-list-box",
-        "page.list"
+        "page.list",
+        "page.user-feedback"
       ],
       "pluginOptions": {
         "i18n": {

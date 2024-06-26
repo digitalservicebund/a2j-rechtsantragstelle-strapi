@@ -76,7 +76,8 @@
         "page.list",
         "page.inline-notice",
         "page.details-summary",
-        "page.box"
+        "page.box",
+        "page.user-feedback"
       ]
     },
     "pageType": {

@@ -1035,7 +1035,8 @@ export interface ApiElementWithIdElementWithId extends Schema.CollectionType {
         'form-elements.dropdown',
         'page.inline-notice',
         'page.link-list-box',
-        'page.list'
+        'page.list',
+        'page.user-feedback'
       ]
     > &
       Attribute.Required &
@@ -1253,7 +1254,8 @@ export interface ApiFormFlowPageFormFlowPage extends Schema.CollectionType {
         'page.box',
         'page.info-box',
         'page.link-list-box',
-        'page.list'
+        'page.list',
+        'page.user-feedback'
       ]
     > &
       Attribute.SetPluginOptions<{
@@ -1376,7 +1378,8 @@ export interface ApiPagePage extends Schema.CollectionType {
         'page.link-list-box',
         'page.box-with-image',
         'page.list',
-        'page.inline-notice'
+        'page.inline-notice',
+        'page.user-feedback'
       ]
     > &
       Attribute.Required &
@@ -1510,7 +1513,8 @@ export interface ApiResultPageResultPage extends Schema.CollectionType {
         'page.list',
         'page.inline-notice',
         'page.details-summary',
-        'page.box'
+        'page.box',
+        'page.user-feedback'
       ]
     > &
       Attribute.SetPluginOptions<{
