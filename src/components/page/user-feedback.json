@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_page_user_feedbacks",
+  "info": {
+    "displayName": "UserFeedback"
+  },
+  "options": {},
+  "attributes": {
+    "headingRating": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

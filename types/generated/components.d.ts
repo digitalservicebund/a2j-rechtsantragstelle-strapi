@@ -649,6 +649,16 @@ export interface PageNavigationItem extends Schema.Component {
   };
 }
 
+export interface PageUserFeedback extends Schema.Component {
+  collectionName: 'components_page_user_feedbacks';
+  info: {
+    displayName: 'UserFeedback';
+  };
+  attributes: {
+    headingRating: Attribute.String & Attribute.Required;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
@@ -685,6 +695,7 @@ declare module '@strapi/types' {
       'page.list': PageList;
       'page.meta-page-info': PageMetaPageInfo;
       'page.navigation-item': PageNavigationItem;
+      'page.user-feedback': PageUserFeedback;
     }
   }
 }
