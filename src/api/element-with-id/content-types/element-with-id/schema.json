@@ -48,7 +48,8 @@
         "form-elements.dropdown",
         "page.inline-notice",
         "page.link-list-box",
-        "page.list"
+        "page.list",
+        "page.user-feedback"
       ],
       "required": true
     }
