@@ -18,6 +18,10 @@
       "type": "boolean",
       "default": true
     },
+    "subheading": {
+      "type": "richtext",
+      "required": false
+    },
     "items": {
       "type": "component",
       "repeatable": true,
