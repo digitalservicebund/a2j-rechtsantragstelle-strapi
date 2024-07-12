@@ -46,7 +46,6 @@ export interface BasicLink extends Schema.Component {
   attributes: {
     text: Attribute.String;
     url: Attribute.String & Attribute.Required;
-    openInNewTab: Attribute.Boolean & Attribute.DefaultTo<false>;
   };
 }
 
@@ -124,7 +123,6 @@ export interface FormElementsButton extends Schema.Component {
     href: Attribute.String;
     text: Attribute.String;
     downloadFile: Attribute.String;
-    openInNewTab: Attribute.Boolean;
   };
 }
 

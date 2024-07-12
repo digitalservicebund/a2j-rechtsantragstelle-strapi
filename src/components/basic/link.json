@@ -12,11 +12,6 @@
     "url": {
       "required": true,
       "type": "string"
-    },
-    "openInNewTab": {
-      "type": "boolean",
-      "default": false,
-      "required": false
     }
   }
 }

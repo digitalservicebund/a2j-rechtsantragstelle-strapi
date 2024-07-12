@@ -39,9 +39,6 @@
     },
     "downloadFile": {
       "type": "string"
-    },
-    "openInNewTab": {
-      "type": "boolean"
     }
   }
 }
