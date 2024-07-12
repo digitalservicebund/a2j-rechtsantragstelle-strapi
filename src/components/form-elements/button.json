@@ -36,9 +36,6 @@
     },
     "text": {
       "type": "string"
-    },
-    "downloadFile": {
-      "type": "string"
     }
   }
 }

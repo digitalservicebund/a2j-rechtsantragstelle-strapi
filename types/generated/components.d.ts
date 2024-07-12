@@ -122,7 +122,6 @@ export interface FormElementsButton extends Schema.Component {
       Attribute.DefaultTo<false>;
     href: Attribute.String;
     text: Attribute.String;
-    downloadFile: Attribute.String;
   };
 }
 
