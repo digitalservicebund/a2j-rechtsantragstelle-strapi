@@ -1287,58 +1287,6 @@ export interface ApiFormFlowPageFormFlowPage extends Schema.CollectionType {
   };
 }
 
-export interface ApiGlobalGlobal extends Schema.SingleType {
-  collectionName: 'globals';
-  info: {
-    singularName: 'global';
-    pluralName: 'globals';
-    displayName: 'GlobalVariables';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  pluginOptions: {
-    i18n: {
-      localized: true;
-    };
-  };
-  attributes: {
-    feedbackHeading: Attribute.String &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    feedbackContent: Attribute.Text &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::global.global',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::global.global',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    localizations: Attribute.Relation<
-      'api::global.global',
-      'oneToMany',
-      'api::global.global'
-    >;
-    locale: Attribute.String;
-  };
-}
-
 export interface ApiPagePage extends Schema.CollectionType {
   collectionName: 'pages';
   info: {
@@ -1820,7 +1768,6 @@ declare module '@strapi/types' {
       'api::error.error': ApiErrorError;
       'api::footer.footer': ApiFooterFooter;
       'api::form-flow-page.form-flow-page': ApiFormFlowPageFormFlowPage;
-      'api::global.global': ApiGlobalGlobal;
       'api::page.page': ApiPagePage;
       'api::page-header.page-header': ApiPageHeaderPageHeader;
       'api::result-page.result-page': ApiResultPageResultPage;
