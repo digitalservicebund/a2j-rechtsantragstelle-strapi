@@ -1576,82 +1576,6 @@ export interface ApiTranslationTranslation extends Schema.CollectionType {
   };
 }
 
-export interface ApiVorabCheckCommonVorabCheckCommon extends Schema.SingleType {
-  collectionName: 'vorab_check_commons';
-  info: {
-    singularName: 'vorab-check-common';
-    pluralName: 'vorab-check-commons';
-    displayName: 'VorabCheckCommon';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  pluginOptions: {
-    i18n: {
-      localized: true;
-    };
-  };
-  attributes: {
-    progressBarLabel: Attribute.String &
-      Attribute.Required &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    resultHintLabel: Attribute.String &
-      Attribute.Required &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    backButtonDefaultLabel: Attribute.String &
-      Attribute.Required &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    nextButtonDefaultLabel: Attribute.String &
-      Attribute.Required &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    lastNextButtonLabel: Attribute.String &
-      Attribute.Required &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::vorab-check-common.vorab-check-common',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::vorab-check-common.vorab-check-common',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    localizations: Attribute.Relation<
-      'api::vorab-check-common.vorab-check-common',
-      'oneToMany',
-      'api::vorab-check-common.vorab-check-common'
-    >;
-    locale: Attribute.String;
-  };
-}
-
 export interface ApiVorabCheckPageVorabCheckPage extends Schema.CollectionType {
   collectionName: 'vorab_check_pages';
   info: {
@@ -1772,7 +1696,6 @@ declare module '@strapi/types' {
       'api::page-header.page-header': ApiPageHeaderPageHeader;
       'api::result-page.result-page': ApiResultPageResultPage;
       'api::translation.translation': ApiTranslationTranslation;
-      'api::vorab-check-common.vorab-check-common': ApiVorabCheckCommonVorabCheckCommon;
       'api::vorab-check-page.vorab-check-page': ApiVorabCheckPageVorabCheckPage;
     }
   }
