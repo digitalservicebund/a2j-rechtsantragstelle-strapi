@@ -33,19 +33,21 @@ npm run build
 npm run develop
 ```
 
-## Transfer staging data to local database
+## Sync with remote instance
 
-**Deletes all you local data!**
+Replaces all local data with a copy of remote instance
 
-[docs](https://docs.strapi.io/dev-docs/data-management/transfer)
+### Note
 
-* Strapi versions must match exactly
+- Requires both strapi instances to be of the same version
+- **Deletes all local data!**
 
-```sh
-npm run strapi transfer -- --from "https://a2j-rast-strapi.dev.ds4g.net/admin/" --to-token=<PUSH_TRANSFER_TOKEN_FROM_LOCAL_STRAPI> --from-token=<PULL_TRANSFER_TOKEN_FROM_STAGING_STRAPI>
-```
+### Steps
 
-Create your own transfer tokens in Strapi Admin Settings "Transfer Tokens".
+1. Create a `Push` transfer token in your local instance ([Settings / Transfer Tokens](http://localhost:1337/admin/settings/transfer-tokens)) & save as `TRANSFER_TOKEN_LOCAL` into your local `.env` file
+2. Create a `Pull` transfer token on the remote instance and save as `TRANSFER_TOKEN_REMOTE` into your `.env` file
+3. Update the `TRANSFER_URL_REMOTE` (Note: this should point to the `/admin` endpoint)
+4. Run `npm run transfer`
 
 ## Data migrations
 
@@ -53,9 +55,9 @@ Create your own transfer tokens in Strapi Admin Settings "Transfer Tokens".
 
 [docs](https://docs.strapi.io/dev-docs/database-migrations)
 
-* read the (short) docs!
-* run **once** on Strapi server start-up (or reload when using `npm run develop`)
-* migration files are run in alphabetical order (use time stamps in front)
-* **no revert** possible
-* only(?) use for data migration, not for changing database structure (do this in the schemas instead)
-* you might not want to run a migration in unit tests -> check for `process.env.NODE_ENV === "test"` and return early
+- read the (short) docs!
+- run **once** on Strapi server start-up (or reload when using `npm run develop`)
+- migration files are run in alphabetical order (use time stamps in front)
+- **no revert** possible
+- only(?) use for data migration, not for changing database structure (do this in the schemas instead)
+- you might not want to run a migration in unit tests -> check for `process.env.NODE_ENV === "test"` and return early
