@@ -1101,6 +1101,50 @@ export interface ApiErrorError extends Schema.CollectionType {
   };
 }
 
+export interface ApiFlowIdFlowId extends Schema.CollectionType {
+  collectionName: 'flow_ids';
+  info: {
+    singularName: 'flow-id';
+    pluralName: 'flow-ids';
+    displayName: 'FlowId';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    flowId: Attribute.String & Attribute.Required & Attribute.Unique;
+    form_flow_pages: Attribute.Relation<
+      'api::flow-id.flow-id',
+      'manyToMany',
+      'api::form-flow-page.form-flow-page'
+    >;
+    result_pages: Attribute.Relation<
+      'api::flow-id.flow-id',
+      'manyToMany',
+      'api::result-page.result-page'
+    >;
+    vorab_check_pages: Attribute.Relation<
+      'api::flow-id.flow-id',
+      'manyToMany',
+      'api::vorab-check-page.vorab-check-page'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::flow-id.flow-id',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::flow-id.flow-id',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiFooterFooter extends Schema.SingleType {
   collectionName: 'footers';
   info: {
@@ -1261,6 +1305,17 @@ export interface ApiFormFlowPageFormFlowPage extends Schema.CollectionType {
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
+        };
+      }>;
+    flow_ids: Attribute.Relation<
+      'api::form-flow-page.form-flow-page',
+      'manyToMany',
+      'api::flow-id.flow-id'
+    >;
+    stepId: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
         };
       }>;
     createdAt: Attribute.DateTime;
@@ -1499,6 +1554,17 @@ export interface ApiResultPageResultPage extends Schema.CollectionType {
       'oneToOne',
       'api::element-with-id.element-with-id'
     >;
+    flow_ids: Attribute.Relation<
+      'api::result-page.result-page',
+      'manyToMany',
+      'api::flow-id.flow-id'
+    >;
+    stepId: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1644,6 +1710,17 @@ export interface ApiVorabCheckPageVorabCheckPage extends Schema.CollectionType {
           localized: true;
         };
       }>;
+    flow_ids: Attribute.Relation<
+      'api::vorab-check-page.vorab-check-page',
+      'manyToMany',
+      'api::flow-id.flow-id'
+    >;
+    stepId: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1690,6 +1767,7 @@ declare module '@strapi/types' {
       'api::cookie-banner.cookie-banner': ApiCookieBannerCookieBanner;
       'api::element-with-id.element-with-id': ApiElementWithIdElementWithId;
       'api::error.error': ApiErrorError;
+      'api::flow-id.flow-id': ApiFlowIdFlowId;
       'api::footer.footer': ApiFooterFooter;
       'api::form-flow-page.form-flow-page': ApiFormFlowPageFormFlowPage;
       'api::page.page': ApiPagePage;
