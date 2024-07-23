@@ -76,6 +76,20 @@
           "localized": true
         }
       }
+    },
+    "flow_ids": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::flow-id.flow-id",
+      "inversedBy": "vorab_check_pages"
+    },
+    "stepId": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string"
     }
   }
 }

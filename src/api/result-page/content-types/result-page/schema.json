@@ -119,6 +119,21 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::element-with-id.element-with-id"
+    },
+    "flow_ids": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::flow-id.flow-id",
+      "inversedBy": "result_pages"
+    },
+    "stepId": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string",
+      "unique": false
     }
   }
 }
