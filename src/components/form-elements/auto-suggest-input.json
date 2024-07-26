@@ -42,6 +42,10 @@
     },
     "noSuggestionMessage": {
       "type": "string"
+    },
+    "isDisabled": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

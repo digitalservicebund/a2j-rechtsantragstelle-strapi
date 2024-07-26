@@ -92,7 +92,8 @@
         "form-elements.tile-group",
         "form-elements.date-input",
         "form-elements.time-input",
-        "form-elements.file-input"
+        "form-elements.file-input",
+        "form-elements.auto-suggest-input"
       ],
       "pluginOptions": {
         "i18n": {

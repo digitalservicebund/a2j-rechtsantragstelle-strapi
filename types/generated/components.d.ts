@@ -312,6 +312,45 @@ export interface MetaBackground extends Schema.Component {
   };
 }
 
+export interface FormHelperTile extends Schema.Component {
+  collectionName: 'components_basic_tile';
+  info: {
+    displayName: 'Tile';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    description: Attribute.RichText;
+    value: Attribute.String & Attribute.Required;
+    image: Attribute.Media<'images'>;
+    tagDescription: Attribute.String;
+  };
+}
+
+export interface FormHelperSelectOption extends Schema.Component {
+  collectionName: 'components_basic_select_options';
+  info: {
+    displayName: 'SelectOption';
+    description: '';
+  };
+  attributes: {
+    text: Attribute.String & Attribute.Required;
+    value: Attribute.String & Attribute.Required;
+  };
+}
+
+export interface FormHelperErrors extends Schema.Component {
+  collectionName: 'components_basic_errors';
+  info: {
+    displayName: 'Errors';
+    description: '';
+  };
+  attributes: {
+    code: Attribute.String;
+    text: Attribute.String;
+  };
+}
+
 export interface FormElementsTimeInput extends Schema.Component {
   collectionName: 'components_form_elements_time_inputs';
   info: {
@@ -542,6 +581,7 @@ export interface FormElementsAutoSuggestInput extends Schema.Component {
     >;
     dataList: Attribute.Enumeration<['airports', 'airlines']>;
     noSuggestionMessage: Attribute.String;
+    isDisabled: Attribute.Boolean & Attribute.DefaultTo<false>;
   };
 }
 
@@ -555,45 +595,6 @@ export interface FieldField extends Schema.Component {
   attributes: {
     name: Attribute.String & Attribute.Required;
     value: Attribute.Text & Attribute.Required;
-  };
-}
-
-export interface FormHelperTile extends Schema.Component {
-  collectionName: 'components_basic_tile';
-  info: {
-    displayName: 'Tile';
-    description: '';
-  };
-  attributes: {
-    title: Attribute.String & Attribute.Required;
-    description: Attribute.RichText;
-    value: Attribute.String & Attribute.Required;
-    image: Attribute.Media<'images'>;
-    tagDescription: Attribute.String;
-  };
-}
-
-export interface FormHelperSelectOption extends Schema.Component {
-  collectionName: 'components_basic_select_options';
-  info: {
-    displayName: 'SelectOption';
-    description: '';
-  };
-  attributes: {
-    text: Attribute.String & Attribute.Required;
-    value: Attribute.String & Attribute.Required;
-  };
-}
-
-export interface FormHelperErrors extends Schema.Component {
-  collectionName: 'components_basic_errors';
-  info: {
-    displayName: 'Errors';
-    description: '';
-  };
-  attributes: {
-    code: Attribute.String;
-    text: Attribute.String;
   };
 }
 
@@ -676,6 +677,9 @@ declare module '@strapi/types' {
       'page.array-summary': PageArraySummary;
       'meta.container': MetaContainer;
       'meta.background': MetaBackground;
+      'form-helper.tile': FormHelperTile;
+      'form-helper.select-option': FormHelperSelectOption;
+      'form-helper.errors': FormHelperErrors;
       'form-elements.time-input': FormElementsTimeInput;
       'form-elements.tile-group': FormElementsTileGroup;
       'form-elements.textarea': FormElementsTextarea;
@@ -688,9 +692,6 @@ declare module '@strapi/types' {
       'form-elements.button': FormElementsButton;
       'form-elements.auto-suggest-input': FormElementsAutoSuggestInput;
       'field.field': FieldField;
-      'form-helper.tile': FormHelperTile;
-      'form-helper.select-option': FormHelperSelectOption;
-      'form-helper.errors': FormHelperErrors;
       'basic.paragraph': BasicParagraph;
       'basic.link': BasicLink;
       'basic.heading': BasicHeading;
