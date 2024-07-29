@@ -1113,21 +1113,6 @@ export interface ApiFlowIdFlowId extends Schema.CollectionType {
   };
   attributes: {
     flowId: Attribute.String & Attribute.Required & Attribute.Unique;
-    form_flow_pages: Attribute.Relation<
-      'api::flow-id.flow-id',
-      'manyToMany',
-      'api::form-flow-page.form-flow-page'
-    >;
-    result_pages: Attribute.Relation<
-      'api::flow-id.flow-id',
-      'manyToMany',
-      'api::result-page.result-page'
-    >;
-    vorab_check_pages: Attribute.Relation<
-      'api::flow-id.flow-id',
-      'manyToMany',
-      'api::vorab-check-page.vorab-check-page'
-    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -1310,7 +1295,7 @@ export interface ApiFormFlowPageFormFlowPage extends Schema.CollectionType {
       }>;
     flow_ids: Attribute.Relation<
       'api::form-flow-page.form-flow-page',
-      'manyToMany',
+      'oneToMany',
       'api::flow-id.flow-id'
     >;
     stepId: Attribute.String &
@@ -1557,7 +1542,7 @@ export interface ApiResultPageResultPage extends Schema.CollectionType {
     >;
     flow_ids: Attribute.Relation<
       'api::result-page.result-page',
-      'manyToMany',
+      'oneToMany',
       'api::flow-id.flow-id'
     >;
     stepId: Attribute.String &
@@ -1713,7 +1698,7 @@ export interface ApiVorabCheckPageVorabCheckPage extends Schema.CollectionType {
       }>;
     flow_ids: Attribute.Relation<
       'api::vorab-check-page.vorab-check-page',
-      'manyToMany',
+      'oneToMany',
       'api::flow-id.flow-id'
     >;
     stepId: Attribute.String &

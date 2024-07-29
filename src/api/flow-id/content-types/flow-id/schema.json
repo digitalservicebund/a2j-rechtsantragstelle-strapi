@@ -15,24 +15,6 @@
       "type": "string",
       "required": true,
       "unique": true
-    },
-    "form_flow_pages": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::form-flow-page.form-flow-page",
-      "mappedBy": "flow_ids"
-    },
-    "result_pages": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::result-page.result-page",
-      "mappedBy": "flow_ids"
-    },
-    "vorab_check_pages": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::vorab-check-page.vorab-check-page",
-      "mappedBy": "flow_ids"
     }
   }
 }

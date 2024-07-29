@@ -79,9 +79,8 @@
     },
     "flow_ids": {
       "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::flow-id.flow-id",
-      "inversedBy": "vorab_check_pages"
+      "relation": "oneToMany",
+      "target": "api::flow-id.flow-id"
     },
     "stepId": {
       "pluginOptions": {
