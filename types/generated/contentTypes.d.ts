@@ -1080,13 +1080,6 @@ export interface ApiFormFlowPageFormFlowPage extends Schema.CollectionType {
     };
   };
   attributes: {
-    slug: Attribute.String &
-      Attribute.Required &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     meta: Attribute.Component<'page.meta-page-info'> &
       Attribute.Required &
       Attribute.SetPluginOptions<{
@@ -1338,13 +1331,6 @@ export interface ApiResultPageResultPage extends Schema.CollectionType {
     };
   };
   attributes: {
-    slug: Attribute.String &
-      Attribute.Required &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     meta: Attribute.Component<'page.meta-page-info'> &
       Attribute.Required &
       Attribute.SetPluginOptions<{
@@ -1519,13 +1505,6 @@ export interface ApiVorabCheckPageVorabCheckPage extends Schema.CollectionType {
     };
   };
   attributes: {
-    slug: Attribute.String &
-      Attribute.Required &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     meta: Attribute.Component<'page.meta-page-info'> &
       Attribute.Required &
       Attribute.SetPluginOptions<{
