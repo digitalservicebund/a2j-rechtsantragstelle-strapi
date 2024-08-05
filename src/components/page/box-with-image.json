@@ -38,9 +38,6 @@
       "type": "component",
       "repeatable": false,
       "component": "meta.background"
-    },
-    "imageLabel": {
-      "type": "string"
     }
   }
 }
