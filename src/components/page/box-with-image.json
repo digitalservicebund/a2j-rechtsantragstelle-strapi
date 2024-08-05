@@ -38,6 +38,12 @@
       "type": "component",
       "repeatable": false,
       "component": "meta.background"
+    },
+    "variant": {
+      "type": "enumeration",
+      "enum": [
+        "ImgMTextL"
+      ]
     }
   }
 }

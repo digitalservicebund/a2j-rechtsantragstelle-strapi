@@ -201,6 +201,7 @@ export interface PageBoxWithImage extends Schema.Component {
       Attribute.Required;
     container: Attribute.Component<'meta.container'> & Attribute.Required;
     outerBackground: Attribute.Component<'meta.background'>;
+    variant: Attribute.Enumeration<['ImgMTextL']>;
   };
 }
 
