@@ -1,5 +1,19 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface PageVideo extends Schema.Component {
+  collectionName: 'components_page_videos';
+  info: {
+    displayName: 'Video';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    url: Attribute.String & Attribute.Required;
+    container: Attribute.Component<'meta.container'> & Attribute.Required;
+    dataProtection: Attribute.RichText & Attribute.Required;
+  };
+}
+
 export interface PageUserFeedback extends Schema.Component {
   collectionName: 'components_page_user_feedbacks';
   info: {
@@ -312,6 +326,45 @@ export interface MetaBackground extends Schema.Component {
   };
 }
 
+export interface FormHelperTile extends Schema.Component {
+  collectionName: 'components_basic_tile';
+  info: {
+    displayName: 'Tile';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    description: Attribute.RichText;
+    value: Attribute.String & Attribute.Required;
+    image: Attribute.Media<'images'>;
+    tagDescription: Attribute.String;
+  };
+}
+
+export interface FormHelperSelectOption extends Schema.Component {
+  collectionName: 'components_basic_select_options';
+  info: {
+    displayName: 'SelectOption';
+    description: '';
+  };
+  attributes: {
+    text: Attribute.String & Attribute.Required;
+    value: Attribute.String & Attribute.Required;
+  };
+}
+
+export interface FormHelperErrors extends Schema.Component {
+  collectionName: 'components_basic_errors';
+  info: {
+    displayName: 'Errors';
+    description: '';
+  };
+  attributes: {
+    code: Attribute.String;
+    text: Attribute.String;
+  };
+}
+
 export interface FormElementsTimeInput extends Schema.Component {
   collectionName: 'components_form_elements_time_inputs';
   info: {
@@ -546,45 +599,6 @@ export interface FormElementsAutoSuggestInput extends Schema.Component {
   };
 }
 
-export interface FormHelperTile extends Schema.Component {
-  collectionName: 'components_basic_tile';
-  info: {
-    displayName: 'Tile';
-    description: '';
-  };
-  attributes: {
-    title: Attribute.String & Attribute.Required;
-    description: Attribute.RichText;
-    value: Attribute.String & Attribute.Required;
-    image: Attribute.Media<'images'>;
-    tagDescription: Attribute.String;
-  };
-}
-
-export interface FormHelperSelectOption extends Schema.Component {
-  collectionName: 'components_basic_select_options';
-  info: {
-    displayName: 'SelectOption';
-    description: '';
-  };
-  attributes: {
-    text: Attribute.String & Attribute.Required;
-    value: Attribute.String & Attribute.Required;
-  };
-}
-
-export interface FormHelperErrors extends Schema.Component {
-  collectionName: 'components_basic_errors';
-  info: {
-    displayName: 'Errors';
-    description: '';
-  };
-  attributes: {
-    code: Attribute.String;
-    text: Attribute.String;
-  };
-}
-
 export interface FieldField extends Schema.Component {
   collectionName: 'components_field_fields';
   info: {
@@ -661,6 +675,7 @@ export interface BasicHeading extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'page.video': PageVideo;
       'page.user-feedback': PageUserFeedback;
       'page.navigation-item': PageNavigationItem;
       'page.meta-page-info': PageMetaPageInfo;
@@ -677,6 +692,9 @@ declare module '@strapi/types' {
       'page.array-summary': PageArraySummary;
       'meta.container': MetaContainer;
       'meta.background': MetaBackground;
+      'form-helper.tile': FormHelperTile;
+      'form-helper.select-option': FormHelperSelectOption;
+      'form-helper.errors': FormHelperErrors;
       'form-elements.time-input': FormElementsTimeInput;
       'form-elements.tile-group': FormElementsTileGroup;
       'form-elements.textarea': FormElementsTextarea;
@@ -688,9 +706,6 @@ declare module '@strapi/types' {
       'form-elements.checkbox': FormElementsCheckbox;
       'form-elements.button': FormElementsButton;
       'form-elements.auto-suggest-input': FormElementsAutoSuggestInput;
-      'form-helper.tile': FormHelperTile;
-      'form-helper.select-option': FormHelperSelectOption;
-      'form-helper.errors': FormHelperErrors;
       'field.field': FieldField;
       'basic.paragraph': BasicParagraph;
       'basic.link': BasicLink;

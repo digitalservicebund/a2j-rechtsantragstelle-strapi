@@ -1235,7 +1235,8 @@ export interface ApiPagePage extends Schema.CollectionType {
         'page.box-with-image',
         'page.list',
         'page.inline-notice',
-        'page.user-feedback'
+        'page.user-feedback',
+        'page.video'
       ]
     > &
       Attribute.Required &

@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_page_videos",
+  "info": {
+    "displayName": "Video",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "required": true,
+      "type": "string"
+    },
+    "url": {
+      "required": true,
+      "type": "string"
+    },
+    "container": {
+      "type": "component",
+      "repeatable": false,
+      "component": "meta.container",
+      "required": true
+    },
+    "dataProtection": {
+      "required": true,
+      "type": "richtext"
+    }
+  }
+}
