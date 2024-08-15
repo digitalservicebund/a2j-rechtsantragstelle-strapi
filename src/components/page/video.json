@@ -13,16 +13,6 @@
     "url": {
       "required": true,
       "type": "string"
-    },
-    "container": {
-      "type": "component",
-      "repeatable": false,
-      "component": "meta.container",
-      "required": true
-    },
-    "dataProtection": {
-      "required": true,
-      "type": "richtext"
     }
   }
 }

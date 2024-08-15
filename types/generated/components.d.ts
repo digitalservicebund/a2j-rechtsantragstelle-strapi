@@ -9,8 +9,6 @@ export interface PageVideo extends Schema.Component {
   attributes: {
     title: Attribute.String & Attribute.Required;
     url: Attribute.String & Attribute.Required;
-    container: Attribute.Component<'meta.container'> & Attribute.Required;
-    dataProtection: Attribute.RichText & Attribute.Required;
   };
 }
 
