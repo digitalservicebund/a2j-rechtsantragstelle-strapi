@@ -1,7 +1,8 @@
 {
   "collectionName": "components_form_elements_dropdowns",
   "info": {
-    "displayName": "Dropdown"
+    "displayName": "Dropdown",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -27,6 +28,15 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::error.error"
+    },
+    "width": {
+      "type": "enumeration",
+      "enum": [
+        "characters16",
+        "characters24",
+        "characters36",
+        "characters54"
+      ]
     }
   }
 }
