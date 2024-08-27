@@ -48,6 +48,12 @@
     "npm": ">=6.0.0"
   },
   "overrides": {
+    "@strapi/provider-upload-aws-s3": {
+      "@aws-sdk/client-s3": "3.637.0",
+      "@aws-sdk/lib-storage": "3.637.0",
+      "@aws-sdk/s3-request-presigner": "3.637.0",
+      "@aws-sdk/types": "3.609.0"
+    },
     "@strapi/cloud-cli": {
       "tar": "~6.2.1"
     },
