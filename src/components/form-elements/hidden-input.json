@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_form_elements_hidden_inputs",
+  "info": {
+    "displayName": "HiddenInput",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "reason": {
+      "type": "text",
+      "required": true
+    }
+  }
+}
