@@ -60,7 +60,8 @@
         "form-elements.tile-group",
         "form-elements.date-input",
         "form-elements.file-input",
-        "form-elements.auto-suggest-input"
+        "form-elements.auto-suggest-input",
+        "form-elements.hidden-input"
       ],
       "pluginOptions": {
         "i18n": {
