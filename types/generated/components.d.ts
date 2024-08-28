@@ -1,5 +1,99 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface MetaContainer extends Schema.Component {
+  collectionName: 'components_meta_containers';
+  info: {
+    displayName: 'Container';
+    description: '';
+  };
+  attributes: {
+    backgroundColor: Attribute.Enumeration<
+      ['default', 'white', 'blue', 'yellow']
+    > &
+      Attribute.Required &
+      Attribute.DefaultTo<'default'>;
+    paddingTop: Attribute.Enumeration<
+      [
+        'default',
+        'px0',
+        'px8',
+        'px16',
+        'px24',
+        'px32',
+        'px40',
+        'px48',
+        'px56',
+        'px64'
+      ]
+    > &
+      Attribute.Required &
+      Attribute.DefaultTo<'default'>;
+    paddingBottom: Attribute.Enumeration<
+      [
+        'default',
+        'px0',
+        'px8',
+        'px16',
+        'px24',
+        'px32',
+        'px40',
+        'px48',
+        'px56',
+        'px64'
+      ]
+    > &
+      Attribute.Required &
+      Attribute.DefaultTo<'default'>;
+  };
+}
+
+export interface MetaBackground extends Schema.Component {
+  collectionName: 'components_meta_backgrounds';
+  info: {
+    displayName: 'Outer Background';
+    description: '';
+  };
+  attributes: {
+    backgroundColor: Attribute.Enumeration<
+      ['default', 'white', 'blue', 'darkBlue', 'yellow']
+    > &
+      Attribute.Required &
+      Attribute.DefaultTo<'default'>;
+    paddingTop: Attribute.Enumeration<
+      [
+        'default',
+        'px0',
+        'px8',
+        'px16',
+        'px24',
+        'px32',
+        'px40',
+        'px48',
+        'px56',
+        'px64'
+      ]
+    > &
+      Attribute.Required &
+      Attribute.DefaultTo<'default'>;
+    paddingBottom: Attribute.Enumeration<
+      [
+        'default',
+        'px0',
+        'px8',
+        'px16',
+        'px24',
+        'px32',
+        'px40',
+        'px48',
+        'px56',
+        'px64'
+      ]
+    > &
+      Attribute.Required &
+      Attribute.DefaultTo<'default'>;
+  };
+}
+
 export interface PageVideo extends Schema.Component {
   collectionName: 'components_page_videos';
   info: {
@@ -230,100 +324,6 @@ export interface PageArraySummary extends Schema.Component {
   };
 }
 
-export interface MetaContainer extends Schema.Component {
-  collectionName: 'components_meta_containers';
-  info: {
-    displayName: 'Container';
-    description: '';
-  };
-  attributes: {
-    backgroundColor: Attribute.Enumeration<
-      ['default', 'white', 'blue', 'yellow']
-    > &
-      Attribute.Required &
-      Attribute.DefaultTo<'default'>;
-    paddingTop: Attribute.Enumeration<
-      [
-        'default',
-        'px0',
-        'px8',
-        'px16',
-        'px24',
-        'px32',
-        'px40',
-        'px48',
-        'px56',
-        'px64'
-      ]
-    > &
-      Attribute.Required &
-      Attribute.DefaultTo<'default'>;
-    paddingBottom: Attribute.Enumeration<
-      [
-        'default',
-        'px0',
-        'px8',
-        'px16',
-        'px24',
-        'px32',
-        'px40',
-        'px48',
-        'px56',
-        'px64'
-      ]
-    > &
-      Attribute.Required &
-      Attribute.DefaultTo<'default'>;
-  };
-}
-
-export interface MetaBackground extends Schema.Component {
-  collectionName: 'components_meta_backgrounds';
-  info: {
-    displayName: 'Outer Background';
-    description: '';
-  };
-  attributes: {
-    backgroundColor: Attribute.Enumeration<
-      ['default', 'white', 'blue', 'darkBlue', 'yellow']
-    > &
-      Attribute.Required &
-      Attribute.DefaultTo<'default'>;
-    paddingTop: Attribute.Enumeration<
-      [
-        'default',
-        'px0',
-        'px8',
-        'px16',
-        'px24',
-        'px32',
-        'px40',
-        'px48',
-        'px56',
-        'px64'
-      ]
-    > &
-      Attribute.Required &
-      Attribute.DefaultTo<'default'>;
-    paddingBottom: Attribute.Enumeration<
-      [
-        'default',
-        'px0',
-        'px8',
-        'px16',
-        'px24',
-        'px32',
-        'px40',
-        'px48',
-        'px56',
-        'px64'
-      ]
-    > &
-      Attribute.Required &
-      Attribute.DefaultTo<'default'>;
-  };
-}
-
 export interface FormHelperTile extends Schema.Component {
   collectionName: 'components_basic_tile';
   info: {
@@ -360,19 +360,6 @@ export interface FormHelperErrors extends Schema.Component {
   attributes: {
     code: Attribute.String;
     text: Attribute.String;
-  };
-}
-
-export interface FieldField extends Schema.Component {
-  collectionName: 'components_field_fields';
-  info: {
-    displayName: 'Field';
-    icon: '';
-    description: '';
-  };
-  attributes: {
-    name: Attribute.String & Attribute.Required;
-    value: Attribute.Text & Attribute.Required;
   };
 }
 
@@ -487,6 +474,18 @@ export interface FormElementsInput extends Schema.Component {
         'characters54'
       ]
     >;
+  };
+}
+
+export interface FormElementsHiddenInput extends Schema.Component {
+  collectionName: 'components_form_elements_hidden_inputs';
+  info: {
+    displayName: 'HiddenInput';
+    description: '';
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Required;
+    reason: Attribute.Text & Attribute.Required;
   };
 }
 
@@ -614,6 +613,19 @@ export interface FormElementsAutoSuggestInput extends Schema.Component {
   };
 }
 
+export interface FieldField extends Schema.Component {
+  collectionName: 'components_field_fields';
+  info: {
+    displayName: 'Field';
+    icon: '';
+    description: '';
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Required;
+    value: Attribute.Text & Attribute.Required;
+  };
+}
+
 export interface BasicParagraph extends Schema.Component {
   collectionName: 'components_basic_paragraphs';
   info: {
@@ -677,6 +689,8 @@ export interface BasicHeading extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'meta.container': MetaContainer;
+      'meta.background': MetaBackground;
       'page.video': PageVideo;
       'page.user-feedback': PageUserFeedback;
       'page.navigation-item': PageNavigationItem;
@@ -692,23 +706,22 @@ declare module '@strapi/types' {
       'page.box': PageBox;
       'page.box-with-image': PageBoxWithImage;
       'page.array-summary': PageArraySummary;
-      'meta.container': MetaContainer;
-      'meta.background': MetaBackground;
       'form-helper.tile': FormHelperTile;
       'form-helper.select-option': FormHelperSelectOption;
       'form-helper.errors': FormHelperErrors;
-      'field.field': FieldField;
       'form-elements.time-input': FormElementsTimeInput;
       'form-elements.tile-group': FormElementsTileGroup;
       'form-elements.textarea': FormElementsTextarea;
       'form-elements.select': FormElementsSelect;
       'form-elements.input': FormElementsInput;
+      'form-elements.hidden-input': FormElementsHiddenInput;
       'form-elements.file-input': FormElementsFileInput;
       'form-elements.dropdown': FormElementsDropdown;
       'form-elements.date-input': FormElementsDateInput;
       'form-elements.checkbox': FormElementsCheckbox;
       'form-elements.button': FormElementsButton;
       'form-elements.auto-suggest-input': FormElementsAutoSuggestInput;
+      'field.field': FieldField;
       'basic.paragraph': BasicParagraph;
       'basic.link': BasicLink;
       'basic.heading': BasicHeading;
