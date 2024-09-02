@@ -975,6 +975,68 @@ export interface ApiErrorError extends Schema.CollectionType {
   };
 }
 
+export interface ApiFieldsetGroupFieldsetGroup extends Schema.CollectionType {
+  collectionName: 'fieldset_groups';
+  info: {
+    singularName: 'fieldset-group';
+    pluralName: 'fieldset-groups';
+    displayName: 'FieldsetGroup';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    name: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    formComponents: Attribute.DynamicZone<
+      [
+        'form-elements.time-input',
+        'form-elements.input',
+        'form-elements.date-input',
+        'form-elements.dropdown'
+      ]
+    > &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::fieldset-group.fieldset-group',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::fieldset-group.fieldset-group',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::fieldset-group.fieldset-group',
+      'oneToMany',
+      'api::fieldset-group.fieldset-group'
+    >;
+    locale: Attribute.String;
+  };
+}
+
 export interface ApiFlowIdFlowId extends Schema.CollectionType {
   collectionName: 'flow_ids';
   info: {
@@ -1136,7 +1198,8 @@ export interface ApiFormFlowPageFormFlowPage extends Schema.CollectionType {
         'form-elements.time-input',
         'form-elements.file-input',
         'form-elements.auto-suggest-input',
-        'form-elements.hidden-input'
+        'form-elements.hidden-input',
+        'form-elements.fieldset'
       ]
     > &
       Attribute.SetPluginOptions<{
@@ -1608,6 +1671,7 @@ declare module '@strapi/types' {
       'api::cookie-banner.cookie-banner': ApiCookieBannerCookieBanner;
       'api::element-with-id.element-with-id': ApiElementWithIdElementWithId;
       'api::error.error': ApiErrorError;
+      'api::fieldset-group.fieldset-group': ApiFieldsetGroupFieldsetGroup;
       'api::flow-id.flow-id': ApiFlowIdFlowId;
       'api::footer.footer': ApiFooterFooter;
       'api::form-flow-page.form-flow-page': ApiFormFlowPageFormFlowPage;

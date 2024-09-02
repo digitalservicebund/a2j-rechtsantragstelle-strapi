@@ -85,7 +85,8 @@
         "form-elements.time-input",
         "form-elements.file-input",
         "form-elements.auto-suggest-input",
-        "form-elements.hidden-input"
+        "form-elements.hidden-input",
+        "form-elements.fieldset"
       ],
       "pluginOptions": {
         "i18n": {
