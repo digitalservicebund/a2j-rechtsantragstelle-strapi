@@ -14,10 +14,6 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::fieldset-group.fieldset-group"
-    },
-    "name": {
-      "type": "string",
-      "required": true
     }
   }
 }

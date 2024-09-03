@@ -230,6 +230,45 @@ export interface PageArraySummary extends Schema.Component {
   };
 }
 
+export interface FormHelperTile extends Schema.Component {
+  collectionName: 'components_basic_tile';
+  info: {
+    displayName: 'Tile';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    description: Attribute.RichText;
+    value: Attribute.String & Attribute.Required;
+    image: Attribute.Media<'images'>;
+    tagDescription: Attribute.String;
+  };
+}
+
+export interface FormHelperSelectOption extends Schema.Component {
+  collectionName: 'components_basic_select_options';
+  info: {
+    displayName: 'SelectOption';
+    description: '';
+  };
+  attributes: {
+    text: Attribute.String & Attribute.Required;
+    value: Attribute.String & Attribute.Required;
+  };
+}
+
+export interface FormHelperErrors extends Schema.Component {
+  collectionName: 'components_basic_errors';
+  info: {
+    displayName: 'Errors';
+    description: '';
+  };
+  attributes: {
+    code: Attribute.String;
+    text: Attribute.String;
+  };
+}
+
 export interface MetaContainer extends Schema.Component {
   collectionName: 'components_meta_containers';
   info: {
@@ -321,45 +360,6 @@ export interface MetaBackground extends Schema.Component {
     > &
       Attribute.Required &
       Attribute.DefaultTo<'default'>;
-  };
-}
-
-export interface FormHelperTile extends Schema.Component {
-  collectionName: 'components_basic_tile';
-  info: {
-    displayName: 'Tile';
-    description: '';
-  };
-  attributes: {
-    title: Attribute.String & Attribute.Required;
-    description: Attribute.RichText;
-    value: Attribute.String & Attribute.Required;
-    image: Attribute.Media<'images'>;
-    tagDescription: Attribute.String;
-  };
-}
-
-export interface FormHelperSelectOption extends Schema.Component {
-  collectionName: 'components_basic_select_options';
-  info: {
-    displayName: 'SelectOption';
-    description: '';
-  };
-  attributes: {
-    text: Attribute.String & Attribute.Required;
-    value: Attribute.String & Attribute.Required;
-  };
-}
-
-export interface FormHelperErrors extends Schema.Component {
-  collectionName: 'components_basic_errors';
-  info: {
-    displayName: 'Errors';
-    description: '';
-  };
-  attributes: {
-    code: Attribute.String;
-    text: Attribute.String;
   };
 }
 
@@ -514,7 +514,6 @@ export interface FormElementsFieldset extends Schema.Component {
       'oneToOne',
       'api::fieldset-group.fieldset-group'
     >;
-    name: Attribute.String & Attribute.Required;
   };
 }
 
@@ -721,11 +720,11 @@ declare module '@strapi/types' {
       'page.box': PageBox;
       'page.box-with-image': PageBoxWithImage;
       'page.array-summary': PageArraySummary;
-      'meta.container': MetaContainer;
-      'meta.background': MetaBackground;
       'form-helper.tile': FormHelperTile;
       'form-helper.select-option': FormHelperSelectOption;
       'form-helper.errors': FormHelperErrors;
+      'meta.container': MetaContainer;
+      'meta.background': MetaBackground;
       'form-elements.time-input': FormElementsTimeInput;
       'form-elements.tile-group': FormElementsTileGroup;
       'form-elements.textarea': FormElementsTextarea;
