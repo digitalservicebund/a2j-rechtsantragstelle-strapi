@@ -24,10 +24,10 @@
     "testTimeout": 70000
   },
   "dependencies": {
-    "@strapi/plugin-i18n": "4.25.9",
-    "@strapi/plugin-users-permissions": "4.25.9",
-    "@strapi/provider-upload-aws-s3": "4.25.9",
-    "@strapi/strapi": "4.25.9",
+    "@strapi/plugin-i18n": "4.25.10",
+    "@strapi/plugin-users-permissions": "4.25.10",
+    "@strapi/provider-upload-aws-s3": "4.25.10",
+    "@strapi/strapi": "4.25.10",
     "patch-package": "^8.0.0",
     "pg": "^8.12.0",
     "pluralize": "^8.0.0",
