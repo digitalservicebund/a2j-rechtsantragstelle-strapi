@@ -1,7 +1,8 @@
 # 🚀 Getting started with Strapi
 
 ## Requirement
-- Node 20 (There is an issue with Node 22)
+
+- Node 20
 
 ## Quickstart
 
@@ -10,7 +11,7 @@
 
 ```bash
 cp .env.example .env
-docker compose up
+docker compose up // or docker compose strapiDB -d
 ```
 
 1. Visit http://localhost:1337/admin/
@@ -19,7 +20,14 @@ docker compose up
 
 ### Troubleshooting
 
-If you get an error like `ECONNREFUSED 172.**.*.*:5431` on Mac, this is a [known issue](https://github.com/docker/compose/issues/4783#issuecomment-301778969). Just remove the port binding to 5431 for it to work.
+- If you get an error like `ECONNREFUSED 172.**.*.*:5431` on Mac, this is a [known issue](https://github.com/docker/compose/issues/4783#issuecomment-301778969). Just remove the port binding to 5431 for it to work.
+
+- If you see this error, then you need to install Node 20.x not higher
+
+```
+(node:27666) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+```
 
 ## Strapi CLI
 
