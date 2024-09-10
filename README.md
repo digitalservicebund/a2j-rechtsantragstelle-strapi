@@ -1,5 +1,8 @@
 # 🚀 Getting started with Strapi
 
+## Requirement
+- Node 20 (There is an issue with Node 22)
+
 ## Quickstart
 
 1. Copy `.env.example` to `.env`
