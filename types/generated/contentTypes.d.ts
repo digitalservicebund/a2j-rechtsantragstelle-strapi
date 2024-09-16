@@ -1172,6 +1172,12 @@ export interface ApiFormFlowPageFormFlowPage extends Schema.CollectionType {
           localized: false;
         };
       }>;
+    backButtonLabel: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

@@ -124,6 +124,14 @@
       },
       "type": "string",
       "required": false
+    },
+    "backButtonLabel": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
     }
   }
 }
