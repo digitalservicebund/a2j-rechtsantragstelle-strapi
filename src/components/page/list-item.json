@@ -14,14 +14,6 @@
       "repeatable": false,
       "component": "basic.heading"
     },
-    "image": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ]
-    },
     "content": {
       "type": "richtext"
     },
