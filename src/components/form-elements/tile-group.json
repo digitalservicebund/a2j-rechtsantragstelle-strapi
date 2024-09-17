@@ -24,8 +24,7 @@
     "errors": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::error.error",
-      "required": true
+      "target": "api::error.error"
     },
     "useTwoColumns": {
       "type": "boolean",
