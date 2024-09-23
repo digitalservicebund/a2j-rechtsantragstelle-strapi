@@ -9,11 +9,6 @@
     "identifier": {
       "type": "string"
     },
-    "label": {
-      "type": "component",
-      "repeatable": false,
-      "component": "basic.heading"
-    },
     "content": {
       "type": "richtext"
     },
