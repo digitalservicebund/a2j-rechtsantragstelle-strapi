@@ -23,6 +23,11 @@
     },
     "description": {
       "type": "richtext"
+    },
+    "textHint": {
+      "type": "component",
+      "repeatable": false,
+      "component": "page.details-summary"
     }
   }
 }

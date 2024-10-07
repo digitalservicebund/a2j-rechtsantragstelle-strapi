@@ -74,8 +74,6 @@ export interface PageListItem extends Schema.Component {
   };
   attributes: {
     identifier: Attribute.String;
-    label: Attribute.Component<'basic.heading'>;
-    image: Attribute.Media<'images'>;
     content: Attribute.RichText;
     headline: Attribute.Component<'basic.heading'>;
     buttons: Attribute.Component<'form-elements.button', true>;
@@ -419,6 +417,7 @@ export interface FormElementsTextarea extends Schema.Component {
     >;
     placeholder: Attribute.String;
     description: Attribute.RichText;
+    textHint: Attribute.Component<'page.details-summary'>;
   };
 }
 
