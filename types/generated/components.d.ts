@@ -174,7 +174,6 @@ export interface PageDetailsSummary extends Schema.Component {
     description: '';
   };
   attributes: {
-    identifier: Attribute.String;
     title: Attribute.String & Attribute.Required;
     content: Attribute.RichText & Attribute.Required;
   };
