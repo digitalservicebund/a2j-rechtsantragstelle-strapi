@@ -417,7 +417,7 @@ export interface FormElementsTextarea extends Schema.Component {
     >;
     placeholder: Attribute.String;
     description: Attribute.RichText;
-    textHint: Attribute.Component<'page.details-summary'>;
+    details: Attribute.Component<'page.details-summary'>;
   };
 }
 

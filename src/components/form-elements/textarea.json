@@ -24,7 +24,7 @@
     "description": {
       "type": "richtext"
     },
-    "textHint": {
+    "details": {
       "type": "component",
       "repeatable": false,
       "component": "page.details-summary"
