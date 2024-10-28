@@ -45,6 +45,9 @@
         "characters36",
         "characters54"
       ]
+    },
+    "helperText": {
+      "type": "string"
     }
   }
 }
