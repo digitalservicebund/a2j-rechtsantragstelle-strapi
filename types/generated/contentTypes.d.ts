@@ -1151,6 +1151,7 @@ export interface ApiFormFlowPageFormFlowPage extends Schema.CollectionType {
         'page.box-with-image',
         'page.box',
         'page.info-box',
+        'page.inline-notice',
         'page.link-list-box',
         'page.list',
         'page.user-feedback'
