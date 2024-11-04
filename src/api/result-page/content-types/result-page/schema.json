@@ -80,7 +80,8 @@
       "enum": [
         "error",
         "success",
-        "warning"
+        "warning",
+        "info"
       ],
       "required": true,
       "default": "error"

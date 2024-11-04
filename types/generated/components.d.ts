@@ -360,19 +360,6 @@ export interface FormHelperErrors extends Schema.Component {
   };
 }
 
-export interface FieldField extends Schema.Component {
-  collectionName: 'components_field_fields';
-  info: {
-    displayName: 'Field';
-    icon: '';
-    description: '';
-  };
-  attributes: {
-    name: Attribute.String & Attribute.Required;
-    value: Attribute.Text & Attribute.Required;
-  };
-}
-
 export interface FormElementsTimeInput extends Schema.Component {
   collectionName: 'components_form_elements_time_inputs';
   info: {
@@ -623,6 +610,19 @@ export interface FormElementsAutoSuggestInput extends Schema.Component {
   };
 }
 
+export interface FieldField extends Schema.Component {
+  collectionName: 'components_field_fields';
+  info: {
+    displayName: 'Field';
+    icon: '';
+    description: '';
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Required;
+    value: Attribute.Text & Attribute.Required;
+  };
+}
+
 export interface BasicParagraph extends Schema.Component {
   collectionName: 'components_basic_paragraphs';
   info: {
@@ -706,7 +706,6 @@ declare module '@strapi/types' {
       'form-helper.tile': FormHelperTile;
       'form-helper.select-option': FormHelperSelectOption;
       'form-helper.errors': FormHelperErrors;
-      'field.field': FieldField;
       'form-elements.time-input': FormElementsTimeInput;
       'form-elements.tile-group': FormElementsTileGroup;
       'form-elements.textarea': FormElementsTextarea;
@@ -719,6 +718,7 @@ declare module '@strapi/types' {
       'form-elements.checkbox': FormElementsCheckbox;
       'form-elements.button': FormElementsButton;
       'form-elements.auto-suggest-input': FormElementsAutoSuggestInput;
+      'field.field': FieldField;
       'basic.paragraph': BasicParagraph;
       'basic.link': BasicLink;
       'basic.heading': BasicHeading;
