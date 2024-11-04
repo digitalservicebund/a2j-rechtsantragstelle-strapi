@@ -1380,9 +1380,7 @@ export interface ApiResultPageResultPage extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    pageType: Attribute.Enumeration<
-      ['error', 'success', 'warning', 'default']
-    > &
+    pageType: Attribute.Enumeration<['error', 'success', 'warning', 'info']> &
       Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {

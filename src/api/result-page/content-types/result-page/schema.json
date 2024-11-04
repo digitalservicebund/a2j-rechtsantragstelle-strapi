@@ -81,7 +81,7 @@
         "error",
         "success",
         "warning",
-        "default"
+        "info"
       ],
       "required": true,
       "default": "error"
