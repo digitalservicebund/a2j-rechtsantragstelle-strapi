@@ -4,7 +4,8 @@
   "info": {
     "singularName": "page-header",
     "pluralName": "page-headers",
-    "displayName": "PageHeader"
+    "displayName": "PageHeader",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true

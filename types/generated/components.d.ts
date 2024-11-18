@@ -22,6 +22,18 @@ export interface PageUserFeedback extends Schema.Component {
   };
 }
 
+export interface PageSummaryDataOverview extends Schema.Component {
+  collectionName: 'components_page_summary_data_overviews';
+  info: {
+    displayName: 'SummaryDataOverview';
+    description: '';
+  };
+  attributes: {
+    heading: Attribute.String;
+    content: Attribute.RichText;
+  };
+}
+
 export interface PageNavigationItem extends Schema.Component {
   collectionName: 'components_page_navigation_items';
   info: {
@@ -688,6 +700,7 @@ declare module '@strapi/types' {
     export interface Components {
       'page.video': PageVideo;
       'page.user-feedback': PageUserFeedback;
+      'page.summary-data-overview': PageSummaryDataOverview;
       'page.navigation-item': PageNavigationItem;
       'page.meta-page-info': PageMetaPageInfo;
       'page.list': PageList;

@@ -1116,7 +1116,8 @@ export interface ApiFormFlowPageFormFlowPage extends Schema.CollectionType {
         'page.link-list-box',
         'page.array-summary',
         'page.list',
-        'page.inline-notice'
+        'page.inline-notice',
+        'page.summary-data-overview'
       ]
     > &
       Attribute.SetPluginOptions<{
@@ -1275,6 +1276,7 @@ export interface ApiPageHeaderPageHeader extends Schema.SingleType {
     singularName: 'page-header';
     pluralName: 'page-headers';
     displayName: 'PageHeader';
+    description: '';
   };
   options: {
     draftAndPublish: true;

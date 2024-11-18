@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_page_summary_data_overviews",
+  "info": {
+    "displayName": "SummaryDataOverview",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    }
+  }
+}

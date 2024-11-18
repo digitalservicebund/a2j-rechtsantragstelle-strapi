@@ -64,7 +64,8 @@
         "page.link-list-box",
         "page.array-summary",
         "page.list",
-        "page.inline-notice"
+        "page.inline-notice",
+        "page.summary-data-overview"
       ],
       "pluginOptions": {
         "i18n": {
