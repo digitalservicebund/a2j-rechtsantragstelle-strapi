@@ -43,7 +43,17 @@
     "node": ">=18.0.0 <=20.x.x",
     "npm": ">=6.0.0"
   },
-  "overrides": {},
+  "overrides": {
+    "@strapi/admin": {
+      "msw": "^2.0.0"
+    },
+    "grant": {
+      "cookie": "^1.0.0"
+    },
+    "@strapi/pack-up": {
+      "vite": "^5.4.11"
+    }
+  },
   "strapi": {
     "uuid": "75be5f21-db3a-4a6f-9069-20b0c6b8e10c"
   }
