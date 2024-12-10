@@ -95,11 +95,6 @@
       },
       "component": "basic.link"
     },
-    "reasonings": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::element-with-id.element-with-id"
-    },
     "documents": {
       "type": "relation",
       "relation": "oneToOne",
