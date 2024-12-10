@@ -278,6 +278,14 @@ export interface FormElementsTextarea extends Schema.Component {
       'api::error.error'
     >;
     label: Attribute.String;
+    maxLength: Attribute.Integer &
+      Attribute.SetMinMax<
+        {
+          max: 5000;
+        },
+        number
+      > &
+      Attribute.DefaultTo<5000>;
     name: Attribute.String & Attribute.Required;
     placeholder: Attribute.String;
   };
