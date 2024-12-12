@@ -23,9 +23,9 @@
     "testTimeout": 70000
   },
   "dependencies": {
-    "@strapi/plugin-users-permissions": "5.4.1",
-    "@strapi/provider-upload-aws-s3": "5.4.1",
-    "@strapi/strapi": "5.4.1",
+    "@strapi/plugin-users-permissions": "5.5.1",
+    "@strapi/provider-upload-aws-s3": "5.5.1",
+    "@strapi/strapi": "5.5.1",
     "pg": "^8.13.1",
     "pluralize": "^8.0.0",
     "react": "^18.3.1",
@@ -44,17 +44,12 @@
     "npm": ">=6.0.0"
   },
   "overrides": {
-    "@strapi/admin": {
-      "msw": "^2.0.0"
-    },
     "grant": {
       "cookie": "^1.0.0"
-    },
-    "@strapi/pack-up": {
-      "vite": "^5.4.11"
     }
   },
   "strapi": {
-    "uuid": "75be5f21-db3a-4a6f-9069-20b0c6b8e10c"
+    "uuid": "75be5f21-db3a-4a6f-9069-20b0c6b8e10c",
+    "telemetryDisabled": true
   }
 }
