@@ -31,6 +31,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.0.0",
+    "strapi-plugin-gh-workflow-trigger-v5": "file:plugins/strapi-plugin-gh-workflow-trigger-v5",
     "strapi-v5-plugin-populate-deep": "^4.0.4",
     "styled-components": "^6.1.13"
   },
@@ -51,5 +52,8 @@
   "strapi": {
     "uuid": "75be5f21-db3a-4a6f-9069-20b0c6b8e10c",
     "telemetryDisabled": true
-  }
+  },
+  "workspaces": [
+    "plugins/strapi-plugin-gh-workflow-trigger-v5"
+  ]
 }
