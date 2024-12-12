@@ -19,7 +19,12 @@ module.exports = ({ env }) => {
         contentSecurityPolicy: {
           useDefaults: true,
           directives: {
-            'connect-src': ["'self'", 'https:'],
+            'connect-src': [
+              "'self'",
+              'https:',
+              'ws://localhost:5173/',
+              'http://localhost:5173/',
+            ],
             'img-src': [
               "'self'",
               'data:',
