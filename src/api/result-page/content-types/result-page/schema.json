@@ -61,7 +61,6 @@
         "basic.link",
         "basic.paragraph",
         "page.info-box",
-        "page.info-box-item",
         "page.box-with-image",
         "page.list",
         "page.inline-notice",
@@ -95,11 +94,6 @@
         }
       },
       "component": "basic.link"
-    },
-    "reasonings": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::element-with-id.element-with-id"
     },
     "documents": {
       "type": "relation",
