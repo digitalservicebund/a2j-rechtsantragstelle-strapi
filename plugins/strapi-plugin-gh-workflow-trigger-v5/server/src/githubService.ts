@@ -27,7 +27,6 @@ export default ({ strapi }: { strapi: Core.Strapi }) => ({
     const data = { ref, inputs };
 
     const url = `https://api.github.com/repos/${owner}/${repo}/actions/workflows/${workflow_id}/dispatches`;
-    return { success: false, error: 'Not implemented' };
     return fetch(url, {
       method: 'POST',
       headers: githubHeaders(token),
