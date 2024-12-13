@@ -10,7 +10,9 @@
     "start": "strapi start",
     "strapi": "strapi",
     "test": "jest --forceExit --detectOpenHandles",
-    "transfer": "source .env && strapi transfer --from $TRANSFER_URL_REMOTE --from-token $TRANSFER_TOKEN_REMOTE --to-token $TRANSFER_TOKEN_LOCAL"
+    "transfer": "source .env && strapi transfer --from $TRANSFER_URL_REMOTE --from-token $TRANSFER_TOKEN_REMOTE --to-token $TRANSFER_TOKEN_LOCAL",
+    "plugin:build": "npm run build --workspace plugins/strapi-plugin-gh-workflow-trigger-v5",
+    "plugin:develop": "npm run watch --workspace plugins/strapi-plugin-gh-workflow-trigger-v5"
   },
   "jest": {
     "testEnvironment": "node",
