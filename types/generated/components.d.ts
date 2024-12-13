@@ -1,665 +1,13 @@
-import type { Schema, Attribute } from '@strapi/strapi';
+import type { Schema, Struct } from '@strapi/strapi';
 
-export interface PageVideo extends Schema.Component {
-  collectionName: 'components_page_videos';
-  info: {
-    displayName: 'Video';
-    description: '';
-  };
-  attributes: {
-    title: Attribute.String & Attribute.Required;
-    url: Attribute.String & Attribute.Required;
-  };
-}
-
-export interface PageUserFeedback extends Schema.Component {
-  collectionName: 'components_page_user_feedbacks';
-  info: {
-    displayName: 'UserFeedback';
-  };
-  attributes: {
-    headingRating: Attribute.String & Attribute.Required;
-  };
-}
-
-export interface PageNavigationItem extends Schema.Component {
-  collectionName: 'components_page_navigation_items';
-  info: {
-    displayName: 'Navigation Item';
-    description: '';
-  };
-  attributes: {
-    text: Attribute.String & Attribute.Required;
-    targeturl: Attribute.String;
-    baseurl: Attribute.String;
-  };
-}
-
-export interface PageMetaPageInfo extends Schema.Component {
-  collectionName: 'components_page_meta_page_infos';
-  info: {
-    displayName: 'MetaPageInfo';
-    description: '';
-  };
-  attributes: {
-    title: Attribute.String & Attribute.Required;
-    description: Attribute.Text;
-    ogTitle: Attribute.Text;
-    breadcrumb: Attribute.Text & Attribute.Required;
-  };
-}
-
-export interface PageList extends Schema.Component {
-  collectionName: 'components_page_lists';
-  info: {
-    displayName: 'List';
-    description: '';
-  };
-  attributes: {
-    identifier: Attribute.String;
-    heading: Attribute.Component<'basic.heading'>;
-    isNumeric: Attribute.Boolean & Attribute.DefaultTo<true>;
-    subheading: Attribute.RichText;
-    items: Attribute.Component<'page.list-item', true>;
-    container: Attribute.Component<'meta.container'> & Attribute.Required;
-    outerBackground: Attribute.Component<'meta.background'>;
-  };
-}
-
-export interface PageListItem extends Schema.Component {
-  collectionName: 'components_page_list_items';
-  info: {
-    displayName: 'ListItem';
-    description: '';
-  };
-  attributes: {
-    identifier: Attribute.String;
-    content: Attribute.RichText;
-    headline: Attribute.Component<'basic.heading'>;
-    buttons: Attribute.Component<'form-elements.button', true>;
-  };
-}
-
-export interface PageLinkListBox extends Schema.Component {
-  collectionName: 'components_page_link_list_boxes';
-  info: {
-    displayName: 'LinkListBox';
-    description: '';
-  };
-  attributes: {
-    identifier: Attribute.String;
-    label: Attribute.Component<'basic.heading'>;
-    heading: Attribute.Component<'basic.heading'>;
-    links: Attribute.Component<'basic.link', true>;
-    container: Attribute.Component<'meta.container'> & Attribute.Required;
-    outerBackground: Attribute.Component<'meta.background'>;
-    buttons: Attribute.Component<'form-elements.button', true>;
-  };
-}
-
-export interface PageInlineNotice extends Schema.Component {
-  collectionName: 'components_page_inline_notice';
-  info: {
-    displayName: 'InlineNotice';
-    description: 'A notice component with a fixed title label-01-bold. The component works in FormFlow Page, Vorabcheck Page, and Content Page';
-  };
-  attributes: {
-    identifier: Attribute.String;
-    title: Attribute.String & Attribute.Required;
-    tagName: Attribute.Enumeration<
-      ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'div']
-    > &
-      Attribute.Required &
-      Attribute.DefaultTo<'h1'>;
-    look: Attribute.Enumeration<['warning', 'tips']> &
-      Attribute.Required &
-      Attribute.DefaultTo<'warning'>;
-    content: Attribute.RichText;
-    container: Attribute.Component<'meta.container'> & Attribute.Required;
-    outerBackground: Attribute.Component<'meta.background'>;
-  };
-}
-
-export interface PageInfoBox extends Schema.Component {
-  collectionName: 'components_page_info_boxes';
-  info: {
-    displayName: 'InfoBox';
-    description: '';
-  };
-  attributes: {
-    identifier: Attribute.String;
-    separator: Attribute.Boolean & Attribute.DefaultTo<true>;
-    heading: Attribute.Component<'basic.heading'>;
-    items: Attribute.Component<'page.info-box-item', true>;
-    container: Attribute.Component<'meta.container'> & Attribute.Required;
-    outerBackground: Attribute.Component<'meta.background'>;
-  };
-}
-
-export interface PageInfoBoxItem extends Schema.Component {
-  collectionName: 'components_page_info_box_items';
-  info: {
-    displayName: 'InfoBoxItem';
-    description: '';
-  };
-  attributes: {
-    identifier: Attribute.String;
-    label: Attribute.Component<'basic.heading'>;
-    image: Attribute.Media<'images'>;
-    content: Attribute.RichText;
-    headline: Attribute.Component<'basic.heading'>;
-    buttons: Attribute.Component<'form-elements.button', true>;
-    detailsSummary: Attribute.Component<'page.details-summary', true>;
-  };
-}
-
-export interface PageHeader extends Schema.Component {
-  collectionName: 'components_page_headers';
-  info: {
-    displayName: 'Header';
-    description: '';
-  };
-  attributes: {
-    heading: Attribute.Component<'basic.heading'> & Attribute.Required;
-    content: Attribute.Component<'basic.paragraph'>;
-    container: Attribute.Component<'meta.container'> & Attribute.Required;
-    outerBackground: Attribute.Component<'meta.background'>;
-  };
-}
-
-export interface PageDetailsSummary extends Schema.Component {
-  collectionName: 'components_page_details_summary';
-  info: {
-    displayName: 'DetailsSummary';
-    description: '';
-  };
-  attributes: {
-    title: Attribute.String & Attribute.Required;
-    content: Attribute.RichText & Attribute.Required;
-  };
-}
-
-export interface PageBox extends Schema.Component {
-  collectionName: 'components_page_boxes';
-  info: {
-    displayName: 'Box';
-    description: '';
-  };
-  attributes: {
-    identifier: Attribute.String;
-    label: Attribute.Component<'basic.heading'>;
-    heading: Attribute.Component<'basic.heading'>;
-    content: Attribute.Component<'basic.paragraph'>;
-    container: Attribute.Component<'meta.container'> & Attribute.Required;
-    outerBackground: Attribute.Component<'meta.background'>;
-    buttons: Attribute.Component<'form-elements.button', true>;
-  };
-}
-
-export interface PageBoxWithImage extends Schema.Component {
-  collectionName: 'components_page_box_with_images';
-  info: {
-    displayName: 'BoxWithImage';
-    description: '';
-  };
-  attributes: {
-    identifier: Attribute.String;
-    heading: Attribute.Component<'basic.heading'>;
-    content: Attribute.RichText;
-    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
-      Attribute.Required;
-    container: Attribute.Component<'meta.container'> & Attribute.Required;
-    outerBackground: Attribute.Component<'meta.background'>;
-    variant: Attribute.Enumeration<['ImgMTextL']>;
-  };
-}
-
-export interface PageArraySummary extends Schema.Component {
-  collectionName: 'components_page_array_summaries';
-  info: {
-    displayName: 'ArraySummary';
-    icon: 'bulletList';
-    description: '';
-  };
-  attributes: {
-    categoryUrl: Attribute.String & Attribute.Required;
-    category: Attribute.String & Attribute.Required;
-  };
-}
-
-export interface MetaContainer extends Schema.Component {
-  collectionName: 'components_meta_containers';
-  info: {
-    displayName: 'Container';
-    description: '';
-  };
-  attributes: {
-    backgroundColor: Attribute.Enumeration<
-      ['default', 'white', 'blue', 'yellow']
-    > &
-      Attribute.Required &
-      Attribute.DefaultTo<'default'>;
-    paddingTop: Attribute.Enumeration<
-      [
-        'default',
-        'px0',
-        'px8',
-        'px16',
-        'px24',
-        'px32',
-        'px40',
-        'px48',
-        'px56',
-        'px64'
-      ]
-    > &
-      Attribute.Required &
-      Attribute.DefaultTo<'default'>;
-    paddingBottom: Attribute.Enumeration<
-      [
-        'default',
-        'px0',
-        'px8',
-        'px16',
-        'px24',
-        'px32',
-        'px40',
-        'px48',
-        'px56',
-        'px64'
-      ]
-    > &
-      Attribute.Required &
-      Attribute.DefaultTo<'default'>;
-  };
-}
-
-export interface MetaBackground extends Schema.Component {
-  collectionName: 'components_meta_backgrounds';
-  info: {
-    displayName: 'Outer Background';
-    description: '';
-  };
-  attributes: {
-    backgroundColor: Attribute.Enumeration<
-      ['default', 'white', 'blue', 'darkBlue', 'yellow']
-    > &
-      Attribute.Required &
-      Attribute.DefaultTo<'default'>;
-    paddingTop: Attribute.Enumeration<
-      [
-        'default',
-        'px0',
-        'px8',
-        'px16',
-        'px24',
-        'px32',
-        'px40',
-        'px48',
-        'px56',
-        'px64'
-      ]
-    > &
-      Attribute.Required &
-      Attribute.DefaultTo<'default'>;
-    paddingBottom: Attribute.Enumeration<
-      [
-        'default',
-        'px0',
-        'px8',
-        'px16',
-        'px24',
-        'px32',
-        'px40',
-        'px48',
-        'px56',
-        'px64'
-      ]
-    > &
-      Attribute.Required &
-      Attribute.DefaultTo<'default'>;
-  };
-}
-
-export interface FormHelperTile extends Schema.Component {
-  collectionName: 'components_basic_tile';
-  info: {
-    displayName: 'Tile';
-    description: '';
-  };
-  attributes: {
-    title: Attribute.String & Attribute.Required;
-    description: Attribute.RichText;
-    value: Attribute.String & Attribute.Required;
-    image: Attribute.Media<'images'>;
-    tagDescription: Attribute.String;
-  };
-}
-
-export interface FormHelperSelectOption extends Schema.Component {
-  collectionName: 'components_basic_select_options';
-  info: {
-    displayName: 'SelectOption';
-    description: '';
-  };
-  attributes: {
-    text: Attribute.String & Attribute.Required;
-    value: Attribute.String & Attribute.Required;
-  };
-}
-
-export interface FormHelperErrors extends Schema.Component {
-  collectionName: 'components_basic_errors';
-  info: {
-    displayName: 'Errors';
-    description: '';
-  };
-  attributes: {
-    code: Attribute.String;
-    text: Attribute.String;
-  };
-}
-
-export interface FormElementsTimeInput extends Schema.Component {
-  collectionName: 'components_form_elements_time_inputs';
-  info: {
-    displayName: 'TimeInput';
-    description: '';
-  };
-  attributes: {
-    name: Attribute.String & Attribute.Required;
-    label: Attribute.String;
-    errors: Attribute.Relation<
-      'form-elements.time-input',
-      'oneToMany',
-      'api::error.error'
-    >;
-    placeholder: Attribute.String;
-  };
-}
-
-export interface FormElementsTileGroup extends Schema.Component {
-  collectionName: 'components_basic_tile_group';
-  info: {
-    displayName: 'Tiles';
-    description: '';
-  };
-  attributes: {
-    name: Attribute.String & Attribute.Required;
-    label: Attribute.String;
-    options: Attribute.Component<'form-helper.tile', true>;
-    altLabel: Attribute.String;
-    errors: Attribute.Relation<
-      'form-elements.tile-group',
-      'oneToMany',
-      'api::error.error'
-    >;
-    useTwoColumns: Attribute.Boolean &
-      Attribute.Required &
-      Attribute.DefaultTo<true>;
-  };
-}
-
-export interface FormElementsTextarea extends Schema.Component {
-  collectionName: 'components_basic_textareas';
-  info: {
-    displayName: 'textarea';
-    description: '';
-  };
-  attributes: {
-    name: Attribute.String & Attribute.Required;
-    label: Attribute.String;
-    errors: Attribute.Relation<
-      'form-elements.textarea',
-      'oneToMany',
-      'api::error.error'
-    >;
-    placeholder: Attribute.String;
-    description: Attribute.RichText;
-    details: Attribute.Component<'page.details-summary'>;
-  };
-}
-
-export interface FormElementsSelect extends Schema.Component {
-  collectionName: 'components_basic_selects';
-  info: {
-    displayName: 'Select';
-    description: '';
-  };
-  attributes: {
-    name: Attribute.String & Attribute.Required;
-    label: Attribute.String;
-    options: Attribute.Component<'form-helper.select-option', true>;
-    altLabel: Attribute.String;
-    errors: Attribute.Relation<
-      'form-elements.select',
-      'oneToMany',
-      'api::error.error'
-    >;
-  };
-}
-
-export interface FormElementsInput extends Schema.Component {
-  collectionName: 'components_basic_inputs';
-  info: {
-    displayName: 'Input';
-    description: '';
-  };
-  attributes: {
-    name: Attribute.String & Attribute.Required;
-    label: Attribute.String;
-    type: Attribute.Enumeration<['text', 'number']> &
-      Attribute.Required &
-      Attribute.DefaultTo<'text'>;
-    errors: Attribute.Relation<
-      'form-elements.input',
-      'oneToMany',
-      'api::error.error'
-    >;
-    placeholder: Attribute.String;
-    suffix: Attribute.String;
-    width: Attribute.Enumeration<
-      [
-        'characters3',
-        'characters5',
-        'characters7',
-        'characters10',
-        'characters16',
-        'characters24',
-        'characters36',
-        'characters54'
-      ]
-    >;
-    helperText: Attribute.String;
-  };
-}
-
-export interface FormElementsHiddenInput extends Schema.Component {
-  collectionName: 'components_form_elements_hidden_inputs';
-  info: {
-    displayName: 'HiddenInput';
-    description: '';
-  };
-  attributes: {
-    name: Attribute.String & Attribute.Required;
-    reason: Attribute.Text & Attribute.Required;
-  };
-}
-
-export interface FormElementsFileInput extends Schema.Component {
-  collectionName: 'components_form_elements_file_inputs';
-  info: {
-    displayName: 'FileInput';
-    icon: '';
-  };
-  attributes: {
-    name: Attribute.String & Attribute.Required;
-    label: Attribute.String;
-  };
-}
-
-export interface FormElementsDropdown extends Schema.Component {
-  collectionName: 'components_form_elements_dropdowns';
-  info: {
-    displayName: 'Dropdown';
-    description: '';
-  };
-  attributes: {
-    name: Attribute.String & Attribute.Required;
-    label: Attribute.Text;
-    options: Attribute.Component<'form-helper.select-option', true>;
-    altLabel: Attribute.Text;
-    placeholder: Attribute.Text;
-    errors: Attribute.Relation<
-      'form-elements.dropdown',
-      'oneToMany',
-      'api::error.error'
-    >;
-    width: Attribute.Enumeration<
-      ['characters16', 'characters24', 'characters36', 'characters54']
-    >;
-  };
-}
-
-export interface FormElementsDateInput extends Schema.Component {
-  collectionName: 'components_form_elements_date_inputs';
-  info: {
-    displayName: 'DateInput';
-    icon: 'calendar';
-  };
-  attributes: {
-    name: Attribute.String & Attribute.Required;
-    label: Attribute.String;
-    errors: Attribute.Relation<
-      'form-elements.date-input',
-      'oneToMany',
-      'api::error.error'
-    >;
-    placeholder: Attribute.String;
-  };
-}
-
-export interface FormElementsCheckbox extends Schema.Component {
-  collectionName: 'components_form_elements_checkboxes';
-  info: {
-    displayName: 'Checkbox';
-    icon: 'check';
-    description: '';
-  };
-  attributes: {
-    label: Attribute.Text & Attribute.Required;
-    name: Attribute.String & Attribute.Required;
-    isRequiredError: Attribute.Relation<
-      'form-elements.checkbox',
-      'oneToOne',
-      'api::error.error'
-    >;
-  };
-}
-
-export interface FormElementsButton extends Schema.Component {
-  collectionName: 'components_form_elements_buttons';
-  info: {
-    displayName: 'Button';
-    description: '';
-  };
-  attributes: {
-    look: Attribute.Enumeration<['primary', 'secondary', 'tertiary', 'ghost']> &
-      Attribute.Required &
-      Attribute.DefaultTo<'primary'>;
-    size: Attribute.Enumeration<['large', 'medium', 'small']> &
-      Attribute.Required;
-    fullWidth: Attribute.Boolean &
-      Attribute.Required &
-      Attribute.DefaultTo<false>;
-    href: Attribute.String;
-    text: Attribute.String;
-  };
-}
-
-export interface FormElementsAutoSuggestInput extends Schema.Component {
-  collectionName: 'components_form_elements_auto_suggest_inputs';
-  info: {
-    displayName: 'AutoSuggestInput';
-    description: '';
-  };
-  attributes: {
-    name: Attribute.String;
-    label: Attribute.String;
-    errors: Attribute.Relation<
-      'form-elements.auto-suggest-input',
-      'oneToMany',
-      'api::error.error'
-    >;
-    placeholder: Attribute.String;
-    width: Attribute.Enumeration<
-      [
-        'characters3',
-        'characters5',
-        'characters7',
-        'characters10',
-        'characters16',
-        'characters24',
-        'characters36',
-        'characters54'
-      ]
-    >;
-    dataList: Attribute.Enumeration<['airports', 'airlines']>;
-    noSuggestionMessage: Attribute.String;
-    isDisabled: Attribute.Boolean & Attribute.DefaultTo<false>;
-  };
-}
-
-export interface FieldField extends Schema.Component {
-  collectionName: 'components_field_fields';
-  info: {
-    displayName: 'Field';
-    icon: '';
-    description: '';
-  };
-  attributes: {
-    name: Attribute.String & Attribute.Required;
-    value: Attribute.Text & Attribute.Required;
-  };
-}
-
-export interface BasicParagraph extends Schema.Component {
-  collectionName: 'components_basic_paragraphs';
-  info: {
-    displayName: 'Paragraph';
-    description: '';
-  };
-  attributes: {
-    text: Attribute.RichText & Attribute.Required;
-  };
-}
-
-export interface BasicLink extends Schema.Component {
-  collectionName: 'components_basic_links';
-  info: {
-    displayName: 'Link';
-    description: '';
-  };
-  attributes: {
-    text: Attribute.String;
-    url: Attribute.String & Attribute.Required;
-  };
-}
-
-export interface BasicHeading extends Schema.Component {
+export interface BasicHeading extends Struct.ComponentSchema {
   collectionName: 'components_basic_headings';
   info: {
-    displayName: 'Heading';
     description: '';
+    displayName: 'Heading';
   };
   attributes: {
-    text: Attribute.String & Attribute.Required;
-    tagName: Attribute.Enumeration<
-      ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'div']
-    > &
-      Attribute.Required &
-      Attribute.DefaultTo<'h1'>;
-    look: Attribute.Enumeration<
+    look: Schema.Attribute.Enumeration<
       [
         'default',
         'ds-heading-01-reg',
@@ -675,53 +23,679 @@ export interface BasicHeading extends Schema.Component {
         'ds-label-03-bold',
         'ds-label-section',
         'ds-body-01-reg',
-        'ds-body-02-reg'
+        'ds-body-02-reg',
       ]
     > &
-      Attribute.Required &
-      Attribute.DefaultTo<'default'>;
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'default'>;
+    tagName: Schema.Attribute.Enumeration<
+      ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'div']
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'h1'>;
+    text: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
-declare module '@strapi/types' {
-  export module Shared {
-    export interface Components {
-      'page.video': PageVideo;
-      'page.user-feedback': PageUserFeedback;
-      'page.navigation-item': PageNavigationItem;
-      'page.meta-page-info': PageMetaPageInfo;
-      'page.list': PageList;
-      'page.list-item': PageListItem;
-      'page.link-list-box': PageLinkListBox;
-      'page.inline-notice': PageInlineNotice;
-      'page.info-box': PageInfoBox;
-      'page.info-box-item': PageInfoBoxItem;
-      'page.header': PageHeader;
-      'page.details-summary': PageDetailsSummary;
+export interface BasicLink extends Struct.ComponentSchema {
+  collectionName: 'components_basic_links';
+  info: {
+    description: '';
+    displayName: 'Link';
+  };
+  attributes: {
+    text: Schema.Attribute.String;
+    url: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface BasicParagraph extends Struct.ComponentSchema {
+  collectionName: 'components_basic_paragraphs';
+  info: {
+    description: '';
+    displayName: 'Paragraph';
+  };
+  attributes: {
+    text: Schema.Attribute.RichText & Schema.Attribute.Required;
+  };
+}
+
+export interface FieldField extends Struct.ComponentSchema {
+  collectionName: 'components_field_fields';
+  info: {
+    description: '';
+    displayName: 'Field';
+    icon: '';
+  };
+  attributes: {
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    value: Schema.Attribute.Text & Schema.Attribute.Required;
+  };
+}
+
+export interface FormElementsAutoSuggestInput extends Struct.ComponentSchema {
+  collectionName: 'components_form_elements_auto_suggest_inputs';
+  info: {
+    description: '';
+    displayName: 'AutoSuggestInput';
+  };
+  attributes: {
+    dataList: Schema.Attribute.Enumeration<['airports', 'airlines']>;
+    errors: Schema.Attribute.Relation<'oneToMany', 'api::error.error'>;
+    isDisabled: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    label: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+    noSuggestionMessage: Schema.Attribute.String;
+    placeholder: Schema.Attribute.String;
+    width: Schema.Attribute.Enumeration<
+      [
+        'characters3',
+        'characters5',
+        'characters7',
+        'characters10',
+        'characters16',
+        'characters24',
+        'characters36',
+        'characters54',
+      ]
+    >;
+  };
+}
+
+export interface FormElementsButton extends Struct.ComponentSchema {
+  collectionName: 'components_form_elements_buttons';
+  info: {
+    description: '';
+    displayName: 'Button';
+  };
+  attributes: {
+    fullWidth: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
+    href: Schema.Attribute.String;
+    look: Schema.Attribute.Enumeration<
+      ['primary', 'secondary', 'tertiary', 'ghost']
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'primary'>;
+    size: Schema.Attribute.Enumeration<['large', 'medium', 'small']> &
+      Schema.Attribute.Required;
+    text: Schema.Attribute.String;
+  };
+}
+
+export interface FormElementsCheckbox extends Struct.ComponentSchema {
+  collectionName: 'components_form_elements_checkboxes';
+  info: {
+    description: '';
+    displayName: 'Checkbox';
+    icon: 'check';
+  };
+  attributes: {
+    isRequiredError: Schema.Attribute.Relation<'oneToOne', 'api::error.error'>;
+    label: Schema.Attribute.Text & Schema.Attribute.Required;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface FormElementsDateInput extends Struct.ComponentSchema {
+  collectionName: 'components_form_elements_date_inputs';
+  info: {
+    displayName: 'DateInput';
+    icon: 'calendar';
+  };
+  attributes: {
+    errors: Schema.Attribute.Relation<'oneToMany', 'api::error.error'>;
+    label: Schema.Attribute.String;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    placeholder: Schema.Attribute.String;
+  };
+}
+
+export interface FormElementsDropdown extends Struct.ComponentSchema {
+  collectionName: 'components_form_elements_dropdowns';
+  info: {
+    description: '';
+    displayName: 'Dropdown';
+  };
+  attributes: {
+    altLabel: Schema.Attribute.Text;
+    errors: Schema.Attribute.Relation<'oneToMany', 'api::error.error'>;
+    label: Schema.Attribute.Text;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    options: Schema.Attribute.Component<'form-helper.select-option', true>;
+    placeholder: Schema.Attribute.Text;
+    width: Schema.Attribute.Enumeration<
+      ['characters16', 'characters24', 'characters36', 'characters54']
+    >;
+  };
+}
+
+export interface FormElementsFileInput extends Struct.ComponentSchema {
+  collectionName: 'components_form_elements_file_inputs';
+  info: {
+    displayName: 'FileInput';
+    icon: '';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface FormElementsHiddenInput extends Struct.ComponentSchema {
+  collectionName: 'components_form_elements_hidden_inputs';
+  info: {
+    description: '';
+    displayName: 'HiddenInput';
+  };
+  attributes: {
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    reason: Schema.Attribute.Text & Schema.Attribute.Required;
+  };
+}
+
+export interface FormElementsInput extends Struct.ComponentSchema {
+  collectionName: 'components_basic_inputs';
+  info: {
+    description: '';
+    displayName: 'Input';
+  };
+  attributes: {
+    errors: Schema.Attribute.Relation<'oneToMany', 'api::error.error'>;
+    helperText: Schema.Attribute.String;
+    label: Schema.Attribute.String;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    placeholder: Schema.Attribute.String;
+    suffix: Schema.Attribute.String;
+    type: Schema.Attribute.Enumeration<['text', 'number']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'text'>;
+    width: Schema.Attribute.Enumeration<
+      [
+        'characters3',
+        'characters5',
+        'characters7',
+        'characters10',
+        'characters16',
+        'characters24',
+        'characters36',
+        'characters54',
+      ]
+    >;
+  };
+}
+
+export interface FormElementsSelect extends Struct.ComponentSchema {
+  collectionName: 'components_basic_selects';
+  info: {
+    description: '';
+    displayName: 'Select';
+  };
+  attributes: {
+    altLabel: Schema.Attribute.String;
+    errors: Schema.Attribute.Relation<'oneToMany', 'api::error.error'>;
+    label: Schema.Attribute.String;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    options: Schema.Attribute.Component<'form-helper.select-option', true>;
+  };
+}
+
+export interface FormElementsTextarea extends Struct.ComponentSchema {
+  collectionName: 'components_basic_textareas';
+  info: {
+    description: '';
+    displayName: 'textarea';
+  };
+  attributes: {
+    description: Schema.Attribute.RichText;
+    details: Schema.Attribute.Component<'page.details-summary', false>;
+    errors: Schema.Attribute.Relation<'oneToMany', 'api::error.error'>;
+    label: Schema.Attribute.String;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    placeholder: Schema.Attribute.String;
+  };
+}
+
+export interface FormElementsTileGroup extends Struct.ComponentSchema {
+  collectionName: 'components_basic_tile_group';
+  info: {
+    description: '';
+    displayName: 'Tiles';
+  };
+  attributes: {
+    altLabel: Schema.Attribute.String;
+    errors: Schema.Attribute.Relation<'oneToMany', 'api::error.error'>;
+    label: Schema.Attribute.String;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    options: Schema.Attribute.Component<'form-helper.tile', true>;
+    useTwoColumns: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<true>;
+  };
+}
+
+export interface FormElementsTimeInput extends Struct.ComponentSchema {
+  collectionName: 'components_form_elements_time_inputs';
+  info: {
+    description: '';
+    displayName: 'TimeInput';
+  };
+  attributes: {
+    errors: Schema.Attribute.Relation<'oneToMany', 'api::error.error'>;
+    label: Schema.Attribute.String;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    placeholder: Schema.Attribute.String;
+  };
+}
+
+export interface FormHelperErrors extends Struct.ComponentSchema {
+  collectionName: 'components_basic_errors';
+  info: {
+    description: '';
+    displayName: 'Errors';
+  };
+  attributes: {
+    code: Schema.Attribute.String;
+    text: Schema.Attribute.String;
+  };
+}
+
+export interface FormHelperSelectOption extends Struct.ComponentSchema {
+  collectionName: 'components_basic_select_options';
+  info: {
+    description: '';
+    displayName: 'SelectOption';
+  };
+  attributes: {
+    text: Schema.Attribute.String & Schema.Attribute.Required;
+    value: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface FormHelperTile extends Struct.ComponentSchema {
+  collectionName: 'components_basic_tile';
+  info: {
+    description: '';
+    displayName: 'Tile';
+  };
+  attributes: {
+    description: Schema.Attribute.RichText;
+    image: Schema.Attribute.Media<'images'>;
+    tagDescription: Schema.Attribute.String;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    value: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface MetaBackground extends Struct.ComponentSchema {
+  collectionName: 'components_meta_backgrounds';
+  info: {
+    description: '';
+    displayName: 'Outer Background';
+  };
+  attributes: {
+    backgroundColor: Schema.Attribute.Enumeration<
+      ['default', 'white', 'blue', 'darkBlue', 'yellow']
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'default'>;
+    paddingBottom: Schema.Attribute.Enumeration<
+      [
+        'default',
+        'px0',
+        'px8',
+        'px16',
+        'px24',
+        'px32',
+        'px40',
+        'px48',
+        'px56',
+        'px64',
+      ]
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'default'>;
+    paddingTop: Schema.Attribute.Enumeration<
+      [
+        'default',
+        'px0',
+        'px8',
+        'px16',
+        'px24',
+        'px32',
+        'px40',
+        'px48',
+        'px56',
+        'px64',
+      ]
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'default'>;
+  };
+}
+
+export interface MetaContainer extends Struct.ComponentSchema {
+  collectionName: 'components_meta_containers';
+  info: {
+    description: '';
+    displayName: 'Container';
+  };
+  attributes: {
+    backgroundColor: Schema.Attribute.Enumeration<
+      ['default', 'white', 'blue', 'yellow']
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'default'>;
+    paddingBottom: Schema.Attribute.Enumeration<
+      [
+        'default',
+        'px0',
+        'px8',
+        'px16',
+        'px24',
+        'px32',
+        'px40',
+        'px48',
+        'px56',
+        'px64',
+      ]
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'default'>;
+    paddingTop: Schema.Attribute.Enumeration<
+      [
+        'default',
+        'px0',
+        'px8',
+        'px16',
+        'px24',
+        'px32',
+        'px40',
+        'px48',
+        'px56',
+        'px64',
+      ]
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'default'>;
+  };
+}
+
+export interface PageArraySummary extends Struct.ComponentSchema {
+  collectionName: 'components_page_array_summaries';
+  info: {
+    description: '';
+    displayName: 'ArraySummary';
+    icon: 'bulletList';
+  };
+  attributes: {
+    category: Schema.Attribute.String & Schema.Attribute.Required;
+    categoryUrl: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface PageBox extends Struct.ComponentSchema {
+  collectionName: 'components_page_boxes';
+  info: {
+    description: '';
+    displayName: 'Box';
+  };
+  attributes: {
+    buttons: Schema.Attribute.Component<'form-elements.button', true>;
+    container: Schema.Attribute.Component<'meta.container', false> &
+      Schema.Attribute.Required;
+    content: Schema.Attribute.Component<'basic.paragraph', false>;
+    heading: Schema.Attribute.Component<'basic.heading', false>;
+    identifier: Schema.Attribute.String;
+    label: Schema.Attribute.Component<'basic.heading', false>;
+    outerBackground: Schema.Attribute.Component<'meta.background', false>;
+  };
+}
+
+export interface PageBoxWithImage extends Struct.ComponentSchema {
+  collectionName: 'components_page_box_with_images';
+  info: {
+    description: '';
+    displayName: 'BoxWithImage';
+  };
+  attributes: {
+    container: Schema.Attribute.Component<'meta.container', false> &
+      Schema.Attribute.Required;
+    content: Schema.Attribute.RichText;
+    heading: Schema.Attribute.Component<'basic.heading', false>;
+    identifier: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.Required;
+    outerBackground: Schema.Attribute.Component<'meta.background', false>;
+    variant: Schema.Attribute.Enumeration<['ImgMTextL']>;
+  };
+}
+
+export interface PageDetailsSummary extends Struct.ComponentSchema {
+  collectionName: 'components_page_details_summary';
+  info: {
+    description: '';
+    displayName: 'DetailsSummary';
+  };
+  attributes: {
+    content: Schema.Attribute.RichText & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface PageHeader extends Struct.ComponentSchema {
+  collectionName: 'components_page_headers';
+  info: {
+    description: '';
+    displayName: 'Header';
+  };
+  attributes: {
+    container: Schema.Attribute.Component<'meta.container', false> &
+      Schema.Attribute.Required;
+    content: Schema.Attribute.Component<'basic.paragraph', false>;
+    heading: Schema.Attribute.Component<'basic.heading', false> &
+      Schema.Attribute.Required;
+    outerBackground: Schema.Attribute.Component<'meta.background', false>;
+  };
+}
+
+export interface PageInfoBox extends Struct.ComponentSchema {
+  collectionName: 'components_page_info_boxes';
+  info: {
+    description: '';
+    displayName: 'InfoBox';
+  };
+  attributes: {
+    container: Schema.Attribute.Component<'meta.container', false> &
+      Schema.Attribute.Required;
+    heading: Schema.Attribute.Component<'basic.heading', false>;
+    identifier: Schema.Attribute.String;
+    items: Schema.Attribute.Component<'page.info-box-item', true>;
+    outerBackground: Schema.Attribute.Component<'meta.background', false>;
+    separator: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+  };
+}
+
+export interface PageInfoBoxItem extends Struct.ComponentSchema {
+  collectionName: 'components_page_info_box_items';
+  info: {
+    description: '';
+    displayName: 'InfoBoxItem';
+  };
+  attributes: {
+    buttons: Schema.Attribute.Component<'form-elements.button', true>;
+    content: Schema.Attribute.RichText;
+    detailsSummary: Schema.Attribute.Component<'page.details-summary', true>;
+    headline: Schema.Attribute.Component<'basic.heading', false>;
+    identifier: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images'>;
+    label: Schema.Attribute.Component<'basic.heading', false>;
+  };
+}
+
+export interface PageInlineNotice extends Struct.ComponentSchema {
+  collectionName: 'components_page_inline_notice';
+  info: {
+    description: 'A notice component with a fixed title label-01-bold. The component works in FormFlow Page, Vorabcheck Page, and Content Page';
+    displayName: 'InlineNotice';
+  };
+  attributes: {
+    container: Schema.Attribute.Component<'meta.container', false> &
+      Schema.Attribute.Required;
+    content: Schema.Attribute.RichText;
+    identifier: Schema.Attribute.String;
+    look: Schema.Attribute.Enumeration<['warning', 'tips']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'warning'>;
+    outerBackground: Schema.Attribute.Component<'meta.background', false>;
+    tagName: Schema.Attribute.Enumeration<
+      ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'div']
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'h1'>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface PageLinkListBox extends Struct.ComponentSchema {
+  collectionName: 'components_page_link_list_boxes';
+  info: {
+    description: '';
+    displayName: 'LinkListBox';
+  };
+  attributes: {
+    buttons: Schema.Attribute.Component<'form-elements.button', true>;
+    container: Schema.Attribute.Component<'meta.container', false> &
+      Schema.Attribute.Required;
+    heading: Schema.Attribute.Component<'basic.heading', false>;
+    identifier: Schema.Attribute.String;
+    label: Schema.Attribute.Component<'basic.heading', false>;
+    links: Schema.Attribute.Component<'basic.link', true>;
+    outerBackground: Schema.Attribute.Component<'meta.background', false>;
+  };
+}
+
+export interface PageList extends Struct.ComponentSchema {
+  collectionName: 'components_page_lists';
+  info: {
+    description: '';
+    displayName: 'List';
+  };
+  attributes: {
+    container: Schema.Attribute.Component<'meta.container', false> &
+      Schema.Attribute.Required;
+    heading: Schema.Attribute.Component<'basic.heading', false>;
+    identifier: Schema.Attribute.String;
+    isNumeric: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    items: Schema.Attribute.Component<'page.list-item', true>;
+    outerBackground: Schema.Attribute.Component<'meta.background', false>;
+    subheading: Schema.Attribute.RichText;
+  };
+}
+
+export interface PageListItem extends Struct.ComponentSchema {
+  collectionName: 'components_page_list_items';
+  info: {
+    description: '';
+    displayName: 'ListItem';
+  };
+  attributes: {
+    buttons: Schema.Attribute.Component<'form-elements.button', true>;
+    content: Schema.Attribute.RichText;
+    headline: Schema.Attribute.Component<'basic.heading', false>;
+    identifier: Schema.Attribute.String;
+  };
+}
+
+export interface PageMetaPageInfo extends Struct.ComponentSchema {
+  collectionName: 'components_page_meta_page_infos';
+  info: {
+    description: '';
+    displayName: 'MetaPageInfo';
+  };
+  attributes: {
+    breadcrumb: Schema.Attribute.Text & Schema.Attribute.Required;
+    description: Schema.Attribute.Text;
+    ogTitle: Schema.Attribute.Text;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface PageNavigationItem extends Struct.ComponentSchema {
+  collectionName: 'components_page_navigation_items';
+  info: {
+    description: '';
+    displayName: 'Navigation Item';
+  };
+  attributes: {
+    baseurl: Schema.Attribute.String;
+    targeturl: Schema.Attribute.String;
+    text: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface PageUserFeedback extends Struct.ComponentSchema {
+  collectionName: 'components_page_user_feedbacks';
+  info: {
+    displayName: 'UserFeedback';
+  };
+  attributes: {
+    headingRating: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface PageVideo extends Struct.ComponentSchema {
+  collectionName: 'components_page_videos';
+  info: {
+    description: '';
+    displayName: 'Video';
+  };
+  attributes: {
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    url: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+declare module '@strapi/strapi' {
+  export module Public {
+    export interface ComponentSchemas {
+      'basic.heading': BasicHeading;
+      'basic.link': BasicLink;
+      'basic.paragraph': BasicParagraph;
+      'field.field': FieldField;
+      'form-elements.auto-suggest-input': FormElementsAutoSuggestInput;
+      'form-elements.button': FormElementsButton;
+      'form-elements.checkbox': FormElementsCheckbox;
+      'form-elements.date-input': FormElementsDateInput;
+      'form-elements.dropdown': FormElementsDropdown;
+      'form-elements.file-input': FormElementsFileInput;
+      'form-elements.hidden-input': FormElementsHiddenInput;
+      'form-elements.input': FormElementsInput;
+      'form-elements.select': FormElementsSelect;
+      'form-elements.textarea': FormElementsTextarea;
+      'form-elements.tile-group': FormElementsTileGroup;
+      'form-elements.time-input': FormElementsTimeInput;
+      'form-helper.errors': FormHelperErrors;
+      'form-helper.select-option': FormHelperSelectOption;
+      'form-helper.tile': FormHelperTile;
+      'meta.background': MetaBackground;
+      'meta.container': MetaContainer;
+      'page.array-summary': PageArraySummary;
       'page.box': PageBox;
       'page.box-with-image': PageBoxWithImage;
-      'page.array-summary': PageArraySummary;
-      'meta.container': MetaContainer;
-      'meta.background': MetaBackground;
-      'form-helper.tile': FormHelperTile;
-      'form-helper.select-option': FormHelperSelectOption;
-      'form-helper.errors': FormHelperErrors;
-      'form-elements.time-input': FormElementsTimeInput;
-      'form-elements.tile-group': FormElementsTileGroup;
-      'form-elements.textarea': FormElementsTextarea;
-      'form-elements.select': FormElementsSelect;
-      'form-elements.input': FormElementsInput;
-      'form-elements.hidden-input': FormElementsHiddenInput;
-      'form-elements.file-input': FormElementsFileInput;
-      'form-elements.dropdown': FormElementsDropdown;
-      'form-elements.date-input': FormElementsDateInput;
-      'form-elements.checkbox': FormElementsCheckbox;
-      'form-elements.button': FormElementsButton;
-      'form-elements.auto-suggest-input': FormElementsAutoSuggestInput;
-      'field.field': FieldField;
-      'basic.paragraph': BasicParagraph;
-      'basic.link': BasicLink;
-      'basic.heading': BasicHeading;
+      'page.details-summary': PageDetailsSummary;
+      'page.header': PageHeader;
+      'page.info-box': PageInfoBox;
+      'page.info-box-item': PageInfoBoxItem;
+      'page.inline-notice': PageInlineNotice;
+      'page.link-list-box': PageLinkListBox;
+      'page.list': PageList;
+      'page.list-item': PageListItem;
+      'page.meta-page-info': PageMetaPageInfo;
+      'page.navigation-item': PageNavigationItem;
+      'page.user-feedback': PageUserFeedback;
+      'page.video': PageVideo;
     }
   }
 }
