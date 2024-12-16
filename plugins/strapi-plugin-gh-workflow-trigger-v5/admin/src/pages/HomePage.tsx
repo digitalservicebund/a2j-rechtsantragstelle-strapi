@@ -22,11 +22,13 @@ type listWorkflowsResponse = {
 
 const HomePage = () => {
   const { formatMessage } = useIntl();
+  const { get, post } = getFetchClient();
 
   const [busy, setBusy] = useState(true);
   const [workflows, setWorkflows] = useState<Workflow[]>([]);
-
-  const { get, post } = getFetchClient();
+  const [modelOpen, setModelOpen] = useState(false);
+  const [alertContent, setAlertContent] = useState('');
+  const [alertVariant, setAlertVariant] = useState<AlertVariant>('closed');
 
   const refresh = async () => {
     setBusy(true);
@@ -35,14 +37,6 @@ const HomePage = () => {
       setBusy(false);
     });
   };
-
-  useEffect(() => {
-    refresh();
-  }, []);
-
-  const [modelOpen, setModelOpen] = useState(false);
-  const [alertContent, setAlertContent] = useState('');
-  const [alertVariant, setAlertVariant] = useState<AlertVariant>('closed');
 
   const trigger = () => {
     setBusy(true);
@@ -58,6 +52,10 @@ const HomePage = () => {
       setTimeout(() => setAlertVariant('closed'), ALERT_CLOSE_TIMEOUT_MS);
     });
   };
+
+  useEffect(() => {
+    refresh();
+  }, []);
 
   // See https://design-system-git-main-strapijs.vercel.app/
   return (
