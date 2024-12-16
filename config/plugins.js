@@ -1,6 +1,6 @@
 module.exports = ({ env }) => {
   const config = {
-    "site-publisher": {
+    "gh-workflow-trigger-v5": {
       config: {
         owner: "digitalservicebund",
         repo: "a2j-rechtsantragstelle",
