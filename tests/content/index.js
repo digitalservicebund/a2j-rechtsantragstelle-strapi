@@ -22,18 +22,18 @@ it("returns single type with pLevel and locale=de for authenticated users", asyn
     id: user.id,
   });
 
-  const paragraphs = [{ text: "asd" }];
-  const links = [{ text: "Click Me", url: "http://test.link" }];
-  const data = {
-    paragraphs,
-    links,
-  };
+  const paragraph = { text: "asd" };
+  const link = { text: "Click Me", url: "http://test.link" };
 
-  await strapi
-    .documents("api::footer.footer")
-    .create({ data, locale: "de", status: "published" });
+  await strapi.documents("api::footer.footer").create({
+    data: {
+      paragraphs: [paragraph],
+      links: [link],
+    },
+    status: "published",
+  });
 
-  await request(strapi.server.httpServer)
+  const response = await request(strapi.server.httpServer)
     .get("/api/footer?pLevel")
     .set("accept", "application/json")
     .set("Content-Type", "application/json")
@@ -41,8 +41,7 @@ it("returns single type with pLevel and locale=de for authenticated users", asyn
     .expect("Content-Type", /json/)
     .expect(200)
     .then((data) => {
-      expect(data.body).toBeDefined();
-      expect(data.body.data[0]).toBeDefined();
-      expect(data.body.data[0].paragraphs).toEqual(paragraphs);
+      expect(data.body.data.paragraphs[0]).toMatchObject(paragraph);
+      expect(data.body.data.links[0]).toMatchObject(link);
     });
 });

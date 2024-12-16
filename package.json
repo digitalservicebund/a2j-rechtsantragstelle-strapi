@@ -15,6 +15,7 @@
     "plugin:develop": "npm run watch --workspace plugins/strapi-plugin-gh-workflow-trigger-v5"
   },
   "jest": {
+    "noStackTrace": true,
     "testEnvironment": "node",
     "testPathIgnorePatterns": [
       "/node_modules/",
