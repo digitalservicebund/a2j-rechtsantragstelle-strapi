@@ -5,7 +5,7 @@
   "description": "A Strapi application",
   "license": "MIT",
   "scripts": {
-    "build": "strapi build",
+    "build": "npm run plugin:build && strapi build",
     "develop": "strapi develop",
     "start": "strapi start",
     "strapi": "strapi",
