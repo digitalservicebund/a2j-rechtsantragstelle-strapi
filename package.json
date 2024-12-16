@@ -20,7 +20,7 @@
       "/node_modules/",
       ".tmp",
       ".cache",
-      "/src/plugins/"
+      "/plugins/"
     ],
     "testTimeout": 70000
   },
