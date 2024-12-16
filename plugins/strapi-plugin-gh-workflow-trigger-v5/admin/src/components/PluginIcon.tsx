@@ -1,5 +1,5 @@
-import { Loader } from '@strapi/icons';
+import { PaperPlane } from '@strapi/icons';
 
-const PluginIcon = () => <Loader />;
+const PluginIcon = () => <PaperPlane />;
 
 export { PluginIcon };
