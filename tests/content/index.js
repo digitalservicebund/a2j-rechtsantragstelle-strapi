@@ -1,6 +1,6 @@
 const request = require("supertest");
 
-it("returns single type with populate=deep and locale=all for authenticated users", async () => {
+it("returns single type with pLevel and locale=de for authenticated users", async () => {
   const defaultRole = await strapi
     .query("plugin::users-permissions.role")
     .findOne({}, []);
@@ -16,22 +16,25 @@ it("returns single type with populate=deep and locale=all for authenticated user
   };
 
   /** Creates a new user and push to database */
-  const user = await strapi.plugins["users-permissions"].services.user.add(
-    mockUserData
-  );
+  const user =
+    await strapi.plugins["users-permissions"].services.user.add(mockUserData);
   const jwt = strapi.plugins["users-permissions"].services.jwt.issue({
     id: user.id,
   });
 
-  const paragraphs = [{ id: 1, text: "asd" }];
+  const paragraphs = [{ text: "asd" }];
+  const links = [{ text: "Click Me", url: "http://test.link" }];
   const data = {
-    publishedAt: new Date(),
     paragraphs,
+    links,
   };
-  await strapi.entityService.create("api::footer.footer", { data });
+
+  await strapi
+    .documents("api::footer.footer")
+    .create({ data, locale: "de", status: "published" });
 
   await request(strapi.server.httpServer)
-    .get("/api/footer?populate=deep&locale=all")
+    .get("/api/footer?pLevel")
     .set("accept", "application/json")
     .set("Content-Type", "application/json")
     .set("Authorization", "Bearer " + jwt)
@@ -39,7 +42,7 @@ it("returns single type with populate=deep and locale=all for authenticated user
     .expect(200)
     .then((data) => {
       expect(data.body).toBeDefined();
-      expect(data.body.data[0].attributes).toBeDefined();
-      expect(data.body.data[0].attributes.paragraphs).toEqual(paragraphs);
+      expect(data.body.data[0]).toBeDefined();
+      expect(data.body.data[0].paragraphs).toEqual(paragraphs);
     });
 });
