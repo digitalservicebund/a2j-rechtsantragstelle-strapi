@@ -623,7 +623,7 @@ export interface PageMetaPageInfo extends Struct.ComponentSchema {
     displayName: 'MetaPageInfo';
   };
   attributes: {
-    breadcrumb: Schema.Attribute.Text & Schema.Attribute.Required;
+    breadcrumb: Schema.Attribute.Text;
     description: Schema.Attribute.Text;
     ogTitle: Schema.Attribute.Text;
     title: Schema.Attribute.String & Schema.Attribute.Required;
