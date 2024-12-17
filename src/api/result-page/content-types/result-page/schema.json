@@ -76,7 +76,12 @@
         }
       },
       "type": "enumeration",
-      "enum": ["error", "success", "warning", "info"],
+      "enum": [
+        "error",
+        "success",
+        "warning",
+        "info"
+      ],
       "required": true,
       "default": "error"
     },
@@ -112,8 +117,7 @@
         }
       },
       "type": "string",
-      "unique": false,
-      "required": true
+      "unique": false
     }
   }
 }

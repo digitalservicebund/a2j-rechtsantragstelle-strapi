@@ -725,7 +725,6 @@ export interface ApiFormFlowPageFormFlowPage
       }>;
     publishedAt: Schema.Attribute.DateTime;
     stepId: Schema.Attribute.String &
-      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
@@ -935,7 +934,6 @@ export interface ApiResultPageResultPage extends Struct.CollectionTypeSchema {
       Schema.Attribute.DefaultTo<'error'>;
     publishedAt: Schema.Attribute.DateTime;
     stepId: Schema.Attribute.String &
-      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
@@ -1066,7 +1064,6 @@ export interface ApiVorabCheckPageVorabCheckPage
       }>;
     publishedAt: Schema.Attribute.DateTime;
     stepId: Schema.Attribute.String &
-      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
