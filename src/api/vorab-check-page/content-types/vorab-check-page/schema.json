@@ -80,7 +80,8 @@
           "localized": false
         }
       },
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }
