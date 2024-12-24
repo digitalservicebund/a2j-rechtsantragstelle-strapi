@@ -538,6 +538,7 @@ export interface PageInfoBoxItem extends Struct.ComponentSchema {
     headline: Schema.Attribute.Component<'basic.heading', false>;
     identifier: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images'>;
+    inlineNotice: Schema.Attribute.Component<'page.inline-notice', true>;
     label: Schema.Attribute.Component<'basic.heading', false>;
   };
 }

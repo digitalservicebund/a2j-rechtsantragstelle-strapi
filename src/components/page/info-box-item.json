@@ -38,6 +38,12 @@
       "required": false,
       "repeatable": true,
       "component": "page.details-summary"
+    },
+    "inlineNotice": {
+      "type": "component",
+      "required": false,
+      "repeatable": true,
+      "component": "page.inline-notice"
     }
   }
 }
