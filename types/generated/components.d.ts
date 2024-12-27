@@ -476,7 +476,7 @@ export interface PageBoxWithImage extends Struct.ComponentSchema {
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Schema.Attribute.Required;
     outerBackground: Schema.Attribute.Component<'meta.background', false>;
-    variant: Schema.Attribute.Enumeration<['ImgMTextL']>;
+    variant: Schema.Attribute.Enumeration<['XS', 'S', 'M', 'L', 'XL', 'XXL']>;
   };
 }
 
