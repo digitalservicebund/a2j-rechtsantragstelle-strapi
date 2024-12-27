@@ -42,7 +42,12 @@
     "variant": {
       "type": "enumeration",
       "enum": [
-        "ImgMTextL"
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
       ]
     }
   }
