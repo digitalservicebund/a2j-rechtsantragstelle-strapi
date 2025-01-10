@@ -16,6 +16,17 @@
     }
   },
   "attributes": {
+    "pageMeta": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "page.meta-page-info",
+      "required": true
+    },
     "meta": {
       "type": "component",
       "repeatable": false,

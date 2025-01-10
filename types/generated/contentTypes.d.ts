@@ -681,6 +681,13 @@ export interface ApiFormFlowPageFormFlowPage
           localized: true;
         };
       }>;
+    pageMeta: Schema.Attribute.Component<'page.meta-page-info', false> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     post_form: Schema.Attribute.DynamicZone<
       [
         'basic.heading',
@@ -829,6 +836,13 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    pageMeta: Schema.Attribute.Component<'page.meta-page-info', false> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.String &
       Schema.Attribute.Required &
@@ -922,6 +936,13 @@ export interface ApiResultPageResultPage extends Struct.CollectionTypeSchema {
       'oneToOne',
       'api::element-with-id.element-with-id'
     >;
+    pageMeta: Schema.Attribute.Component<'page.meta-page-info', false> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     pageType: Schema.Attribute.Enumeration<
       ['error', 'success', 'warning', 'info']
     > &
@@ -1044,6 +1065,13 @@ export interface ApiVorabCheckPageVorabCheckPage
         };
       }>;
     nextButtonLabel: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    pageMeta: Schema.Attribute.Component<'page.meta-page-info', false> &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
