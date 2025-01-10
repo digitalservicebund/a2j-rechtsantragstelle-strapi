@@ -27,17 +27,6 @@
         }
       }
     },
-    "meta": {
-      "type": "component",
-      "repeatable": false,
-      "component": "page.meta-page-info",
-      "required": true,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "preHeading": {
       "pluginOptions": {
         "i18n": {

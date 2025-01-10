@@ -668,13 +668,6 @@ export interface ApiFormFlowPageFormFlowPage
       'oneToMany',
       'api::form-flow-page.form-flow-page'
     >;
-    meta: Schema.Attribute.Component<'page.meta-page-info', false> &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     nextButtonLabel: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -830,13 +823,6 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::page.page'>;
-    meta: Schema.Attribute.Component<'page.meta-page-info', false> &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     pageMeta: Schema.Attribute.Component<'page.meta-page-info', false> &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
@@ -920,13 +906,6 @@ export interface ApiResultPageResultPage extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::result-page.result-page'
     >;
-    meta: Schema.Attribute.Component<'page.meta-page-info', false> &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     nextLink: Schema.Attribute.Component<'basic.link', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1059,13 +1038,6 @@ export interface ApiVorabCheckPageVorabCheckPage
       'oneToMany',
       'api::vorab-check-page.vorab-check-page'
     >;
-    meta: Schema.Attribute.Component<'page.meta-page-info', false> &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     nextButtonLabel: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
