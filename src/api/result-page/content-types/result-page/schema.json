@@ -128,7 +128,8 @@
         }
       },
       "type": "string",
-      "unique": false
+      "unique": false,
+      "required": true
     }
   }
 }

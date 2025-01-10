@@ -135,7 +135,7 @@
         }
       },
       "type": "string",
-      "required": false
+      "required": true
     },
     "backButtonLabel": {
       "pluginOptions": {
