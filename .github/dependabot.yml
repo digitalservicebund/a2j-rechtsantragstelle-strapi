@@ -14,6 +14,8 @@ updates:
       strapi:
         patterns:
           - "@strapi/*"
+          - "@strapi/plugin-users-permissions"
+          - "@strapi/provider-upload-aws-s3"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
