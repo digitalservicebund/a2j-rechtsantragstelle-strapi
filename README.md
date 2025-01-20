@@ -20,7 +20,18 @@ docker compose up // or docker compose strapiDB -d
 
 ### Troubleshooting
 
-- If you get an error like `ECONNREFUSED 172.**.*.*:5431` on Mac, this is a [known issue](https://github.com/docker/compose/issues/4783#issuecomment-301778969). Just remove the port binding to 5431 for it to work.
+- If you get an error like `ECONNREFUSED 172.**.*.*:5431` on Mac, this is a [known issue](https://github.com/docker/compose/issues/4783#issuecomment-301778969). Just remove the port binding to 5431 from docker-compose.yaml,
+ 
+``` 
+example#1 
+  ports:
+    - '5432:5432'
+    
+example#2  
+ # Remove or comment out the ports section if not needed
+ # ports:
+ #   - "5431:5432"
+  ```
 
 - If you see this error, then you need to install Node 20.x not higher
 
@@ -56,9 +67,9 @@ Replaces all local data with a copy of remote instance
 ### Steps
 
 1. Create a `Push` transfer token in your local instance ([Settings / Transfer Tokens](http://localhost:1337/admin/settings/transfer-tokens)) & save as `TRANSFER_TOKEN_LOCAL` into your local `.env` file
-2. Create a `Pull` transfer token on the remote instance and save as `TRANSFER_TOKEN_REMOTE` into your `.env` file
+2. Create a `Pull` transfer token on the [remote instance](https://a2j-rast-strapi.dev.ds4g.net/admin/settings/transfer-tokens) and save as `TRANSFER_TOKEN_REMOTE` into your `.env` file
 3. Update the `TRANSFER_URL_REMOTE` (Note: this should point to the `/admin` endpoint)
-4. Run `npm run transfer`
+4. Run `npm run transfer`. If the asset transfer process hangs, cancel it and retry with: `npm run transfer -- --exclude files`
 
 ## Data migrations
 
