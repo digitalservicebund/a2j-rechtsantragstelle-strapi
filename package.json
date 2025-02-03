@@ -50,6 +50,15 @@
   "overrides": {
     "grant": {
       "cookie": "^1.0.0"
+    },
+    "@strapi/pack-up": {
+      "vite": "^5.4.8"
+    },
+    "@strapi/strapi": {
+      "vite": "^5.4.8"
+    },
+    "@strapi/core": {
+      "undici": "^6.21.1"
     }
   },
   "strapi": {
