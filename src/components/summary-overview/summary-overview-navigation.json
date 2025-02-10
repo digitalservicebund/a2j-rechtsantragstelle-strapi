@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_summary_overview_summary_overview_navigations",
+  "info": {
+    "displayName": "SummaryOverviewNavigation",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "boxes": {
+      "displayName": "SummaryOverviewBox",
+      "type": "component",
+      "repeatable": true,
+      "component": "summary-overview.summary-overview-box",
+      "required": true
+    }
+  }
+}

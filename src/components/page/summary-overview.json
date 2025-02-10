@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_page_summary_overviews",
+  "info": {
+    "displayName": "SummaryOverview",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "navigation": {
+      "displayName": "SummaryOverviewNavigation",
+      "type": "component",
+      "repeatable": true,
+      "component": "summary-overview.summary-overview-navigation",
+      "required": true
+    }
+  }
+}

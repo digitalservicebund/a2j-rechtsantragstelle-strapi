@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_summary_overview_summary_overview_boxes",
+  "info": {
+    "displayName": "SummaryOverviewBox",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "stepId": {
+      "type": "string",
+      "required": true
+    },
+    "sortedFields": {
+      "type": "text"
+    },
+    "hiddenFields": {
+      "type": "text"
+    }
+  }
+}

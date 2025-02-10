@@ -644,6 +644,22 @@ export interface PageNavigationItem extends Struct.ComponentSchema {
   };
 }
 
+export interface PageSummaryOverview extends Struct.ComponentSchema {
+  collectionName: 'components_page_summary_overviews';
+  info: {
+    description: '';
+    displayName: 'SummaryOverview';
+    icon: 'bulletList';
+  };
+  attributes: {
+    navigation: Schema.Attribute.Component<
+      'summary-overview.summary-overview-navigation',
+      true
+    > &
+      Schema.Attribute.Required;
+  };
+}
+
 export interface PageUserFeedback extends Struct.ComponentSchema {
   collectionName: 'components_page_user_feedbacks';
   info: {
@@ -663,6 +679,38 @@ export interface PageVideo extends Struct.ComponentSchema {
   attributes: {
     title: Schema.Attribute.String & Schema.Attribute.Required;
     url: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface SummaryOverviewSummaryOverviewBox
+  extends Struct.ComponentSchema {
+  collectionName: 'components_summary_overview_summary_overview_boxes';
+  info: {
+    description: '';
+    displayName: 'SummaryOverviewBox';
+  };
+  attributes: {
+    hiddenFields: Schema.Attribute.Text;
+    sortedFields: Schema.Attribute.Text;
+    stepId: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SummaryOverviewSummaryOverviewNavigation
+  extends Struct.ComponentSchema {
+  collectionName: 'components_summary_overview_summary_overview_navigations';
+  info: {
+    description: '';
+    displayName: 'SummaryOverviewNavigation';
+  };
+  attributes: {
+    boxes: Schema.Attribute.Component<
+      'summary-overview.summary-overview-box',
+      true
+    > &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -703,8 +751,11 @@ declare module '@strapi/strapi' {
       'page.list-item': PageListItem;
       'page.meta-page-info': PageMetaPageInfo;
       'page.navigation-item': PageNavigationItem;
+      'page.summary-overview': PageSummaryOverview;
       'page.user-feedback': PageUserFeedback;
       'page.video': PageVideo;
+      'summary-overview.summary-overview-box': SummaryOverviewSummaryOverviewBox;
+      'summary-overview.summary-overview-navigation': SummaryOverviewSummaryOverviewNavigation;
     }
   }
 }
