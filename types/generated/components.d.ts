@@ -710,7 +710,7 @@ export interface SummaryOverviewSummaryOverviewNavigation
       true
     > &
       Schema.Attribute.Required;
-    title: Schema.Attribute.String;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
