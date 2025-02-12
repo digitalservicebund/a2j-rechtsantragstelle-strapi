@@ -40,7 +40,7 @@
     "react-intl": "^7.1.6"
   },
   "devDependencies": {
-    "@strapi/sdk-plugin": "^5.3.0",
+    "@strapi/sdk-plugin": "^5.3.1",
     "@strapi/strapi": "^5.9.0",
     "@strapi/typescript-utils": "^5.9.0",
     "@types/react": "^18.3.12",
