@@ -51,6 +51,18 @@
     "grant": {
       "cookie": "^1.0.0"
     },
+    "@strapi/admin": {
+      "koa": "^2.15.2"
+    },
+    "@strapi/content-manager": {
+      "koa": "^2.15.2"
+    },
+    "@strapi/plugin-users-permissions": {
+      "koa": "^2.15.2"
+    },
+    "@strapi/types": {
+      "koa": "^2.15.2"
+    },
     "@strapi/pack-up": {
       "vite": "^5.4.8"
     },
@@ -58,6 +70,7 @@
       "vite": "^5.4.8"
     },
     "@strapi/core": {
+      "koa": "^2.15.2",
       "undici": "^6.21.1"
     }
   },
