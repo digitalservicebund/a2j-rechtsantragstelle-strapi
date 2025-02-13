@@ -690,8 +690,7 @@ export interface SummaryOverviewSummaryOverviewBox
     displayName: 'SummaryOverviewBox';
   };
   attributes: {
-    hiddenFields: Schema.Attribute.Text;
-    sortedFields: Schema.Attribute.Text;
+    fields: Schema.Attribute.Text & Schema.Attribute.Required;
     stepId: Schema.Attribute.String & Schema.Attribute.Required;
     title: Schema.Attribute.String;
   };

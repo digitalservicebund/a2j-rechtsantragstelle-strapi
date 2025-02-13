@@ -13,11 +13,9 @@
       "type": "string",
       "required": true
     },
-    "sortedFields": {
-      "type": "text"
-    },
-    "hiddenFields": {
-      "type": "text"
+    "fields": {
+      "type": "text",
+      "required": true
     }
   }
 }
