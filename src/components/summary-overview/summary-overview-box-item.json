@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_summary_overview_summary_overview_box_items",
+  "info": {
+    "displayName": "SummaryOverviewBoxItem"
+  },
+  "options": {},
+  "attributes": {
+    "field": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

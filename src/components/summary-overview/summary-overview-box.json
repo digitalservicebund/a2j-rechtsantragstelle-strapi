@@ -13,8 +13,10 @@
       "type": "string",
       "required": true
     },
-    "fields": {
-      "type": "text",
+    "boxItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "summary-overview.summary-overview-box-item",
       "required": true
     }
   }
