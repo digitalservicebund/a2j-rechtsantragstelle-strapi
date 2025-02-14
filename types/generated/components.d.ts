@@ -704,9 +704,11 @@ export interface SummaryOverviewSummaryOverviewBoxItem
   extends Struct.ComponentSchema {
   collectionName: 'components_summary_overview_summary_overview_box_items';
   info: {
+    description: '';
     displayName: 'SummaryOverviewBoxItem';
   };
   attributes: {
+    displayEmptyValue: Schema.Attribute.String;
     field: Schema.Attribute.String & Schema.Attribute.Required;
     title: Schema.Attribute.String;
   };
