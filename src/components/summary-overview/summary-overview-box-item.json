@@ -15,6 +15,12 @@
     },
     "displayEmptyValue": {
       "type": "string"
+    },
+    "inlineItems": {
+      "displayName": "SummaryOverviewBoxItemInline",
+      "type": "component",
+      "repeatable": true,
+      "component": "summary-overview.summary-overview-box-item-inline"
     }
   }
 }

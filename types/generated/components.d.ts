@@ -710,7 +710,23 @@ export interface SummaryOverviewSummaryOverviewBoxItem
   attributes: {
     displayEmptyValue: Schema.Attribute.String;
     field: Schema.Attribute.String & Schema.Attribute.Required;
+    inlineItems: Schema.Attribute.Component<
+      'summary-overview.summary-overview-box-item-inline',
+      true
+    >;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface SummaryOverviewSummaryOverviewBoxItemInline
+  extends Struct.ComponentSchema {
+  collectionName: 'components_summary_overview_summary_overview_box_item_inlines';
+  info: {
+    description: '';
+    displayName: 'SummaryOverviewBoxItemInline';
+  };
+  attributes: {
+    field: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -775,6 +791,7 @@ declare module '@strapi/strapi' {
       'page.video': PageVideo;
       'summary-overview.summary-overview-box': SummaryOverviewSummaryOverviewBox;
       'summary-overview.summary-overview-box-item': SummaryOverviewSummaryOverviewBoxItem;
+      'summary-overview.summary-overview-box-item-inline': SummaryOverviewSummaryOverviewBoxItemInline;
       'summary-overview.summary-overview-navigation': SummaryOverviewSummaryOverviewNavigation;
     }
   }
