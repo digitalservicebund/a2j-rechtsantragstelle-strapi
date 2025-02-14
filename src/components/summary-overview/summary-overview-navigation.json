@@ -6,15 +6,21 @@
   },
   "options": {},
   "attributes": {
-    "title": {
-      "type": "string",
-      "required": true
-    },
     "boxes": {
       "displayName": "SummaryOverviewBox",
       "type": "component",
       "repeatable": true,
       "component": "summary-overview.summary-overview-box",
+      "required": true
+    },
+    "title": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.heading",
+      "required": true
+    },
+    "description": {
+      "type": "string",
       "required": true
     }
   }

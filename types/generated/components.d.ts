@@ -727,7 +727,9 @@ export interface SummaryOverviewSummaryOverviewNavigation
       true
     > &
       Schema.Attribute.Required;
-    title: Schema.Attribute.String & Schema.Attribute.Required;
+    description: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.Component<'basic.heading', false> &
+      Schema.Attribute.Required;
   };
 }
 
