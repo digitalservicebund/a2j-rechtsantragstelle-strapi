@@ -6,9 +6,6 @@
   },
   "options": {},
   "attributes": {
-    "title": {
-      "type": "string"
-    },
     "stepId": {
       "type": "string",
       "required": true
@@ -18,6 +15,11 @@
       "repeatable": true,
       "component": "summary-overview.summary-overview-box-item",
       "required": true
+    },
+    "title": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.heading"
     }
   }
 }

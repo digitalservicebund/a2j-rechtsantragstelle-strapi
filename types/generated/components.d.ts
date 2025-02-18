@@ -696,7 +696,7 @@ export interface SummaryOverviewSummaryOverviewBox
     > &
       Schema.Attribute.Required;
     stepId: Schema.Attribute.String & Schema.Attribute.Required;
-    title: Schema.Attribute.String;
+    title: Schema.Attribute.Component<'basic.heading', false>;
   };
 }
 
