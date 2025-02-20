@@ -65,7 +65,7 @@
         "page.array-summary",
         "page.list",
         "page.inline-notice",
-        "page.summary-overview"
+        "page.summary-overview-section"
       ],
       "pluginOptions": {
         "i18n": {

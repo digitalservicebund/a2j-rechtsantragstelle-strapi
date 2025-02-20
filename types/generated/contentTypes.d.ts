@@ -710,7 +710,7 @@ export interface ApiFormFlowPageFormFlowPage
         'page.array-summary',
         'page.list',
         'page.inline-notice',
-        'page.summary-overview',
+        'page.summary-overview-section',
       ]
     > &
       Schema.Attribute.SetPluginOptions<{

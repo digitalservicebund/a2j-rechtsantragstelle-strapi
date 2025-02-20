@@ -644,19 +644,18 @@ export interface PageNavigationItem extends Struct.ComponentSchema {
   };
 }
 
-export interface PageSummaryOverview extends Struct.ComponentSchema {
-  collectionName: 'components_page_summary_overviews';
+export interface PageSummaryOverviewSection extends Struct.ComponentSchema {
+  collectionName: 'components_page_summary_overview_sections';
   info: {
-    description: '';
-    displayName: 'SummaryOverview';
-    icon: 'bulletList';
+    displayName: 'SummaryOverviewSection';
   };
   attributes: {
-    navigation: Schema.Attribute.Component<
-      'summary-overview.summary-overview-navigation',
+    boxes: Schema.Attribute.Component<
+      'summary-overview.summary-overview-box',
       true
-    > &
-      Schema.Attribute.Required;
+    >;
+    Description: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.Component<'basic.heading', false>;
   };
 }
 
@@ -730,25 +729,6 @@ export interface SummaryOverviewSummaryOverviewBoxItemInline
   };
 }
 
-export interface SummaryOverviewSummaryOverviewNavigation
-  extends Struct.ComponentSchema {
-  collectionName: 'components_summary_overview_summary_overview_navigations';
-  info: {
-    description: '';
-    displayName: 'SummaryOverviewNavigation';
-  };
-  attributes: {
-    boxes: Schema.Attribute.Component<
-      'summary-overview.summary-overview-box',
-      true
-    > &
-      Schema.Attribute.Required;
-    description: Schema.Attribute.String & Schema.Attribute.Required;
-    title: Schema.Attribute.Component<'basic.heading', false> &
-      Schema.Attribute.Required;
-  };
-}
-
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -786,13 +766,12 @@ declare module '@strapi/strapi' {
       'page.list-item': PageListItem;
       'page.meta-page-info': PageMetaPageInfo;
       'page.navigation-item': PageNavigationItem;
-      'page.summary-overview': PageSummaryOverview;
+      'page.summary-overview-section': PageSummaryOverviewSection;
       'page.user-feedback': PageUserFeedback;
       'page.video': PageVideo;
       'summary-overview.summary-overview-box': SummaryOverviewSummaryOverviewBox;
       'summary-overview.summary-overview-box-item': SummaryOverviewSummaryOverviewBoxItem;
       'summary-overview.summary-overview-box-item-inline': SummaryOverviewSummaryOverviewBoxItemInline;
-      'summary-overview.summary-overview-navigation': SummaryOverviewSummaryOverviewNavigation;
     }
   }
 }
