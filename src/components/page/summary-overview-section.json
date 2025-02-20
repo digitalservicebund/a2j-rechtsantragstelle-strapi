@@ -1,7 +1,8 @@
 {
   "collectionName": "components_page_summary_overview_sections",
   "info": {
-    "displayName": "SummaryOverviewSection"
+    "displayName": "SummaryOverviewSection",
+    "description": ""
   },
   "options": {},
   "attributes": {
