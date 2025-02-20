@@ -644,6 +644,21 @@ export interface PageNavigationItem extends Struct.ComponentSchema {
   };
 }
 
+export interface PageSummaryOverviewSection extends Struct.ComponentSchema {
+  collectionName: 'components_page_summary_overview_sections';
+  info: {
+    displayName: 'SummaryOverviewSection';
+  };
+  attributes: {
+    boxes: Schema.Attribute.Component<
+      'summary-overview.summary-overview-box',
+      true
+    >;
+    Description: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.Component<'basic.heading', false>;
+  };
+}
+
 export interface PageUserFeedback extends Struct.ComponentSchema {
   collectionName: 'components_page_user_feedbacks';
   info: {
@@ -663,6 +678,54 @@ export interface PageVideo extends Struct.ComponentSchema {
   attributes: {
     title: Schema.Attribute.String & Schema.Attribute.Required;
     url: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface SummaryOverviewSummaryOverviewBox
+  extends Struct.ComponentSchema {
+  collectionName: 'components_summary_overview_summary_overview_boxes';
+  info: {
+    description: '';
+    displayName: 'SummaryOverviewBox';
+  };
+  attributes: {
+    boxItems: Schema.Attribute.Component<
+      'summary-overview.summary-overview-box-item',
+      true
+    > &
+      Schema.Attribute.Required;
+    stepId: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.Component<'basic.heading', false>;
+  };
+}
+
+export interface SummaryOverviewSummaryOverviewBoxItem
+  extends Struct.ComponentSchema {
+  collectionName: 'components_summary_overview_summary_overview_box_items';
+  info: {
+    description: '';
+    displayName: 'SummaryOverviewBoxItem';
+  };
+  attributes: {
+    displayEmptyValue: Schema.Attribute.String;
+    field: Schema.Attribute.String & Schema.Attribute.Required;
+    inlineItems: Schema.Attribute.Component<
+      'summary-overview.summary-overview-box-item-inline',
+      true
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SummaryOverviewSummaryOverviewBoxItemInline
+  extends Struct.ComponentSchema {
+  collectionName: 'components_summary_overview_summary_overview_box_item_inlines';
+  info: {
+    description: '';
+    displayName: 'SummaryOverviewBoxItemInline';
+  };
+  attributes: {
+    field: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -703,8 +766,12 @@ declare module '@strapi/strapi' {
       'page.list-item': PageListItem;
       'page.meta-page-info': PageMetaPageInfo;
       'page.navigation-item': PageNavigationItem;
+      'page.summary-overview-section': PageSummaryOverviewSection;
       'page.user-feedback': PageUserFeedback;
       'page.video': PageVideo;
+      'summary-overview.summary-overview-box': SummaryOverviewSummaryOverviewBox;
+      'summary-overview.summary-overview-box-item': SummaryOverviewSummaryOverviewBoxItem;
+      'summary-overview.summary-overview-box-item-inline': SummaryOverviewSummaryOverviewBoxItemInline;
     }
   }
 }

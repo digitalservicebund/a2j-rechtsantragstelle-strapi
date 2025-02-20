@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_summary_overview_summary_overview_box_items",
+  "info": {
+    "displayName": "SummaryOverviewBoxItem",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "field": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "displayEmptyValue": {
+      "type": "string"
+    },
+    "inlineItems": {
+      "displayName": "SummaryOverviewBoxItemInline",
+      "type": "component",
+      "repeatable": true,
+      "component": "summary-overview.summary-overview-box-item-inline"
+    }
+  }
+}

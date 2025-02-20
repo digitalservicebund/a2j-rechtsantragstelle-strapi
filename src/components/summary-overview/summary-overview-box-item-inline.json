@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_summary_overview_summary_overview_box_item_inlines",
+  "info": {
+    "displayName": "SummaryOverviewBoxItemInline",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "field": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
