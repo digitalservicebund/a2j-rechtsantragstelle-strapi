@@ -18,7 +18,8 @@
     "title": {
       "type": "component",
       "repeatable": false,
-      "component": "basic.heading"
+      "component": "basic.heading",
+      "required": true
     }
   }
 }

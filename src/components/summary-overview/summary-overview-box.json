@@ -20,7 +20,7 @@
       "type": "component",
       "repeatable": false,
       "component": "basic.heading",
-      "required": true
+      "required": false
     }
   }
 }

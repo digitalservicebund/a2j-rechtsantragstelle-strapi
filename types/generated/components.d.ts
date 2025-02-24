@@ -656,7 +656,8 @@ export interface PageSummaryOverviewSection extends Struct.ComponentSchema {
       true
     >;
     Description: Schema.Attribute.String & Schema.Attribute.Required;
-    title: Schema.Attribute.Component<'basic.heading', false>;
+    title: Schema.Attribute.Component<'basic.heading', false> &
+      Schema.Attribute.Required;
   };
 }
 
@@ -696,8 +697,7 @@ export interface SummaryOverviewSummaryOverviewBox
     > &
       Schema.Attribute.Required;
     stepId: Schema.Attribute.String & Schema.Attribute.Required;
-    title: Schema.Attribute.Component<'basic.heading', false> &
-      Schema.Attribute.Required;
+    title: Schema.Attribute.Component<'basic.heading', false>;
   };
 }
 
