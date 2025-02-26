@@ -710,7 +710,6 @@ export interface SummaryOverviewSummaryOverviewBoxItem
   };
   attributes: {
     displayEmptyValue: Schema.Attribute.String;
-    field: Schema.Attribute.String & Schema.Attribute.Required;
     inlineItems: Schema.Attribute.Component<
       'summary-overview.summary-overview-box-item-inline',
       true
