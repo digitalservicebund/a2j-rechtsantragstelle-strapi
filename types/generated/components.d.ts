@@ -725,7 +725,7 @@ export interface SummaryOverviewSummaryOverviewBoxItemInline
     displayName: 'SummaryOverviewBoxItemInline';
   };
   attributes: {
-    displayEmptyValue: Schema.Attribute.String;
+    emptyValuePlaceholder: Schema.Attribute.String;
     field: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }

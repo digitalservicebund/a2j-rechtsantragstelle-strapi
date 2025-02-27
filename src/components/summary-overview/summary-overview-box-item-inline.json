@@ -10,7 +10,7 @@
       "type": "string",
       "required": true
     },
-    "displayEmptyValue": {
+    "emptyValuePlaceholder": {
       "type": "string"
     }
   }
