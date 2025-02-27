@@ -9,6 +9,9 @@
     "field": {
       "type": "string",
       "required": true
+    },
+    "displayEmptyValue": {
+      "type": "string"
     }
   }
 }

@@ -709,7 +709,6 @@ export interface SummaryOverviewSummaryOverviewBoxItem
     displayName: 'SummaryOverviewBoxItem';
   };
   attributes: {
-    displayEmptyValue: Schema.Attribute.String;
     inlineItems: Schema.Attribute.Component<
       'summary-overview.summary-overview-box-item-inline',
       true
@@ -726,6 +725,7 @@ export interface SummaryOverviewSummaryOverviewBoxItemInline
     displayName: 'SummaryOverviewBoxItemInline';
   };
   attributes: {
+    displayEmptyValue: Schema.Attribute.String;
     field: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }

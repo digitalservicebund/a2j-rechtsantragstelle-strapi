@@ -9,9 +9,6 @@
     "title": {
       "type": "string"
     },
-    "displayEmptyValue": {
-      "type": "string"
-    },
     "inlineItems": {
       "displayName": "SummaryOverviewBoxItemInline",
       "type": "component",
