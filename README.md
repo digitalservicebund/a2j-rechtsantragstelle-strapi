@@ -2,7 +2,7 @@
 
 ## Requirement
 
-- Node 20
+- Node 18 - 22 (currently running version 22)
 
 ## Quickstart
 
