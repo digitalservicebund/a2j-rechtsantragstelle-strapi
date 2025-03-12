@@ -17,6 +17,11 @@
       "repeatable": false,
       "component": "basic.heading"
     },
+    "accordion": {
+      "type": "component",
+      "component": "page.accordion",
+      "required": false
+    },
     "buttons": {
       "type": "component",
       "repeatable": true,
