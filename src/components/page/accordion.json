@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_page_accordions",
+  "info": {
+    "displayName": "Accordion"
+  },
+  "options": {},
+  "attributes": {
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "page.accordion-item"
+    }
+  }
+}
