@@ -430,6 +430,28 @@ export interface MetaContainer extends Struct.ComponentSchema {
   };
 }
 
+export interface PageAccordion extends Struct.ComponentSchema {
+  collectionName: 'components_page_accordions';
+  info: {
+    displayName: 'Accordion';
+  };
+  attributes: {
+    items: Schema.Attribute.Component<'page.accordion-item', true> &
+      Schema.Attribute.Required;
+  };
+}
+
+export interface PageAccordionItem extends Struct.ComponentSchema {
+  collectionName: 'components_page_accordion_items';
+  info: {
+    displayName: 'Accordion Item';
+  };
+  attributes: {
+    description: Schema.Attribute.RichText & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface PageArraySummary extends Struct.ComponentSchema {
   collectionName: 'components_page_array_summaries';
   info: {
@@ -610,6 +632,7 @@ export interface PageListItem extends Struct.ComponentSchema {
     displayName: 'ListItem';
   };
   attributes: {
+    accordion: Schema.Attribute.Component<'page.accordion', false>;
     buttons: Schema.Attribute.Component<'form-elements.button', true>;
     content: Schema.Attribute.RichText;
     headline: Schema.Attribute.Component<'basic.heading', false>;
@@ -712,7 +735,8 @@ export interface SummaryOverviewSummaryOverviewBoxItem
     inlineItems: Schema.Attribute.Component<
       'summary-overview.summary-overview-box-item-inline',
       true
-    >;
+    > &
+      Schema.Attribute.Required;
     title: Schema.Attribute.String;
   };
 }
@@ -754,6 +778,8 @@ declare module '@strapi/strapi' {
       'form-helper.tile': FormHelperTile;
       'meta.background': MetaBackground;
       'meta.container': MetaContainer;
+      'page.accordion': PageAccordion;
+      'page.accordion-item': PageAccordionItem;
       'page.array-summary': PageArraySummary;
       'page.box': PageBox;
       'page.box-with-image': PageBoxWithImage;
