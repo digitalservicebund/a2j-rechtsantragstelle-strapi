@@ -37,6 +37,15 @@
       "type": "component",
       "repeatable": false,
       "component": "meta.background"
+    },
+    "variant": {
+      "type": "enumeration",
+      "enum": [
+        "unordered",
+        "numbered"
+      ],
+      "default": "unordered",
+      "required": true
     }
   }
 }
