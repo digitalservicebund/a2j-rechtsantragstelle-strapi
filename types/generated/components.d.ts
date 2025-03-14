@@ -626,6 +626,9 @@ export interface PageList extends Struct.ComponentSchema {
     items: Schema.Attribute.Component<'page.list-item', true>;
     outerBackground: Schema.Attribute.Component<'meta.background', false>;
     subheading: Schema.Attribute.RichText;
+    variant: Schema.Attribute.Enumeration<['unordered', 'numbered']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'unordered'>;
   };
 }
 
