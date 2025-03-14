@@ -13,7 +13,8 @@
       "displayName": "SummaryOverviewBoxItemInline",
       "type": "component",
       "repeatable": true,
-      "component": "summary-overview.summary-overview-box-item-inline"
+      "component": "summary-overview.summary-overview-box-item-inline",
+      "required": true
     }
   }
 }
