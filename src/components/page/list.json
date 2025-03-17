@@ -14,10 +14,6 @@
       "repeatable": false,
       "component": "basic.heading"
     },
-    "isNumeric": {
-      "type": "boolean",
-      "default": true
-    },
     "subheading": {
       "type": "richtext",
       "required": false

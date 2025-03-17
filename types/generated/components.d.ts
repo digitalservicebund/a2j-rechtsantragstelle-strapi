@@ -622,7 +622,6 @@ export interface PageList extends Struct.ComponentSchema {
       Schema.Attribute.Required;
     heading: Schema.Attribute.Component<'basic.heading', false>;
     identifier: Schema.Attribute.String;
-    isNumeric: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     items: Schema.Attribute.Component<'page.list-item', true>;
     outerBackground: Schema.Attribute.Component<'meta.background', false>;
     subheading: Schema.Attribute.RichText;
