@@ -20,6 +20,7 @@
     "inlineNotices": {
       "type": "component",
       "repeatable": true,
+      "required": false,
       "component": "page.inline-notice"
     },
     "errors": {
