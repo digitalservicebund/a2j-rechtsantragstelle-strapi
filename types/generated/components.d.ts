@@ -741,7 +741,8 @@ export interface SummaryOverviewSummaryOverviewBoxItem
     inlineItems: Schema.Attribute.Component<
       'summary-overview.summary-overview-box-item-inline',
       true
-    >;
+    > &
+      Schema.Attribute.Required;
     title: Schema.Attribute.String;
   };
 }
