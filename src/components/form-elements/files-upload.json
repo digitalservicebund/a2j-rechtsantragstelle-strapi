@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_form_elements_files_uploads",
+  "info": {
+    "displayName": "FilesUpload",
+    "icon": "",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "inlineNotices": {
+      "type": "component",
+      "repeatable": true,
+      "component": "page.inline-notice"
+    },
+    "errors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::error.error"
+    }
+  }
+}

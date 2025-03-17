@@ -171,15 +171,19 @@ export interface FormElementsDropdown extends Struct.ComponentSchema {
   };
 }
 
-export interface FormElementsFileInput extends Struct.ComponentSchema {
-  collectionName: 'components_form_elements_file_inputs';
+export interface FormElementsFilesUpload extends Struct.ComponentSchema {
+  collectionName: 'components_form_elements_files_uploads';
   info: {
-    displayName: 'FileInput';
+    description: '';
+    displayName: 'FilesUpload';
     icon: '';
   };
   attributes: {
-    label: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    errors: Schema.Attribute.Relation<'oneToMany', 'api::error.error'>;
+    inlineNotices: Schema.Attribute.Component<'page.inline-notice', true>;
     name: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -766,7 +770,7 @@ declare module '@strapi/strapi' {
       'form-elements.checkbox': FormElementsCheckbox;
       'form-elements.date-input': FormElementsDateInput;
       'form-elements.dropdown': FormElementsDropdown;
-      'form-elements.file-input': FormElementsFileInput;
+      'form-elements.files-upload': FormElementsFilesUpload;
       'form-elements.hidden-input': FormElementsHiddenInput;
       'form-elements.input': FormElementsInput;
       'form-elements.select': FormElementsSelect;
