@@ -646,7 +646,7 @@ export interface ApiFormFlowPageFormFlowPage
         'form-elements.tile-group',
         'form-elements.date-input',
         'form-elements.time-input',
-        'form-elements.file-input',
+        'form-elements.files-upload',
         'form-elements.auto-suggest-input',
         'form-elements.hidden-input',
       ]
@@ -1024,7 +1024,7 @@ export interface ApiVorabCheckPageVorabCheckPage
         'form-elements.dropdown',
         'form-elements.tile-group',
         'form-elements.date-input',
-        'form-elements.file-input',
+        'form-elements.files-upload',
         'form-elements.auto-suggest-input',
         'form-elements.hidden-input',
       ]

@@ -171,15 +171,19 @@ export interface FormElementsDropdown extends Struct.ComponentSchema {
   };
 }
 
-export interface FormElementsFileInput extends Struct.ComponentSchema {
-  collectionName: 'components_form_elements_file_inputs';
+export interface FormElementsFilesUpload extends Struct.ComponentSchema {
+  collectionName: 'components_form_elements_files_uploads';
   info: {
-    displayName: 'FileInput';
+    description: '';
+    displayName: 'FilesUpload';
     icon: '';
   };
   attributes: {
-    label: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    errors: Schema.Attribute.Relation<'oneToMany', 'api::error.error'>;
+    inlineNotices: Schema.Attribute.Component<'page.inline-notice', true>;
     name: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -430,6 +434,28 @@ export interface MetaContainer extends Struct.ComponentSchema {
   };
 }
 
+export interface PageAccordion extends Struct.ComponentSchema {
+  collectionName: 'components_page_accordions';
+  info: {
+    displayName: 'Accordion';
+  };
+  attributes: {
+    items: Schema.Attribute.Component<'page.accordion-item', true> &
+      Schema.Attribute.Required;
+  };
+}
+
+export interface PageAccordionItem extends Struct.ComponentSchema {
+  collectionName: 'components_page_accordion_items';
+  info: {
+    displayName: 'Accordion Item';
+  };
+  attributes: {
+    description: Schema.Attribute.RichText & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface PageArraySummary extends Struct.ComponentSchema {
   collectionName: 'components_page_array_summaries';
   info: {
@@ -610,6 +636,7 @@ export interface PageListItem extends Struct.ComponentSchema {
     displayName: 'ListItem';
   };
   attributes: {
+    accordion: Schema.Attribute.Component<'page.accordion', false>;
     buttons: Schema.Attribute.Component<'form-elements.button', true>;
     content: Schema.Attribute.RichText;
     headline: Schema.Attribute.Component<'basic.heading', false>;
@@ -742,7 +769,7 @@ declare module '@strapi/strapi' {
       'form-elements.checkbox': FormElementsCheckbox;
       'form-elements.date-input': FormElementsDateInput;
       'form-elements.dropdown': FormElementsDropdown;
-      'form-elements.file-input': FormElementsFileInput;
+      'form-elements.files-upload': FormElementsFilesUpload;
       'form-elements.hidden-input': FormElementsHiddenInput;
       'form-elements.input': FormElementsInput;
       'form-elements.select': FormElementsSelect;
@@ -754,6 +781,8 @@ declare module '@strapi/strapi' {
       'form-helper.tile': FormHelperTile;
       'meta.background': MetaBackground;
       'meta.container': MetaContainer;
+      'page.accordion': PageAccordion;
+      'page.accordion-item': PageAccordionItem;
       'page.array-summary': PageArraySummary;
       'page.box': PageBox;
       'page.box-with-image': PageBoxWithImage;
