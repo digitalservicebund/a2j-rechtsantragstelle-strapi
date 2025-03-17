@@ -12,7 +12,8 @@
       "required": true
     },
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "description": {
       "type": "text"
@@ -20,7 +21,6 @@
     "inlineNotices": {
       "type": "component",
       "repeatable": true,
-      "required": false,
       "component": "page.inline-notice"
     },
     "errors": {
