@@ -11,12 +11,12 @@
 
 ```bash
 cp .env.example .env
-docker compose up // or docker compose strapiDB -d
+docker compose up -d // or docker compose up strapiDB -d
 ```
 
 1. Visit http://localhost:1337/admin/
 2. Under Settings > Internationalization: Add `German (de)` & set it as default
-3. Under Settings > API Tokens: Add new token and copy it to the `.env` of the A2J webapp
+3. Under Settings > API Tokens: Add new token (access key), set the token type to **read-only** and copy it to the `.env` of the A2J webapp
 
 ### Troubleshooting
 
