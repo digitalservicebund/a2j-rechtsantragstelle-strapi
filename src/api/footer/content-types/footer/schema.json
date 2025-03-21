@@ -49,7 +49,6 @@
     },
     "categorizedLinks": {
       "type": "component",
-      "required": true,
       "repeatable": true,
       "component": "basic.footer",
       "pluginOptions": {
