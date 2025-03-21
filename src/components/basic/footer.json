@@ -7,11 +7,13 @@
   "options": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "links": {
       "type": "component",
       "repeatable": true,
+      "required": true,
       "component": "basic.link",
       "pluginOptions": {
         "i18n": {
