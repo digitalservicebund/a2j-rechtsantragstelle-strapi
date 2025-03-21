@@ -24,11 +24,13 @@ it("returns single type with pLevel and locale=de for authenticated users", asyn
 
   const paragraph = { text: "asd" };
   const link = { text: "Click Me", url: "http://test.link" };
+  const categorizedLinks = [{ title: "Test Title", links: [link] }];
 
   await strapi.documents("api::footer.footer").create({
     data: {
       paragraphs: [paragraph],
       links: [link],
+      categorizedLinks,
     },
     status: "published",
   });

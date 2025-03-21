@@ -20,12 +20,7 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
+      "allowedTypes": ["images", "files", "videos", "audios"],
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -46,6 +41,16 @@
       "type": "component",
       "repeatable": true,
       "component": "basic.link",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "categorizedLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "basic.footer",
       "pluginOptions": {
         "i18n": {
           "localized": true
