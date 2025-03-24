@@ -44,6 +44,8 @@ it("returns single type with pLevel and locale=de for authenticated users", asyn
     .expect(200)
     .then((data) => {
       expect(data.body.data.paragraphs[0]).toMatchObject(paragraph);
-      expect(data.body.data.links[0]).toMatchObject(link);
+      expect(data.body.data.categorizedLinks[0]).toMatchObject(
+        categorizedLinks[0],
+      );
     });
 });
