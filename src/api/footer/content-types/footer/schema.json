@@ -37,16 +37,6 @@
         }
       }
     },
-    "links": {
-      "type": "component",
-      "repeatable": true,
-      "component": "basic.link",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "categorizedLinks": {
       "type": "component",
       "repeatable": true,
