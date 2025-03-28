@@ -35,8 +35,8 @@
     "test:ts:back": "tsc -p server/tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@strapi/design-system": "^2.0.0-rc.18",
-    "@strapi/icons": "^2.0.0-rc.18",
+    "@strapi/design-system": "^2.0.0-rc.20",
+    "@strapi/icons": "^2.0.0-rc.20",
     "react-intl": "^7.1.10"
   },
   "devDependencies": {
