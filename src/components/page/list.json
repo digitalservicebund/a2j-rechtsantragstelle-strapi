@@ -38,7 +38,8 @@
       "type": "enumeration",
       "enum": [
         "unordered",
-        "numbered"
+        "numbered",
+        "stepByStep"
       ],
       "default": "unordered",
       "required": true
