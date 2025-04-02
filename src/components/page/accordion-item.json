@@ -1,7 +1,8 @@
 {
   "collectionName": "components_page_accordion_items",
   "info": {
-    "displayName": "Accordion Item"
+    "displayName": "Accordion Item",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -12,6 +13,9 @@
     "description": {
       "type": "richtext",
       "required": true
+    },
+    "isVisible": {
+      "type": "string"
     }
   }
 }
