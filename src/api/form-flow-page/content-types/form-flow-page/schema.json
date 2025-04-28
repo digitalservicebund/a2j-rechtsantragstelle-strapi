@@ -61,7 +61,7 @@
         "page.box-with-image",
         "page.box",
         "page.info-box",
-        "page.link-list-box",
+        "page.table-of-contents",
         "page.array-summary",
         "page.list",
         "page.inline-notice",
@@ -103,7 +103,7 @@
         "page.box",
         "page.info-box",
         "page.inline-notice",
-        "page.link-list-box",
+        "page.table-of-contents",
         "page.list",
         "page.user-feedback"
       ],
