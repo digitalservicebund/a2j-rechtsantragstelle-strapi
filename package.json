@@ -29,7 +29,7 @@
     "@strapi/plugin-users-permissions": "5.12.6",
     "@strapi/provider-upload-aws-s3": "5.12.6",
     "@strapi/strapi": "5.12.6",
-    "pg": "^8.15.5",
+    "pg": "^8.15.6",
     "pluralize": "^8.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
