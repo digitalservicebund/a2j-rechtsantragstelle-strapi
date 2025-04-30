@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_page_headers",
+  "collectionName": "components_page_hero",
   "info": {
-    "displayName": "Header",
+    "displayName": "Hero",
     "description": ""
   },
   "options": {},
