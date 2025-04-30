@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_page_link_list_boxes",
+  "collectionName": "components_page_table_of_contents",
   "info": {
-    "displayName": "LinkListBox",
+    "displayName": "TableOfContents",
     "description": ""
   },
   "options": {},
