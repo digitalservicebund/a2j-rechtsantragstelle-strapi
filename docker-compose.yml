@@ -35,7 +35,7 @@ services:
       - strapiDB
 
   strapiDB:
-    image: postgres:14-alpine
+    image: postgres:16-alpine
     container_name: strapiDB
     restart: unless-stopped
     env_file: .env
