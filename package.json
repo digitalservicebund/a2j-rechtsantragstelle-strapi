@@ -26,8 +26,8 @@
     "testTimeout": 70000
   },
   "dependencies": {
-    "@strapi/plugin-users-permissions": "5.12.7",
-    "@strapi/provider-upload-aws-s3": "5.12.7",
+    "@strapi/plugin-users-permissions": "5.13.0",
+    "@strapi/provider-upload-aws-s3": "5.13.0",
     "@strapi/strapi": "5.13.0",
     "pg": "^8.16.0",
     "pluralize": "^8.0.0",
