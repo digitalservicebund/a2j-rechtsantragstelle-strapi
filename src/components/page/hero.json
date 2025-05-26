@@ -22,9 +22,9 @@
       "repeatable": false,
       "component": "meta.background"
     },
-    "buttons": {
+    "button": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "form-elements.button"
     }
   }
