@@ -21,6 +21,11 @@
       "type": "component",
       "repeatable": false,
       "component": "meta.background"
+    },
+    "buttons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "form-elements.button"
     }
   }
 }
