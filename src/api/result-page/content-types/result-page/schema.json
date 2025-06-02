@@ -18,44 +18,44 @@
   "attributes": {
     "pageMeta": {
       "type": "component",
-      "repeatable": false,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
       "component": "page.meta-page-info",
+      "repeatable": false,
       "required": true
     },
     "heading": {
       "type": "component",
-      "repeatable": false,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
       "component": "basic.heading",
+      "repeatable": false,
       "required": true
     },
     "hintText": {
       "type": "component",
-      "repeatable": false,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
       "component": "basic.paragraph",
+      "repeatable": false,
       "required": false
     },
     "freeZone": {
+      "type": "dynamiczone",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "type": "dynamiczone",
       "components": [
         "basic.heading",
         "basic.link",
@@ -70,30 +70,30 @@
       ]
     },
     "pageType": {
+      "type": "enumeration",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "type": "enumeration",
+      "required": true,
+      "default": "error",
       "enum": [
         "error",
         "success",
         "warning",
         "info"
-      ],
-      "required": true,
-      "default": "error"
+      ]
     },
     "nextLink": {
       "type": "component",
-      "repeatable": false,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "component": "basic.link"
+      "component": "basic.link",
+      "repeatable": false
     },
     "documents": {
       "type": "relation",
@@ -111,14 +111,22 @@
       "target": "api::flow-id.flow-id"
     },
     "stepId": {
+      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
       },
+      "required": true,
+      "unique": false
+    },
+    "backButtonLabel": {
       "type": "string",
-      "unique": false,
-      "required": true
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
