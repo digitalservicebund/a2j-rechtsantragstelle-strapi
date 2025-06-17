@@ -36,7 +36,7 @@
     "react-router-dom": "^6.0.0",
     "strapi-plugin-gh-workflow-trigger-v5": "file:plugins/strapi-plugin-gh-workflow-trigger-v5",
     "strapi-v5-plugin-populate-deep": "^4.0.5",
-    "styled-components": "^6.1.18"
+    "styled-components": "^6.1.19"
   },
   "devDependencies": {
     "better-sqlite3": "^11.10.0",
