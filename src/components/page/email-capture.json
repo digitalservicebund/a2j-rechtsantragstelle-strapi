@@ -13,7 +13,8 @@
       "type": "string"
     },
     "buttonLabel": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "description": {
       "type": "richtext"
