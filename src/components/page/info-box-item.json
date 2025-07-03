@@ -11,41 +11,39 @@
     },
     "label": {
       "type": "component",
-      "component": "basic.heading",
-      "repeatable": false
+      "repeatable": false,
+      "component": "basic.heading"
     },
     "image": {
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": [
-        "images"
-      ]
+      "allowedTypes": ["images"]
     },
     "content": {
       "type": "richtext"
     },
     "headline": {
       "type": "component",
-      "component": "basic.heading",
-      "repeatable": false
+      "repeatable": false,
+      "component": "basic.heading"
     },
     "buttons": {
       "type": "component",
-      "component": "form-elements.button",
-      "repeatable": true
+      "repeatable": true,
+      "component": "form-elements.button"
     },
     "detailsSummary": {
       "type": "component",
-      "component": "page.details-summary",
+      "required": false,
       "repeatable": true,
-      "required": false
+      "component": "page.details-summary"
     },
     "inlineNotice": {
       "type": "component",
-      "component": "page.inline-notice",
+      "required": false,
       "repeatable": true,
-      "required": false
+      "component": "page.inline-notice"
     },
     "accordion": {
       "type": "component",
