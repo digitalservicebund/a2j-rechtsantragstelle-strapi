@@ -44,6 +44,12 @@
       "required": false,
       "repeatable": true,
       "component": "page.inline-notice"
+    },
+    "accordion": {
+      "type": "component",
+      "component": "page.accordion",
+      "repeatable": false,
+      "required": false
     }
   }
 }
