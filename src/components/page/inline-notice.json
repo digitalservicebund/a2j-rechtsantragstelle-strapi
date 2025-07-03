@@ -15,29 +15,43 @@
     },
     "tagName": {
       "type": "enumeration",
-      "enum": ["h1", "h2", "h3", "h4", "h5", "h6", "p", "div"],
+      "required": true,
       "default": "h1",
-      "required": true
+      "enum": [
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6",
+        "p",
+        "div"
+      ]
     },
     "look": {
       "type": "enumeration",
-      "enum": ["warning", "tips"],
+      "required": true,
       "default": "warning",
-      "required": true
+      "enum": [
+        "warning",
+        "tips",
+        "success",
+        "error"
+      ]
     },
     "content": {
       "type": "richtext"
     },
     "container": {
       "type": "component",
-      "repeatable": false,
       "component": "meta.container",
+      "repeatable": false,
       "required": true
     },
     "outerBackground": {
       "type": "component",
-      "repeatable": false,
-      "component": "meta.background"
+      "component": "meta.background",
+      "repeatable": false
     }
   }
 }
