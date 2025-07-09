@@ -49,6 +49,11 @@
     "isDisabled": {
       "type": "boolean",
       "default": false
+    },
+    "minSuggestCharacters": {
+      "type": "integer",
+      "default": 3,
+      "min": 0
     }
   }
 }

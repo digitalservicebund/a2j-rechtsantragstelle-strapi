@@ -11,7 +11,7 @@
       "required": true
     },
     "description": {
-      "type": "richtext"
+      "type": "string"
     },
     "value": {
       "type": "string",
