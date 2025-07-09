@@ -1,28 +1,26 @@
 # Adapted from https://docs.strapi.io/dev-docs/installation/docker#production-dockerfile
 # Creating multi-stage build for production
-FROM node:20-alpine AS build
+FROM node:22-alpine AS build
 RUN apk update && apk add --no-cache build-base zlib-dev libpng-dev vips-dev > /dev/null 2>&1
 ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}
 
-WORKDIR /opt/
-COPY package.json package-lock.json ./
-COPY ./patches/* ./patches/
-RUN npm ci --omit=dev
-ENV PATH /opt/node_modules/.bin:$PATH
 WORKDIR /opt/app
 COPY . .
+RUN npm ci --include=dev
 RUN npm run build
+RUN npm prune --omit=dev
 
 # Creating final production image
-FROM node:20-alpine
+FROM node:22-alpine
 RUN apk add --no-cache vips-dev
 ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}
-WORKDIR /opt/
-COPY --from=build /opt/node_modules ./node_modules
 WORKDIR /opt/app
 COPY --from=build /opt/app ./
+RUN mv ./node_modules ../
+# Also need to move the plugins folder so the node_modules workspace symlink is correct
+RUN mv ./plugins ../
 ENV PATH /opt/node_modules/.bin:$PATH
 
 RUN mkdir -p /opt/app/database/migrations

@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_summary_overview_summary_overview_boxes",
+  "info": {
+    "displayName": "SummaryOverviewBox",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "stepId": {
+      "type": "string",
+      "required": true
+    },
+    "boxItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "summary-overview.summary-overview-box-item",
+      "required": true
+    },
+    "title": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.heading",
+      "required": false
+    }
+  }
+}

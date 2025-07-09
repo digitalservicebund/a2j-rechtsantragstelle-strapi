@@ -16,64 +16,71 @@
     }
   },
   "attributes": {
-    "meta": {
+    "pageMeta": {
       "type": "component",
-      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "component": "page.meta-page-info",
-      "required": true,
+      "repeatable": false,
+      "required": true
+    },
+    "preHeading": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": false
+    },
+    "heading": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "nextButtonLabel": {
+      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
     },
-    "preHeading": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "required": false,
-      "type": "string"
-    },
-    "heading": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "required": true,
-      "type": "string"
-    },
-    "nextButtonLabel": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string"
-    },
     "pre_form": {
       "type": "dynamiczone",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "components": [
         "basic.heading",
         "basic.paragraph",
         "page.box-with-image",
         "page.box",
         "page.info-box",
-        "page.link-list-box",
+        "page.table-of-contents",
         "page.array-summary",
         "page.list",
-        "page.inline-notice"
-      ],
+        "page.inline-notice",
+        "page.summary-overview-section",
+        "page.email-capture"
+      ]
+    },
+    "form": {
+      "type": "dynamiczone",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
-    },
-    "form": {
-      "type": "dynamiczone",
+      },
       "components": [
         "form-elements.input",
         "form-elements.textarea",
@@ -83,34 +90,31 @@
         "form-elements.tile-group",
         "form-elements.date-input",
         "form-elements.time-input",
-        "form-elements.file-input",
+        "form-elements.files-upload",
         "form-elements.auto-suggest-input",
         "form-elements.hidden-input",
         "form-elements.fieldset"
-      ],
+      ]
+    },
+    "post_form": {
+      "type": "dynamiczone",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
-    },
-    "post_form": {
-      "type": "dynamiczone",
+      },
       "components": [
         "basic.heading",
         "basic.paragraph",
         "page.box-with-image",
         "page.box",
         "page.info-box",
-        "page.link-list-box",
+        "page.inline-notice",
+        "page.table-of-contents",
         "page.list",
-        "page.user-feedback"
-      ],
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+        "page.user-feedback",
+        "page.email-capture"
+      ]
     },
     "flow_ids": {
       "type": "relation",
@@ -118,13 +122,21 @@
       "target": "api::flow-id.flow-id"
     },
     "stepId": {
+      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
       },
+      "required": true
+    },
+    "backButtonLabel": {
       "type": "string",
-      "required": false
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

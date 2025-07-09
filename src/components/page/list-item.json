@@ -9,19 +9,6 @@
     "identifier": {
       "type": "string"
     },
-    "label": {
-      "type": "component",
-      "repeatable": false,
-      "component": "basic.heading"
-    },
-    "image": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ]
-    },
     "content": {
       "type": "richtext"
     },
@@ -30,10 +17,21 @@
       "repeatable": false,
       "component": "basic.heading"
     },
+    "accordion": {
+      "type": "component",
+      "component": "page.accordion",
+      "required": false
+    },
     "buttons": {
       "type": "component",
       "repeatable": true,
       "component": "form-elements.button"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
     }
   }
 }

@@ -34,9 +34,7 @@
         }
       },
       "type": "dynamiczone",
-      "components": [
-        "basic.paragraph"
-      ]
+      "components": ["basic.paragraph"]
     },
     "acceptButtonLabel": {
       "pluginOptions": {
@@ -63,7 +61,7 @@
         }
       },
       "type": "string",
-      "required": false
+      "required": true
     },
     "cookieSettingLinkUrl": {
       "pluginOptions": {
@@ -71,6 +69,7 @@
           "localized": true
         }
       },
+      "required": true,
       "type": "string"
     }
   }

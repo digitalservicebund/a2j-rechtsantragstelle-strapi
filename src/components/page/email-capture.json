@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_page_email_captures",
+  "info": {
+    "displayName": "EmailCapture"
+  },
+  "options": {},
+  "attributes": {
+    "target": {
+      "type": "string",
+      "required": true
+    },
+    "label": {
+      "type": "string"
+    },
+    "buttonLabel": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "successBanner": {
+      "type": "component",
+      "component": "page.inline-notice",
+      "repeatable": false,
+      "required": true
+    },
+    "errorBanner": {
+      "type": "component",
+      "component": "page.inline-notice",
+      "repeatable": false,
+      "required": true
+    }
+  },
+  "config": {}
+}

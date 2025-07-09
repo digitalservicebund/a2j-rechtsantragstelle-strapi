@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_page_summary_overview_sections",
+  "info": {
+    "displayName": "SummaryOverviewSection",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "boxes": {
+      "type": "component",
+      "repeatable": true,
+      "component": "summary-overview.summary-overview-box"
+    },
+    "Description": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.heading",
+      "required": true
+    }
+  }
+}

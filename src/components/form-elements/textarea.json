@@ -23,6 +23,17 @@
     },
     "description": {
       "type": "richtext"
+    },
+    "details": {
+      "type": "component",
+      "repeatable": false,
+      "component": "page.details-summary"
+    },
+    "maxLength": {
+      "type": "integer",
+      "required": false,
+      "max": 5000,
+      "default": 5000
     }
   }
 }

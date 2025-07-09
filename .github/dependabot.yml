@@ -10,6 +10,12 @@ updates:
       # https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file#scheduletime
       time: "10:00"
       timezone: "Europe/Berlin"
+    groups:
+      strapi:
+        patterns:
+          - "@strapi/*"
+          - "@strapi/plugin-users-permissions"
+          - "@strapi/provider-upload-aws-s3"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:

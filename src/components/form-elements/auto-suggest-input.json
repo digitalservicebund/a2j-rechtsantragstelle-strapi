@@ -7,7 +7,8 @@
   "options": {},
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "label": {
       "type": "string"
@@ -35,9 +36,11 @@
     },
     "dataList": {
       "type": "enumeration",
+      "required": true,
       "enum": [
         "airports",
-        "airlines"
+        "airlines",
+        "streetNames"
       ]
     },
     "noSuggestionMessage": {
@@ -46,6 +49,11 @@
     "isDisabled": {
       "type": "boolean",
       "default": false
+    },
+    "minSuggestCharacters": {
+      "type": "integer",
+      "default": 3,
+      "min": 0
     }
   }
 }

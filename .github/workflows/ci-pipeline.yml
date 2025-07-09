@@ -25,7 +25,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20.x"
+          node-version: "22.x"
           cache: "npm"
       - name: Install dependencies
         run: npm ci --include=dev
@@ -56,24 +56,28 @@ jobs:
           docker build -t ${{ env.IMAGE_NAME }}:${{ github.sha }} . --build-arg COMMIT_SHA=${{ github.sha }}
 
       - name: Install cosign
-        uses: sigstore/cosign-installer@4959ce089c160fddf62f7b42464195ba1a56d382
+        uses: sigstore/cosign-installer@398d4b0eeef1380460a10c8013a76f728fb906ac
 
       - name: Login to container registry
-        uses: docker/login-action@9780b0c442fbb1117ed29e0efdff1e18412f7567
+        uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate cosign vulnerability scan record
-        uses: aquasecurity/trivy-action@6e7b7d1fd3e4fef0c5fa8cce1229c54b2c9bd0d8
+        uses: aquasecurity/trivy-action@dc5a429b52fcf669ce959baa2c2dd26090d2a6c4
+        env:
+          TRIVY_DB_REPOSITORY: ghcr.io/aquasecurity/trivy-db,public.ecr.aws/aquasecurity/trivy-db
         with:
           image-ref: ${{ env.IMAGE_NAME }}:${{ github.sha }}
           format: "cosign-vuln"
           output: "vulnerabilities.json"
 
       - name: Run Trivy vulnerability scanner
-        uses: aquasecurity/trivy-action@6e7b7d1fd3e4fef0c5fa8cce1229c54b2c9bd0d8
+        uses: aquasecurity/trivy-action@dc5a429b52fcf669ce959baa2c2dd26090d2a6c4
+        env:
+          TRIVY_DB_REPOSITORY: ghcr.io/aquasecurity/trivy-db,public.ecr.aws/aquasecurity/trivy-db
         with:
           image-ref: "${{ env.IMAGE_NAME }}:${{ github.sha }}"
           format: "template"
@@ -105,6 +109,8 @@ jobs:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     environment: staging
+    permissions:
+      contents: read
     steps:
       - name: Deploy new staging image
         uses: digitalservicebund/argocd-deploy@4fac1bb67c92ed168f6d9b22f8779ce241a9e412 # v1.0.0

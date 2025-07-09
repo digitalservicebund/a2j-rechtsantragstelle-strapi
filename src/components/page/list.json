@@ -14,10 +14,6 @@
       "repeatable": false,
       "component": "basic.heading"
     },
-    "isNumeric": {
-      "type": "boolean",
-      "default": true
-    },
     "subheading": {
       "type": "richtext",
       "required": false
@@ -37,6 +33,16 @@
       "type": "component",
       "repeatable": false,
       "component": "meta.background"
+    },
+    "variant": {
+      "type": "enumeration",
+      "enum": [
+        "unordered",
+        "numbered",
+        "stepByStep"
+      ],
+      "default": "unordered",
+      "required": true
     }
   }
 }

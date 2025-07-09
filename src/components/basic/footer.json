@@ -1,0 +1,25 @@
+{
+  "collectionName": "basic_footer_list_items",
+  "info": {
+    "displayName": "FooterListItem",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "required": true,
+      "component": "basic.link",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

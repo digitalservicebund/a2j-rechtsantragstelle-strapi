@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_page_headers",
+  "collectionName": "components_page_hero",
   "info": {
-    "displayName": "Header",
+    "displayName": "Hero",
     "description": ""
   },
   "options": {},
@@ -17,16 +17,15 @@
       "repeatable": false,
       "component": "basic.paragraph"
     },
-    "container": {
-      "type": "component",
-      "repeatable": false,
-      "component": "meta.container",
-      "required": true
-    },
     "outerBackground": {
       "type": "component",
       "repeatable": false,
       "component": "meta.background"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "form-elements.button"
     }
   }
 }
