@@ -18,6 +18,13 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::fieldset-group.fieldset-group"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }
