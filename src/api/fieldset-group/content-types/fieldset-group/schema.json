@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fieldset_groups",
+  "info": {
+    "singularName": "fieldset-group",
+    "pluralName": "fieldset-groups",
+    "displayName": "FieldSetGroup",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "formComponents": {
+      "type": "dynamiczone",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "components": [
+        "form-elements.time-input",
+        "form-elements.input",
+        "form-elements.date-input",
+        "form-elements.dropdown",
+        "form-elements.auto-suggest-input"
+      ],
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "required": true
+    }
+  }
+}
