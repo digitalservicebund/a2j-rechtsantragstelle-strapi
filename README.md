@@ -66,10 +66,10 @@ Replaces all local data with a copy of remote instance
 
 ### Steps
 
-1. Create a `Push` transfer token in your local instance ([Settings / Transfer Tokens](http://localhost:1337/admin/settings/transfer-tokens)) & save as `TRANSFER_TOKEN_LOCAL` into your local `.env` file
-2. Create a `Pull` transfer token on the [remote instance](https://a2j-rast-strapi.dev.ds4g.net/admin/settings/transfer-tokens) and save as `TRANSFER_TOKEN_REMOTE` into your `.env` file
-3. Update the `TRANSFER_URL_REMOTE` (Note: this should point to the `/admin` endpoint)
-4. Run `npm run transfer`. If the asset transfer process hangs, cancel it and retry with: `npm run transfer -- --exclude files`
+1. Create a `Pull` transfer token on the [remote instance](https://a2j-rast-strapi.dev.ds4g.net/admin/settings/transfer-tokens) and save as `STRAPI_TRANSFER_TOKEN` into your `.env` file
+2. Update the `STRAPI_TRANSFER_URL` (Note: this should point to the `/admin` endpoint)
+3. Run `npm run transfer`
+4. Choose the option: `Pull data from remote Strapi to local`
 
 ## Data migrations
 
