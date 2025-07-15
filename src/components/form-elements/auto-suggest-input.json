@@ -54,6 +54,10 @@
       "type": "integer",
       "default": 3,
       "min": 0
+    },
+    "supportsFreeText": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
