@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_form_elements_fieldsets",
+  "info": {
+    "displayName": "FieldSet",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "heading": {
+      "type": "richtext",
+      "required": true
+    },
+    "fieldSetGroup": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::fieldset-group.fieldset-group"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}
