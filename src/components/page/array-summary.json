@@ -14,6 +14,29 @@
     "category": {
       "type": "string",
       "required": true
+    },
+    "title": {
+      "type": "component",
+      "component": "basic.heading",
+      "repeatable": false
+    },
+    "buttonLabel": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "subtitle": {
+      "type": "component",
+      "component": "basic.heading",
+      "repeatable": false,
+      "required": false
+    },
+    "items": {
+      "type": "component",
+      "component": "page.array-summary-item",
+      "repeatable": true,
+      "required": true
     }
   }
 }
