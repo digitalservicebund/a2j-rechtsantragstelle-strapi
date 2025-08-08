@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_page_array_summary_items",
+  "info": {
+    "displayName": "ArraySummaryItem"
+  },
+  "options": {},
+  "attributes": {
+    "item": {
+      "type": "string",
+      "required": true
+    },
+    "value": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}
