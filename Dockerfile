@@ -21,7 +21,7 @@ COPY --from=build /opt/app ./
 RUN mv ./node_modules ../
 # Also need to move the plugins folder so the node_modules workspace symlink is correct
 RUN mv ./plugins ../
-ENV PATH /opt/node_modules/.bin:$PATH
+ENV PATH=/opt/node_modules/.bin:$PATH
 
 RUN mkdir -p /opt/app/database/migrations
 RUN chown -R node:node /opt/app
