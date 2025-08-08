@@ -32,7 +32,7 @@
       "repeatable": false,
       "required": false
     },
-    "items": {
+    "itemLabels": {
       "type": "component",
       "component": "page.array-summary-item",
       "repeatable": true,
