@@ -54,7 +54,14 @@
   "overrides": {
     "koa": "^2.16.2",
     "tmp": "0.2.5",
-    "vite": "^5.4.19"
+    "vite": "^5.4.19",
+    "strapi-plugin-gh-workflow-trigger-v5": {
+      "@strapi/sdk-plugin": {
+        "@strapi/pack-up": {
+          "vite": "^5.4.19"
+        }
+      }
+    }
   },
   "workspaces": [
     "plugins/strapi-plugin-gh-workflow-trigger-v5"
