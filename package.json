@@ -51,6 +51,11 @@
     "uuid": "75be5f21-db3a-4a6f-9069-20b0c6b8e10c",
     "telemetryDisabled": true
   },
+  "overrides": {
+    "koa": "^2.16.2",
+    "tmp": "0.2.5",
+    "vite": "^5.4.19"
+  },
   "workspaces": [
     "plugins/strapi-plugin-gh-workflow-trigger-v5"
   ]

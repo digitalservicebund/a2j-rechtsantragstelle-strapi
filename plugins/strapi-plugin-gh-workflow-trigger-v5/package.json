@@ -73,10 +73,5 @@
     "printWidth": 100,
     "singleQuote": true,
     "trailingComma": "es5"
-  },
-  "overrides": {
-    "@strapi/pack-up": {
-      "vite": "^5.1.8"
-    }
   }
 }
