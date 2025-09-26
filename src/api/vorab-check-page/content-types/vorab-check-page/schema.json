@@ -19,7 +19,7 @@
     "pageMeta": {
       "type": "component",
       "repeatable": false,
-      "component": "page.meta-page-info",
+      "component": "page.meta-page-info-flow",
       "required": true,
       "pluginOptions": {
         "i18n": {

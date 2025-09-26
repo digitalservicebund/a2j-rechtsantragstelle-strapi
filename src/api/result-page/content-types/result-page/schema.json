@@ -23,7 +23,7 @@
           "localized": true
         }
       },
-      "component": "page.meta-page-info",
+      "component": "page.meta-page-info-flow",
       "repeatable": false,
       "required": true
     },
