@@ -23,9 +23,27 @@
           "localized": true
         }
       },
-      "component": "page.meta-page-info-flow",
+      "component": "page.meta-page-info",
       "repeatable": false,
       "required": true
+    },
+    "pageTitle": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "breadcrumb": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": false
     },
     "heading": {
       "type": "component",
@@ -78,12 +96,7 @@
       },
       "required": true,
       "default": "error",
-      "enum": [
-        "error",
-        "success",
-        "warning",
-        "info"
-      ]
+      "enum": ["error", "success", "warning", "info"]
     },
     "nextLink": {
       "type": "component",

@@ -19,13 +19,31 @@
     "pageMeta": {
       "type": "component",
       "repeatable": false,
-      "component": "page.meta-page-info-flow",
+      "component": "page.meta-page-info",
       "required": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
+    },
+    "pageTitle": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "breadcrumb": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": false
     },
     "nextButtonLabel": {
       "pluginOptions": {
