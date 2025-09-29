@@ -24,7 +24,7 @@ async function up(knex) {
         "page_title",
       );
       if (!columnTitleExists) {
-        knex.schema.alterTable(flowPageTable, function (table) {
+        await knex.schema.alterTable(flowPageTable, function (table) {
           table.string("page_title");
         });
       }
@@ -33,7 +33,7 @@ async function up(knex) {
         "breadcrumb",
       );
       if (!columnBreadcrumbExists) {
-        knex.schema.alterTable(flowPageTable, function (table) {
+        await knex.schema.alterTable(flowPageTable, function (table) {
           table.string("breadcrumb");
         });
       }
