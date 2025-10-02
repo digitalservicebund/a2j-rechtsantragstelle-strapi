@@ -40,33 +40,21 @@ async function up(knex) {
 
       const flowPageComponentTableName = `${flowPageTable}_cmps`;
 
-      await knex(flowPageTable).update({
-        page_title: knex("components_page_meta_page_infos")
-          .select("components_page_meta_page_infos.title")
-          .join(
-            flowPageComponentTableName,
-            "components_page_meta_page_infos.id",
-            flowPageComponentTableName + ".cmp_id",
-          )
-          .whereRaw(
-            `${flowPageComponentTableName}.entity_id = ${flowPageTable}.id`,
-          )
-          .limit(1),
-      });
-
-      await knex(flowPageTable).update({
-        breadcrumb: knex("components_page_meta_page_infos")
-          .select("components_page_meta_page_infos.breadcrumb")
-          .join(
-            flowPageComponentTableName,
-            "components_page_meta_page_infos.id",
-            flowPageComponentTableName + ".cmp_id",
-          )
-          .whereRaw(
-            `${flowPageComponentTableName}.entity_id = ${flowPageTable}.id`,
-          )
-          .limit(1),
-      });
+      await knex.raw(`
+        UPDATE ${flowPageTable}
+        SET
+          page_title = meta.title,
+          breadcrumb = meta.breadcrumb
+        FROM (
+          SELECT
+            c.entity_id,
+            m.title,
+            m.breadcrumb
+          FROM ${flowPageComponentTableName} c
+          JOIN components_page_meta_page_infos m ON c.cmp_id = m.id
+        ) meta
+        WHERE ${flowPageTable}.id = meta.entity_id
+      `);
     }
     console.timeEnd(
       "Copy meta fields in flow pages - migration execution time",
