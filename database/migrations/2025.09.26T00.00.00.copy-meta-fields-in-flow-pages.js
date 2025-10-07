@@ -4,8 +4,8 @@
 Table result_pages has an id which has a foreign key entity_id in result_pages_cmps.
 components_page_meta_page_infos has an id which has a foreign key cmp_id in result_pages_cmps.
 
-This migration copies the content of columns title and breadcrumb
-from components_page_meta_page_infos to the columns pageTitle and breadcrumb in table result_pages.
+This migration copies the content of column title from components_page_meta_page_infos
+to the column pageTitle in table result_pages.
 */
 
 async function up(knex) {
@@ -28,32 +28,15 @@ async function up(knex) {
           table.string("page_title");
         });
       }
-      const columnBreadcrumbExists = await knex.schema.hasColumn(
-        flowPageTable,
-        "breadcrumb",
-      );
-      if (!columnBreadcrumbExists) {
-        await knex.schema.alterTable(flowPageTable, function (table) {
-          table.string("breadcrumb");
-        });
-      }
 
       const flowPageComponentTableName = `${flowPageTable}_cmps`;
 
       await knex.raw(`
-        UPDATE ${flowPageTable}
-        SET
-          page_title = meta.title,
-          breadcrumb = meta.breadcrumb
-        FROM (
-          SELECT
-            c.entity_id,
-            m.title,
-            m.breadcrumb
-          FROM ${flowPageComponentTableName} c
-          JOIN components_page_meta_page_infos m ON c.cmp_id = m.id
-        ) meta
-        WHERE ${flowPageTable}.id = meta.entity_id
+        UPDATE ${flowPageTable} f
+        SET page_title = m.title
+        FROM ${flowPageComponentTableName} c
+        JOIN components_page_meta_page_infos m ON c.cmp_id = m.id
+        WHERE f.id = c.entity_id
       `);
     }
     console.timeEnd(

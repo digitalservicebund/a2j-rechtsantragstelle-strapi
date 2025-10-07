@@ -36,15 +36,6 @@
       },
       "required": true
     },
-    "breadcrumb": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "required": false
-    },
     "heading": {
       "type": "component",
       "pluginOptions": {
