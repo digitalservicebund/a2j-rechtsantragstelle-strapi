@@ -27,6 +27,15 @@
         }
       }
     },
+    "pageTitle": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
     "nextButtonLabel": {
       "pluginOptions": {
         "i18n": {

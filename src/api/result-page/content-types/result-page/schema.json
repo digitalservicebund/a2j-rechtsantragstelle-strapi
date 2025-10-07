@@ -27,6 +27,15 @@
       "repeatable": false,
       "required": true
     },
+    "pageTitle": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
     "heading": {
       "type": "component",
       "pluginOptions": {
@@ -78,12 +87,7 @@
       },
       "required": true,
       "default": "error",
-      "enum": [
-        "error",
-        "success",
-        "warning",
-        "info"
-      ]
+      "enum": ["error", "success", "warning", "info"]
     },
     "nextLink": {
       "type": "component",

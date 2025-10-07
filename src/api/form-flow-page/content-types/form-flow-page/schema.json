@@ -27,6 +27,15 @@
       "repeatable": false,
       "required": true
     },
+    "pageTitle": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
     "preHeading": {
       "type": "string",
       "pluginOptions": {
