@@ -26,9 +26,9 @@
     "testTimeout": 70000
   },
   "dependencies": {
-    "@strapi/plugin-users-permissions": "5.26.0",
-    "@strapi/provider-upload-aws-s3": " 5.26.0",
-    "@strapi/strapi": "5.26.0",
+    "@strapi/plugin-users-permissions": "5.23.6",
+    "@strapi/provider-upload-aws-s3": "5.23.6",
+    "@strapi/strapi": "5.23.6",
     "pg": "^8.16.3",
     "pluralize": "^8.0.0",
     "react": "^18.3.1",
