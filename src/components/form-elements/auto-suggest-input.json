@@ -58,6 +58,9 @@
     "supportsFreeText": {
       "type": "boolean",
       "default": false
+    },
+    "helperText": {
+      "type": "string"
     }
   }
 }
