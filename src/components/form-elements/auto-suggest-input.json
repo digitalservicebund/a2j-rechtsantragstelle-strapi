@@ -60,7 +60,8 @@
       "default": false
     },
     "helperText": {
-      "type": "string"
+      "type": "string",
+      "required": false
     }
   }
 }
