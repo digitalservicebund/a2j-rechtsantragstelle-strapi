@@ -16,17 +16,6 @@
     }
   },
   "attributes": {
-    "pageMeta": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "page.meta-page-info",
-      "repeatable": false,
-      "required": true
-    },
     "pageTitle": {
       "type": "string",
       "pluginOptions": {
