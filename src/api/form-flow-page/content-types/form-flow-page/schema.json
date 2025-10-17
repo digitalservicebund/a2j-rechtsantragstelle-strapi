@@ -69,7 +69,8 @@
         "page.list",
         "page.inline-notice",
         "page.summary-overview-section",
-        "page.email-capture"
+        "page.email-capture",
+        "page.details-summary"
       ]
     },
     "form": {
