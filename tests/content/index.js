@@ -35,7 +35,7 @@ it("returns single type with pLevel and locale=de for authenticated users", asyn
     status: "published",
   });
 
-  const response = await request(strapi.server.httpServer)
+  await request(strapi.server.httpServer)
     .get("/api/footer?pLevel")
     .set("accept", "application/json")
     .set("Content-Type", "application/json")
