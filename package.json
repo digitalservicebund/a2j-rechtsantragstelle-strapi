@@ -56,6 +56,9 @@
     "tmp": "0.2.5",
     "vite": "^5.4.20",
     "esbuild": "^0.25.0",
+    "@strapi/strapi": {
+      "glob": "^10.4.5"
+    },
     "strapi-plugin-gh-workflow-trigger-v5": {
       "@strapi/sdk-plugin": {
         "@strapi/pack-up": {
