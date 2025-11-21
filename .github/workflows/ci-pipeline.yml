@@ -17,6 +17,8 @@ jobs:
   test-build-strapi:
     runs-on: ubuntu-latest
     timeout-minutes: 25
+    permissions:
+      contents: none
     steps:
       - name: Checkout repo
         uses: actions/checkout@v5
@@ -136,7 +138,8 @@ jobs:
     needs: [test-build-strapi, build-push-image, deploy-staging]
     if: always() && failure() && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    permissions: none
+    permissions:
+      contents: none
     steps:
       - uses: digitalservicebund/notify-on-failure-gha@66c485757701f8d5dbee32f24df38d904ca693ba
         with:
