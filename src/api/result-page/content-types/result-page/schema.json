@@ -76,7 +76,12 @@
       },
       "required": true,
       "default": "error",
-      "enum": ["error", "success", "warning", "info"]
+      "enum": [
+        "error",
+        "success",
+        "warning",
+        "info"
+      ]
     },
     "nextLink": {
       "type": "component",
@@ -120,6 +125,16 @@
           "localized": true
         }
       }
+    },
+    "hintButton": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "form-elements.button",
+      "repeatable": false
     }
   }
 }
