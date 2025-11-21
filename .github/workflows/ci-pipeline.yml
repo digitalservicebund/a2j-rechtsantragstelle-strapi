@@ -15,8 +15,6 @@ env:
 
 jobs:
   test-build-strapi:
-    permissions:
-      packages: read
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
