@@ -33,7 +33,7 @@ jobs:
       - name: Install dependencies
         run: npm ci --include=dev
       - name: Install better-sqlite3 release
-        run: cd node_modules/better-sqlite3 && npm run build-release && cd ../..
+        run: npm rebuild better-sqlite3 --ignore-scripts=false
         shell: bash
       - name: Run build
         run: npm run build
