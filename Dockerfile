@@ -7,6 +7,7 @@ ENV NODE_ENV=${NODE_ENV}
 
 WORKDIR /opt/app
 COPY . .
+RUN npm config set ignore-scripts true
 RUN npm ci --include=dev
 RUN npm run build
 RUN npm prune --omit=dev
