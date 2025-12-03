@@ -120,13 +120,14 @@ jobs:
       contents: read
     steps:
       - name: Deploy new staging image
-        uses: digitalservicebund/argocd-deploy@4fac1bb67c92ed168f6d9b22f8779ce241a9e412 # v1.0.0
+        uses: digitalservicebund/argocd-deploy@faa88406a1d6afa918aad127b19735c6e54d7fb1 # v1.0.0
         with:
           environment: staging
           version: ${{ github.sha }}
           deploying_repo: a2j-rechtsantragstelle-strapi
           infra_repo: a2j-rechtsantragstelle-strapi-infra
-          deploy_key: ${{ secrets.DEPLOY_KEY }}
+          github_app_id: ${{ secrets.GITOPS_A2J_APP_ID }}
+          github_app_private_key: ${{ secrets.GITOPS_A2J_APP_PRIVATE_KEY }}
           app: a2j-rast-strapi
           argocd_pipeline_password: ${{ secrets.ARGOCD_PIPELINE_PASSWORD }}
           argocd_server: ${{ secrets.ARGOCD_SERVER }}
