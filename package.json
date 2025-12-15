@@ -44,8 +44,8 @@
     "supertest": "^7.1.4"
   },
   "engines": {
-    "node": ">=18.0.0 <=22.x.x",
-    "npm": ">=6.0.0"
+    "node": "22.x",
+    "npm": "10.x"
   },
   "strapi": {
     "uuid": "75be5f21-db3a-4a6f-9069-20b0c6b8e10c",
