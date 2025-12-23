@@ -17,33 +17,33 @@
   },
   "attributes": {
     "slug": {
+      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "type": "string",
-      "unique": false,
-      "required": true
+      "required": true,
+      "unique": false
     },
     "pageMeta": {
       "type": "component",
-      "repeatable": false,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
       "component": "page.meta-page-info",
+      "repeatable": false,
       "required": true
     },
     "content": {
+      "type": "dynamiczone",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "type": "dynamiczone",
       "components": [
         "page.info-box",
         "page.hero",
@@ -53,7 +53,8 @@
         "page.list",
         "page.inline-notice",
         "page.user-feedback",
-        "page.video"
+        "page.video",
+        "page.details-summary"
       ],
       "required": true
     }
