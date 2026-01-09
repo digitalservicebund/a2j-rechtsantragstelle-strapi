@@ -60,7 +60,8 @@
     "@strapi/strapi": {
       "glob": "^10.4.5",
       "qs": "6.14.1"
-    }
+    },
+    "@smithy/config-resolver": "4.4.0"
   },
   "workspaces": [
     "plugins/strapi-plugin-gh-workflow-trigger-v5"
