@@ -26,9 +26,9 @@
     "testTimeout": 70000
   },
   "dependencies": {
-    "@strapi/plugin-users-permissions": "5.33.0",
-    "@strapi/provider-upload-aws-s3": "5.33.0",
-    "@strapi/strapi": "5.33.0",
+    "@strapi/plugin-users-permissions": "5.33.3",
+    "@strapi/provider-upload-aws-s3": "5.33.3",
+    "@strapi/strapi": "5.33.3",
     "pg": "^8.16.3",
     "pluralize": "^8.0.0",
     "react": "^18.3.1",
@@ -52,12 +52,12 @@
     "telemetryDisabled": true
   },
   "overrides": {
-    "koa": "^2.16.2",
     "tmp": "0.2.5",
-    "vite": "^5.4.20",
     "esbuild": "^0.25.0",
-    "@strapi/strapi": {
-      "glob": "^10.4.5"
+    "@aws-sdk/client-s3": "3.726.1",
+    "glob": "^10.4.5",
+    "@strapi/core": {
+      "undici": "^6.23.0"
     }
   },
   "workspaces": [

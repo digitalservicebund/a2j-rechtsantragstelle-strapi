@@ -13,6 +13,16 @@
     "content": {
       "type": "richtext",
       "required": true
+    },
+    "outerBackground": {
+      "type": "component",
+      "component": "meta.background",
+      "repeatable": false
+    },
+    "container": {
+      "type": "component",
+      "component": "meta.container",
+      "repeatable": false
     }
   }
 }
