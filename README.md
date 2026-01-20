@@ -2,7 +2,7 @@
 
 ## Requirement
 
-- Node 18 - 22 (currently running version 22)
+- Node 24
 
 ## Quickstart
 
@@ -33,12 +33,6 @@ example#2
  #   - "5431:5432"
   ```
 
-- If you see this error, then you need to install Node 20.x not higher
-
-```
-(node:27666) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
-(Use `node --trace-deprecation ...` to show where the warning was created)
-```
 
 ## Strapi CLI
 
