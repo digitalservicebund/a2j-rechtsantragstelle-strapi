@@ -15,6 +15,7 @@ RUN npm prune --omit=dev
 # Creating final production image
 FROM node:24-alpine
 RUN apk add --no-cache vips-dev
+RUN npm install -g npm@^11.8.0
 ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}
 WORKDIR /opt/app
