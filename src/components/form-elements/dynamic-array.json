@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_form_elements_dynamic_arrays",
+  "info": {
+    "displayName": "DynamicArray"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "arrayItemLengthVariable": {
+      "type": "string",
+      "required": true
+    },
+    "dynamicArrayGroup": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::dynamic-array-group.dynamic-array-group"
+    }
+  },
+  "config": {}
+}

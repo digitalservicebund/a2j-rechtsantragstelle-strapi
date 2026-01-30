@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_form_elements_number_increments",
+  "info": {
+    "displayName": "NumberIncrement"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "label": {
+      "type": "string"
+    },
+    "min": {
+      "type": "integer",
+      "required": true,
+      "default": 0,
+      "min": 0
+    },
+    "max": {
+      "type": "integer",
+      "min": 0
+    }
+  },
+  "config": {}
+}

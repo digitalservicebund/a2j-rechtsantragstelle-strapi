@@ -26,29 +26,34 @@
       "required": true
     },
     "nextButtonLabel": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string"
-    },
-    "pre_form": {
-      "type": "dynamiczone",
-      "components": [
-        "basic.heading",
-        "basic.paragraph",
-        "page.inline-notice",
-        "page.details-summary"
-      ],
+      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
     },
+    "pre_form": {
+      "type": "dynamiczone",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "components": [
+        "basic.heading",
+        "basic.paragraph",
+        "page.inline-notice",
+        "page.details-summary"
+      ]
+    },
     "form": {
       "type": "dynamiczone",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "components": [
         "form-elements.input",
         "form-elements.textarea",
@@ -59,13 +64,10 @@
         "form-elements.date-input",
         "form-elements.files-upload",
         "form-elements.auto-suggest-input",
-        "form-elements.hidden-input"
-      ],
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+        "form-elements.hidden-input",
+        "form-elements.number-increment",
+        "form-elements.dynamic-array"
+      ]
     },
     "flow_ids": {
       "type": "relation",
@@ -73,12 +75,12 @@
       "target": "api::flow-id.flow-id"
     },
     "stepId": {
+      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
       },
-      "type": "string",
       "required": true
     }
   }

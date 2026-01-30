@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dynamic_array_groups",
+  "info": {
+    "singularName": "dynamic-array-group",
+    "pluralName": "dynamic-array-groups",
+    "displayName": "DynamicArrayGroup"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "formComponents": {
+      "type": "dynamiczone",
+      "components": [
+        "form-elements.select",
+        "form-elements.input",
+        "form-elements.hidden-input"
+      ],
+      "required": true
+    }
+  }
+}
