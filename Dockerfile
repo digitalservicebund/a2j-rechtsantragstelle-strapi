@@ -26,8 +26,8 @@ RUN mv ./plugins ../
 ENV PATH=/opt/node_modules/.bin:$PATH
 
 RUN mkdir -p /opt/app/database/migrations
-RUN chown -R node:node /opt/app
-USER node
+RUN chown -R 1000:1000 /opt/app
+USER 1000
 EXPOSE 1337
 # Avoiding NPM as it wants to read to /.npm/ which doesn't work in read-only
 CMD ["strapi", "start"]
