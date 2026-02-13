@@ -18,7 +18,9 @@ module.exports = ({ env }) => {
           provider: "aws-s3",
           providerOptions: {
             s3Options: {
-              endpoint: "https://" + env("OBS_ENDPOINT"),
+              endpoint: env("OBS_ENDPOINT").startsWith("https://")
+                ? env("OBS_ENDPOINT")
+                : "https://" + env("OBS_ENDPOINT"),
               region: "eu-de",
               params: {
                 Bucket: env("OBS_BUCKET_NAME"),
