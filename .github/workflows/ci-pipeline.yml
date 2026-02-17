@@ -153,7 +153,7 @@ jobs:
       - name: Deploy new staging image
         uses: digitalservicebund/argocd-deploy@d14e68e4c78222189d8a20c1552639f33f93fe91 # auth-token branch, v1.0.0
         with:
-          environment: staging
+          environment: environments/staging/strapi
           version: ${{ github.sha }}
           deploying_repo: a2j-rechtsantragstelle-strapi
           infra_repo: a2j-rechtsantragstelle-infra
