@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
   pull_request:
-    branches: [main]
+    # branches: [main]
   # Allow to run this workflow manually
   workflow_dispatch:
 
@@ -44,7 +44,7 @@ jobs:
 
   build-push-image:
     needs: [test-build-strapi]
-    if: github.ref == 'refs/heads/main'
+    # if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     permissions:
@@ -171,11 +171,10 @@ jobs:
 
   alert-pipeline-failure:
     name: Send failure message to Slack
-    needs:
-      [
+    needs: [
         test-build-strapi,
         build-push-image,
-        deploy-staging,
+        # deploy-staging,
         deploy-staging-stackit,
       ]
     if: always() && failure() && github.ref == 'refs/heads/main'
