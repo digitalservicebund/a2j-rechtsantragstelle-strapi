@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
   pull_request:
-    branches: [main]
+    # branches: [main]
   # Allow to run this workflow manually
   workflow_dispatch:
 
@@ -16,6 +16,7 @@ env:
 jobs:
   test-build-strapi:
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
     timeout-minutes: 25
     permissions:
       contents: none
@@ -43,8 +44,8 @@ jobs:
           NODE_ENV: test
 
   build-push-image:
-    needs: [test-build-strapi]
-    if: github.ref == 'refs/heads/main'
+    # needs: [test-build-strapi]
+    # if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     permissions:
@@ -113,7 +114,7 @@ jobs:
 
   deploy-staging:
     needs: [build-push-image]
-    if: github.ref == 'refs/heads/main'
+    # if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     environment: staging
     permissions:
@@ -142,7 +143,7 @@ jobs:
 
   deploy-staging-stackit:
     needs: [build-push-image]
-    if: github.ref == 'refs/heads/main'
+    # if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     environment: staging
     concurrency: deploy-staging
