@@ -150,7 +150,7 @@ jobs:
       contents: read
     steps:
       - name: Deploy new staging image
-        uses: digitalservicebund/argocd-deploy@d14e68e4c78222189d8a20c1552639f33f93fe91 # auth-token branch, v1.0.0
+        uses: digitalservicebund/argocd-deploy@4e758f584953506c571951ffcba33d6a6246e856 # auth-token branch, v1.0.0
         with:
           environment: environments/staging/strapi
           version: ${{ github.sha }}
