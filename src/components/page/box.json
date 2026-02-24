@@ -9,6 +9,54 @@
     "identifier": {
       "type": "string"
     },
+    "sectionBackgroundColor": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "grey"
+      ],
+      "required": false,
+      "default": "white"
+    },
+    "contentBackgroundColor": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "grey"
+      ],
+      "required": false,
+      "default": "white"
+    },
+    "paddingTop": {
+      "type": "enumeration",
+      "enum": [
+        "default",
+        "0",
+        "40"
+      ],
+      "default": "default",
+      "required": false
+    },
+    "paddingBottom": {
+      "type": "enumeration",
+      "enum": [
+        "default",
+        "0",
+        "40"
+      ],
+      "default": "default",
+      "required": false
+    },
+    "outerBackground": {
+      "type": "component",
+      "repeatable": false,
+      "component": "meta.background"
+    },
+    "container": {
+      "type": "component",
+      "repeatable": false,
+      "component": "meta.container"
+    },
     "label": {
       "type": "component",
       "repeatable": false,
@@ -19,26 +67,49 @@
       "repeatable": false,
       "component": "basic.heading"
     },
+    "subline": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.heading",
+      "required": false
+    },
     "content": {
       "type": "component",
       "repeatable": false,
       "component": "basic.paragraph"
     },
-    "container": {
+    "items": {
       "type": "component",
-      "repeatable": false,
-      "component": "meta.container",
-      "required": true
-    },
-    "outerBackground": {
-      "type": "component",
-      "repeatable": false,
-      "component": "meta.background"
+      "repeatable": true,
+      "component": "page.box-item",
+      "required": false
     },
     "buttons": {
       "type": "component",
       "repeatable": true,
       "component": "form-elements.button"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "variant": {
+      "type": "enumeration",
+      "enum": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ]
     }
   }
 }
