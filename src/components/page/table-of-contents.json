@@ -39,6 +39,44 @@
       "type": "component",
       "repeatable": true,
       "component": "form-elements.button"
+    },
+    "sectionBackgroundColor": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "grey"
+      ],
+      "required": false,
+      "default": "white"
+    },
+    "contentBackgroundColor": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "grey"
+      ],
+      "required": false,
+      "default": "white"
+    },
+    "paddingTop": {
+      "type": "enumeration",
+      "enum": [
+        "default",
+        "0",
+        "40"
+      ],
+      "default": "default",
+      "required": false
+    },
+    "paddingBottom": {
+      "type": "enumeration",
+      "enum": [
+        "default",
+        "0",
+        "40"
+      ],
+      "default": "default",
+      "required": false
     }
   }
 }
