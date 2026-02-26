@@ -6,5 +6,6 @@ module.exports = {
     defaultLimit: 99999,
     maxLimit: 99999,
     withCount: true,
+    strictParams: true,
   },
 };
