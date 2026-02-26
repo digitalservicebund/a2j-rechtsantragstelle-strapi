@@ -36,7 +36,7 @@ it("returns single type with pLevel and locale=de for authenticated users", asyn
   });
 
   const response = await request(strapi.server.httpServer)
-    .get("/api/footer?pLevel")
+    .get("/api/footer?populate=*&pLevel=5")
     .set("accept", "application/json")
     .set("Content-Type", "application/json")
     .set("Authorization", "Bearer " + jwt)

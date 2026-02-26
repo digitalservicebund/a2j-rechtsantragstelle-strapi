@@ -7,7 +7,13 @@ module.exports = {
    *
    * This gives you an opportunity to extend code.
    */
-  register(/*{ strapi }*/) {},
+  register({ strapi }) {
+    strapi.contentAPI.addQueryParams({
+      pLevel: {
+        schema: (z) => z.string().optional(),
+      },
+    });
+  },
 
   /**
    * An asynchronous bootstrap function that runs before
@@ -27,7 +33,7 @@ module.exports = {
       .filter((permission) => permission.startsWith("api"))
       .forEach((permission) => {
         const controller = Object.keys(
-          _authenticated.permissions[permission].controllers
+          _authenticated.permissions[permission].controllers,
         )[0];
 
         // Enable find
