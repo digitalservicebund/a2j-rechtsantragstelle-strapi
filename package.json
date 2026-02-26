@@ -54,7 +54,6 @@
   "overrides": {
     "tmp": "0.2.5",
     "esbuild": "^0.25.0",
-    "@aws-sdk/client-s3": "3.726.1",
     "glob": "^10.4.5",
     "lodash": "^4.17.23"
   },
