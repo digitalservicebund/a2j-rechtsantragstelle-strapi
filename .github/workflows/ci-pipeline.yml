@@ -39,8 +39,6 @@ jobs:
         run: npm run build
       - name: Run test
         run: cp .env.example .env && npm run test
-        env:
-          NODE_ENV: test
 
   build-push-image:
     needs: [test-build-strapi]
