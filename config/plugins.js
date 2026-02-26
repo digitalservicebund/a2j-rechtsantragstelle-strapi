@@ -21,7 +21,7 @@ module.exports = ({ env }) => {
               endpoint: env("OBS_ENDPOINT").startsWith("https://")
                 ? env("OBS_ENDPOINT")
                 : "https://" + env("OBS_ENDPOINT"),
-              region: "eu-de",
+              region: env("OBS_REGION") ?? "eu-de",
               params: {
                 Bucket: env("OBS_BUCKET_NAME"),
               },
