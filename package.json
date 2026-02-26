@@ -9,7 +9,7 @@
     "develop": "strapi develop",
     "start": "strapi start",
     "strapi": "strapi",
-    "test": "jest --forceExit --detectOpenHandles",
+    "test": "NODE_ENV=test jest --forceExit --detectOpenHandles",
     "transfer": "source .env && strapi transfer",
     "plugin:build": "npm run build --workspace plugins/strapi-plugin-gh-workflow-trigger-v5",
     "plugin:develop": "npm run watch --workspace plugins/strapi-plugin-gh-workflow-trigger-v5"
@@ -44,7 +44,7 @@
     "supertest": "^7.2.2"
   },
   "engines": {
-    "node": "^24.13.0",
+    "node": "^24.14.0",
     "npm": "^11.6.0"
   },
   "strapi": {
