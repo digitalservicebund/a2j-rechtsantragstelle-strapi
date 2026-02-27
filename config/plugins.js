@@ -29,6 +29,11 @@ module.exports = ({ env }) => {
               },
             },
           },
+          actionOptions: {
+            upload: {},
+            uploadStream: {},
+            delete: {},
+          },
         },
       },
     });
