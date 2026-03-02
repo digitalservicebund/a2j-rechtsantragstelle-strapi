@@ -33,14 +33,14 @@
     "test:ts:back": "tsc -p server/tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@strapi/design-system": "^2.1.2",
-    "@strapi/icons": "^2.1.2",
+    "@strapi/design-system": "^2.2.0",
+    "@strapi/icons": "^2.2.0",
     "react-intl": "^7.1.14"
   },
   "devDependencies": {
     "@strapi/sdk-plugin": "^6.0.1",
-    "@strapi/strapi": "^5.37.0",
-    "@strapi/typescript-utils": "^5.37.0",
+    "@strapi/strapi": "^5.37.1",
+    "@strapi/typescript-utils": "^5.37.1",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "prettier": "^3.8.1",
