@@ -55,7 +55,7 @@
         "xLarge"
       ],
       "default": "large",
-      "required": true
+      "required": false
     }
   }
 }
