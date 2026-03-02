@@ -54,8 +54,7 @@
         "page.inline-notice",
         "page.user-feedback",
         "page.video",
-        "page.details-summary",
-        "basic.heading"
+        "page.details-summary"
       ],
       "required": true
     }

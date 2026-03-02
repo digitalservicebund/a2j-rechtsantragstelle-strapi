@@ -15,7 +15,7 @@
         "white",
         "grey"
       ],
-      "required": false,
+      "required": true,
       "default": "white"
     },
     "contentBackgroundColor": {
@@ -24,27 +24,27 @@
         "white",
         "grey"
       ],
-      "required": false,
+      "required": true,
       "default": "white"
     },
     "paddingTop": {
       "type": "enumeration",
       "enum": [
-        "default",
+        "auto",
         "0",
         "40"
       ],
-      "default": "default",
+      "default": "auto",
       "required": false
     },
     "paddingBottom": {
       "type": "enumeration",
       "enum": [
-        "default",
+        "auto",
         "0",
         "40"
       ],
-      "default": "default",
+      "default": "auto",
       "required": false
     },
     "outerBackground": {
