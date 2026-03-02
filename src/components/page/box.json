@@ -15,7 +15,7 @@
         "white",
         "grey"
       ],
-      "required": true,
+      "required": false,
       "default": "white"
     },
     "contentBackgroundColor": {
@@ -24,7 +24,7 @@
         "white",
         "grey"
       ],
-      "required": true,
+      "required": false,
       "default": "white"
     },
     "paddingTop": {
