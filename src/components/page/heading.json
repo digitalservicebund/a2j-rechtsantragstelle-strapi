@@ -1,0 +1,38 @@
+{
+    "collectionName": "components_page_heading",
+    "info": {
+        "displayName": "Heading",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "identifier": {
+            "type": "string"
+        },
+        "heading": {
+            "type": "component",
+            "repeatable": false,
+            "component": "basic.heading"
+        },
+        "paddingTop": {
+            "type": "enumeration",
+            "enum": [
+                "auto",
+                "0",
+                "40"
+            ],
+            "default": "auto",
+            "required": false
+        },
+        "paddingBottom": {
+            "type": "enumeration",
+            "enum": [
+                "auto",
+                "0",
+                "40"
+            ],
+            "default": "auto",
+            "required": false
+        }
+    }
+}
