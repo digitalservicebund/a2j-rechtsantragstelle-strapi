@@ -1,0 +1,57 @@
+{
+    "collectionName": "components_page_box_items",
+    "info": {
+        "displayName": "BoxItem",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "identifier": {
+            "type": "string"
+        },
+        "label": {
+            "type": "component",
+            "repeatable": false,
+            "component": "basic.heading"
+        },
+        "image": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+                "images"
+            ]
+        },
+        "content": {
+            "type": "richtext"
+        },
+        "headline": {
+            "type": "component",
+            "repeatable": false,
+            "component": "basic.heading"
+        },
+        "buttons": {
+            "type": "component",
+            "repeatable": true,
+            "component": "form-elements.button"
+        },
+        "detailsSummary": {
+            "type": "component",
+            "required": false,
+            "repeatable": true,
+            "component": "page.details-summary"
+        },
+        "inlineNotice": {
+            "type": "component",
+            "required": false,
+            "repeatable": true,
+            "component": "page.inline-notice"
+        },
+        "accordion": {
+            "type": "component",
+            "component": "page.accordion",
+            "repeatable": false,
+            "required": false
+        }
+    }
+}
