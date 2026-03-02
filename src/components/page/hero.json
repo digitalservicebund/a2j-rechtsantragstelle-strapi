@@ -26,6 +26,16 @@
       "type": "component",
       "repeatable": false,
       "component": "form-elements.button"
+    },
+    "sectionBackgroundColor": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "grey",
+        "blue"
+      ],
+      "required": false,
+      "default": "white"
     }
   }
 }

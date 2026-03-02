@@ -46,6 +46,16 @@
       ],
       "default": "default",
       "required": true
+    },
+    "size": {
+      "type": "enumeration",
+      "enum": [
+        "medium",
+        "large",
+        "xLarge"
+      ],
+      "default": "large",
+      "required": false
     }
   }
 }
