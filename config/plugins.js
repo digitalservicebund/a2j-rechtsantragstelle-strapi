@@ -17,8 +17,10 @@ module.exports = ({ env }) => {
         config: {
           provider: "aws-s3",
           providerOptions: {
+            baseUrl: `https://${env("OBS_BUCKET_NAME")}.${env("OBS_ENDPOINT")}`,
             s3Options: {
-              endpoint: "https://" + env("OBS_ENDPOINT"),
+              endpoint: `https://${env("OBS_ENDPOINT")}`,
+              forcePathStyle: false,
               region: env("OBS_REGION") ?? "eu-de",
               credentials: {
                 accessKeyId: env("AWS_ACCESS_KEY_ID"),

@@ -1,6 +1,5 @@
 module.exports = ({ env }) => {
-  const deprecatedUploadBucket = `${env('OBS_BUCKET_NAME')}.${env('OBS_ENDPOINT')}`; // Delete after migration
-  const uploadBucket = `${env('OBS_ENDPOINT')}/${env('OBS_BUCKET_NAME')}/`;
+  const uploadBucket = `${env('OBS_BUCKET_NAME')}.${env('OBS_ENDPOINT')}`;
 
   return [
     'strapi::errors',
@@ -32,8 +31,7 @@ module.exports = ({ env }) => {
               'blob:',
               'market-assets.strapi.io',
               // allow display of image thumbnail previews
-              deprecatedUploadBucket,
-              uploadBucket
+              uploadBucket,
             ],
             'media-src': [
               "'self'",
@@ -41,8 +39,7 @@ module.exports = ({ env }) => {
               'blob:',
               'market-assets.strapi.io',
               // allow display of media thumbnail previews
-              deprecatedUploadBucket,
-              uploadBucket
+              uploadBucket,
             ],
             upgradeInsecureRequests: null,
           },
