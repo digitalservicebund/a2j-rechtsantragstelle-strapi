@@ -21,18 +21,17 @@ docker compose up -d // or docker compose up strapiDB -d
 ### Troubleshooting
 
 - If you get an error like `ECONNREFUSED 172.**.*.*:5431` on Mac, this is a [known issue](https://github.com/docker/compose/issues/4783#issuecomment-301778969). Just remove the port binding to 5431 from docker-compose.yaml,
- 
-``` 
-example#1 
+
+```
+example#1
   ports:
     - '5432:5432'
-    
-example#2  
+
+example#2
  # Remove or comment out the ports section if not needed
  # ports:
  #   - "5431:5432"
-  ```
-
+```
 
 ## Strapi CLI
 
@@ -60,8 +59,8 @@ Replaces all local data with a copy of remote instance
 
 ### Steps
 
-1. Create a `Pull` transfer token on the [remote instance](https://a2j-rast-strapi.dev.ds4g.net/admin/settings/transfer-tokens) and save as `STRAPI_TRANSFER_TOKEN` into your `.env` file
-2. Update the `STRAPI_TRANSFER_URL` (Note: this should point to the `https://a2j-rast-strapi.dev.ds4g.net/admin/` endpoint)
+1. Create a `Pull` transfer token on the [remote instance](https://a2j-strapi.staging.tech.digitalservice.dev/admin/settings/transfer-tokens) and save as `STRAPI_TRANSFER_TOKEN` into your `.env` file
+2. Update the `STRAPI_TRANSFER_URL` (Note: this should point to the `https://a2j-strapi.staging.tech.digitalservice.dev/admin/` endpoint)
 3. Run `npm run transfer`
 4. Choose the option: `Pull data from remote Strapi to local`
 
