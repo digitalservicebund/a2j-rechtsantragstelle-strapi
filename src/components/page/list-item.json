@@ -31,7 +31,29 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "paddingTop": {
+      "type": "enumeration",
+      "enum": [
+        "auto",
+        "0",
+        "40"
+      ],
+      "default": "auto",
+      "required": false
+    },
+    "paddingBottom": {
+      "type": "enumeration",
+      "enum": [
+        "auto",
+        "0",
+        "40"
+      ],
+      "default": "auto",
+      "required": false
     }
   }
 }
