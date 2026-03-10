@@ -15,12 +15,13 @@
     },
     "type": {
       "type": "enumeration",
+      "required": true,
+      "default": "text",
       "enum": [
         "text",
-        "number"
-      ],
-      "default": "text",
-      "required": true
+        "number",
+        "iban"
+      ]
     },
     "errors": {
       "type": "relation",
