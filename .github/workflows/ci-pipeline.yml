@@ -118,7 +118,7 @@ jobs:
       contents: read
     steps:
       - name: Deploy new staging image
-        uses: digitalservicebund/argocd-deploy@4e758f584953506c571951ffcba33d6a6246e856 # v1.0.0
+        uses: digitalservicebund/argocd-deploy@19708d480aa35161125e04e2e5147bec1a9322ad # v1.0.0
         with:
           environment: staging
           version: ${{ github.sha }}
