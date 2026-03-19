@@ -19,8 +19,7 @@
       "default": "text",
       "enum": [
         "text",
-        "number",
-        "iban"
+        "number"
       ]
     },
     "errors": {
