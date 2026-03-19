@@ -91,7 +91,6 @@ describe("strapi app", () => {
       .expect(200)
       .then(({ body }) => {
         const entry = body.data[0];
-        console.log({ entry });
         expect(entry.pageTitle).toBe("pageTitle");
         expect(entry.stepId).toBe("stepId");
         expect(entry.pre_form[0]).toMatchObject(contentEntry);
