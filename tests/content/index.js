@@ -73,17 +73,34 @@ describe("strapi app", () => {
       look: "default",
     };
 
+    const errorEntry = {
+      name: "errorName",
+      errorCodes: [{ code: "errorCode", text: "errorText" }],
+    };
+
+    const errorEntity = await strapi.documents("api::error.error").create({
+      data: errorEntry,
+      status: "published",
+    });
+
     await strapi.documents("api::vorab-check-page.vorab-check-page").create({
       data: {
         pageTitle: "pageTitle",
         stepId: "stepId",
         pre_form: [contentEntry],
+        form: [
+          {
+            __component: "form-elements.input",
+            name: "fieldName",
+            errors: [errorEntity.id],
+          },
+        ],
       },
       status: "published",
     });
 
     await request(strapi.server.httpServer)
-      .get("/api/vorab-check-pages?populate=*&pLevel=3")
+      .get("/api/vorab-check-pages?populate=*&pLevel=5")
       .set("accept", "application/json")
       .set("Content-Type", "application/json")
       .set("Authorization", "Bearer " + jwt)
@@ -94,6 +111,7 @@ describe("strapi app", () => {
         expect(entry.pageTitle).toBe("pageTitle");
         expect(entry.stepId).toBe("stepId");
         expect(entry.pre_form[0]).toMatchObject(contentEntry);
+        expect(entry.form[0].errors[0]).toMatchObject(errorEntry);
       });
   });
 });
