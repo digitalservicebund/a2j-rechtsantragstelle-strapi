@@ -90,7 +90,7 @@ describe("strapi app", () => {
         pre_form: [contentEntry],
         form: [
           {
-            __component: "form-elements.input",
+            __component: "form-elements.textarea",
             name: "fieldName",
             errors: [errorEntity.id],
           },
