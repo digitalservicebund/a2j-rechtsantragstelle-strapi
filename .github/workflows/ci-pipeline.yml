@@ -114,35 +114,6 @@ jobs:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     environment: staging
-    permissions:
-      contents: read
-    steps:
-      - name: Deploy new staging image
-        uses: digitalservicebund/argocd-deploy@19708d480aa35161125e04e2e5147bec1a9322ad # v1.0.0
-        with:
-          environment: staging
-          version: ${{ github.sha }}
-          deploying_repo: a2j-rechtsantragstelle-strapi
-          infra_repo: a2j-rechtsantragstelle-strapi-infra
-          github_app_id: ${{ secrets.GITOPS_A2J_APP_ID }}
-          github_app_private_key: ${{ secrets.GITOPS_A2J_APP_PRIVATE_KEY }}
-          app: a2j-rast-strapi
-          argocd_pipeline_password: ${{ secrets.ARGOCD_PIPELINE_PASSWORD }}
-          argocd_server: ${{ secrets.ARGOCD_SERVER }}
-          argocd_sync_timeout: 300
-      - name: Report Deployment
-        uses: digitalservicebund/track-deployment@5a2815e150e1268983aac5ca04c8c046ed1b614a # v1.0.0
-        with:
-          project: a2j-rechtsantragstelle
-          environment: staging
-          metrics_deployment_webhook_url: ${{ secrets.METRICS_DEPLOYMENT_WEBHOOK_URL }}
-          metrics_webhook_token: ${{ secrets.METRICS_WEBHOOK_TOKEN }}
-
-  deploy-staging-stackit:
-    needs: [build-push-image]
-    if: github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    environment: staging
     concurrency: deploy-staging
     permissions:
       contents: read
@@ -169,13 +140,7 @@ jobs:
 
   alert-pipeline-failure:
     name: Send failure message to Slack
-    needs:
-      [
-        test-build-strapi,
-        build-push-image,
-        deploy-staging,
-        deploy-staging-stackit,
-      ]
+    needs: [test-build-strapi, build-push-image, deploy-staging]
     if: always() && failure() && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     permissions:
