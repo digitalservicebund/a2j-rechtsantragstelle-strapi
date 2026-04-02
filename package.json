@@ -36,6 +36,7 @@
     "react-router-dom": "^6.0.0",
     "strapi-plugin-gh-workflow-trigger-v5": "file:plugins/strapi-plugin-gh-workflow-trigger-v5",
     "strapi-v5-plugin-populate-deep": "4.3.2",
+    "lodash": "^4.18.1",
     "styled-components": "^6.3.12"
   },
   "devDependencies": {
