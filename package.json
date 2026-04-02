@@ -52,12 +52,7 @@
     "telemetryDisabled": true
   },
   "overrides": {
-    "tmp": "0.2.5",
-    "esbuild": "^0.25.0",
-    "file-type": "^21.3.2",
-    "glob": "^10.4.5",
-    "tar": "^7.5.11",
-    "undici": "^6.24.0"
+    "esbuild": "^0.25.0"
   },
   "workspaces": [
     "plugins/strapi-plugin-gh-workflow-trigger-v5"
