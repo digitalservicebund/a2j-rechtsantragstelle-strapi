@@ -54,8 +54,7 @@
   },
   "overrides": {
     "esbuild": "^0.25.0",
-    "lodash": "^4.18.1",
-    "handlebars": "^4.7.9"
+    "lodash": "^4.18.1"
   },
   "workspaces": [
     "plugins/strapi-plugin-gh-workflow-trigger-v5"
