@@ -59,10 +59,8 @@ Replaces all local data with a copy of remote instance
 
 ### Steps
 
-1. Create a `Pull` transfer token on the [remote instance](https://a2j-strapi.staging.tech.digitalservice.dev/admin/settings/transfer-tokens) and save as `STRAPI_TRANSFER_TOKEN` into your `.env` file
-2. Update the `STRAPI_TRANSFER_URL` (Note: this should point to the `https://a2j-strapi.staging.tech.digitalservice.dev/admin/` endpoint)
-3. Run `npm run transfer`
-4. Choose the option: `Pull data from remote Strapi to local`
+1. Create a `Pull` transfer token on the [remote instance](https://a2j-strapi.staging.tech.digitalservice.dev/admin/settings/transfer-tokens) and add to 1pw (you will need to paste it in the next step)
+2. Run `npm run transfer`
 
 ## Data migrations
 

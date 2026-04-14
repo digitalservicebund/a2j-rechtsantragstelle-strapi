@@ -10,7 +10,7 @@
     "start": "strapi start",
     "strapi": "strapi",
     "test": "NODE_ENV=test jest --forceExit --detectOpenHandles",
-    "transfer": "source .env && strapi transfer",
+    "transfer": "strapi transfer --from https://a2j-strapi.staging.tech.digitalservice.dev/admin",
     "plugin:build": "npm run build --workspace plugins/strapi-plugin-gh-workflow-trigger-v5",
     "plugin:develop": "npm run watch --workspace plugins/strapi-plugin-gh-workflow-trigger-v5"
   },
