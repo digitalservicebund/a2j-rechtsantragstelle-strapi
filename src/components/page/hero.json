@@ -17,11 +17,6 @@
       "repeatable": false,
       "component": "basic.paragraph"
     },
-    "outerBackground": {
-      "type": "component",
-      "repeatable": false,
-      "component": "meta.background"
-    },
     "button": {
       "type": "component",
       "repeatable": false,

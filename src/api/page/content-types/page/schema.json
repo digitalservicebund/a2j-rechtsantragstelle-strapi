@@ -45,11 +45,9 @@
         }
       },
       "components": [
-        "page.info-box",
         "page.hero",
         "page.box",
         "page.table-of-contents",
-        "page.box-with-image",
         "page.list",
         "page.inline-notice",
         "page.user-feedback",
