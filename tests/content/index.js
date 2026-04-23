@@ -37,31 +37,27 @@ describe("strapi app", () => {
   });
 
   it("returns single type with pLevel and locale=de for authenticated users", async () => {
-    const paragraph = { text: "asd" };
-    const link = { text: "Click Me", url: "http://test.link" };
-    const categorizedLinks = [{ title: "Test Title", links: [link] }];
+    const title = "Page Title";
+    const linkLabel = "Link Label";
 
-    await strapi.documents("api::footer.footer").create({
+    await strapi.documents("api::page-header.page-header").create({
       data: {
-        paragraphs: [paragraph],
-        links: [link],
-        categorizedLinks,
+        title: title,
+        linkLabel: linkLabel,
       },
       status: "published",
     });
 
-    const response = await request(strapi.server.httpServer)
-      .get("/api/footer?populate=*&pLevel=3")
+    await request(strapi.server.httpServer)
+      .get("/api/page-header?populate=*&pLevel=3")
       .set("accept", "application/json")
       .set("Content-Type", "application/json")
       .set("Authorization", "Bearer " + jwt)
       .expect("Content-Type", /json/)
       .expect(200)
       .then((data) => {
-        expect(data.body.data.paragraphs[0]).toMatchObject(paragraph);
-        expect(data.body.data.categorizedLinks[0]).toMatchObject(
-          categorizedLinks[0],
-        );
+        expect(data.body.data.title).toMatch(title);
+        expect(data.body.data.linkLabel).toMatch(linkLabel);
       });
   });
 
