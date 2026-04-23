@@ -47,16 +47,6 @@
       "default": "auto",
       "required": false
     },
-    "outerBackground": {
-      "type": "component",
-      "repeatable": false,
-      "component": "meta.background"
-    },
-    "container": {
-      "type": "component",
-      "repeatable": false,
-      "component": "meta.container"
-    },
     "label": {
       "type": "component",
       "repeatable": false,

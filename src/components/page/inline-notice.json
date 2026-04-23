@@ -42,17 +42,6 @@
     "content": {
       "type": "richtext"
     },
-    "container": {
-      "type": "component",
-      "component": "meta.container",
-      "repeatable": false,
-      "required": true
-    },
-    "outerBackground": {
-      "type": "component",
-      "component": "meta.background",
-      "repeatable": false
-    },
     "paddingTop": {
       "type": "enumeration",
       "enum": [

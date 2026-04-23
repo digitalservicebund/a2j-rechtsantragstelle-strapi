@@ -61,9 +61,7 @@
       "components": [
         "basic.heading",
         "basic.paragraph",
-        "page.box-with-image",
         "page.box",
-        "page.info-box",
         "page.table-of-contents",
         "page.array-summary",
         "page.list",
@@ -105,9 +103,7 @@
       "components": [
         "basic.heading",
         "basic.paragraph",
-        "page.box-with-image",
         "page.box",
-        "page.info-box",
         "page.inline-notice",
         "page.table-of-contents",
         "page.list",

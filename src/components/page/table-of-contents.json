@@ -24,17 +24,6 @@
       "repeatable": true,
       "component": "basic.link"
     },
-    "container": {
-      "type": "component",
-      "repeatable": false,
-      "component": "meta.container",
-      "required": true
-    },
-    "outerBackground": {
-      "type": "component",
-      "repeatable": false,
-      "component": "meta.background"
-    },
     "buttons": {
       "type": "component",
       "repeatable": true,
