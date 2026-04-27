@@ -10,6 +10,17 @@
       "type": "string",
       "required": true
     },
+    "sectionBackgroundColor": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "grey",
+        "blue",
+        "yellow"
+      ],
+      "required": false,
+      "default": "white"
+    },
     "content": {
       "type": "richtext",
       "required": true

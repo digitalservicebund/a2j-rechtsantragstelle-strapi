@@ -15,12 +15,12 @@
     },
     "type": {
       "type": "enumeration",
+      "required": true,
+      "default": "text",
       "enum": [
         "text",
         "number"
-      ],
-      "default": "text",
-      "required": true
+      ]
     },
     "errors": {
       "type": "relation",

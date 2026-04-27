@@ -21,9 +21,9 @@ jobs:
       contents: none
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
       - name: Setup Node
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6
         with:
           node-version: "24.x"
           cache: "npm"
@@ -39,8 +39,6 @@ jobs:
         run: npm run build
       - name: Run test
         run: cp .env.example .env && npm run test
-        env:
-          NODE_ENV: test
 
   build-push-image:
     needs: [test-build-strapi]
@@ -55,26 +53,26 @@ jobs:
       version: ${{ github.sha }}
     steps:
       - name: Checkout code
-        uses: actions/checkout@v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
       - name: Build an image from Dockerfile
         run: |
           docker build -t ${{ env.IMAGE_NAME }}:${{ github.sha }} . --build-arg COMMIT_SHA=${{ github.sha }}
 
       - name: Install cosign
-        uses: sigstore/cosign-installer@faadad0cce49287aee09b3a48701e75088a2c6ad
+        uses: sigstore/cosign-installer@cad07c2e89fa2edd6e2d7bab4c1aa38e53f76003
         with:
           cosign-release: "v2.6.1" # use latest 2.x release until Kyverno supports 3.x
 
       - name: Login to container registry
-        uses: docker/login-action@c94ce9fb468520275223c153574b00df6fe4bcc9
+        uses: docker/login-action@4907a6ddec9925e35a0a9e82d7399ccc52663121
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate cosign vulnerability scan record
-        uses: aquasecurity/trivy-action@b6643a29fecd7f34b3597bc6acb0a98b03d33ff8
+        uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25
         env:
           TRIVY_DB_REPOSITORY: ghcr.io/aquasecurity/trivy-db,public.ecr.aws/aquasecurity/trivy-db
         with:
@@ -83,7 +81,7 @@ jobs:
           output: "vulnerabilities.json"
 
       - name: Run Trivy vulnerability scanner
-        uses: aquasecurity/trivy-action@b6643a29fecd7f34b3597bc6acb0a98b03d33ff8
+        uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25
         env:
           TRIVY_DB_REPOSITORY: ghcr.io/aquasecurity/trivy-db,public.ecr.aws/aquasecurity/trivy-db
         with:
@@ -120,18 +118,17 @@ jobs:
       contents: read
     steps:
       - name: Deploy new staging image
-        uses: digitalservicebund/argocd-deploy@4e758f584953506c571951ffcba33d6a6246e856 # v1.0.0
+        uses: digitalservicebund/argocd-deploy@6033da861398e0d7fcffe1b195f8d58f10b62c4e # auth-token branch, v1.0.0
         with:
-          environment: staging
+          environment: environments/staging/strapi
           version: ${{ github.sha }}
           deploying_repo: a2j-rechtsantragstelle-strapi
-          infra_repo: a2j-rechtsantragstelle-strapi-infra
+          infra_repo: a2j-rechtsantragstelle-infra
           github_app_id: ${{ secrets.GITOPS_A2J_APP_ID }}
           github_app_private_key: ${{ secrets.GITOPS_A2J_APP_PRIVATE_KEY }}
-          app: a2j-rast-strapi
-          argocd_pipeline_password: ${{ secrets.ARGOCD_PIPELINE_PASSWORD }}
-          argocd_server: ${{ secrets.ARGOCD_SERVER }}
-          argocd_sync_timeout: 300
+          app: a2j-strapi
+          argocd_auth_token: ${{ secrets.ARGOCD_AUTH_TOKEN }}
+          argocd_server: ${{ secrets.ARGOCD_SERVER_STACKIT }}
       - name: Report Deployment
         uses: digitalservicebund/track-deployment@5a2815e150e1268983aac5ca04c8c046ed1b614a # v1.0.0
         with:
@@ -148,6 +145,7 @@ jobs:
     permissions:
       contents: none
     steps:
-      - uses: digitalservicebund/notify-on-failure-gha@66c485757701f8d5dbee32f24df38d904ca693ba
+      - uses: digitalservicebund/notify-on-failure-gha@671832f192aee0a068fd92b2f6deb975df794a84
         with:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_A2J_ALERT_ID }}

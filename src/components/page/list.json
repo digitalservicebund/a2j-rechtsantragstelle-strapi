@@ -43,6 +43,44 @@
       ],
       "default": "unordered",
       "required": true
+    },
+    "sectionBackgroundColor": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "grey"
+      ],
+      "required": false,
+      "default": "white"
+    },
+    "contentBackgroundColor": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "grey"
+      ],
+      "required": false,
+      "default": "white"
+    },
+    "paddingTop": {
+      "type": "enumeration",
+      "enum": [
+        "auto",
+        "0",
+        "40"
+      ],
+      "default": "auto",
+      "required": false
+    },
+    "paddingBottom": {
+      "type": "enumeration",
+      "enum": [
+        "auto",
+        "0",
+        "40"
+      ],
+      "default": "auto",
+      "required": false
     }
   }
 }

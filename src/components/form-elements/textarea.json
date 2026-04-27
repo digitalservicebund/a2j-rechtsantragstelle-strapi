@@ -32,7 +32,7 @@
     "maxLength": {
       "type": "integer",
       "required": false,
-      "max": 5000,
+      "max": 60000,
       "default": 5000
     }
   }
