@@ -36,9 +36,7 @@
       "components": [
         "basic.heading",
         "basic.paragraph",
-        "page.info-box",
         "page.box",
-        "page.box-with-image",
         "page.inline-notice",
         "page.table-of-contents",
         "page.list",

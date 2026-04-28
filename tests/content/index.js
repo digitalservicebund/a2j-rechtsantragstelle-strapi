@@ -66,7 +66,7 @@ describe("strapi app", () => {
       __component: "basic.heading",
       text: "heading",
       tagName: "h1",
-      look: "default",
+      size: "large",
     };
 
     const errorEntry = {
