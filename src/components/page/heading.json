@@ -19,7 +19,8 @@
             "enum": [
                 "auto",
                 "0",
-                "40"
+                "40",
+                "80"
             ],
             "default": "auto",
             "required": true
@@ -29,7 +30,8 @@
             "enum": [
                 "auto",
                 "0",
-                "40"
+                "40",
+                "80"
             ],
             "default": "auto",
             "required": true

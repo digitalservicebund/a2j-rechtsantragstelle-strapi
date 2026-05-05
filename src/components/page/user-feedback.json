@@ -8,6 +8,26 @@
     "headingRating": {
       "type": "string",
       "required": true
+    },
+    "paddingTop": {
+      "type": "enumeration",
+      "enum": [
+        "auto",
+        "0",
+        "40",
+        "80"
+      ],
+      "default": "auto",
+      "required": false
+    },
+    "paddingBottom": {
+      "type": "enumeration",
+      "enum": [
+        "auto",
+        "0",
+        "40",
+        "80"
+      ]
     }
   }
 }
