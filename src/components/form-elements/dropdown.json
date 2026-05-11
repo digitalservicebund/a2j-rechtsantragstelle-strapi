@@ -37,6 +37,9 @@
         "characters36",
         "characters54"
       ]
+    },
+        "suffix": {
+      "type": "string"
     }
   }
 }
