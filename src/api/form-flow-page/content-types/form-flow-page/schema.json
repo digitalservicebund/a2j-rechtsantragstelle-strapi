@@ -89,7 +89,6 @@
         "form-elements.time-input",
         "form-elements.files-upload",
         "form-elements.auto-suggest-input",
-        "form-elements.hidden-input",
         "form-elements.fieldset"
       ]
     },
