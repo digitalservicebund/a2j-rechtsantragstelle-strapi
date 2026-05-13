@@ -6,8 +6,8 @@ Inspired by [strapi-plugin-site-publisher](https://github.com/colibris-xyz/strap
 
 ## Getting started
 
-- To build: `npm run build`
-- To develop: `npm run watch`
+- To build: `pnpm run build`
+- To develop: `pnpm run watch`
 
 ## Usage
 

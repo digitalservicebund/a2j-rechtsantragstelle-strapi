@@ -7,15 +7,16 @@ ENV NODE_ENV=${NODE_ENV}
 
 WORKDIR /opt/app
 COPY . .
-RUN npm config set ignore-scripts true
-RUN npm ci --include=dev
-RUN npm run build
-RUN npm prune --omit=dev
+
+RUN corepack enable pnpm
+
+RUN pnpm install --frozen-lockfile
+RUN pnpm run build
+RUN pnpm prune --prod
 
 # Creating final production image
 FROM node:24.15.0-alpine3.23
-RUN apk add --no-cache vips-dev
-RUN npm install -g npm@^11.8.0
+RUN apk add --no-cache dumb-init && rm -rf /var/cache/apk/*
 ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}
 WORKDIR /opt/app

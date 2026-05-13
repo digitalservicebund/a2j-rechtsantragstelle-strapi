@@ -22,23 +22,25 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+      - uses: pnpm/action-setup@739bfe42ca9233c5e6aca07c1a25a9d34aca49b0 # v6.0.7
+        name: Install pnpm
+        with:
+          run_install: false
       - name: Setup Node
         uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6
         with:
-          node-version: "24.x"
-          cache: "npm"
-      - name: Disable npm script execution
-        run: npm config set ignore-scripts true
+          node-version-file: "package.json"
+          cache: "pnpm"
+      - name: Grab node version
+        run: echo "NODE_VERSION=$(node --version)" >> $GITHUB_ENV
         shell: bash
-      - name: Install dependencies
-        run: npm ci --include=dev
-      - name: Install better-sqlite3 release
-        run: npm rebuild better-sqlite3 --ignore-scripts=false
+      - name: Perform a clean install of node dependencies
+        run: pnpm i --prod=false
         shell: bash
       - name: Run build
-        run: npm run build
+        run: pnpm run build
       - name: Run test
-        run: cp .env.example .env && npm run test
+        run: cp .env.example .env && pnpm run test
 
   build-push-image:
     needs: [test-build-strapi]
