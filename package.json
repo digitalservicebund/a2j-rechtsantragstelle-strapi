@@ -5,14 +5,14 @@
   "description": "A Strapi application",
   "license": "MIT",
   "scripts": {
-    "build": "npm run plugin:build && strapi build",
+    "build": "pnpm run plugin:build && strapi build",
     "develop": "strapi develop",
     "start": "strapi start",
     "strapi": "strapi",
     "test": "NODE_ENV=test jest --forceExit --detectOpenHandles",
     "transfer": "strapi transfer --from https://a2j-strapi.staging.tech.digitalservice.dev/admin",
-    "plugin:build": "npm run build --workspace plugins/strapi-plugin-gh-workflow-trigger-v5",
-    "plugin:develop": "npm run watch --workspace plugins/strapi-plugin-gh-workflow-trigger-v5"
+    "plugin:build": "pnpm run build --workspace plugins/strapi-plugin-gh-workflow-trigger-v5",
+    "plugin:develop": "pnpm run watch --workspace plugins/strapi-plugin-gh-workflow-trigger-v5"
   },
   "jest": {
     "noStackTrace": true,
@@ -44,20 +44,13 @@
     "jest": "^30.4.1",
     "supertest": "^7.2.2"
   },
+  "packageManager": "pnpm@11.0.8",
   "engines": {
     "node": "^24.15.0",
-    "npm": "^11.6.0"
+    "pnpm": "11.0.8"
   },
   "strapi": {
     "uuid": "75be5f21-db3a-4a6f-9069-20b0c6b8e10c",
     "telemetryDisabled": true
-  },
-  "overrides": {
-    "esbuild": "^0.25.0",
-    "lodash": "^4.18.1",
-    "ajv": "^8.18.0"
-  },
-  "workspaces": [
-    "plugins/strapi-plugin-gh-workflow-trigger-v5"
-  ]
+  }
 }
