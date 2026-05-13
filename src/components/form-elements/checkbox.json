@@ -19,6 +19,9 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::error.error"
+    },
+    "suffix": {
+      "type": "string"
     }
   }
 }
