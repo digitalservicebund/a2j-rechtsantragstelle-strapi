@@ -89,7 +89,8 @@
         "form-elements.time-input",
         "form-elements.files-upload",
         "form-elements.auto-suggest-input",
-        "form-elements.fieldset"
+        "form-elements.fieldset",
+        "form-elements.number-increment"
       ]
     },
     "post_form": {
