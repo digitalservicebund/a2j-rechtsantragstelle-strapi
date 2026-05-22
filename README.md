@@ -14,6 +14,19 @@ cp .env.example .env
 docker compose up -d // or docker compose up strapiDB -d
 ```
 
+With Node and Postgres installed, enable `corepack` (this only needs to happen once):
+
+```sh
+corepack enable
+```
+
+Then, install dependencies and create admin panel:
+
+```sh
+pnpm install
+pnpm run build
+```
+
 1. Visit http://localhost:1337/admin/
 2. Under Settings > Internationalization: Add `German (de)` & set it as default
 3. Under Settings > API Tokens: Add new token (access key), set the token type to **read-only** and copy it to the `.env` of the A2J webapp
@@ -39,13 +52,13 @@ Strapi comes with a fully featured [Command Line Interface](https://docs.strapi.
 
 ```bash
 # Start strapi instance
-npm run start
+pnpm run start
 
 # Build admin panel
-npm run build
+pnpm run build
 
 # Start strapi instance with autoreload & content builder enabled
-npm run develop
+pnpm run develop
 ```
 
 ## Sync with remote instance
@@ -60,7 +73,7 @@ Replaces all local data with a copy of remote instance
 ### Steps
 
 1. Create a `Pull` transfer token on the [remote instance](https://a2j-strapi.staging.tech.digitalservice.dev/admin/settings/transfer-tokens) and add to 1pw (you will need to paste it in the next step)
-2. Run `npm run transfer`
+2. Run `pnpm run transfer`
 
 ## Data migrations
 
@@ -69,7 +82,7 @@ Replaces all local data with a copy of remote instance
 [docs](https://docs.strapi.io/dev-docs/database-migrations)
 
 - read the (short) docs!
-- run **once** on Strapi server start-up (or reload when using `npm run develop`)
+- run **once** on Strapi server start-up (or reload when using `pnpm run develop`)
 - migration files are run in alphabetical order (use time stamps in front)
 - **no revert** possible
 - only(?) use for data migration, not for changing database structure (do this in the schemas instead)
