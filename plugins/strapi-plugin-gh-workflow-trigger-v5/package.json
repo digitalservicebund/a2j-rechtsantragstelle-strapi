@@ -58,7 +58,7 @@
   "strapi": {
     "kind": "plugin",
     "name": "gh-workflow-trigger-v5",
-    "displayName": "Github Workflow Trigger",
+    "displayName": "Github Workflow Trigger 2",
     "description": "Trigger a github workflow from your admin panel"
   },
   "name": "strapi-plugin-gh-workflow-trigger-v5",
