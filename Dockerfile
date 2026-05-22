@@ -9,7 +9,7 @@ COPY . .
 
 RUN corepack enable pnpm
 
-RUN pnpm install --frozen-lockfile --prod=false
+RUN pnpm install
 RUN pnpm run build
 RUN pnpm prune --prod
 
