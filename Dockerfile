@@ -4,6 +4,7 @@ FROM node:24.15.0-alpine3.23 AS build
 RUN apk update && apk add --no-cache build-base zlib-dev libpng-dev vips-dev > /dev/null 2>&1
 ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}
+ENV CI=true
 
 WORKDIR /opt/app
 COPY . .
