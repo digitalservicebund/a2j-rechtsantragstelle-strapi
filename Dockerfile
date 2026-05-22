@@ -2,8 +2,6 @@
 # Creating multi-stage build for production
 FROM node:24.15.0-alpine3.23 AS build
 RUN apk update && apk add --no-cache build-base gcc autoconf automake zlib-dev libpng-dev bash vips-dev git
-ARG NODE_ENV=production
-ENV NODE_ENV=${NODE_ENV}
 ENV CI=true
 
 WORKDIR /opt/app
@@ -13,6 +11,8 @@ RUN corepack enable pnpm
 
 RUN pnpm install --frozen-lockfile
 RUN pnpm run build
+ARG NODE_ENV=production
+ENV NODE_ENV=${NODE_ENV}
 RUN pnpm prune --prod
 
 # Creating final production image
