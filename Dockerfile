@@ -15,7 +15,7 @@ RUN npm prune --omit=dev
 
 # Creating final production image
 FROM node:24.15.0-alpine3.23
-RUN apk add --no-cache dumb-init && rm -rf /var/cache/apk/*
+RUN apk update && apk upgrade --no-cache && apk add --no-cache dumb-init && rm -rf /var/cache/apk/*
 ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}
 WORKDIR /opt/app
