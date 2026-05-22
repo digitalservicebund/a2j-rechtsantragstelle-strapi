@@ -13,6 +13,7 @@ RUN corepack enable pnpm
 
 RUN pnpm install --frozen-lockfile
 RUN pnpm run build
+RUN pnpm prune --prod
 
 # Creating final production image
 FROM node:24.15.0-alpine3.23
