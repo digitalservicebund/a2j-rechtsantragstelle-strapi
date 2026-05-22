@@ -9,7 +9,7 @@ COPY . .
 
 RUN corepack enable pnpm
 
-RUN pnpm install
+RUN pnpm install --shamefully-hoist
 RUN pnpm run build
 RUN pnpm prune --prod
 
