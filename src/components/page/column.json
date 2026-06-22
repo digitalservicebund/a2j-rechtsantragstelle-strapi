@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_table_columns",
+  "info": {
+    "displayName": "Column"
+  },
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

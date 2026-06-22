@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_page_tables",
+  "info": {
+    "displayName": "Table"
+  },
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "columns": {
+      "type": "component",
+      "repeatable": true,
+      "component": "table.column"
+    },
+    "rows": {
+      "type": "component",
+      "repeatable": true,
+      "component": "table.row"
+    }
+  }
+}
