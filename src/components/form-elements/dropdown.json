@@ -15,13 +15,10 @@
     },
     "options": {
       "type": "component",
-      "repeatable": true,
-      "component": "form-helper.select-option"
+      "component": "form-helper.select-option",
+      "repeatable": true
     },
     "altLabel": {
-      "type": "text"
-    },
-    "placeholder": {
       "type": "text"
     },
     "errors": {
@@ -38,7 +35,7 @@
         "characters54"
       ]
     },
-        "suffix": {
+    "suffix": {
       "type": "string"
     }
   }
