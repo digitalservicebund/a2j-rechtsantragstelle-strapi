@@ -13,6 +13,10 @@
     "value": {
       "type": "string",
       "required": true
+    },
+    "preSelected": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
