@@ -7,13 +7,13 @@
     "heading": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.heading"
+      "component": "basic.heading"
     },
     "title": {
       "type": "string"
     },
     "description": {
-      "type": "text"
+      "type": "richtext"
     },
     "columns": {
       "type": "component",
