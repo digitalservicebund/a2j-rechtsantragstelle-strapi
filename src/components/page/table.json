@@ -5,6 +5,11 @@
   },
   "attributes": {
     "heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.heading"
+    },
+    "title": {
       "type": "string"
     },
     "description": {

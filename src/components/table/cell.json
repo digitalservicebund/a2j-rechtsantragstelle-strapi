@@ -8,9 +8,9 @@
       "type": "text",
       "required": true
     },
-    "isHeader": {
-      "type": "boolean",
-      "default": false
+    "header": {
+      "type": "string",
+      "default": true
     }
   }
 }

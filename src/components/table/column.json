@@ -4,7 +4,7 @@
     "displayName": "Column"
   },
   "attributes": {
-    "label": {
+    "header": {
       "type": "string",
       "required": true
     }
