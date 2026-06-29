@@ -18,12 +18,14 @@
     "columns": {
       "type": "component",
       "repeatable": true,
-      "component": "table.column"
+      "component": "table.column",
+      "required": true
     },
     "rows": {
       "type": "component",
       "repeatable": true,
-      "component": "table.row"
+      "component": "table.row",
+      "required": true
     }
   }
 }
