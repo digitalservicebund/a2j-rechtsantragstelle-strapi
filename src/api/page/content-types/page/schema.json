@@ -53,7 +53,8 @@
         "page.user-feedback",
         "page.video",
         "page.details-summary",
-        "page.heading"
+        "page.heading",
+        "page.table"
       ],
       "required": true
     }
