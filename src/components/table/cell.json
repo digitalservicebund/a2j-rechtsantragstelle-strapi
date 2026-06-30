@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_table_cells",
+  "info": {
+    "displayName": "Cell"
+  },
+  "attributes": {
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "header": {
+      "type": "string",
+      "default": true
+    }
+  }
+}
