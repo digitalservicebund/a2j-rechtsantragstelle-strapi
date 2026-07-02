@@ -10,7 +10,8 @@
       "component": "basic.heading"
     },
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": false
     },
     "description": {
       "type": "richtext"
