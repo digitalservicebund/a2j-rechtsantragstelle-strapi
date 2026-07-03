@@ -10,9 +10,7 @@
       "component": "basic.heading"
     },
     "title": {
-      "type": "component",
-      "component": "basic.heading",
-      "repeatable": false
+      "type": "string"
     },
     "description": {
       "type": "richtext"
