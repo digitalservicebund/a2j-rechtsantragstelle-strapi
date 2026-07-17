@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_page_card_groups",
+  "info": {
+    "displayName": "Card Group",
+    "icon": "grid"
+  },
+  "options": {},
+  "attributes": {
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "page.card",
+      "required": true
+    }
+  }
+}
