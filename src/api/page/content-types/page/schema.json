@@ -54,9 +54,7 @@
         "page.video",
         "page.details-summary",
         "page.heading",
-        "page.table",
-        "page.card",
-        "page.card-group"
+        "page.table"
       ],
       "required": true
     }
