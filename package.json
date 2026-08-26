@@ -46,7 +46,7 @@
     "@strapi/sdk-plugin": "^6.1.1"
   },
   "engines": {
-    "node": "^24.15.0",
+    "node": "^24.19.0",
     "npm": "^11.6.0"
   },
   "workspaces": [
