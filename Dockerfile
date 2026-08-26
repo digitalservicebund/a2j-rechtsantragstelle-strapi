@@ -1,6 +1,6 @@
 # Adapted from https://docs.strapi.io/dev-docs/installation/docker#production-dockerfile
 # Creating multi-stage build for production
-FROM node:24.15.0-alpine3.23 AS build
+FROM node:24.19.0-alpine3.24 AS build
 RUN apk update && apk add --no-cache build-base gcc autoconf automake zlib-dev libpng-dev bash vips-dev git
 ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}
@@ -14,7 +14,7 @@ RUN npm run build
 RUN npm prune --omit=dev
 
 # Creating final production image
-FROM node:24.15.0-alpine3.23
+FROM node:24.19.0-alpine3.24
 RUN apk update && apk upgrade --no-cache && apk add --no-cache dumb-init && rm -rf /var/cache/apk/*
 ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}
