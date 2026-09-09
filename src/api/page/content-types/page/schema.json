@@ -54,7 +54,8 @@
         "page.video",
         "page.details-summary",
         "page.heading",
-        "page.table"
+        "page.table",
+        "page.badge"
       ],
       "required": true
     }
