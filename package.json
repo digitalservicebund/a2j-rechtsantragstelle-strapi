@@ -10,7 +10,7 @@
     "start": "strapi start",
     "strapi": "strapi",
     "test": "NODE_ENV=test jest --forceExit --detectOpenHandles",
-    "transfer": "strapi transfer --from https://a2j-strapi.staging.tech.digitalservice.dev/admin",
+    "transfer": "node ./scripts/strapiTransfer.mjs strapiTransfer",
     "plugin:build": "npm run build --workspace strapi-plugin-gh-workflow-trigger-v5",
     "plugin:develop": "npm run watch --workspace plugins/strapi-plugin-gh-workflow-trigger-v5"
   },
@@ -29,6 +29,8 @@
     "@strapi/plugin-users-permissions": "5.52.0",
     "@strapi/provider-upload-aws-s3": "5.52.0",
     "@strapi/strapi": "5.52.0",
+    "dotenv": "^17.4.2",
+    "lodash": "^4.18.1",
     "pg": "^8.23.0",
     "pluralize": "^8.0.0",
     "react": "^18.3.1",
@@ -36,7 +38,6 @@
     "react-router-dom": "^6.30.6",
     "strapi-plugin-gh-workflow-trigger-v5": "file:plugins/strapi-plugin-gh-workflow-trigger-v5",
     "strapi-v5-plugin-populate-deep": "4.3.3",
-    "lodash": "^4.18.1",
     "styled-components": "^6.3.12"
   },
   "devDependencies": {
