@@ -68,7 +68,8 @@
         "page.inline-notice",
         "page.summary-overview-section",
         "page.email-capture",
-        "page.details-summary"
+        "page.details-summary",
+        "page.badge"
       ]
     },
     "form": {
@@ -108,7 +109,8 @@
         "page.table-of-contents",
         "page.list",
         "page.user-feedback",
-        "page.email-capture"
+        "page.email-capture",
+        "page.badge"
       ]
     },
     "flow_ids": {
