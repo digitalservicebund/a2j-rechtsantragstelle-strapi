@@ -130,7 +130,7 @@ jobs:
           argocd_auth_token: ${{ secrets.ARGOCD_AUTH_TOKEN }}
           argocd_server: ${{ secrets.ARGOCD_SERVER_STACKIT }}
       - name: Report Deployment
-        uses: digitalservicebund/track-deployment@5a2815e150e1268983aac5ca04c8c046ed1b614a # v1.0.0
+        uses: digitalservicebund/track-deployment@379b3db3b4ed6c0eab31e057858e842cea4789dc # v1.2.0
         with:
           project: a2j-rechtsantragstelle
           environment: staging
@@ -145,7 +145,7 @@ jobs:
     permissions:
       contents: none
     steps:
-      - uses: digitalservicebund/notify-on-failure-gha@671832f192aee0a068fd92b2f6deb975df794a84
+      - uses: digitalservicebund/notify-on-failure-gha@9fafd6e97d275a51126f80bec2285a2cf2beb1fc
         with:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
           SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_A2J_ALERT_ID }}
