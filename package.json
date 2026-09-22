@@ -28,7 +28,7 @@
   "dependencies": {
     "@strapi/plugin-users-permissions": "5.53.0",
     "@strapi/provider-upload-aws-s3": "5.53.0",
-    "@strapi/strapi": "5.53.0",
+    "@strapi/strapi": "5.54.0",
     "dotenv": "^17.4.2",
     "lodash": "^4.18.1",
     "pg": "^8.23.0",
