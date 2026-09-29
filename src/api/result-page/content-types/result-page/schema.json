@@ -62,7 +62,8 @@
         "page.inline-notice",
         "page.details-summary",
         "page.box",
-        "page.user-feedback"
+        "page.user-feedback",
+        "page.badge"
       ]
     },
     "pageType": {

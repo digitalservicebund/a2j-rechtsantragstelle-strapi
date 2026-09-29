@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_page_badges",
+  "info": {
+    "displayName": "Badge"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "variant": {
+      "type": "enumeration",
+      "required": false,
+      "default": "info",
+      "enum": [
+        "info",
+        "success",
+        "warning",
+        "danger"
+      ]
+    }
+  },
+  "config": {}
+}

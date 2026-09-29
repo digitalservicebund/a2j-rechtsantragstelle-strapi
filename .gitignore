@@ -103,6 +103,7 @@ coverage
 ############################
 
 .env
+.envrc
 license.txt
 exports
 *.cache

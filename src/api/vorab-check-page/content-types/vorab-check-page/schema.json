@@ -44,7 +44,8 @@
         "basic.heading",
         "basic.paragraph",
         "page.inline-notice",
-        "page.details-summary"
+        "page.details-summary",
+        "page.badge"
       ]
     },
     "form": {
