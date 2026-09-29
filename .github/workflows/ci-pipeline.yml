@@ -130,7 +130,7 @@ jobs:
           argocd_auth_token: ${{ secrets.ARGOCD_AUTH_TOKEN }}
           argocd_server: ${{ secrets.ARGOCD_SERVER_STACKIT }}
       - name: Report Deployment
-        uses: digitalservicebund/track-deployment@379b3db3b4ed6c0eab31e057858e842cea4789dc # v1.2.0
+        uses: digitalservicebund/track-deployment@e5d2262c109590c7af668dd176ae848566500004 # v1.3.0
         with:
           project: a2j-rechtsantragstelle
           environment: staging
