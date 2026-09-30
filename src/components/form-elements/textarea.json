@@ -21,8 +21,8 @@
     "placeholder": {
       "type": "string"
     },
-    "description": {
-      "type": "richtext"
+    "helperText": {
+      "type": "string"
     },
     "details": {
       "type": "component",
