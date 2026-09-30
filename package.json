@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "better-sqlite3": "^13.0.3",
-    "jest": "^30.5.1",
+    "jest": "^30.5.2",
     "supertest": "^7.2.2",
     "@strapi/sdk-plugin": "^6.1.1"
   },
