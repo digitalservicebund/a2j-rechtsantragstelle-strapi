@@ -3,7 +3,16 @@
 async function up(knex) {
   try {
     console.log("Processing renaming column 'description' to 'helper_text'");
-    if (await knex.schema.hasColumn('components_basic_textareas', 'description')) {
+    if (
+      (await knex.schema.hasColumn(
+        "components_basic_textareas",
+        "description",
+      )) &&
+      !(await knex.schema.hasColumn(
+        "components_basic_textareas",
+        "helper_text",
+      ))
+    ) {
       await knex.schema.table("components_basic_textareas", function (table) {
         table.renameColumn("description", "helper_text");
       });
