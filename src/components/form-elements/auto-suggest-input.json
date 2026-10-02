@@ -40,7 +40,9 @@
       "enum": [
         "airports",
         "airlines",
-        "streetNames"
+        "streetNames",
+        "nationalities",
+        "countries"
       ]
     },
     "noSuggestionMessage": {
