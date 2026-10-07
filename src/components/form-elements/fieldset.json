@@ -28,6 +28,9 @@
     },
     "helperText": {
       "type": "text"
+    },
+    "suffix": {
+      "type": "string"
     }
   }
 }
