@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_form_elements_standalone_checkboxes",
+  "info": {
+    "displayName": "StandaloneCheckbox"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "label": {
+      "type": "string"
+    },
+    "error": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::error.error"
+    }
+  },
+  "config": {}
+}
