@@ -65,7 +65,8 @@
         "form-elements.date-input",
         "form-elements.files-upload",
         "form-elements.auto-suggest-input",
-        "form-elements.number-increment"
+        "form-elements.number-increment",
+        "form-elements.standalone-checkbox"
       ]
     },
     "flow_ids": {
