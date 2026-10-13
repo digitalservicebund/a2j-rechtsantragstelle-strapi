@@ -32,6 +32,12 @@
     },
     "helperText": {
       "type": "string"
+    },
+    "size": {
+      "type": "enumeration",
+      "enum": ["large", "medium", "small"],
+      "default": "large",
+      "required": false
     }
   }
 }
