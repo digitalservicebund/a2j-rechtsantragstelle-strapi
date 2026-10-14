@@ -17,10 +17,7 @@
       "type": "enumeration",
       "required": true,
       "default": "text",
-      "enum": [
-        "text",
-        "number"
-      ]
+      "enum": ["text", "number"]
     },
     "errors": {
       "type": "relation",
@@ -33,21 +30,14 @@
     "suffix": {
       "type": "string"
     },
-    "width": {
-      "type": "enumeration",
-      "enum": [
-        "characters3",
-        "characters5",
-        "characters7",
-        "characters10",
-        "characters16",
-        "characters24",
-        "characters36",
-        "characters54"
-      ]
-    },
     "helperText": {
       "type": "string"
+    },
+    "size": {
+      "type": "enumeration",
+      "enum": ["large", "medium", "small"],
+      "default": "large",
+      "required": false
     }
   }
 }

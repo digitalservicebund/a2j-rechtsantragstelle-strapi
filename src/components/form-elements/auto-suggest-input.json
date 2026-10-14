@@ -21,30 +21,6 @@
     "placeholder": {
       "type": "string"
     },
-    "width": {
-      "type": "enumeration",
-      "enum": [
-        "characters3",
-        "characters5",
-        "characters7",
-        "characters10",
-        "characters16",
-        "characters24",
-        "characters36",
-        "characters54"
-      ]
-    },
-    "dataList": {
-      "type": "enumeration",
-      "required": true,
-      "enum": [
-        "airports",
-        "airlines",
-        "streetNames",
-        "nationalities",
-        "countries"
-      ]
-    },
     "noSuggestionMessage": {
       "type": "string"
     },
@@ -63,6 +39,12 @@
     },
     "helperText": {
       "type": "string",
+      "required": false
+    },
+    "size": {
+      "type": "enumeration",
+      "enum": ["large", "medium", "small"],
+      "default": "large",
       "required": false
     }
   }
