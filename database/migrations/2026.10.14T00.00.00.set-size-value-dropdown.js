@@ -26,13 +26,7 @@ async function up(knex) {
 
     const totalDropdownSmall = updateDropdownsSmall + updateDropdownsSmall2;
 
-    const updateDropdownsMedium = await dropdown
-      .where({ size: null, width: "characters36" })
-      .update({ size: "medium" });
-
-    console.log(
-      `Updated ${totalDropdownSmall} dropdowns with the size small and updated ${updateDropdownsMedium} dropdowns with the size medium`,
-    );
+    console.log(`Updated ${totalDropdownSmall} dropdowns with the size small`);
   } catch (error) {
     console.error("Error update dropdowns:", error);
   }
