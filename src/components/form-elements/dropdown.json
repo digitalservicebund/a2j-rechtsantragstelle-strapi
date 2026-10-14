@@ -26,17 +26,14 @@
       "relation": "oneToMany",
       "target": "api::error.error"
     },
-    "width": {
-      "type": "enumeration",
-      "enum": [
-        "characters16",
-        "characters24",
-        "characters36",
-        "characters54"
-      ]
-    },
     "suffix": {
       "type": "string"
+    },
+    "size": {
+      "type": "enumeration",
+      "enum": ["large", "medium", "small"],
+      "default": "large",
+      "required": false
     }
   }
 }
