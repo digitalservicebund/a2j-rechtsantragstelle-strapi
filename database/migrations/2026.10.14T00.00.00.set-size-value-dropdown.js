@@ -1,13 +1,38 @@
 // add doc
 
+const DROPDOWN_TABLE = "components_form_elements_dropdowns";
+
 async function up(knex) {
   try {
-    const dropdown = knex("components_form_elements_dropdowns");
-    const updateDropdowns = await dropdown
+    const dropdown = knex(DROPDOWN_TABLE);
+
+    const columnTitleExists = await knex.schema.hasColumn(
+      DROPDOWN_TABLE,
+      "size",
+    );
+    if (!columnTitleExists) {
+      await knex.schema.alterTable(DROPDOWN_TABLE, function (table) {
+        table.string("size");
+      });
+    }
+
+    const updateDropdownsSmall = await dropdown
       .where({ size: null, width: "characters16" })
       .update({ size: "small" });
 
-    console.log(`Updated ${updateDropdowns} dropdowns with the size small`);
+    const updateDropdownsSmall2 = await dropdown
+      .where({ size: null, width: "characters24" })
+      .update({ size: "small" });
+
+    const totalDropdownSmall = updateDropdownsSmall + updateDropdownsSmall2;
+
+    const updateDropdownsMedium = await dropdown
+      .where({ size: null, width: "characters36" })
+      .update({ size: "medium" });
+
+    console.log(
+      `Updated ${totalDropdownSmall} dropdowns with the size small and updated ${updateDropdownsMedium} dropdowns with the size medium`,
+    );
   } catch (error) {
     console.error("Error update dropdowns:", error);
   }
