@@ -29,7 +29,9 @@
         "form-elements.date-input",
         "form-elements.dropdown",
         "form-elements.auto-suggest-input",
-        "form-elements.textarea"
+        "form-elements.textarea",
+        "form-elements.checkbox",
+        "form-elements.standalone-checkbox"
       ],
       "required": true
     },
