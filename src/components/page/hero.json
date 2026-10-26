@@ -24,11 +24,7 @@
     },
     "sectionBackgroundColor": {
       "type": "enumeration",
-      "enum": [
-        "white",
-        "grey",
-        "blue"
-      ],
+      "enum": ["white", "grey", "blue", "darkBlue"],
       "required": false,
       "default": "white"
     }
