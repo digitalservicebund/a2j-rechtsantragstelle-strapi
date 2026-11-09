@@ -26,8 +26,8 @@
     "testTimeout": 70000
   },
   "dependencies": {
-    "@strapi/plugin-users-permissions": "5.60.0",
-    "@strapi/provider-upload-aws-s3": "5.60.0",
+    "@strapi/plugin-users-permissions": "5.61.0",
+    "@strapi/provider-upload-aws-s3": "5.61.0",
     "@strapi/strapi": "5.61.0",
     "dotenv": "^18.0.9",
     "lodash": "^4.18.1",
