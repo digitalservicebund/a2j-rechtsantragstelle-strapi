@@ -18,6 +18,10 @@
       "component": "form-helper.select-option",
       "repeatable": true
     },
+    "helperText": {
+      "type": "string",
+      "required": false
+    },
     "altLabel": {
       "type": "text"
     },
@@ -31,7 +35,11 @@
     },
     "size": {
       "type": "enumeration",
-      "enum": ["large", "medium", "small"],
+      "enum": [
+        "large",
+        "medium",
+        "small"
+      ],
       "default": "large",
       "required": false
     }
