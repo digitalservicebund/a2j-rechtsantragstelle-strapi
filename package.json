@@ -54,7 +54,10 @@
     "plugins/strapi-plugin-gh-workflow-trigger-v5"
   ],
   "overrides": {
-    "shell-quote@1.9.0": "1.12.0"
+    "shell-quote@1.9.0": "1.12.0",
+    "follow-redirects@<=1.16.1": "1.16.3",
+    "@hono/node-server": "2.1.6",
+    "fast-xml-parser": "5.12.1"
   },
   "strapi": {
     "uuid": "75be5f21-db3a-4a6f-9069-20b0c6b8e10c",
