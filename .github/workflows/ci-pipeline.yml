@@ -61,8 +61,6 @@ jobs:
 
       - name: Install cosign
         uses: sigstore/cosign-installer@756fe2d284c7292c4e9b62c8a28f1e5629c59532
-        with:
-          cosign-release: "v2.6.1" # use latest 2.x release until Kyverno supports 3.x
 
       - name: Login to container registry
         uses: docker/login-action@8aa5831fb8d48d8f76594c7ddde61ae58019f550
